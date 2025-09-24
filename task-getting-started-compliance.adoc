@@ -58,7 +58,7 @@ The switch at the top of the page for *Scan when missing "write attributes" perm
 
 Data Classification starts scanning the volumes you selected in the system. Results start to appear in the Compliance dashboard as soon as Data Classification starts the scan. The time that it takes to complete depends on the amount of data--it could be a few minutes or hours.  
 
-NOTE: Data Classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#bluexp-classification-scans-only-one-share-under-a-volume[See more details about this Data Classification limitation^].
+NOTE: Data Classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume[See more details about this Data Classification limitation^].
 
 
 

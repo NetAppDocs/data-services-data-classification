@@ -25,8 +25,6 @@ You can also link:task-deploy-compliance-onprem.html[deploy Data Classification 
 
 The Data Classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the Data Classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install Data Classification].
 
-NOTE: For legacy versions 1.30 and earlier, if you need to install Data Classification on multiple hosts, refer to link:task-deploy-multi-host-install-dark-site.html[Install Data Classification on multiple hosts with no internet access].
-
 == Supported data sources
 
 When installed private mode (sometimes called an "offline" or "dark" site), Data Classification can only scan data from data sources that are also local to the on-premises site. At this time, Data Classification can scan the following *local* data sources:
@@ -153,17 +151,15 @@ You must have the information for the Active Directory:
 
 For typical configurations you'll install the software on a single host system. 
 
-image:diagram_deploy_onprem_single_host_no_internet.png[A diagram showing the location of the data sources you can scan when using a single Data Classification instance deployed on-prem without internet access.]
+// image:diagram_deploy_onprem_single_host_no_internet.png[A diagram showing the location of the data sources you can scan when using a single Data Classification instance deployed on-prem without internet access.]
 
 //For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. 
 
 //image:diagram_deploy_onprem_multi_host_no_internet.png[A diagram showing the location of the data sources you can scan when using multiple Data Classification instances deployed on-prem without internet access.]
 
-=== Single-host installation for typical configurations
-
 Follow these steps when installing Data Classification software on a single on-premises host in an offline environment.
 
-Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html[See more details here].
+Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-actions.html[See more details here].
 
 .Before you begin
 

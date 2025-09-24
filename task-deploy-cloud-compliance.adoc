@@ -208,7 +208,7 @@ After Data Classification is enabled, ensure that users access the Console inter
 The Data Classification instance uses a private IP address to ensure that the indexed data isn't accessible to the internet. As a result, the web browser that you use to access the Console must have a connection to that private IP address. That connection can come from a direct connection to your cloud provider (for example, a VPN), or from a host that's inside the same network as the Data Classification instance.
 
 Check your vCPU limits::
-Ensure that your cloud provider's vCPU limit allows for the deployment of an instance with the necessary number of cores. You'll need to verify the vCPU limit for the relevant instance family in the region where the Console is running. link:concept-classification.html#the-bluexp-classification-instance[See the required instance types].
+Ensure that your cloud provider's vCPU limit allows for the deployment of an instance with the necessary number of cores. You'll need to verify the vCPU limit for the relevant instance family in the region where the Console is running. link:concept-classification.html#the-data-classification-instance[See the required instance types].
 +
 See the following links for more details on vCPU limits:
 +

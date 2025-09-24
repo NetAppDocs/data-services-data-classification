@@ -194,8 +194,11 @@ Data Classification collects, indexes, and assigns categories to the following d
 * *Sensitive personal data*: Special types of sensitive personal information (SPII), such as health data, ethnic origin, or political opinions, as defined by General Data Protection Regulation (GDPR) and other privacy regulations. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data[Learn more about sensitive personal data^].
 
 * *Categories*: Data Classification takes the data that it scanned and divides it into different types of categories. Categories are topics based on AI analysis of the content and metadata of each file. link:task-controlling-private-data.html#view-files-by-categories[Learn more about categories^].
+// check link
 
 * *Types*: Data Classification takes the data that it scanned and breaks it down by file type. link:task-controlling-private-data.html#view-files-by-file-types[Learn more about types^].
+// check link
+
 
 * *Name entity recognition*: Data Classification uses AI to extract people's natural names from documents. link:task-generating-compliance-reports.html[Learn about responding to Data Subject Access Requests^].
 
@@ -209,4 +212,4 @@ When you use the Console in SaaS mode, the connection to the Console is served o
 
 Outbound rules are completely open. Internet access is needed to install and upgrade the Data Classification software and to send usage metrics.
 
-If you have strict networking requirements, link:task-deploy-cloud-compliance.html#review-prerequisites[learn about the endpoints that Data Classification contacts^].
+If you have strict networking requirements, link:task-deploy-cloud-compliance.html#prerequisites[learn about the endpoints that Data Classification contacts^].

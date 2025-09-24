@@ -29,7 +29,7 @@ image:diagram_deploy_onprem_cloud_instance.png[A diagram of the required Console
 
 //For very large configurations where you'll be scanning petabytes of data, on versions 1.30 and earlier, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the _Manager node_, and the additional systems that provide extra processing power are called _Scanner nodes_.
 
-NOTE: For legacy versions 1.30 and earlier, if you need to install Data Classification on multiple hosts, refer to link:task-deploy-multi-host-install-dark-site.html[Install Data Classification on multiple hosts with no internet access].
+NOTE: For legacy versions 1.30 and earlier, if you need to install Data Classification on multiple hosts, refer to link:task-deploy-compliance-dark-site.html[Install Data Classification on multiple hosts with no internet access].
 
 
 You can also link:task-deploy-compliance-dark-site.html[install Data Classification in an on-premises site that doesn't have internet access].
@@ -233,7 +233,7 @@ Review the requirements and follow these steps when installing Data Classificati
 
 https://youtu.be/XiPLaJpfJEI[Watch this video^] to see how to install Data Classification.
 
-Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-data-sense-actions.html[See more details here].
+Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-actions.html[See more details here].
 
 .Before you begin
 
