@@ -1,0 +1,120 @@
+---
+sidebar: sidebar
+permalink: task-managing-repo-scanning.html
+keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification
+summary: You can manage how your data is being scanned in each of your systems and data sources in NetApp Data Classification. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
+---
+
+= Change the NetApp Data Classification scan settings for your repositories
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can manage how your data is being scanned in each of your systems and data sources. You can make the changes on a "repository" basis; meaning you can make changes for each volume, schema, user, etc. depending on the type of data source you are scanning.
+
+Some of the things you can change are whether a repository is scanned or not, and whether NetApp Data Classification is performing a link:concept-classification.html[mapping scan or a mapping & classification scan]. You can also pause and resume scanning, for example, if you need to stop scanning a volume for a period of time.
+
+== View the scan status for your repositories
+
+You can view the individual repositories that NetApp Data Classification is scanning (volumes, buckets, etc.) for each system and data source. You can also see how many have been "Mapped", and how many have been "Classified". Classification takes longer because the full AI identification is being performed on all data.
+
+You can view the scanning status of each work environment on the Configuration page:
+
+* *Initializing* (light blue dot): The map or classify configuration is activated. This appears for few seconds before starting the “pending queue” status.
+* *Pending queue* (orange dot): The scan task is waiting to be listed in the scanning queue. 
+* *Queued* (orange dot): The task was successfully added to the scanning queue. The system will start mapping or classifying the volume when its turn in the queue arrives.
+* *Running* (green dot): The scan task, which was in the queue, is actively in progress on the selected storage repository.
+* *Finished* (green dot): The scan of the storage repository is complete.
+* *Paused* (gray dot): You selected the “Pause” option to pause scanning. While the changes in the volume are not displayed in the system, the scanned insights are still shown. 
+* *Error* (red dot): The scan cannot complete because it has encountered issues. If you need to complete an action, the error appears in the tooltip under the “Required action” column.  Otherwise, the system shows an “error” status and tries to recover. When it finishes, the status changes.
+* *Not scanning*: The volume configuration of "Off" was selected and the system is not scanning the volume. 
+
+
+//After a scan has completed, you can also see the last full cycle date and time.
+
+.Steps
+
+. From the Data Classification menu, select *Configuration*.
++
+image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.] 
+. From the Configuration tab, select the *Configuration* button for the system.
+
+
+. In the Scan Configuration page, view the scan settings for all repositories.
++
+image:screenshot_compliance_repo_scan_settings.png["A screenshot showing whether your buckets are being scanned, and the current scan status."]
+
+. Hover your cursor over the chart in the _Mapping Status_ column to see the number of files that remain to be mapped or classified in each repository (bucket in this example).
+
+== Change the type of scanning for a repository
+
+You can start or stop mapping-only scans, or mapping and classification scans, in a system at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa.
+
+TIP: Databases can't be set to mapping-only scans. Database scanning can be Off or On; where On is equivalent to Map & Classify.
+
+.Steps
+
+. From the Data Classification menu, select *Configuration*. 
+. From the Configuration tab, select the *Configuration* button for the system.
++
+image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.]
+
+. In the Scan Configuration page, change any of the repositories (buckets in this example) to perform *Map* or *Map & Classify* scans.
++
+image:screenshot_compliance_repo_scan_settings.png[A screenshot showing how to select the type of scanning for a bucket.]
++
+Certain types of systems enable you to change the type of scanning globally for all repositories using a button bar at the top of the page. This is valid for Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, and Amazon FSx for ONTAP systems.
++
+The example below shows this button bar for an Azure NetApp Files system.
++
+image:screenshot_compliance_repo_scan_all.png[A screenshot showing how to configure the same scan setting for all volumes in a system.]
+
+== Prioritize scans
+
+You can prioritize the most important mapping-only scans or map & classify scans to ensure high priority scans are completed first. 
+
+By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. 
+
+Priority is granted on a one-time basis. Automatic rescans of mapping data occur in the default order. 
+
+.Steps
+. From the Data Classification menu, select *Configuration*. 
+. Select the resources you want to prioritize.
+. From the Actions `...` option, select *Prioritize scan*.
+
+== Stop scanning for a repository
+
+You can stop scanning a repository (for example, a volume) if you no longer need to monitor it for compliance. You do this by turning scanning "off". When scanning is turned off, all the indexing and information about that volume is removed from the system, and charging for scanning the data is stopped.
+
+.Steps
+
+. From the Data Classification menu, select *Configuration*. 
+. From the Configuration tab, select the *Configuration* button for the system.
++
+image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.]
+
+. In the Scan Configuration page select *Off* to stop scanning for a particular bucket.
++
+image:screenshot_compliance_repo_scan_settings.png[A screenshot showing how to select the type of scanning for a bucket.]
+
+== Pause and resume scanning for a repository
+
+You can "pause" scanning on a repository if you want to temporarily stop scanning certain content. Pausing scanning means that Data Classification won't perform any future scans for changes or additions to the repository, but that all the current results will still be displayed in the system. Pausing scanning does not stop charging for the scanned the data because the data still exists.
+
+You can "resume" scanning at any time.
+
+.Steps
+
+. From the Data Classification menu, select *Configuration*. 
+. From the Configuration tab, select the *Configuration* button for the system.
++
+image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.]
+
+. In the Scan Configuration page, select the Actions image:button-actions-horizontal.png[Actions icon] icon. 
+
+. Select *Pause* to pause scanning for a volume, or select *Resume* to resume scanning for a volume that had been previously paused.
+
+

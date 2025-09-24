@@ -1,0 +1,45 @@
+---
+sidebar: sidebar
+permalink: task-uninstall.html
+keywords: remove, delete, stop, stop scans, stop scanning, delete cloud data sense, terminate, deactivate, data sense
+summary: You can uninstall the Data Classification software to troubleshoot issues or to permanently remove the software from the host. Deleting the instance also deletes the associated disks where the indexed data resides. All the information Data Classification has scanned will be permanently deleted.
+---
+= Uninstall NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can uninstall NetApp Data Classification to troubleshoot issues or to permanently remove the software from the host. Deleting the instance also deletes the associated disks where the indexed data resides, meaning all the information Data Classification has scanned will be permanently deleted.
+
+The steps that you need to use depend on whether you deployed Data Classification in the cloud or on an on-premises host.
+
+== Uninstall Data Classification from a cloud provider
+
+. From Data Classification, select **Configuration**.
+// check name
+. At the bottom of the configuration page, select **Uninstall Classification**. 
++
+image:screenshot-uninstall.png[A screenshot of the button to uninstall Data Classification.]
+. In the dialog, enter "uninstall" to proceed with disconnecting the Data Clasification instance from the Console agent. Select **Uninstall** to confirm. 
+. In the _Uninstall Classification_ dialog, type *uninstall* to confirm that you want to disconnect the Data Classification instance from the Console agent then select *Uninstall*.
+. To finalize the uninstall process, go to your cloud provider's console and delete the Data Classification instance. The instance is named _CloudCompliance_ with a generated hash (UUID) concatenated to it. For example: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
+
+== Uninstall Data Classification from an on-premises deployment
+
+. From Data Classification, select **Configuration**.
+// check name
+. At the bottom of the configuration page, select **Uninstall Classification**. 
++
+image:screenshot-uninstall.png[A screenshot of the button to uninstall Data Classification.]
+. In the dialog, enter "uninstall" to proceed with disconnecting the Data Clasification instance from the Console agent. Select **Uninstall** to confirm. 
+
+. To uninstall the software from the host, run the `cleanup.sh` script on the Data Classification host machine, for example:
++
+[source,cli]
+cleanup.sh
++
+The script is located in the `/install/light_probe/onprem_installer/cleanup.sh` directory.
+See how to link:reference-log-in-to-instance.html[log in to the Data Classification host machine].

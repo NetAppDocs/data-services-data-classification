@@ -1,0 +1,53 @@
+=== Version 1.40
+This BlueXP classification release includes the following updates.
+
+.Support for RHEL 9.5
+This release provides support for Red Hat Enterprise Linux v9.5 in addition to previously supported versions. This is applicable to any manual on-premises installation of BlueXP classification, including dark site deployments.
+
+The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, and 9.5.
+
+
+.Prioritize scans 
+
+When scanning configuration, you can prioritize the most important scans so that they are done before other scans. This feature helps when you have many working environments and you want to make sure the high priority scans are being done successfully at first.
+
+There are two types of scans: 
+
+* *Mapping-only scans* provide only a high-level overview of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
+* *Map and classify* scans provide deep-level scanning of your data. 
+
+You might benefit from using Mapping-only scans to quickly scan your data to identify the data sources that require more research and then  later enable Map and classify scans only on those required data sources or volumes.
+
+The priority is assigned only to Mapping-only scans, not Map and classify scans. 
+
+The priority is set to 1 by default, and you can change it to any number between 1 and 10. The lower the number, the higher the priority. If you don't set a priority, the scan is assigned a priority of 5.
+
+To change the priority, do the following: 
+
+. From the BlueXP classification menu, select *Configuration*. 
+. Select the resources you want to prioritize.
+//+
+//image:../screenshot-configuration-scans-prioritize.png[Configuration page where you can prioritize scans]
+
+. From the Actions ... option, select *Prioritize scan*.
+//. Select the image://button-actions.png[Actions] option and select *Prioritize scan*.
+
+.Retry scans
+
+With this release, you can retry scans that have failed. This feature is useful when you have a scan that failed because of a temporary issue, such as a network outage. You can retry the scan without having to reconfigure it.
+
+To retry a scan, do the following:
+
+. From the BlueXP classification menu, select *Configuration*.
+//+
+//image:../screenshot-configuration-scans-retry.png[Configuration page where you can retry scans]
+. Do one of the following: 
+** To retry all failed scans, select *Retry all scans*.
+** To retry a specific scan, select the resource and select *Retry scan* from the Actions ... option.
+
+The scan is retried with the same configuration as the original scan. If the scan fails again, you can retry it as many times as needed.
+
+
+
+
+

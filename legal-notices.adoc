@@ -1,18 +1,76 @@
 ---
-permalink:  legal-notices.html
+permalink: legal-notices.html
 sidebar: sidebar
-keywords: # no keywords
-summary: # no summary
+keywords:
+summary:
 ---
+
 = Legal notices
 :icons: font
 :imagesdir: ./media/
 
-// Include the common notices
+// Include common notices 
 include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/common-legal-notices.adoc[]
+
 
 // Include the open source notice intro
 include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
 
+// Add required link(s) for open source
+* https://docs.netapp.com/us-en/bluexp-setup-admin/media/notice.pdf[Notice for NetApp Console^]
+* link:media/notice_cloud_data_sense.pdf[Notice for NetApp Data Classification^]
 
-// Add required link(s)
+//Add include for additional notices
+//include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/additional-notices.adoc[]
+
+
+
+//=== Privacy and security responsibilities
+
+//Data Classification SaaS is unique from other services from NetApp because we will directly handle your content. As such, we want you to be aware of the privacy and data protection responsibilities that you and NetApp have. 
+
+//==== Shared Responsibilities for Data Protection 
+
+//When you direct Data Classification SaaS to scan your content, both NetApp and you have a shared obligation to ensure that any personal information in such content (the “Scanned Personal Information”) is processed in accordance with all applicable data protection laws, the confidentiality provisions set forth in our https://www.netapp.com/how-to-buy/sales-terms-and-conditions/[terms and conditions^], and the additional terms in the https://netapp.na1.adobesign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhDOJqkYGrUVkPdUNgovPXkRV64QcigdRPo51UwgV10gOTJTN42UXPE0JxBy9OHpO-A*[NetApp Data Processing Addendum (“DPA”)^]. 
+
+//==== NetApp Responsibilities for Privacy and Data Protection 
+
+//When NetApp handles your Scanned Personal Information, we will act strictly as a “data processor” under applicable data protection laws. Further, as laid out in further detail in our DPA, we will: 
+
+//* Implement reasonable technical and organizational controls to prevent security breaches; 
+
+//* Maintain our obligations regarding sub-processors; 
+
+//* Notify you of any security incidents that involve your content or the Scanned Personal Information; 
+
+//* Comply with audit or inspection requests;  
+
+//* Routinely delete the Scanned Personal Information; and 
+
+//* Maintain our obligations for the cross-border transfer of Scanned Personal Information. 
+
+//==== Your Responsibilities for Privacy and Data Protection 
+
+//When NetApp handles your Scanned Personal Information, you will act as a “data controller”, “data processor”, or both, depending on the content you upload to the service.  
+
+//When you upload content, you are representing to NetApp that you have sufficient authority, right, title and interest to provide the content to us for the purpose of providing Data Classification SaaS. 
+
+//Further, you have an obligation to: 
+
+//* Implement our recommendations in the user interface of Data Classification SaaS and/or documentation regarding technical and organizational safeguards used to establish a connect between the service and your environment. 
+
+//* Immediately notify NetApp about any possible misuse or unauthorized access to any connection between Data Classification SaaS and your environment that you become aware of. 
+
+//* If your content is associated with a government organization or entity, determine whether the data center that NetApp uses to process the content for Data Classification SaaS (Amazon Web Services’ US-East) is appropriate. 
+
+//==== Customer Responsibilities for Sensitive Health Information 
+
+//If you are aware that the content that you intend to direct Data Classification SaaS to scan contains any patient, medical, or other protected health information regulated by the Health Insurance Portability and Accountability Act (“HIPAA”) or any similar health data protected under applicable law, you have an obligation to: 
+
+//* Notify NetApp in advance in writing so that we can work together to conclude an appropriate agreement regarding the safeguarding and handling of such data (such as a Business Associate Agreement); and 
+
+//* De-identify the content according to the standards set forth in HIPAA or applicable law prior to providing the Customer Content to NetApp. 
+
+ 
+
+  

@@ -1,0 +1,182 @@
+---
+sidebar: sidebar
+permalink: task-controlling-governance-data.html
+keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data
+summary: Gain control of the costs related to the data on your organizations' storage resources. NetApp Data Classification identifies the amount of stale data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
+---
+
+= View governance details about the data stored in your organization with NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Gain control of the costs related to the data on your organization's storage resources. NetApp Data Classification identifies the amount of stale data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
+
+This is where you should begin your research. From the Governance dashboard, you can select an area for further investigation.
+
+Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information before moving it.
+
+== Review the Governance dashboard
+
+The Governance dashboard provides information so that you can increase the efficiency and control the costs related to the data stored on your storage resources.
+
+image:screenshot_compliance_governance_dashboard.png[A screenshot of the Data Classification Governance dashboard.]
+
+.Steps 
+
+. From the NetApp Console menu, select *Governance > Classification*.
+. Select *Governance*.
++
+The Governance dashboard appears. 
+
+
+=== Review savings opportunities
+
+The _Saving Opportunities_ component shows data that you can delete or tier to less expensive object storage. The data in _Saving Opportunities_ update every 2 hours. You can also manually update the data. 
+
+.Steps 
+
+. From the Data Classification menu, select *Governance*.
+
+. Within each Savings Opportunities tile of the Governance dashboard, select *Optimize Storage* to view the filtered results in the Investigation page. To discover any data you should delete or tier to less expensive storage, investigate the the _Saving Opportunities_.
+
+* *Stale Data* - Data that was last modified over 3 years ago.
+* *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html[See what types of duplicate files are displayed].
+
+NOTE: If any of your data sources implement data tiering, old data that already resides in object storage can be identified in the _Stale Data_ category.
+
+=== Review saved searches with the largest number of results
+
+In the _Saved searches_ tab, the searches with the greatest number of results appear at the top of the list. This data updates every two hours. 
+
+For details about saved searches, see link:task-using-policies.html[Create saved searches].
+
+.Steps 
+. From the Data Classification menu, select *Governance*.
+. In the Governance dashboard, locate the Saved Searches tile. Select the name of a saved search to display the results in the Investigation page. 
+. Select *View All* to view the list of all available saved searches.
+In the _Saved searches_ area, the searches with the greatest number of results appear at the top of the list. 
+
+== Create the Data Discovery Assessment Report
+
+The Data Discovery Assessment Report provides a high-level analysis of the scanned environment to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your dataset:
+
+[cols="25,65",width=90%,options="header"]
+|===
+| Feature
+| Description
+| Data governance concerns | A detailed picture of all the data you own and areas where you may be able to reduce the amount of data to save costs.
+| Data security exposures | Areas where your data is accessible to internal or external attacks because of broad access permissions.
+| Data compliance gaps | Where your personal or sensitive personal information is located for both security and for DSARs (data subject access requests).
+|===
+
+With the report, you can take the following actions:
+
+* Reduce storage costs by changing your retention policy, or by moving or deleting certain data (stale or duplicate data).
+* Protect your data that has broad permissions by revising global group management policies.
+* Protect your data that has personal or sensitive personal information by moving PII to more secure data stores.
+
+.Steps
+
+. From Data Classification, select *Governance*.
+. Select *Data Discovery Assessment Report*.
++
+image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Discovery Assessment Report.]
+
+.Result
+
+Data Classification generates a PDF report that you can review and send to other groups as needed.
+
+== Create the Data Mapping Overview Report
+
+The Data Mapping Overview Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report summarizes all systems and data sources. It also provides an analysis for each system.
+
+The report includes the following information:
+
+[cols="25,65",width=90%,options="header"]
+|===
+| Category
+| Description
+| Usage Capacity | For all systems: Lists the number of files and the used capacity for each system.
+For single systems: Lists the files that are using the most capacity.
+| Age of Data | Provides three charts and graphs for when files were created, last modified, or last accessed. Lists the number of files, and their used capacity, based on certain date ranges.
+| Size of Data | Lists the number of files that exist within certain size ranges in your systems.
+|===
+
+.Steps
+
+. From Data Classification, select *Governance*.
+. Select *Full Data Mapping Overview Report*.
++
+image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
+
+// PM - confirm step with Micky/Shir
+. To customize the company name that appears on the first page of the report, from the top right of the Data Classification page, select image:button-gallery-options.gif[the More button]. Then select *Change company name*. When you generate the next report, the company name change appears. 
+
+.Result
+
+Data Classification generates a PDF report that you can review and send to other groups as needed.
+
+If the report is larger than 1 MB, the PDF file is retained on the Data Classification instance and you'll see a pop-up message about the exact location. When Data Classification is installed on a Linux machine on your premises, or on a Linux machine you deployed in the cloud, you can navigate directly to the PDF file. When Data Classification is deployed in the cloud, you need to authorize with SSH to the Data Classification instance to download the PDF file. 
+
+=== Review the top data repositories listed by data sensitivity
+
+The _Top Data Repositories by Sensitivity Level_ area of the Data Mapping Overview report lists the top four data repositories (systems and data sources) that contain the most sensitive items. The bar chart for each system is divided into:
+
+* Non-Sensitive data
+* Personal data
+* Sensitive Personal data
+
+This data refreshes every two hours and can be manually refreshed. 
+
+.Steps
+
+. To see the total number of items in each category, position your cursor over each section of the bar.
+
+. To filter results that will appear in the Investigation page, select each area in the bar and investigate further.
+
+=== Review sensitive data and wide permissions
+
+The _Sensitive Data and Wide Permissions_ area of the Data Mapping Overview report shows the percentage of files that contain sensitive data and have wide permissions. The chart shows the following types of permissions: 
+
+* From the most restrictive permissions to the most permissive restrictions on the horizontal axis. 
+* From the least sensitive data to the most sensitive data on the vertical axis.
+
+.Steps
+. To see the total number of files in each category, position your cursor over each box. 
+
+. To filter results that will appear in the Investigation page, select a box and investigate further.
+
+
+=== Review data listed by types of open permissions
+
+The _Open Permissions_ area of the Data Mapping Overview report shows the percentage for each type of permissions that exist for all files that are being scanned. The chart shows the following types of permissions:
+
+* No Open Permissions
+* Open to Organization
+* Open to Public
+* Unknown Access
+
+.Steps 
+
+. To see the total number of files in each category, position your cursor over each box. 
+
+. To filter results that will appear in the Investigation page, select a box and investigate further.
+
+=== Review the age and size of data
+
+You might want to investigate the items in the _Age_ and _Size_ graphs of the Data Mapping Overview report to see if there is any data you should delete or tier to less expensive object storage.
+
+.Steps
+
+. In the Age of Data chart, to see details about the age of the data, position your cursor over a point in the chart. 
+
+. To filter by an age or size range, select that age or size.
+
+* *Age of Data graph* - Categorizes data based on the time it was created, the last time it was accessed, or the last time it was modified.
+* *Size of Data graph* - Categorizes data based on size.
+
+NOTE: If any of your data sources implement data tiering, old data that already resides in object storage might be identified in the _Age of Data_ graph.

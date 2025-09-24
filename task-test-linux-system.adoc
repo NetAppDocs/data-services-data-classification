@@ -1,0 +1,186 @@
+---
+sidebar: sidebar
+permalink: task-test-linux-system.html
+keywords: cloud compliance, bluexp, data sense, get started, deploy, data classification, cloud compliance access, compliance, on-premises, linux, test linux system, docker, podman, ubuntu, rhel, dark site
+summary: Before installing Data Classification manually on a Linux host you can run a script on the host to verify that all the prerequisites are in place for installing Data Classification. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access.
+---
+
+= Check that your Linux host is ready to install NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Before installing NetApp Data Classification manually on a Linux host, optionally run a script on the host to verify that all the prerequisites are in place for installing Data Classification. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access (a _dark site_).
+
+// no dark sites
+
+There is also a prerequisite test script that is part of the Data Classification installation script. The script described here is specifically designed for users who want to verify the Linux host independently of running the Data Classification installation script.
+
+== Getting Started
+
+You'll perform the following tasks.
+
+. Optionally, install a Console agent if you don't already have one installed. You can run the test script without having a Console agent installed, but the script checks for connectivity between the Console agent and the Data Classification host machine - so it is recommended that you have a Console agent.
+. Prepare the host machine and verify that it meets all the requirements.
+. Enable outbound internet access from the Data Classification host machine.
+. Verify that all required ports are enabled on all systems.
+. Download and run the Prerequisite test script.
+
+== Create a Console agent
+
+A Console agent is required before you can install and use Data Classification. You can, however, run the Prerequisites script without a Console agent.
+
+You can https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install Data Classification on-prem may also choose to install the Console agent on-prem.
+
+To create a Console agent in your cloud provider environment, see https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]. 
+
+You'll need the IP address or host name of the Console agent system when running the Prerequisites script. You'll have this information if you installed the Console agent in your premises. If the Console agent is deployed in the cloud, you can find this information from the Console: select the Help icon then *Support* then *Console agent*.
+
+== Verify host requirements
+
+Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. 
+
+include::_include/host-requirements.adoc[]
+
+* *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Classification. Run the following commands to configure `firewalld` so that it is compatible with Data Classification:
++
+ firewall-cmd --permanent --add-service=http
+ firewall-cmd --permanent --add-service=https
+ firewall-cmd --permanent --add-port=80/tcp
+ firewall-cmd --permanent --add-port=8080/tcp
+ firewall-cmd --permanent --add-port=443/tcp
+ firewall-cmd --reload
++
+If you're planning to use additional Data Classification hosts as scanner nodes (in a distributed model), add these rules to your primary system at this time:
++
+ firewall-cmd --permanent --add-port=2377/tcp
+ firewall-cmd --permanent --add-port=7946/udp
+ firewall-cmd --permanent --add-port=7946/tcp
+ firewall-cmd --permanent --add-port=4789/udp
++
+Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
+//add 'or Podman' in 2nd bullet
+
+== Enable outbound internet access from Data Classification
+
+Data Classification requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the Data Classification instance has outbound internet access to contact the following endpoints.
+
+TIP: This section is not required for host systems installed in sites without internet connectivity. 
+
+[cols="43,57",options="header"]
+|===
+| Endpoints
+| Purpose
+
+| \https://api.bluexp.netapp.com | Communication with the Console service, which includes NetApp accounts.
+
+|
+\https://netapp-cloud-account.auth0.com
+\https://auth0.com
+
+| Communication with the Console website for centralized user authentication.
+
+|
+\https://support.compliance.api.bluexp.netapp.com/
+\https://hub.docker.com
+\https://auth.docker.io
+\https://registry-1.docker.io
+\https://index.docker.io/
+\https://dseasb33srnrn.cloudfront.net/
+\https://production.cloudflare.docker.com/
+
+| Provides access to software images, manifests, templates, and to send logs and metrics.
+
+| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
+
+|
+\https://github.com/docker
+\https://download.docker.com
+
+| Provides prerequisite packages for docker installation.
+
+|
+\http://packages.ubuntu.com/
+\http://archive.ubuntu.com
+
+| Provides prerequisite packages for Ubuntu installation.
+|===
+
+== Verify that all required ports are enabled
+
+You must ensure that all required ports are open for communication between the Console agent, Data Classification, Active Directory, and your data sources.
+
+[cols="25,25,50",options="header"]
+|===
+| Connection Type
+| Ports
+| Description
+
+|Console agent <> Data Classification | 8080 (TCP), 443 (TCP), and 80. 
+9000 | The firewall or routing rules for the Console agent must allow inbound and outbound traffic over port 443 to and from the Data Classification instance.
+
+Make sure port 8080 is open so you can see the installation progress in the Console.
+
+If a firewall is used on the Linux host, port 9000 is required for internal processes within an Ubuntu server. 
+
+|Console agent <> ONTAP cluster (NAS) | 443 (TCP)  a| The Console discovers ONTAP clusters using HTTPS. If you use custom firewall policies, the Console agent host must allow outbound HTTPS access through port 443. If the Console agent is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
+
+
+|===
+
+== Run the Data Classification prerequisites script
+
+Follow these steps to run the Data Classification prerequisites script.
+
+https://youtu.be/5ONowfPWkFs?si=QLGUw8mqPrz9qs4B[Watch this video^] to see how to run the Prerequisites script and interpret the results.
+
+.Before you begin
+
+* Verify that your Linux system meets the <<Verify host requirements,host requirements>>.
+* Verify that the system has the two prerequisite software packages installed (Docker Engine or Podman, and Python 3).
+//add 'or Podman'
+* Make sure you have root privileges on the Linux system.
+//* If you're using a proxy for access to the internet:
+//** You'll need the proxy server information (IP address or host name, connection port, connection scheme: https or http, user name and password).
+//** If the proxy is performing TLS interception, you'll need to know the path on the Linux system where the TLS CA certificates are stored.
+//* Verify that your offline environment meets the required <<Enable outbound internet access from Data Classification,permissions and connectivity>>.
+
+.Steps
+
+. Download the Data Classification Prerequisites script from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *standalone-pre-requisite-tester-<version>*.
+
+. Copy the file to the Linux host you plan to use (using `scp` or some other method).
+
+. Assign permissions to run the script.
++
+[source,cli]
+chmod +x standalone-pre-requisite-tester-v1.25.0
+
+. Run the script using the following command.
++
+[source,cli]
+ ./standalone-pre-requisite-tester-v1.25.0 <--darksite>
++
+Add the option "--darksite" only if you are running the script on a host that doesn't have internet access. Certain prerequisite tests are skipped when the host is not connected to the internet.
+
+. The script prompts you for the IP address of the Data Classification host machine.
++
+** Enter the IP address or host name.
+
+. The script prompts whether you have an installed Console agent. 
++
+** Enter *N* if you do not have an installed Console agent.
+** Enter *Y* if you do have an installed Console agent. And then enter the IP address or host name of the Console agent so the test script can test this connectivity.
+
+. The script runs a variety of tests on the system and it displays results as it progresses. When it finishes it writes a log of the session to a file named `prerequisites-test-<timestamp>.log` in the directory `/opt/netapp/install_logs`.
+
+.Result
+
+If all the prerequisites tests ran successfully, you can install Data Classification on the host when you are ready.
+
+If any issues were discovered, they are categorized as "Recommended" or "Required" to be fixed. Recommended issues are typically items that would make the Data Classification scanning and categorizing tasks run slower. These items do not need to be corrected - but you may want to address them.
+
+If you have any "Required" issues, you should fix the issues and run the Prerequisites test script again.

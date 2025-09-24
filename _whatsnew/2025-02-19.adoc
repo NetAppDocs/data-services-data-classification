@@ -1,0 +1,38 @@
+=== Version 1.40
+This BlueXP classification release includes the following updates.
+
+.Support for RHEL 9.5
+This release provides support for Red Hat Enterprise Linux v9.5 in addition to previously supported versions. This is applicable to any manual on-premises installation of BlueXP classification, including dark site deployments.
+
+The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, and 9.5.
+
+.Prioritize mapping-only scans 
+
+When conducting Mapping-only scans, you can prioritize the most important scans. This feature helps when you have many working environments and want to ensure high priority scans are completed first. 
+
+By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. 
+
+Priority is granted on a one-time basis. Automatic rescans of mapping data occur in the default order. 
+
+Prioritization is limited to link:https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html[mapping-only scans^]; it's not available for map and classify scans. 
+// https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html[What's the difference between Mapping and Classification scans?]
+
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans[Prioritize scans^].
+
+.Retry all scans
+
+BlueXP classification supports the ability to batch retry all failed scans. 
+
+You can reattempt scans in a batch operation with the **Retry all** function. If classification scans are failing due to a temporary issue such as a network outage, you can retry all scans at the same time with one button instead of retrying them individually. Scans can be retried as many times as needed. 
+
+To retry all scans:
+
+. From the BlueXP classification menu, select *Configuration*.
+//+
+//image:../screenshot-configuration-scans-retry.png[Configuration page where you can retry scans]
+. To retry all failed scans, select *Retry all scans*.
+// ** To retry a specific scan, select the resource and select *Retry scan* from the Actions ... option.
+
+.Improved categorization model accuracy 
+
+The accuracy of the machine learning model for link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories[predefined categories] has improved by 11%. 

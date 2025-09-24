@@ -1,0 +1,83 @@
+---
+permalink: data-services-data-classification/task-deploy-multi-host-install-dark-site.html
+redirect: data-services-data-classification/task-deploy-compliance-dark-site.html
+---
+
+
+
+---
+sidebar: sidebar
+permalink: task-deploy-multi-host-install-dark-site.html
+keywords: cloud compliance, data sense, get started, web browser connectivity, cloud compliance access, privacy, compliance, on-premises, dark site, upgrade, private mode, docker, podman, bluexp classification, classification, install
+summary: Complete a few steps to install NetApp Data Classification on a Linux host in an on-premises site that doesn't have internet access - also known as "private mode". This type of installation is perfect for your secure sites.
+---
+
+= Install NetApp Data Classification on multiple hosts for large configurations with no internet access
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Complete a few steps to install NetApp Data Classification on multiple hosts in an on-premises site that doesn't have internet access - also known as _private mode_. This type of installation is perfect for your secure sites.
+
+For very large configurations where you'll be scanning petabytes of data in sites without internet access, you can include multiple hosts to provide additional processing power. When using multiple host systems, the primary system is called the _Manager node_ and the additional systems that provide extra processing power are called _Scanner nodes_.
+
+Follow these steps when installing Data Classification on multiple on-premises hosts in an offline environment.
+
+[NOTE]
+The following information is relevant only for Data  Classification legacy versions 1.30 and earlier.
+
+.Before you begin
+
+* Verify that all your Linux systems for the Manager and Scanner nodes meet the host requirements.
+* Verify that you have installed the two prerequisite software packages (Docker Engine or Podman, and Python 3).
+//add 'or Podman' in 2nd bullet
+* Make sure you have root privileges on the Linux systems.
+* Verify that your offline environment meets the required permissions and connectivity.
+* You must have the IP addresses of the scanner node hosts that you plan to use.
+* The following ports and protocols must be enabled on all hosts:
++
+[cols="15,20,55",options="header"]
+|===
+| Port
+| Protocols
+| Description
+
+|2377 | TCP | Cluster management communications
+|7946 | TCP, UDP | Inter-node communication
+|4789 | UDP | Overlay network traffic
+|50 | ESP | Encrypted IPsec overlay network (ESP) traffic
+|111 | TCP, UDP | NFS Server for sharing files between the hosts (needed from each scanner node to manager node)
+|2049 | TCP, UDP | NFS Server for sharing files between the hosts (needed from each scanner node to manager node)
+
+|===
+
+.Steps
+
+. Follow steps 1 through 8 from the link:task-deploy-compliance-dark-site.html#single-host-installation-for-typical-configurations[Single-host installation] on the manager node.
+
+. As shown in step 9, when prompted by the installer, you can enter the required values in a series of prompts, or you can provide the required parameters as command line arguments to the installer.
++
+In addition to the variables available for a single-host installation, a new option *-n <node_ip>* is used to specify the IP addresses of the scanner nodes. Multiple node IPs are separated by a comma.
++
+For example, this command adds 3 scanner nodes:
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> *-n <node_ip1>,<node_ip2>,<node_ip3>* --no-proxy --darksite`
+
+. Before the manager node installation completes, a dialog displays the installation command needed for the scanner nodes. Copy the command (for example: `sudo ./node_install.sh -m 10.11.12.13 -t ABCDEF-1-3u69m1-1s35212`) and save it in a text file. 
+
+. On *each* scanner node host:
+.. Copy the Data Classification installer file (*cc_onprem_installer.tar.gz*) to the host machine.
+.. Unzip the installer file.
+.. Paste and run the command that you copied in step 3.
++
+When the installation finishes on all scanner nodes and they have been joined to the manager node, the manager node installation finishes as well.
+
+.Result
+
+The Data Classification installer finishes installing packages, and registers the installation. Installation can take 15 to 25 minutes.
+
+.What's Next
+From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and local link:task-scanning-databases.html[databases] that you want to scan.
+

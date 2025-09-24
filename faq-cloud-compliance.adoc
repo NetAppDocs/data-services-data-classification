@@ -1,0 +1,275 @@
+---
+sidebar: sidebar
+permalink: faq-cloud-compliance.html
+keywords: faq, frequently asked questions, questions, cloud compliance, data sense
+summary: This FAQ can help if you're just looking for a quick answer to a question.
+---
+= Frequently asked questions about NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+
+This FAQ can help if you're just looking for a quick answer to a question.
+
+== NetApp Data Classification
+
+The following questions provide a general understanding of Data Classification.
+
+=== How does Data Classification work?
+
+Data Classification deploys another layer of AI alongside your NetApp Console system and storage systems. It then scans the data on volumes, buckets, databases, and other storage accounts and indexes the data insights that are found. Data Classification leverages both artificial intelligence and natural language processing, as opposed to alternative solutions that are commonly built around regular expressions and pattern matching. 
+
+Data Classification uses AI to provide contextual understanding of data for accurate detection and classification. It is driven by AI because it is designed for modern data types and scale. It also understands data context in order to provide strong, accurate, discovery and classification.
+
+link:concept-classification.html[Learn more about how Data Classification works].
+
+//=== What are the common use cases for Data Classification?
+
+//* Identify Personal Identifiable Information (PII).
+//* Easily locate and report on specific data in response to data subjects, as required by GDPR, CCPA, HIPAA, and other data privacy regulations.
+//* Comply with new and upcoming data privacy regulations.
+//* Comply with data compliance and privacy regulations.
+//* Migrate data from legacy systems to the cloud.
+//* Comply with data retention policies.
+
+
+
+
+
+=== Does Data Classification have a REST API, and does it work with third-party tools?
+
+Yes, Data Classification has a REST API for the supported features in the Data Classification version that is part of the Console core platform. See link:api-classification.html[API documentation].
+
+
+
+=== Is Data Classification available through the cloud marketplaces?
+
+Data Classification is part of the NetApp Console core features, so you do not need to use the marketplaces for this service . 
+
+== Data Classification scanning and analytics
+
+The following questions relate to Data Classification scanning performance and the analytics.
+
+=== How often does Data Classification scan my data?
+
+While the initial scan of your data might take a little bit of time, subsequent scans only inspect the incremental changes, which reduces system scan times. Data Classification scans your data continuously in a round-robin fashion, six repositories at a time, so that all changed data is classified very quickly.
+
+link:task-scanning-overview.html[Learn how scans work].
+
+Data Classification scans databases only once per day; databases are not continuously scanned like other data sources.
+
+Data scans have a negligible impact on your storage systems and on your data. 
+
+//However, if you are concerned with even a very small impact, you can configure Data Classification to perform "slow" scans. link:task-reduce-scan-speed.html[See how to reduce the scan speed].
+
+
+=== Does scan performance vary?
+
+Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size characteristics of the host system (either in the cloud or on-premises). See link:concept-classification.html[The Data Classification instance] and link:task-deploy-overview.html[Deploying Data Classification] for more information.
+
+When initially adding new data sources, you can also choose to perform only a "mapping" (Mapping only) scan instead of a full "classification" (Map & Classify) scan. Mapping can be done on your data sources very quickly because it does not access files to see the data inside. link:task-scanning-overview.html[See the difference between a mapping and classification scan].
+
+=== Can I search my data using Data Classification?
+
+Data Classification offers extensive search capabilities that make it easy to search for a specific file or piece of data across all connected sources. Data Classification empowers users to search deeper than just what the metadata reflects. It is a language-agnostic service that can also read the files and analyze a multitude of sensitive data types, such as names and IDs. For example, users can search across both structured and unstructured data stores to find data that may have leaked from databases to user files, in violation of corporate policy. Searches can be saved for later, and policies can be created to search and take action on the results at a set frequency.
+
+Once the files of interest are found, characteristics can be listed, including tags, system account, bucket, file path, category (from classification), file size, last modified, permission status, duplicates, sensitivity level, personal data, sensitive data types within the file, owner, file type, file size, created time, file hash, whether the data was assigned to someone seeking their attention, and more. Filters can be applied to screen out characteristics that are not pertinent. 
+
+Data Classification also has role-based access control (RBAC) to allow files to be moved or deleted, if the right permissions are present. If the right permissions are not present, the tasks can be assigned to someone in the organization who does have the right permissions.
+
+//=== What kind of analytics does Data Classification provide?
+
+//Data sources can be represented visually, and relationships defined and depicted graphically. For example, admins can see all stale, duplicate, and non-business-related data across data sources throughout the enterprise. They can then copy, move, delete, and manage data to optimize storage costs and reduce risk. Users can reduce risk by seeing what sensitive data might be exposed, and they can create jobs to manage permissions for strong data protection. Data Classification also classifies all the different types of data, so admins can investigate data by type and see what actions have been taken on the data, and when.
+
+
+
+
+== Data Classification management and privacy
+
+The following questions provide information on how to manage Data Classification and privacy settings.
+
+=== How do I enable or disable Data Classification?
+
+First you need to deploy an instance of Data Classification in the Console, or on an on-premises system. Once the instance is running, you can enable the service on existing systems, databases, and other data sources from the *Configuration* tab or by selecting a specific system. link:task-getting-started-compliance.html[Learn how to get started].
+
+NOTE: Activating Data Classification on a data source results in an immediate initial scan. Scan results display shortly after.
+
+
+You can disable Data Classification from scanning an individual system, database, or file share group from the Data Classification Configuration page. See link:task-managing-compliance.html[Remove data sources from Data Classification].
+
+To completely remove the Data Classification instance,  manually remove the Data Classification instance from your cloud provider's portal or on-prem location.
+
+
+=== Can the service exclude scanning data in certain directories?
+
+Yes. If you want Data Classification to exclude scanning data that resides in certain data source directories, you can provide that list to the classification engine. After you apply that change, Data Classification will exclude scanning data in the specified directories. link:task-exclude-scan-paths.html[Learn more].
+
+=== Are snapshots that reside on ONTAP volumes scanned?
+
+No. Data Classification does not scan snapshots because the content is identical to the content in the volume.
+
+=== What happens if data tiering is enabled on your ONTAP volumes?
+
+When Data Classification scans volumes that have cold data tiered to object storage using the Mapping only scans, it scans all of the data--data that's on local disks and cold data tiered to object storage. This is also true for non-NetApp products that implement tiering.
+
+The Mapping only scan doesn't heat up the cold data--it stays cold and remains in object storage. On the other hand, if you perform the Map & Classify scan, some configurations might heat up the cold data. 
+
+
+
+//=== Can Data Classification send notifications to my organization?
+
+//Yes. In conjunction with the Policies feature, you can send email alerts to NetApp Console users (daily, weekly, or monthly), or any other email address,  when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-using-policies.html[Policies^].
+
+//You can also download status reports from the Governance page and Investigation page that you can share internally in your organization.
+
+//=== Can Data Classification work with the AIP labels I have embedded in my files?
+
+//Yes. You can manage AIP labels in the files that Data Classification is scanning if you have subscribed to https://azure.microsoft.com/en-us/services/information-protection/[Azure Information Protection (AIP)^]. You can view the labels that are already assigned to files, add labels to files, and change existing labels.
+
+//link:task-org-private-data.html#categorize-your-data-using-aip-labels[Learn more^].
+
+== Types of source systems and data types
+
+The following questions relate to the types of storage that can be scanned, and the types of data that is scanned.
+
+
+=== Are there any restrictions when deployed in a Government region?
+
+Data Classification is supported when the Console agent is deployed in a Government region (AWS GovCloud, Azure Gov, or Azure DoD) - also known as "Restricted mode". 
+
+
+=== What data sources can I scan if I install Data Classification in a site without internet access?
+
+Data Classification can only scan data from data sources that are local to the on-premises site. At this time, Data Classification can scan the following local data sources in "Private mode" - also known as a "dark" site:
+
+* On-premises ONTAP systems
+* Database schemas
+//* SharePoint On-Premises accounts (SharePoint Server)
+//* Non-NetApp NFS or CIFS file shares
+* Object Storage that uses the Simple Storage Service (S3) protocol
+
+See link:concept-classification.html[Supported systems and data sources].
+
+=== Which file types are supported?
+
+Data Classification scans all files for category and metadata insights, and displays all file types in the file types section of the dashboard.
+
+When Data Classification detects Personal Identifiable Information (PII), or when it performs a DSAR search, only the following file formats are supported:
+
+`+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+=== What kinds of data and metadata does Data Classification capture?
+
+Data Classification enables you to run a general "mapping" scan or a full "classification" scan on your data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
+
+* *Data mapping scan (Mapping only scan)*: Data Classification scans the metadata only. This is useful for overall data management and governance, quick project scoping, very large estates, and prioritization. Data mapping is based on metadata and is considered a *fast* scan.
++
+After a fast scan, you can generate a Data Mapping Report. This report is an overview of the data stored in your corporate data sources to assist you with decisions about resource utilization, migration, backup, security, and compliance processes.
+
+* *Data classification deep scan (Map & Classify scan)*: Data Classification scans data using standard protocols and read-only permission throughout your environments. Select files are opened and scanned for sensitive business-related data, private information, and issues related to ransomware.
++
+After a full scan there are many additional Data Classification features you can apply to your data, such as view and refine data in the Data Investigation page, search for names within files, copy, move, and delete source files, and more.
+
+Data Classification captures metadata such as: file name, permissions, creation time, last access, and last modification. This includes all of the metadata that appears in the Data Investigatcdion Details page and in Data Investigation Reports.  
+
+Data Classification can identify many types of private data such as personal information (PII) and sensitive personal information (SPII). For details about private data, refer to https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html[Categories of private data that Data Classification scans].
+
+=== Can I limit Data Classification information to specific users?
+
+Yes, Data Classification is fully integrated with the NetApp Console. NetApp Console users can only see information for the systems they are eligible to view according to their permissions.
+
+Additionally, if you want to allow certain users to just view Data Classification scan results without having the ability to manage Data Classification settings, you can assign those users the *Classification viewer* role (when using the NetApp Console in standard mode) or the *Compliance Viewer* role (when using the NetApp Console in restricted mode). link:concept-classification.html[Learn more].
+
+=== Can anyone access the private data sent between my browser and Data Classification?
+
+No. The private data sent between your browser and the Data Classification instance are secured with end-to-end encryption using TLS 1.2, which means NetApp and non-NetApp parties can't read it. Data Classification won't share any data or results with NetApp unless you request and approve access.
+
+The data that is scanned stays within your environment. 
+
+=== How is sensitive data handled? 
+
+NetApp does not have access to sensitive data and does not display it in the UI. Sensitive data is masked, for example, the last four numbers are displayed for credit card information. 
+
+=== Where is the data stored? 
+
+Scan results are stored in Elasticsearch within your Data Classification instance. 
+
+=== How is the data accessed? 
+
+Data Classification accesses data stored in Elasticsearch through API calls, which require authentication and are encrypted using AES-128. Accessing Elasticsearch directly requires root access. 
+
+== Licenses and costs
+
+The following question relates to licensing and costs to use Data Classification.
+
+=== How much does Data Classification cost?
+
+Data Classification is a NetApp Console core capability. It's not charged. 
+
+== Console agent deployment
+
+The following questions relate to the Console agent.
+
+=== What is the Console agent?
+
+The Console agent is software running on a compute instance either within your cloud account, or on-premises, that enables the NetApp Console to securely manage cloud resources. You must deploy a Console agent to use Data Classification.
+
+=== Where does the Console agent need to be installed?
+
+When scanning data, the NetApp Console Console agent needs to be installed in the following locations: 
+
+* For Cloud Volumes ONTAP in AWS or Amazon FSx for ONTAP: Console agent is in AWS.
+* For Cloud Volumes ONTAP in Azure or in Azure NetApp Files:  Console agent is in Azure.
+* For Cloud Volumes ONTAP in GCP: Console agent is in GCP.
+* For on-premises ONTAP systems: Console agent is on-premises.
+
+
+//* When scanning data in on-premises ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts, you can use a Console agent in any of these cloud locations.
+
+If you have data in these locations, you may need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Console agents^].
+
+=== Does Data Classification require access to credentials? 
+
+Data Classification itself doesn't retrieve storage credentials. Instead, they are stored within the Console agent. 
+
+Data Classification uses data plane credentials, for example, CIFS credentials to mount shares before scanning. 
+
+
+
+=== Does communication between the service and the Console agent use HTTP? 
+
+Yes, Data Classification communicates with the Console agent using HTTP. 
+
+
+== Data Classification deployment
+
+The following questions relate to the separate Data Classification instance.
+
+=== What deployment models does Data Classification support?
+
+The NetApp Console allows the user to scan and report on systems virtually anywhere, including on-premises, cloud, and hybrid environments. Data Classification is normally deployed using a SaaS model, in which the service is enabled via the Console interface and requires no hardware or software installation. Even in this click-and-run deployment mode, data management can be done regardless of whether the data stores are on premises or in the public cloud.
+
+=== What type of instance or VM is required for Data Classification?
+
+When link:task-deploy-cloud-compliance.html[deployed in the cloud]:
+
+* In AWS, Data Classification runs on an m6i.4xlarge instance with a 500 GiB GP2 disk. You can select a smaller instance type during deployment.
+* In Azure, Data Classification runs on a Standard_D16s_v3 VM with a 500 GiB disk.
+* In GCP, Data Classification runs on an n2-standard-16 VM with a 500 GiB Standard persistent disk.
+
+
+link:concept-classification.html[Learn more about how Data Classification works].
+
+=== Can I deploy the Data Classification on my own host?
+
+Yes. You can install Data Classification software on a Linux host that has internet access in your network or in the cloud. Everything works the same and you continue to manage your scan configuration and results through the Console. See link:task-deploy-compliance-onprem.html[Deploying Data Classification on premises] for system requirements and installation details.
+
+=== What about secure sites without internet access?
+
+Yes, that's also supported. You can link:task-deploy-compliance-dark-site.html[deploy Data Classification in an on-premises site that doesn't have internet access] for completely secure sites.
+
+
