@@ -159,7 +159,7 @@ For typical configurations you'll install the software on a single host system.
 
 Follow these steps when installing Data Classification software on a single on-premises host in an offline environment.
 
-Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-actions.html[See more details here].
+Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`.
 
 .Before you begin
 

@@ -169,7 +169,7 @@ The filtered results in the Investigation page display the total size of the ite
 
 .Configure additional Group IDs as "Open to Organization"
 
-Now you can configure Group IDs in NFS to be considered as "Open to Organization" directly from BlueXP classification if the group had not initially been set with that permission. Any files and folders that have these group IDs attached will show as "Open to Organization" in the Investigation Details page. See how to https://docs.netapp.com/us-en/data-services-data-classification/task-add-group-id-as-open.html[add additional Group IDs as "open to organization"].
+Now you can configure Group IDs in NFS to be considered as "Open to Organization" directly from BlueXP classification if the group had not initially been set with that permission. Any files and folders that have these group IDs attached will show as "Open to Organization" in the Investigation Details page. See how to link:https://docs.netapp.com/us-en/data-services-data-classification/task-add-group-id-as-open.html[add additional Group IDs as "open to organization"].
 
 //=== Now you can download up to 500k rows of data in CSV reports to a local directory
 //  
@@ -229,11 +229,11 @@ BlueXP classification can identify and categorize files that contain the followi
 * German ID (Personalausweisnummer)
 * German Social Security Number (Sozialversicherungsnummer)
 
-https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
+link:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-personal-data[See all the types of personal data that BlueXP classification can identify in your data].
 
 .BlueXP classification is fully supported in Restricted mode and Private mode
 
-BlueXP classification is now fully supported in sites with no internet access (Private mode) and with limited outbound internet access (Restricted mode). https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn more about BlueXP deployment modes for the Connector^].
+BlueXP classification is now fully supported in sites with no internet access (Private mode) and with limited outbound internet access (Restricted mode). link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn more about BlueXP deployment modes for the Connector^].
 
 .Ability to skip versions when upgrading a Private mode installation of BlueXP classification
 
@@ -243,14 +243,14 @@ Now you can upgrade to a newer version of BlueXP classification even if it is no
 
 The BlueXP classification API enables you to perform actions, create queries, and export information about the data you are scanning. The interactive documentation is available using Swagger. The documentation is separated into multiple categories, including Investigation, Compliance, Governance, and Configuration. Each category is a reference to the tabs in the BlueXP classification UI.
 
-https://docs.netapp.com/us-en/data-services-data-classification/api-classification.html[Learn more about the BlueXP classification APIs].
+link:https://docs.netapp.com/us-en/data-services-data-classification/api-classification.html[Learn more about the BlueXP classification APIs].
 
 == 06 June 2023
 === Version 1.23
 
 .Japanese is now supported when searching for data subject names
 
-Japanese names can now be entered when searching for a subject's name in response to a Data Subject Access Request (DSAR). You can generate a https://docs.netapp.com/us-en/data-services-data-classification/task-generating-compliance-reports.html[Data Subject Access Request report] with the resulting information. You can also enter Japanese names in the https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Data Subject" filter in the Data Investigation page] to identify files that contain the subject's name.
+Japanese names can now be entered when searching for a subject's name in response to a Data Subject Access Request (DSAR). You can generate a link:https://docs.netapp.com/us-en/data-services-data-classification/task-generating-compliance-reports.html[Data Subject Access Request report] with the resulting information. You can also enter Japanese names in the link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Data Subject" filter in the Data Investigation page] to identify files that contain the subject's name.
 
 .Ubuntu is now a supported Linux distribution on which you can install BlueXP classification
 

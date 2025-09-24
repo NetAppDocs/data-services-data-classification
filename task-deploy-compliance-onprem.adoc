@@ -233,7 +233,7 @@ Review the requirements and follow these steps when installing Data Classificati
 
 https://youtu.be/XiPLaJpfJEI[Watch this video^] to see how to install Data Classification.
 
-Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`. link:task-audit-actions.html[See more details here].
+Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`.
 
 .Before you begin
 

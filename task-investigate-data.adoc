@@ -223,9 +223,6 @@ Data Classification uses hashing technology to determine duplicate files. If any
 
 . Optionally, download the list of duplicate files and send it to your storage administrator so they can decide which files, if any, can be deleted. 
 
-. Optionally, link:task-managing-highlights.html[delete the file] yourself if you are confident that a specific version of the file is not needed.
-
-
 *View if a specific file is duplicated*
 
 You can see if a single file has duplicates. 
