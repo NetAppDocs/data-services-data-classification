@@ -3,58 +3,58 @@ permalink: data-services-data-classification/task-audit-actions.html
 redirect: data-services-data-classification/concept-classification.html
 ---
 
-sidebar: sidebar
-permalink: task-audit-actions.html
-keywords: compliance, actions, view progress, audit, logs, installation
-summary: Data Classification logs management activities that have been performed on files from all the systems and data sources that Data Classification is scanning. Data Classification also logs the activities when deploying the Data Classification instance.
----
+// sidebar: sidebar
+// permalink: task-audit-actions.html
+// keywords: compliance, actions, view progress, audit, logs, installation
+// summary: Data Classification logs management activities that have been performed on files from all the systems and data sources that Data Classification is scanning. Data Classification also logs the activities when deploying the Data Classification instance.
+// ---
 
-= Audit the history of NetApp Data Classification actions
-:hardbreaks:
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
+// = Audit the history of NetApp Data Classification actions
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
 
-[.lead]
-NetApp Data Classification logs management activities that have been performed on files from all the systems and data sources that Data Classification is scanning. Data Classification also logs the activities when deploying the Data Classification instance.
+// [.lead]
+// NetApp Data Classification logs management activities that have been performed on files from all the systems and data sources that Data Classification is scanning. Data Classification also logs the activities when deploying the Data Classification instance.
 
-You can view and download the contents of the Data Classification audit log files to see what file changes have occurred, and when. For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
+// You can view and download the contents of the Data Classification audit log files to see what file changes have occurred, and when. For example, you can see what request was issued, the time of the request, and details such as source location in case a file was deleted, or source and destination location in case a file was moved.
 
-include::_include/legacy-version-130.adoc[]
+// include::_include/legacy-version-130.adoc[]
 
-== Log file contents
+// == Log file contents
 
-Each line in the audit log contains information in this format:
+// Each line in the audit log contains information in this format:
 
-`<full date> | <status> | ds_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
+// `<full date> | <status> | ds_audit_logger | <module> | 0 | 0 | File <full file path> deleted from device <device path> - <result>`
 
-* Date and time - full timestamp for the event
-* Status - INFO, WARNING
-* Action type (delete, copy, move, create saved search, update saved search, rescan files, download JSON report, etc.)
-* File name (if the action is relevant to a file)
-* Details for the action - what was done: depends on the action
+// * Date and time - full timestamp for the event
+// * Status - INFO, WARNING
+// * Action type (delete, copy, move, create saved search, update saved search, rescan files, download JSON report, etc.)
+// * File name (if the action is relevant to a file)
+// * Details for the action - what was done: depends on the action
 
-** Saved search name
-** For move - Source and destination
-** For copy - Source and destination
-** For tag - tag name
-** For assign to - user name
-** For email alert - email address / account
+// ** Saved search name
+// ** For move - Source and destination
+// ** For copy - Source and destination
+// ** For tag - tag name
+// ** For assign to - user name
+// ** For email alert - email address / account
 
-For example, the following lines from the log file show a successful copy operation and a failed copy operation.
+// For example, the following lines from the log file show a successful copy operation and a failed copy operation.
 
- 2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
- 2022-06-06 15:23:08,968 | WARNING | ds_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
+//  2022-06-06 15:23:08,910 | INFO | ds_audit_logger | es_scanned_file | 237 | 49 | Copy file /CIFS_share/data/dop1/random_positives.tsv from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - SUCCESS
+//  2022-06-06 15:23:08,968 | WARNING | ds_audit_logger | es_scanned_file | 239 | 153 | Copy file /CIFS_share/data/compliance-netapp.tar.gz from device 10.31.133.183 (type: SMB_SHARE) to device 10.31.130.133:/export_reports (NFS_SHARE) - FAILURE
 
-== Log file locations
+// == Log file locations
 
-The management audit log files are located on the Data Classification machine in: `/opt/netapp/audit_logs/`
+// The management audit log files are located on the Data Classification machine in: `/opt/netapp/audit_logs/`
 
-The installation audit log files are written to `/opt/netapp/install_logs/`
+// The installation audit log files are written to `/opt/netapp/install_logs/`
 
-Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - older log files are deleted automatically after the maximum has been reached.
+// Each log file can be a maximum of 10 MB in size. When that limit is reached, a new log file is started. The log files are named "DataSense_audit.log", "DataSense_audit.log.1", "DataSense_audit.log.2", and so on. A maximum of 100 log files are retained on the system - older log files are deleted automatically after the maximum has been reached.
 
-== Access the log files
+// == Access the log files
 
-You need to log into the Data Classification system to access the log files. See how to link:reference-log-in-to-instance.html[log in to the Data Classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.
+// You need to log into the Data Classification system to access the log files. See how to link:reference-log-in-to-instance.html[log in to the Data Classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.

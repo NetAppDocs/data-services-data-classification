@@ -1,0 +1,105 @@
+---
+sidebar: sidebar
+permalink: task-active-directory.html
+keywords: active directory, ad, data sense, cloud data sense
+summary: You can integrate a global Active Directory with NetApp Data Classification to enhance the results that Data Classification reports about file owners and which users and groups have access to your files.
+---
+
+= Integrate your Active Directory with NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can integrate a global Active Directory with NetApp Data Classification to enhance the results that Data Classification reports about file owners and which users and groups have access to your files.
+
+//NOTE: Integration with Active Directory is not supported in the Data Classification core version.
+
+When you set up certain data sources (listed below), you need to enter Active Directory credentials in order for Data Classification to scan CIFS volumes. This integration provides Data Classification with file owner and permissions details for the data that resides in those data sources. The Active Directory entered for those data sources might differ from the global Active Directory credentials you enter here. Data Classification will look in all integrated Active Directories for user and permission details.
+
+This integration provides additional information in the following locations in Data Classification:
+
+* You can use the "File Owner" link:task-investigate-data.html[filter] and see results in the file's metadata in the Investigation pane. Instead of the file owner containing the SID (Security IDentifier), it is populated with the actual user name.
++
+You can also view more details about the file owner: account name, email address, and SAM account name, or view items owned by that user.
+* You can see link:task-investigate-data.html[full file permissions] for each file and directory when you click the "View all Permissions" button.
+* In the link:task-controlling-governance-data.html[Governance dashboard], the Open Permissions panel will show a greater level of detail about your data.
+
+NOTE: Local user SIDs, and SIDs from unknown domains, are not translated to the actual user name.
+
+== Supported data sources
+
+An Active Directory integration with Data Classification can identify data from within the following data sources:
+
+* On-premises ONTAP systems
+* Cloud Volumes ONTAP
+* Azure NetApp Files
+* FSx for ONTAP
+//* Third-party CIFS file shares (not NFS file shares)
+// * OneDrive accounts and SharePoint accounts (for legacy versions 1.30 and earlier)
+
+// There is no support for identifying user and permission information from Database schemas, Google Drive accounts, Amazon S3 accounts, or Object Storage that uses the Simple Storage Service (S3) protocol.
+
+== Connect to your Active Directory server
+
+After you've deployed Data Classification and have activated scanning on your data sources, you can integrate Data Classification with your Active Directory. Active Directory can be accessed using a DNS Server IP address or an LDAP Server IP address.
+
+The Active Directory credentials can be read-only, but providing admin credentials ensures that Data Classification can read any data that requires elevated permissions. The credentials are stored on the Data Classification instance.
+
+For CIFS volumes/file shares, if you want to make sure your files "last accessed times" are unchanged by Data Classification classification scans, the user should have Write Attributes permission. If possible, we recommend making the Active Directory configured user part of a parent group in the organization which has permissions to all files.
+
+.Requirements
+
+* You must have an Active Directory already set up for the users in your company.
+
+* You must have the information for the Active Directory:
+** DNS Server IP address, or multiple IP addresses
++
+or
++
+LDAP Server IP address, or multiple IP addresses
+** User Name and Password to access the server
+** Domain Name (Active Directory Name)
+** Whether you are using secure LDAP (LDAPS) or not
+** LDAP Server Port (typically 389 for LDAP, and 636 for secure LDAP)
+
+* The following ports must be open for outbound communication by the Data Classification instance:
++
+[cols="20,20,30,30",width=80%,options="header"]
+|===
+
+| Protocol
+| Port
+| Destination
+| Purpose
+
+| TCP & UDP | 389 | Active Directory | LDAP
+| TCP | 636 | Active Directory | LDAP over SSL
+| TCP | 3268 | Active Directory | Global Catalog
+| TCP | 3269 | Active Directory | Global Catalog over SSL
+
+|===
+
+.Steps
+
+. From the Data Classification Configuration page, click *Add Active Directory*.
++
+image:screenshot_compliance_integrate_active_directory.png[A screenshot that shows clicking the button to add an Active Directory server into Data Classification.]
+
+. In the Connect to Active Directory dialog, enter the Active Directory details and click *Connect*.
++
+You can add multiple IP addresses, if required, by selecting *Add IP*.
++
+image:screenshot_compliance_active_directory_dialog.png[A screenshot of the dialog where you define the Active Directory you want to integrate with Data Classification.]
++
+Data Classification integrates to the Active Directory, and a new section is added to the Configuration page.
++
+image:screenshot_compliance_active_directory_added.png[A screenshot showing the new Active Directory integrated in Data Classification.]
+
+== Manage your Active Directory integration
+
+If you need to modify any values in your Active Directory integration, click the *Edit* button and make the changes.
+
+You can also delete the integration selecting the image:button-gallery-options.gif[More button] button then *Remove Active Directory*.

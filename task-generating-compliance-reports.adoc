@@ -61,7 +61,7 @@ You can respond to a DSAR by searching for a subject's full name or known identi
 
 *How can Data Classification help you respond to a DSAR?*
 
-When you perform a data subject search, Data Classification finds all of the files, buckets, OneDrive, and SharePoint accounts that have that person's name or identifier in it. Data Classification checks the latest pre-indexed data for the name or identifier. It doesn't initiate a new scan.
+When you perform a data subject search, Data Classification finds all of the files that have that person's name or identifier in it. Data Classification checks the latest pre-indexed data for the name or identifier. It doesn't initiate a new scan.
 
 After the search is complete, you can then download the list of files for a Data Subject Access Request report. The report aggregates insights from the data and puts it into legal terms that you can send back to the person.
 

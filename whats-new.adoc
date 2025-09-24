@@ -195,8 +195,8 @@ This release included some minor enhancements.
 The release also removed the following options: 
 
 * The option to activate audit log collection has been disabled. 
-* During the Directories investigation, the option to calculate the number of personal identifiable information  (PII) data by Directories is not available. Refer to link:task-investigate-data.html[Investigate the data stored in your organization].
-* The option to integrate data using Azure Information Protection (AIP) labels has been disabled. Refer to link:task-org-private-data.html[Organize your private data].
+* During the Directories investigation, the option to calculate the number of personal identifiable information (PII) data by Directories is not available. Refer to link:task-investigate-data.html[Investigate the data stored in your organization].
+* The option to integrate data using Azure Information Protection (AIP) labels has been disabled.
 
 == 06 November 2023
 === Version 1.26.3

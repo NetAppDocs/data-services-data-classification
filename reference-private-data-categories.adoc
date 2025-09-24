@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-private-data-categories.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy,
-summary: There are many types of private data that Data Classification can identify in your volumes, Amazon S3 buckets, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts.
+summary: There are many types of private data that Data Classification can identify in your volumes.
 ---
 = Categories of private data in NetApp Data Classification
 :hardbreaks:

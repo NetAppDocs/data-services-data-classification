@@ -3,136 +3,136 @@ permalink: data-services-data-classification/task-scanning-sharepoint.html
 redirect: data-services-data-classification/task-scanning-overview.html
 ---
 
----
-sidebar: sidebar
-permalink: task-scanning-sharepoint.html
-keywords: cloud compliance, enable cloud compliance, privacy, compliance, sharepoint, sharepoint online, sharepoint on-premises, data sense
-summary: Complete a few steps to start scanning files in your SharePoint Online and SharePoint On-Premise accounts with NetApp Data Classification.
----
+// ---
+// sidebar: sidebar
+// permalink: task-scanning-sharepoint.html
+// keywords: cloud compliance, enable cloud compliance, privacy, compliance, sharepoint, sharepoint online, sharepoint on-premises, data sense
+// summary: Complete a few steps to start scanning files in your SharePoint Online and SharePoint On-Premise accounts with NetApp Data Classification.
+// ---
 
-= Scan SharePoint accounts with NetApp Data Classification
-:hardbreaks:
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
+// = Scan SharePoint accounts with NetApp Data Classification
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
 
-[.lead]
-Complete a few steps to start scanning files in your SharePoint Online and SharePoint On-Premise accounts with NetApp Data Classification.
+// [.lead]
+// Complete a few steps to start scanning files in your SharePoint Online and SharePoint On-Premise accounts with NetApp Data Classification.
 
-//Note that you can scan data from the default library and any additional libraries in the SharePoint site.
+// //Note that you can scan data from the default library and any additional libraries in the SharePoint site.
 
-====
-*NOTE*    This information is relevant only for Data Classification legacy versions 1.30 and earlier.
-====
+// ====
+// *NOTE*    This information is relevant only for Data Classification legacy versions 1.30 and earlier.
+// ====
 
 
 
-== Review SharePoint requirements
+// == Review SharePoint requirements
 
-Review the following prerequisites to make sure you are ready to activate Data Classification on a SharePoint account.
+// Review the following prerequisites to make sure you are ready to activate Data Classification on a SharePoint account.
 
-* You must have the Admin user login credentials for the SharePoint account that provides read access to all SharePoint sites.
-** For SharePoint Online you can use a non-Admin account, but that user must have permission to access all the SharePoint sites that you want to scan.
-* For SharePoint On-Premise, you'll also need the URL of the SharePoint Server.
-* You will need a line-separated list of the SharePoint site URLs for all the data you want to scan.
+// * You must have the Admin user login credentials for the SharePoint account that provides read access to all SharePoint sites.
+// ** For SharePoint Online you can use a non-Admin account, but that user must have permission to access all the SharePoint sites that you want to scan.
+// * For SharePoint On-Premise, you'll also need the URL of the SharePoint Server.
+// * You will need a line-separated list of the SharePoint site URLs for all the data you want to scan.
 
-== Deploy the Data Classification instance
+// == Deploy the Data Classification instance
 
-Deploy Data Classification if there isn't already an instance deployed.
+// Deploy Data Classification if there isn't already an instance deployed.
 
-* For SharePoint Online, Data Classification can be link:task-deploy-cloud-compliance.html[deployed in the cloud^].
-* For SharePoint On-Premises, Data Classification can be installed link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^] or link:task-deploy-compliance-dark-site.html[in an on-premises location that does not have internet access^]. 
+// * For SharePoint Online, Data Classification can be link:task-deploy-cloud-compliance.html[deployed in the cloud^].
+// * For SharePoint On-Premises, Data Classification can be installed link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^] or link:task-deploy-compliance-dark-site.html[in an on-premises location that does not have internet access^]. 
 
-When Data Classification is installed in a site without internet access, the Console agent also must be installed in that same site without internet access. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[Learn more^].
+// When Data Classification is installed in a site without internet access, the Console agent also must be installed in that same site without internet access. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[Learn more^].
 
-Upgrades to Data Classification software is automated as long as the instance has internet connectivity.
+// Upgrades to Data Classification software is automated as long as the instance has internet connectivity.
 
-== Add a SharePoint Online account
+// == Add a SharePoint Online account
 
-Add the SharePoint Online account where the user files reside.
+// Add the SharePoint Online account where the user files reside.
 
-.Steps
+// .Steps
 
-. From the Systems Configuration page, select *Add Data Source* > *Add SharePoint Online Account*.
-+
-image:screenshot_compliance_add_sharepoint_button.png[A screenshot of the Configuration page where you can select the Add SharePoint Online button.]
+// . From the Systems Configuration page, select *Add Data Source* > *Add SharePoint Online Account*.
+// +
+// image:screenshot_compliance_add_sharepoint_button.png[A screenshot of the Configuration page where you can select the Add SharePoint Online button.]
 
-. In the Add a SharePoint Online Account dialog, select *Sign in to SharePoint*.
+// . In the Add a SharePoint Online Account dialog, select *Sign in to SharePoint*.
 
-. In the Microsoft page that appears, select the SharePoint account and enter the user and password (Admin user or other user with access to the SharePoint sites), then select *Accept* to allow Data Classification to read data from this account.
+// . In the Microsoft page that appears, select the SharePoint account and enter the user and password (Admin user or other user with access to the SharePoint sites), then select *Accept* to allow Data Classification to read data from this account.
 
-The SharePoint Online account is added to the list of systems.
+// The SharePoint Online account is added to the list of systems.
 
-== Add a SharePoint On-premise account
+// == Add a SharePoint On-premise account
 
-Add the SharePoint On-premise account where the user files reside.
+// Add the SharePoint On-premise account where the user files reside.
 
-.Steps
+// .Steps
 
-. From the Systems Configuration page, select *Add Data Source* > *Add SharePoint On-premise Account*.
-+
-image:screenshot_compliance_add_sharepoint_onprem_button.png[A screenshot of the Configuration page where you can select the Add SharePoint On-premise button.]
+// . From the Systems Configuration page, select *Add Data Source* > *Add SharePoint On-premise Account*.
+// +
+// image:screenshot_compliance_add_sharepoint_onprem_button.png[A screenshot of the Configuration page where you can select the Add SharePoint On-premise button.]
 
-. In the Log into the SharePoint On-Premise Server dialog, enter the following information:
-* Admin user in the format "domain/user" or "user@domain", and admin password
-* URL of the SharePoint Server
-+
-image:screenshot_compliance_sharepoint_onprem.png[A screenshot showing the login information for a SharePoint On-premise account.]
+// . In the Log into the SharePoint On-Premise Server dialog, enter the following information:
+// * Admin user in the format "domain/user" or "user@domain", and admin password
+// * URL of the SharePoint Server
+// +
+// image:screenshot_compliance_sharepoint_onprem.png[A screenshot showing the login information for a SharePoint On-premise account.]
 
-. Select *Connect*.
+// . Select *Connect*.
 
-The SharePoint On-premise account is added to the list of systems.
+// The SharePoint On-premise account is added to the list of systems.
 
-== Add SharePoint sites to compliance scans
+// == Add SharePoint sites to compliance scans
 
-You can add individual SharePoint sites, or up to 1,000 SharePoint sites in the account, so that the associated files will be scanned by Data Classification. The steps are the same whether you are adding SharePoint Online or SharePoint On-premise sites.
+// You can add individual SharePoint sites, or up to 1,000 SharePoint sites in the account, so that the associated files will be scanned by Data Classification. The steps are the same whether you are adding SharePoint Online or SharePoint On-premise sites.
 
-.Steps
+// .Steps
 
-. From the _Configuration_ page, select the *Configuration* button for the SharePoint account.
-+
-image:screenshot_compliance_sharepoint_add_sites.png[A screenshot of the Scan Configuration page where you can select the Configuration button.]
+// . From the _Configuration_ page, select the *Configuration* button for the SharePoint account.
+// +
+// image:screenshot_compliance_sharepoint_add_sites.png[A screenshot of the Scan Configuration page where you can select the Configuration button.]
 
-. If this is the first time adding sites for this SharePoint account, select *Add your first SharePoint site*.
-+
-image:screenshot_compliance_sharepoint_add_initial_sites.png[A screenshot showing the Add your first SharePoint sites button to add initial sites to be scanned.]
-+
-If you are adding additional users from a SharePoint account, select *Add SharePoint Sites*.
-+
-image:screenshot_compliance_sharepoint_add_more_sites.png[A screenshot showing the Add SharePoint sites button to add more sites to an account.]
+// . If this is the first time adding sites for this SharePoint account, select *Add your first SharePoint site*.
+// +
+// image:screenshot_compliance_sharepoint_add_initial_sites.png[A screenshot showing the Add your first SharePoint sites button to add initial sites to be scanned.]
+// +
+// If you are adding additional users from a SharePoint account, select *Add SharePoint Sites*.
+// +
+// image:screenshot_compliance_sharepoint_add_more_sites.png[A screenshot showing the Add SharePoint sites button to add more sites to an account.]
 
-. Add the URLs for the sites whose files you want to scan - one URL per line (up to 100 maximum per session) - and select *Add Sites*.
-+
-image:screenshot_compliance_sharepoint_add_site.png[A screenshot of the Add SharePoint Sites page where you can add sites to be scanned.]
-+
-A confirmation dialog displays the number of sites that were added.
-+
-If the dialog lists any sites that could not be added, capture this information so that you can resolve the issue. In some cases you can re-add the site with a corrected URL.
+// . Add the URLs for the sites whose files you want to scan - one URL per line (up to 100 maximum per session) - and select *Add Sites*.
+// +
+// image:screenshot_compliance_sharepoint_add_site.png[A screenshot of the Add SharePoint Sites page where you can add sites to be scanned.]
+// +
+// A confirmation dialog displays the number of sites that were added.
+// +
+// If the dialog lists any sites that could not be added, capture this information so that you can resolve the issue. In some cases you can re-add the site with a corrected URL.
 
-. If you need to add more than 100 sites for this account, just select *Add SharePoint Sites* again until you have added all your sites for this account (up to 1,000 sites total for each account).
+// . If you need to add more than 100 sites for this account, just select *Add SharePoint Sites* again until you have added all your sites for this account (up to 1,000 sites total for each account).
 
-. Enable mapping-only scans, or mapping and classification scans, on the files in the SharePoint sites.
-+
-[cols="45,45",width=90%,options="header"]
-|===
-| To:
-| Do this:
+// . Enable mapping-only scans, or mapping and classification scans, on the files in the SharePoint sites.
+// +
+// [cols="45,45",width=90%,options="header"]
+// |===
+// | To:
+// | Do this:
 
-| Enable mapping-only scans on files | Select *Map*
-| Enable full scans on files | Select *Map & Classify*
-| Disable scanning on files | Select *Off*
+// | Enable mapping-only scans on files | Select *Map*
+// | Enable full scans on files | Select *Map & Classify*
+// | Disable scanning on files | Select *Off*
 
-|===
+// |===
 
-.Result
+// .Result
 
-Data Classification starts scanning the files in the SharePoint sites you added, and the results are displayed in the Dashboard and in other locations.
+// Data Classification starts scanning the files in the SharePoint sites you added, and the results are displayed in the Dashboard and in other locations.
 
-== Remove a SharePoint site from compliance scans
+// == Remove a SharePoint site from compliance scans
 
-If you remove a SharePoint site in the future, or decide not to scan files in a SharePoint site, you can remove individual SharePoint sites from having their files scanned at any time. Just select *Remove SharePoint Site* from the Configuration page.
+// If you remove a SharePoint site in the future, or decide not to scan files in a SharePoint site, you can remove individual SharePoint sites from having their files scanned at any time. Just select *Remove SharePoint Site* from the Configuration page.
 
-image:screenshot_compliance_sharepoint_remove_site.png[A screenshot showing how to remove a single SharePoint site from having their files scanned.]
+// image:screenshot_compliance_sharepoint_remove_site.png[A screenshot showing how to remove a single SharePoint site from having their files scanned.]
 
-Note that you can link:task-managing-compliance.html[delete the entire SharePoint account from Data Classification] if you no longer want to scan any user data from the SharePoint account.
+// Note that you can link:task-managing-compliance.html[delete the entire SharePoint account from Data Classification] if you no longer want to scan any user data from the SharePoint account.

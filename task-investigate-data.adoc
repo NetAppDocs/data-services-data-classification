@@ -117,7 +117,7 @@ Use the following filters to view data by storage type.
 | Filter
 | Details
 
-| System type | Select the type of system. OneDrive, SharePoint, and Google Drive are categorized under "Apps".
+| System type | Select the type of system.
 | System environment name | Select specific systems.
 | Storage Repository | Select the storage repository, for example, a volume or a schema.
 

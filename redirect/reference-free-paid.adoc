@@ -1,103 +1,102 @@
-
 ---
 permalink: data-services-data-classification/reference-free-paid.html
 redirect: data-services-data-classification/concept-classification.html
 ---
 
-= Deprecated features in NetApp Data Classification
-:hardbreaks:
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
+// = Deprecated features in NetApp Data Classification
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
 
-[.lead]
-NetApp Data Classification is available as a core capability within the NetApp Console at no additional charge. By including Data Classification as a core BlueXP capability available to all customers, NetApp is enabling you to access tailored data management with core features.  
+// [.lead]
+// NetApp Data Classification is available as a core capability within the NetApp Console at no additional charge. By including Data Classification as a core BlueXP capability available to all customers, NetApp is enabling you to access tailored data management with core features.  
 
-There are some features and functionality that are deprecated in the BlueXP core version starting with version 1.31 and later and are still supported in legacy versions 1.30 and earlier. 
+// There are some features and functionality that are deprecated in the BlueXP core version starting with version 1.31 and later and are still supported in legacy versions 1.30 and earlier. 
 
-== Supported data sources
+// == Supported data sources
 
-[cols="60,20,20",width=100%,options="header"]
-|===
-| Data source
-| Legacy versions 1.30 and earlier
-| BlueXP core versions 1.31 and later
+// [cols="60,20,20",width=100%,options="header"]
+// |===
+// | Data source
+// | Legacy versions 1.30 and earlier
+// | BlueXP core versions 1.31 and later
 
-| Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP) | Yes | Yes
-| On-premises ONTAP clusters | Yes | Yes
-| StorageGRID | Yes | Yes
-| Azure NetApp Files | Yes | Yes
-| Amazon FSx for ONTAP | Yes | Yes
-| Google Cloud NetApp Volumes  | Yes | Yes
-| Cloud Volumes Service for Google Cloud | Yes | Yes
-| Databases | Yes  | Yes
-| Amazon S3 | Yes | No
-| Google Cloud Storage | Yes | No
-| OneDrive | Yes | No
-| SharePoint Online | Yes | No
-| SharePoint On-premises (SharePoint Server) | Yes | No
-| Google Drive | Yes | No
+// | Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP) | Yes | Yes
+// | On-premises ONTAP clusters | Yes | Yes
+// | StorageGRID | Yes | Yes
+// | Azure NetApp Files | Yes | Yes
+// | Amazon FSx for ONTAP | Yes | Yes
+// | Google Cloud NetApp Volumes  | Yes | Yes
+// | Cloud Volumes Service for Google Cloud | Yes | Yes
+// | Databases | Yes  | Yes
+// | Amazon S3 | Yes | No
+// | Google Cloud Storage | Yes | No
+// | OneDrive | Yes | No
+// | SharePoint Online | Yes | No
+// | SharePoint On-premises (SharePoint Server) | Yes | No
+// | Google Drive | Yes | No
 
-|===
-
-
-
-== Compliance features
-
-[cols="60,20,20",width=100%,options="header"]
-|===
-| Feature
-| Legacy versions 1.30 and earlier
-| BlueXP core versions 1.31 and later
-
-| Identify Personal Identifiable Information (PII) | Yes | Yes
-| Identify sensitive personal information | Yes | Yes
-| Respond to Data Subject Access Requests (DSAR) | Yes | Yes
-| Create a custom list of "personal data" that is identified | Yes | No
-| Notify users through email when files contain certain PII. (You define this criteria using link:task-using-policies.html[Policies^].)  | Yes | No
-| Use directory-level filters  | Yes  | Yes
-| Use directory-level PII analysis  | Yes | No
-|===
+// |===
 
 
-== Features to manage your data
 
-[cols="60,20,20",width=100%,options="header"]
-|===
-| Feature
-| Legacy versions 1.30 and earlier
-| BlueXP core versions 1.31 and later
+// == Compliance features
 
-| Move, copy, and delete source files   | Yes | No
-| Categorize data using Status tags | Yes | No
-| Categorize data using AIP labels | Yes | No
-| Assign files to users | Yes | No
-| Rescan data on demand | Yes | No
-| Create custom classifiers | Yes | No
-| Exclude directories from scanning | Yes | Yes
-| Search for names within files | Yes | Yes
-| Export data to NFS/CIFS from investigation | Yes | Yes
-| Export data to CSV from investigation | Yes | Yes
-| Support multiple scanners | Yes | No
-| Integrate Active Directory  | Yes | Yes
-| Use permission analysis and filters | Yes | Yes
-| Use the file card | Yes | Yes
-| Use the heatmap | Yes | Yes
-| Use actions on Dashboard and file card | Yes | No
-| Use file access audit logging | Yes | No
-| Enable file access from the Configuration page | Yes | No
-| Use certain predefined policies | Yes | No
-// v1.43 policies -- is above still valid? 
+// [cols="60,20,20",width=100%,options="header"]
+// |===
+// | Feature
+// | Legacy versions 1.30 and earlier
+// | BlueXP core versions 1.31 and later
 
-|===
+// | Identify Personal Identifiable Information (PII) | Yes | Yes
+// | Identify sensitive personal information | Yes | Yes
+// | Respond to Data Subject Access Requests (DSAR) | Yes | Yes
+// | Create a custom list of "personal data" that is identified | Yes | No
+// | Notify users through email when files contain certain PII. (You define this criteria using link:task-using-policies.html[Policies^].)  | Yes | No
+// | Use directory-level filters  | Yes  | Yes
+// | Use directory-level PII analysis  | Yes | No
+// |===
 
-// predefined policies are supported in 1.30 and later? 
 
-//* For a limited time
-//* Predefined policies available only in versions 1.30 and earlier include: 
-//** S3 publicly - Exposed private data
-//** PCI DSS - Stale data over 30 days
-//** HIPAA - Stale data over 30 days
-//** GDPR - European citizens
-//** CCPA - California residents
+// == Features to manage your data
+
+// [cols="60,20,20",width=100%,options="header"]
+// |===
+// | Feature
+// | Legacy versions 1.30 and earlier
+// | BlueXP core versions 1.31 and later
+
+// | Move, copy, and delete source files   | Yes | No
+// | Categorize data using Status tags | Yes | No
+// | Categorize data using AIP labels | Yes | No
+// | Assign files to users | Yes | No
+// | Rescan data on demand | Yes | No
+// | Create custom classifiers | Yes | No
+// | Exclude directories from scanning | Yes | Yes
+// | Search for names within files | Yes | Yes
+// | Export data to NFS/CIFS from investigation | Yes | Yes
+// | Export data to CSV from investigation | Yes | Yes
+// | Support multiple scanners | Yes | No
+// | Integrate Active Directory  | Yes | Yes
+// | Use permission analysis and filters | Yes | Yes
+// | Use the file card | Yes | Yes
+// | Use the heatmap | Yes | Yes
+// | Use actions on Dashboard and file card | Yes | No
+// | Use file access audit logging | Yes | No
+// | Enable file access from the Configuration page | Yes | No
+// | Use certain predefined policies | Yes | No
+// // v1.43 policies -- is above still valid? 
+
+// |===
+
+// // predefined policies are supported in 1.30 and later? 
+
+// //* For a limited time
+// //* Predefined policies available only in versions 1.30 and earlier include: 
+// //** S3 publicly - Exposed private data
+// //** PCI DSS - Stale data over 30 days
+// //** HIPAA - Stale data over 30 days
+// //** GDPR - European citizens
+// //** CCPA - California residents

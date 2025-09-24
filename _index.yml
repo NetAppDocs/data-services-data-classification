@@ -12,8 +12,6 @@ indexpage:
           url: concept-classification.html
         - title: What's New
           url: whats-new.html
-        - title: Features available in NetApp Console core and legacy versions
-          url: reference-free-paid.html 
         - title: Deploy Data Classification in the cloud
           url: task-deploy-cloud-compliance.html
         - title: Install Data Classification on a Linux host with internet
