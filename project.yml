@@ -67,7 +67,7 @@ sidebar:
           url: /task-custom-classification.html
         - title: Investigate data
           url: /task-investigate-data.html
-        - title: Manage saved searches
+        - title: Manage saved queries
           url: /task-using-policies.html
         - title: Modify scan settings
           url: /task-managing-repo-scanning.html

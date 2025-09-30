@@ -244,8 +244,6 @@ image:screenshot-deploy-classification.png[A screenshot of selecting the button 
 //image:screenshot_cloud_deploy_resource_size.png[A screenshot of the deployment page to pick the size of the instance that Data Classification will be deployed on.]
 
 . The wizard displays progress as it goes through the deployment steps. When inputs are required or if it encounters issues, you are prompted.
-+
-image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Classification wizard to deploy a new instance.]
 
 . When the instance is deployed and Data Classification is installed, select *Continue to configuration* to go to the _Configuration_ page.
 --
@@ -259,12 +257,8 @@ image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Clas
 image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
 
 . Select *Deploy* to start the cloud deployment wizard.
-+
-image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy Data Classification in the cloud.]
 
 . The wizard displays progress as it goes through the deployment steps. It will stop and prompt for input if it runs into any issues.
-+
-image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Classification wizard to deploy a new instance.]
 
 . When the instance is deployed and Data Classification is installed, select *Continue to configuration* to go to the _Configuration_ page.
 --
@@ -280,12 +274,8 @@ image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Clas
 image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
 
 . Select *Deploy* to start the cloud deployment wizard.
-+
-image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy Data Classification in the cloud.]
 
 . The wizard displays progress as it goes through the deployment steps. It will stop and prompt for input if it runs into any issues.
-+
-image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Classification wizard to deploy a new instance.]
 
 . When the instance is deployed and Data Classification is installed, select *Continue to configuration* to go to the _Configuration_ page.
 --

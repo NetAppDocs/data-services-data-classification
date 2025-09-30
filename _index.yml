@@ -40,7 +40,7 @@ indexpage:
           url: task-investigate-data.html#check-for-duplicate-files-in-your-storage-systems
         - title: Filter your data to view specific files
           url: task-investigate-data.html
-        - title: Create a saved search
+        - title: Create a saved query
           url: task-using-policies.html
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html

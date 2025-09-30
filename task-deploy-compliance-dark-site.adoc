@@ -192,8 +192,6 @@ tar -xzf cc_onprem_installer.tar.gz
 image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
 
 . Select *Deploy* to start the on-prem installation.
-+
-image:screenshot_cloud_compliance_deploy_darksite.png[A screenshot of selecting the button to deploy Data Classification on premises.]
 
 . The _Deploy Data Classification On Premises_ dialog is displayed. Copy the provided command (for example: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq --darksite`) and paste it in a text file so you can use it later. Then select *Close* to dismiss the dialog.
 

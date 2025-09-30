@@ -12,7 +12,7 @@ summary: Learn what's new in BlueXP classification.
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new in BlueXP classification.
+Learn what's new in NetApp Data Classification.
 
 // tag::whats-new[]
 == 06 October 2025

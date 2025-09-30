@@ -71,8 +71,6 @@ NOTE: For Azure NetApp Files, Data Classification can only scan volumes in the s
 
 .Steps 
 . From the Data Classification menu, select *Configuration*.
-+
-image:screenshot_cifs_credentials.gif[A screenshot of the Compliance tab that shows the Scan Status button that's available in the top right of the content pane.]
 .. If you're using CIFS (SMB), ensure the Active Directory credentials are correct. For each system, select *Edit CIFS Credentials* then enter the user name and password that Data Classification needs to access CIFS volumes on the system.
 +
 The credentials can be read-only, but providing admin credentials ensures that Data Classification can read any data that requires elevated permissions. The credentials are stored on the Data Classification instance.

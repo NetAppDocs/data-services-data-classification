@@ -48,17 +48,17 @@ The _Saving Opportunities_ component shows data that you can delete or tier to l
 
 NOTE: If any of your data sources implement data tiering, old data that already resides in object storage can be identified in the _Stale Data_ category.
 
-=== Review saved searches with the largest number of results
+=== Review saved queries with the largest number of results
 
-In the _Saved searches_ tab, the searches with the greatest number of results appear at the top of the list. This data updates every two hours. 
+In the _Saved queries_ tab, the queries with the greatest number of results appear at the top of the list. This data updates every two hours. 
 
-For details about saved searches, see link:task-using-policies.html[Create saved searches].
+For details about saved queries, see link:task-using-policies.html[Create saved queries].
 
 .Steps 
 . From the Data Classification menu, select *Governance*.
-. In the Governance dashboard, locate the Saved Searches tile. Select the name of a saved search to display the results in the Investigation page. 
-. Select *View All* to view the list of all available saved searches.
-In the _Saved searches_ area, the searches with the greatest number of results appear at the top of the list. 
+. In the Governance dashboard, locate the Saved sueries tile. Select the name of a saved query to display the results in the Investigation page. 
+. Select *View All* to view the list of all available saved queries.
+In the _Saved queries_ area, the queries with the greatest number of results appear at the top of the list. 
 
 == Create the Data Discovery Assessment Report
 

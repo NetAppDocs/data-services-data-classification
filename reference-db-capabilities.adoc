@@ -29,7 +29,7 @@ You can add your databases schemas to Data Classification to be scanned link:tas
 | Amazon RDS
 
 .9+| Actions 
-| Create saved search | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Create saved query | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Tag | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Assign to | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Export data | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
@@ -40,7 +40,7 @@ You can add your databases schemas to Data Classification to be scanned link:tas
 | Label | x | x | x | x | x | x | x
 
 .25+| Filters 
-| Saved searches | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Saved queries | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Scan analysis status | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | System type | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | System | ✓ | ✓ | ✓ | ✓ | ✓ |  | 

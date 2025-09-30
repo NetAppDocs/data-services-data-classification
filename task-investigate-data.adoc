@@ -125,7 +125,7 @@ Use the following filters to view data by storage type.
 
 *Filter query*
 
-Use the following filter to view data by saved searches.
+Use the following filter to view data by saved queries.
 
 
 [cols=2*,options="header",cols="30,60"]
@@ -134,7 +134,7 @@ Use the following filter to view data by saved searches.
 | Filter
 | Details
 
-| Saved search | Select one saved search or multiples. Go to the link:task-using-policies.html[saved searches tab] to view the list of existing saved searches and create new ones.
+| Saved query | Select one saved query or multiples. Go to the link:task-using-policies.html[saved queries tab] to view the list of existing saved queries and create new ones.
 //| Label | Select link:task-org-private-data.html[AIP labels] that are assigned to your files.
 //| Tags | Select link:task-org-private-data.html[the tag or tags] that are assigned to your files.
 //| Assigned To | Select the name of the person to which the file is assigned.
@@ -174,7 +174,7 @@ Use the following filter to view files that are duplicated in your storage.
 
 == View file metadata
 
-In addition to showing you the system and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html[create saved searches] because you can see all the information that you can use to filter your data.
+In addition to showing you the system and volume where the file resides, the metadata shows much more information, including the file permissions, file owner, and whether there are duplicates of this file. This information is useful if you're planning to link:task-using-policies.html[create saved queries] because you can see all the information that you can use to filter your data.
 
 The availability of information depends on the data source. For example, volume name and permissions are not shared for database files.
 
@@ -198,8 +198,6 @@ If you security identifiers (SIDs) instead of user and group names, you should i
 . To view a list of all users or groups who have access to a file or to a directory and the types of permissions they have, in the Open Permissions field, select *View all Permissions*. 
 +
 NOTE: Data Classification shows up to 100 users in the list. 
-+
-image:screenshot_compliance_permissions.png[A screenshot showing detailed file permissions.]
 
 . Select the down-caret image:button_down_caret.png[down-caret] button for any group to see the list of users who are part of the group.
 +
@@ -240,7 +238,7 @@ If duplicates exist for a file, this information appears next to the _Duplicates
 +
 image:screenshot_compliance_duplicate_file.png[A screenshot showing how to view where duplicated files are located.]
 +
-TIP: You can use the "file hash" value provided in this page and enter it directly in the Investigation page to search for a specific duplicate file at any time - or you can use it in a saved search.
+TIP: You can use the "file hash" value provided in this page and enter it directly in the Investigation page to search for a specific duplicate file at any time - or you can use it in a saved query.
 
 == Download your report
 
@@ -332,18 +330,18 @@ A dialog displays a message that the reports are being downloaded.
 
 //You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
 
-== Create a saved search based on selected filters
+== Create a saved query based on selected filters
 
-You can create a saved search for frequently used search filters in the Data Investigation page to easily replicate those search queries. 
+You can create a saved query for frequently used search filters in the Data Investigation page to easily replicate those queries. 
 
 .Steps
 
 . From the Data Classification menu, select *Investigation*. 
-. On the Data Investigation page, select the filters you want to use to create a saved search.
-. At the bottom of the Filter pane, select *Create saved search from this search*.
-. Enter a name and a description for the saved search.
+. On the Data Investigation page, select the filters you want to use to create a saved query.
+. At the bottom of the Filter pane, select *Create saved query from this query*.
+. Enter a name and a description for the saved query.
 . Choose any of the following: 
-. Select *Create Saved Search*.
+. Select *Create Saved Query*.
 
 [TIP]
-It can take up to 15 minutes for the results to appear on the Saved Searches page. 
+It can take up to 15 minutes for the results to appear on the Saved Queries page. 

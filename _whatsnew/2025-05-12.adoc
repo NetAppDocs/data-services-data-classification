@@ -20,9 +20,9 @@ Data Classification supports custom classifications for Map & Classify scans. Wi
 
 For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-custom-classification.html[Add custom classifications].
 
-.Saved searches tab
+.Saved queries tab
 
-The **Policies** tab has been renamed link:https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html[**Saved searches**]. The functionality is unchanged. 
+The **Policies** tab has been renamed link:https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html[**Saved queries**]. The functionality is unchanged. 
 
 .Send scan events to the Audit page
 
