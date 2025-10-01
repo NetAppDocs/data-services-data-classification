@@ -1,0 +1,2 @@
+[IMPORTANT]
+Private mode support of Data Classification is frozen at version 1.45. For documentation of private, see link:[Data Classification PDF^].

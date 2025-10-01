@@ -1,0 +1,29 @@
+---
+permalink: data-services-data-classification/task-managing-compliance-deprecated.html
+redirect: data-services-data-classification/task-managing-compliance.html
+---
+
+// ---
+// sidebar: sidebar
+// permalink: task-managing-compliance-deprecated.html
+// keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, deactivate, deactivating cloud compliance, data sense
+// summary: You can stop NetApp Data Classification from scanning one or more systems, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts.
+// ---
+
+// = Remove a OneDrive, SharePoint, or Google Drive account from NetApp Data Classification
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
+
+// [.lead]
+// If you no longer want to scan user files from a certain OneDrive account, from a specific SharePoint account, or from a Google Drive account, you can delete the account from the NetApp Data Classification interface and stop all scans.
+
+// .Steps
+
+// . From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the OneDrive, SharePoint, or Google Drive account, then select *Remove OneDrive Account*, *Remove SharePoint Account*, or *Remove Google Drive account*.
+// +
+// //image:screenshot_compliance_remove_onedrive.png[A screenshot of the Remove OneDrive button from the Scan Configuration page.]
+
+// . Select *Delete Account* from the confirmation dialog.

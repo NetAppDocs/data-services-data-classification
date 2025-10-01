@@ -1,14 +1,62 @@
+# Start snippet: landing page
 indexpage:
-  title: # Unquoted string 
-  lead: # Quoted string
-  summary: # Quoted string 
-  keywords: # Unquoted comma-delimited list of keywords 
-  tiles: 
-    # Tile definition 
-    - title: # Quoted or unquoted string
-      links: 
-        # Link definition
-        - title: # Quoted or unquoted string
-          url: # Path to target
-        # Next link on this tile (title/url pair)
-    # Next tile on this page (title/links)
+   title: NetApp Data Classification documentation
+   lead: NetApp Data Classificaiton enables you to scan and classify data across your organization's hybrid multicloud. Data Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+   summary: NetApp Data Classificaiton enables you to scan and classify data across your organization's hybrid multicloud. Data Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+   keywords: bluexp, data classification, cloud data sense, data sense, compliance, security, netapp console, bluexp classification 
+   tiles:
+    # Paste tile definitions from project.yml below this line and correct the indentation as needed
+    - title: Get started
+      links:
+        - title: Learn about Data Classification
+          url: concept-classification.html
+        - title: What's New
+          url: whats-new.html
+        - title: Deploy Data Classification in the cloud
+          url: task-deploy-cloud-compliance.html
+        - title: Install Data Classification on a Linux host with internet
+          url: task-deploy-compliance-onprem.html
+    - title: Scan your data sources 
+      links:
+        - title: Scan Amazon FSx for ONTAP volumes
+          url: task-scanning-fsx.html
+        - title: Scan Azure NetApp Files volumes
+          url: task-scanning-anf.html          
+        - title: Scan Cloud Volumes ONTAP volumes
+          url: task-getting-started-compliance.html
+        - title: Scan database schemas
+          url: task-scanning-databases.html
+        - title: Scan file shares (CIFS, NFS)
+          url: task-scanning-file-shares.html  
+        - title: Scan on-premises ONTAP volumes
+          url: task-getting-started-compliance.html           
+        - title: Scan StorageGRID
+          url: task-scanning-storagegrid.html      
+    - title: View details about your data
+      links:
+        - title: View files containing private information
+          url: task-controlling-private-data.html
+        - title: View files duplicated in your storage
+          url: task-investigate-data.html#check-for-duplicate-files-in-your-storage-systems
+        - title: Filter your data to view specific files
+          url: task-investigate-data.html
+        - title: Create a saved search
+          url: task-using-policies.html
+        - title: Generate compliance reports
+          url: task-generating-compliance-reports.html
+        - title: Respond to a Data Subject Access Request
+          url: task-generating-compliance-reports.html  
+    - title: Blogs & community
+      links:
+        - title: NetApp Console
+          url: https://www.netapp.com/console
+        - title: NetApp Data Services
+          url: https://www.netapp.com/data-services/
+        - title: NetApp Community 
+          url: https://community.netapp.com/
+        # check on these 2
+        - title: Data Classification use cases
+          url: https://bluexp.netapp.com/netapp-cloud-data-sense
+        - title: Data Classification videos
+          url: https://youtube.com/playlist?list=PLdXI3bZJEw7m0dFDhu3w6Yqt71Zqyl2Pw
+# End snippet

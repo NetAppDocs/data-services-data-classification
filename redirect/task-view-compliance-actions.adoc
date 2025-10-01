@@ -1,0 +1,46 @@
+---
+permalink: data-services-data-classification/task-view-compliance-actions.html
+redirect: data-services-data-classification/task-managing-repo-scanning.html
+---
+
+// ---
+// sidebar: sidebar
+// permalink: task-view-compliance-actions.html
+// keywords: compliance, actions, view progress
+// summary: When you run an action from the Investigation Results pane across many files, for example, deleting 100 files, the process can take some time. You can monitor the status of these asynchronous actions in the Action Status pane so you know when it has been applied to all files.
+// ---
+
+// = View the status of your compliance actions in NetApp Data Classification
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
+
+// [.lead]
+// When you run an asynchronous action from the Investigation Results pane across many files, for example, moving or deleting 100 files, the process can take time. You can monitor the status of these actions in the _Action Status_ pane so you know when it has been applied to all files.
+
+// This allows you to see the actions that have completed successfully, those currently in progress, and those that have failed so you can diagnose and fix any problems. Note that short operations that complete quickly, such as moving a single file, do not appear in the Actions Status pane.
+
+// include::_include/legacy-version-130.adoc[]
+
+// The status can be:
+
+// * Success - A Data Classification action is finished and all items succeeded.
+// * Partial Success - A Data Classification action is finished and some items failed and some succeeded.
+// * In Progress - The action is still in progress.
+// * Queued - The action has not started.
+// * Canceled - The action has been canceled.
+// * Failed - The action failed.
+
+// Note that you can Cancel any actions that have the "Queued" or "In Progress" status.
+
+// .Steps
+
+// . In the bottom-right of the Data Classification UI you can see the *Actions Status* button image:button_actions_status.png[].
+
+// . Select this button and the most recent 20 actions are listed.
+// +
+// image:screenshot_compliance_action_status.png[A screenshot that shows the last 20 actions and their statuses in the Configuration page.]
+
+// You can select the name of an action to view details corresponding to that operation.

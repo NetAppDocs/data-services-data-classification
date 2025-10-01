@@ -1,0 +1,263 @@
+---
+sidebar: sidebar
+permalink: reference-private-data-categories.html
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy,
+summary: There are many types of private data that Data Classification can identify in your volumes.
+---
+= Categories of private data in NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are many types of private data that NetApp Data Classification can identify in your volumes and databases. 
+
+Data Classification identifies two types of personal data: 
+
+* *Personally identifiable information (PII)*
+* *Sensitive personal information (SPII)*
+
+TIP: If you need Data Classification to identify other private data types, such as additional national ID numbers or healthcare identifiers, contact your account manager. 
+
+== Types of personal data
+
+The personal data, or _personally identifiable information_ (PII), found in files can be general personal data or national identifiers. The third column in the table below identifies whether Data Classification uses link:task-controlling-private-data.html#view-files-that-contain-personal-data[proximity validation^] to validate its findings for the identifier.
+
+The languages in which these items can be recognized are identified in the table.
+
+//Note that you can add to the list of personal data that is found in your files. If you are scanning a database server, the _Data Fusion_ feature enables you to choose additional identifiers that Data Classification will look for in its scans by selecting columns in a database table. You can also add custom keywords from a text file, or custom patterns using a regular expression. See link:task-managing-data-fusion.html[Adding personal data identifiers to your Data Classification scans^] for details.
+
+[cols="13,37,10,8,8,8,8,8",width=90%,options="header"]
+|===
+| Type
+| Identifier
+| Proximity validation?
+| English
+| German
+| Spanish
+| French
+| Japanese
+
+.6+| General | Credit card number | Yes | ✓ | ✓ | ✓ |  | ✓
+| Data Subjects | No | ✓ | ✓ | ✓ |  | 
+| Email Address | No | ✓ | ✓ | ✓ |  | ✓
+| IBAN Number (International Bank Account Number) | No | ✓ | ✓ | ✓ |  | ✓
+| IP Address | No | ✓ | ✓ | ✓ |  | ✓
+| Password | Yes | ✓ | ✓ | ✓ |  | ✓
+
+.88+| National Identifiers | Australian TFN (Tax File Number) | Yes | ✓ | ✓ | ✓ |  | 
+| Australian Driver's License | Yes | ✓ | ✓ | ✓ |  | 
+| Australian Medicare Number | Yes | ✓ | ✓ | ✓ |  | 
+| Australian Passport Number | Yes | ✓ | ✓ | ✓ |  | 
+| Austrian SSN | Yes | ✓ | ✓ | ✓ |  | 
+| Belgian ID (Numero National) | Yes | ✓ | ✓ | ✓ |  | 
+| Botswana Identity Card (Omang) Number | Yes | ✓ | ✓ | ✓ |  | 
+| Botswana Passport Number | Yes | ✓ | ✓ | ✓ |  | 
+| Brazilian ID (CPF) | Yes | ✓ | ✓ | ✓ |  | 
+| British Passport | Yes | ✓ | ✓ | ✓ |  | 
+| Bulgarian ID (UCN) | Yes | ✓ | ✓ | ✓ |  | 
+| Canadian Banking Information Numbers - Account Number | Yes | ✓ | | |  | 
+| Canadian Banking Information Numbers - Transit Number | Yes | ✓ | | |  |
+| Canadian Citizenship/Permanent Resident Number - PR Card Number (UCI) | Yes | ✓ | | |  | 
+| Canadian Driver's License - Alberta | Yes | ✓ | | | |
+| Canadian Driver's License - British Columbia | Yes | ✓ | | |  |
+| Canadian Driver's License - Manitoba | Yes | ✓ | | |  |
+| Canadian Driver's License - New Brunswick | Yes | ✓ | | |  |
+| Canadian Driver's License - Newfoundland and Labrador | Yes | ✓ | | |  |
+| Canadian Driver's License - Northwest Territories | Yes | ✓ | | |  |
+| Canadian Driver's License - Nova Scotia | Yes | ✓ | | |  |
+| Canadian Driver's License - Nunavut | Yes | ✓ | | |  |
+| Canadian Driver's License - Ontario | Yes | ✓ | | |  |
+| Canadian Driver's License - Prince Edward Island | Yes | ✓ | | |  | 
+| Canadian Driver's License - Quebec | Yes | ✓ | | |  |
+| Canadian Driver's License - Saskatchewan | Yes | ✓ | | |  |
+| Canadian Driver's License - Yukon | Yes | ✓ | | |  |
+| Canadian Health Card Number - Alberta PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - British Columbia PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - Manitoba PHIN | Yes | ✓ | | |  | 
+| Canadian Health Card Number - PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - Newfoundland and Labrador PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - Northwest Territories PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - Nova Scotia PHIN | Yes | ✓ | | |  | 
+| Canadian Health Card Number - Nunavut PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - Ontario PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - Prince Edward Island PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - Quebec PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - Saskatchewan PHIN | Yes | ✓ | | |  |
+| Canadian Health Card Number - Yukon PHIN | Yes | ✓ | | |  |
+| Canadian Passport Number | Yes | ✓ | | |  |
+| Canadian Social Insurance Number (SIN) | Yes | ✓ | | |  |
+| Croatian ID (OIB) | Yes | ✓ | ✓ | ✓ |  | 
+| Cyprus Tax Identification Number (TIC) | Yes | ✓ | ✓ | ✓ |  | 
+| Czech/Slovak ID | Yes | ✓ | ✓ | ✓ |  | 
+| Danish ID (CPR) | Yes | ✓ | ✓ | ✓ |  | 
+| Dutch ID (BSN) | Yes | ✓ | ✓ | ✓ |  | 
+| Estonian ID | Yes | ✓ | ✓ | ✓ |  | 
+| Finnish ID (HETU) | Yes | ✓ | ✓ | ✓ |  | 
+| French Driver's License | Yes | ✓ | ✓ | ✓ | ✓ | 
+| French ID | Yes | ✓ | ✓ | ✓ | ✓ | 
+| French INSEE | Yes | ✓ | ✓ | ✓ | ✓ | 
+| French Social Security Number | Yes | ✓ | ✓ | ✓ | ✓ | 
+| French Tax Identification Number (SPI) | Yes | ✓ | ✓ | ✓ | ✓ | 
+| German ID (Personalausweisnummer) | Yes | ✓ | ✓ | ✓ |  | 
+| German Internal ID for Bank Transfers | Yes | ✓ | ✓ | ✓ |  | 
+// | German Matriculation Number (Matrikelnummer) | Yes | ✓ | ✓ | ✓ |  | 
+| German Social Security Number (Sozialversicherungsnummer) | Yes | ✓ | ✓ | ✓ |  | 
+| German Tax Identification Number (Steuerliche Identifikationsnummer) | Yes | ✓ | ✓ | ✓ |   |
+// | German Telephone Number | Yes | ✓ | ✓ | ✓ |  | 
+| Greek ID | Yes | ✓ | ✓ | ✓ |  | 
+| Hungarian Tax Identification Number | Yes | ✓ | ✓ | ✓ |  | 
+| Irish ID (PPS) | Yes | ✓ | ✓ | ✓ |  | 
+| Israeli ID | Yes | ✓ | ✓ | ✓ |  | 
+| Italian Tax Identification Number | Yes | ✓ | ✓ | ✓ |  | 
+| Japanese Personal Identification Number (both Personal and Corporate) | Yes | ✓ | ✓ | ✓ |  | ✓
+| Latvian ID | Yes | ✓ | ✓ | ✓ |  | 
+| Lithuanian ID | Yes | ✓ | ✓ | ✓ |  | 
+| Luxembourg ID | Yes | ✓ | ✓ | ✓ |  | 
+| Maltese ID | Yes | ✓ | ✓ | ✓ |  | 
+| National Health Service (NHS) Number | Yes | ✓ | ✓ | ✓ |  | 
+| New Zealand Bank Account | Yes | ✓ | ✓ | ✓ |  | 
+| New Zealand Driver's License | Yes | ✓ | ✓ | ✓ |  | 
+| New Zealand IRD Number (Tax ID) | Yes | ✓ | ✓ | ✓ |  | 
+| New Zealand NHI (National Health Index) Number | Yes | ✓ | ✓ | ✓ |  | 
+| New Zealand Passport Number | Yes | ✓ | ✓ | ✓ |  | 
+| Polish ID (PESEL) | Yes | ✓ | ✓ | ✓ |  | 
+| Portuguese Tax Identification Number (NIF) | Yes | ✓ | ✓ | ✓ |  | 
+| Romanian ID (CNP) | Yes | ✓ | ✓ | ✓ |  | 
+| Singapore National Registration Identity Card (NRIC) | Yes | ✓ | ✓ | ✓ |  | 
+| Slovenian ID (EMSO) | Yes | ✓ | ✓ | ✓ |  | 
+| South African ID | Yes | ✓ | ✓ | ✓ |  | 
+| Spanish Tax Identification Number | Yes | ✓ | ✓ | ✓ |  | 
+| Swedish ID | Yes | ✓ | ✓ | ✓ |  | 
+// | Swedish Social Security Number | Yes | ✓ | ✓ | ✓ |  | 
+| UK ID (NINO) | Yes | ✓ | ✓ | ✓ |  | 
+| USA California Driver's License | Yes | ✓ | ✓ | ✓ |  | 
+| USA Indiana Driver's License | Yes | ✓ | ✓ | ✓ |  | 
+| USA New York Driver's License | Yes | ✓ | ✓ | ✓ |  | 
+| USA Texas Driver's License | Yes | ✓ | ✓ | ✓ |  | 
+| USA Social Security Number (SSN) | Yes | ✓ | ✓ | ✓ |  | 
+|===
+
+== Types of sensitive personal data
+
+Data Classification can find the following sensitive personal information (SPII) in files. 
+
+The following SPII can currently only be recongized in English:
+
+// Civil Law Reference:: Data concerning a natural person's civil law suits, offenses, and procedures.
+* *Criminal Procedures Reference*: Data concerning a natural person's criminal convictions and offenses.
+* *Ethnicity Reference*: Data concerning a natural person's racial or ethnic origin.
+* *Health Reference*: Data concerning a natural person's health.
+* *ICD-9-CM Medical Codes*: Codes used in the medical and health industry.
+* *ICD-10-CM Medical Codes*: Codes used in the medical and health industry.
+* *Philosophical Beliefs Reference*: Data concerning a natural person's philosophical beliefs.
+* *Political Opinions Reference*: Data concerning a natural person's political opinions.
+* *Religious Beliefs Reference*: Data concerning a natural person's religious beliefs.
+* *Sex Life or Orientation Reference*:	Data concerning a natural person's sex life or sexual orientation.
+
+== Types of categories
+
+Data Classification categorizes your data as follows. 
+
+Most of these categories can be recognized in English, German, and Spanish.
+
+[cols="25,25,15,15,15",width=90%,options="header"]
+|===
+| Category
+| Type
+| English
+| German
+| Spanish
+
+.4+| Finance | Balance Sheets | ✓ | ✓ | ✓
+| Purchase Orders | ✓ | ✓ | ✓
+| Invoices | ✓ | ✓ | ✓
+| Quarterly Reports | ✓ | ✓ | ✓
+
+.6+| HR | Background Checks | ✓ |  | ✓
+| Compensation Plans | ✓ | ✓ | ✓
+| Employee Contracts | ✓ |  | ✓
+| Employee Reviews | ✓ |  | ✓
+| Health | ✓ |  | ✓
+| Resumes | ✓ | ✓ | ✓
+
+.2+| Legal| NDAs | ✓ | ✓ | ✓
+| Vendor-Customer contracts | ✓ | ✓ | ✓
+
+.2+| Marketing| Campaigns | ✓ | ✓ | ✓
+| Conferences | ✓ | ✓ | ✓
+
+.1+| Operations| Audit Reports | ✓ | ✓ | ✓
+
+.1+| Sales | Sales Orders | ✓ | ✓ |
+
+.4+| Services | RFI | ✓ |  | ✓
+| RFP | ✓ |  | ✓
+| SOW | ✓ | ✓ | ✓
+| Training | ✓ | ✓ | ✓
+
+.1+| Support | Complaints and Tickets | ✓ | ✓ | ✓
+
+|===
+
+The following metadata is also categorized and identified in the same supported languages:
+
+* Application Data
+* Archive Files
+* Audio
+* Breadcrumbs from Data Classification
+Business Application Data
+* CAD Files
+* Code
+* Corrupted
+* Database and index files
+* Design Files
+* Email Application Data
+* Encrypted (files with a high entropy score)
+* Executables
+* Financial Application Data
+* Health Application Data
+* Images
+* Logs
+* Miscellaneous Documents
+* Miscellaneous Presentations
+* Miscellaneous Spreadsheets
+* Miscellaneous "Unknown"
+* Password Protected files
+* Structured Data
+* Videos
+* Zero-Byte Files
+
+== Types of files
+
+Data Classification scans all files for category and metadata insights and displays all file types in the file types section of the dashboard. When Data Classification detects Personal Identifiable Information (PII) or when it performs a DSAR search, only the following file formats are supported:
+
+`+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+== Accuracy of information found
+
+NetApp can't guarantee 100% accuracy of the personal data and sensitive personal data that Data Classification identifies. You should always validate the information by reviewing the data.
+
+Based on our testing, the table below shows the accuracy of the information that Data Classification finds. We break it down by _precision_ and _recall_:
+
+Precision:: The probability that what Data Classification finds has been identified correctly. For example, a precision rate of 90% for personal data means that 9 out of 10 files identified as containing personal information, actually contain personal information. 1 out of 10 files would be a false positive.
+
+Recall:: The probability for Data Classification to find what it should. For example, a recall rate of 70% for personal data means that Data Classification can identify 7 out of 10 files that actually contain personal information in your organization. Data Classification would miss 30% of the data and it won't appear in the dashboard.
+
+We are constantly improving the accuracy of our results. Those improvements will be automatically available in future Data Classification releases.
+
+[cols="25,20,20",width=80%,options="header"]
+|===
+| Type
+| Precision
+| Recall
+
+| Personal data - General | 90%-95% | 60%-80%
+| Personal data - Country identifiers | 30%-60% | 40%-60%
+| Sensitive personal data | 80%-95% | 20%-30%
+| Categories | 90%-97% | 60%-80%
+|===
+
+// 2025 16 april, BLUEXPDOC-402

@@ -1,0 +1,179 @@
+---
+sidebar: sidebar
+permalink: task-scanning-overview.html
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify
+summary: Scan your data sources with NetApp Data Classification.
+---
+
+= Scan data sources with NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+NetApp Data Classification scanns the data in the repositories (the volumes, database schemas, or other user data) that you select to identify personal and sensitive data. Data Classification then maps your organizational data, categorizes each file, and identifies predefined patterns in the data. The result of the scan is an index of personal information, sensitive personal information, data categories, and file types.
+
+After the initial scan, Data Classification continuously scans your data in a round-robin fashion to detect incremental changes. This is why it's important to keep the instance running.
+
+You can enable and disable scans at the volume level or at the database schema level.
+
+== What's the difference between Mapping and Classification scans
+
+You can conduct two types of scans in Data Classification:
+
+- **Mapping-only scans** provide only a high-level overview of your data and are performed on selected data sources. Mapping-only scans take less time than map and classify scans because the do not access files to see the data inside. You might want to do this initially to identify areas of research and then perform a Map & Classify scan on those areas.
+- **Map & Classify scans** provide deep-level scanning of your data. 
+
+
+
+The table below shows some of the differences:
+
+[cols="47,18,18",width=85%,options="header"]
+|===
+| Feature
+| Map & classify scans
+| Mapping-only scans
+
+| Scan speed | Slow | Fast
+| Pricing | Free | Free
+| Capacity | Limited to 500 TiB* | Limited to 500 TiB*
+| List of file types and used capacity | Yes | Yes
+| Number of files and used capacity | Yes | Yes
+| Age and size of files | Yes | Yes
+| Ability to run a link:task-controlling-governance-data.html[Data Mapping Report] | Yes | Yes
+| Data Investigation page to view file details | Yes | No
+| Search for names within files | Yes | No
+| Create link:task-using-policies.html[saved searches] that provide custom search results | Yes | No
+| Ability to run other reports | Yes | No
+| Ability to see metadata from files** | No | Yes
+|===
+
+{asterisk} Data Classification does not impose a limit on the amount of data it can scan. Each Console agent supports scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation[install another Console agent^] then link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html[deploy another Data Classification instance]. +
+The Console UI displays data from a single connector. For tips on viewing data from multiple Console agents, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors[Work with multiple Console agents^].
+// duplicate of content in include file due to formattinginclude::_include/console-agent-limit.adoc[]
+
+{asterisk}{asterisk} The following metadata is extracted from files during mapping scans:  
+
+* System 
+* System type 
+* Storage repository 
+* File type 
+* Used capacity 
+* Number of files  
+* File size 
+* File creation 
+* File last access  
+* File last modified 
+* File discovered time 
+* Permissions extraction 
+
+
+// Start snippet: collapsible block (open on page load)
+.Governance dashboard differences:
+[%collapsible]
+====
+
+
+[cols="40,25,25",width=85%,options="header"]
+|===
+| Feature
+| Map & Classify
+| Map 
+
+| Stale data | Yes | Yes
+| Non-business data | Yes | Yes
+| Duplicated files | Yes | Yes
+| Predefined saved searches | Yes | No
+| Default saved searches | Yes | Yes
+| DDA report | Yes | Yes
+| Mapping report| Yes | Yes
+|Sensitivity level detection | Yes | No
+| Sensitive data with wide permissions | Yes | No
+| Open permissions | Yes | Yes
+| Age of data | Yes | Yes
+| Size of data | Yes | Yes
+| Categories | Yes | No
+| File types | Yes | Yes
+|===
+
+====
+// End snippet
+
+
+// Start snippet: collapsible block (open on page load)
+
+.Compliance dashboard differences:
+[%collapsible]
+====
+
+[cols="40,25,25",width=85%,options="header"]
+|===
+| Feature
+| Map & Classify
+| Map 
+
+| Personal information | Yes | No
+| Sensitive personal information | Yes | No
+| Privacy risk assessment report | Yes | No
+| HIPAA report | Yes | No
+| PCI DSS report | Yes | No
+|===
+
+====
+// End snippet
+
+
+// Start snippet: collapsible block (open on page load)
+.Investigation filters differences:
+[%collapsible]
+====
+
+[cols="40,25,25",width=85%,options="header"]
+|===
+| Feature
+| Map & Classify
+| Map 
+
+| Saved searches | Yes | Yes
+| System type | Yes | Yes
+| System | Yes | Yes
+| Storage repository | Yes | Yes
+| File type | Yes | Yes
+| File size | Yes | Yes
+| Created time | Yes | Yes
+| Discovered time | Yes | Yes
+| Last modified | Yes | Yes
+| Last access | Yes | Yes
+| Open permissions | Yes | Yes
+| File directory path | Yes | Yes
+| Category | Yes | No
+| Sensitivity level | Yes | No
+
+| Number of identifiers | Yes | No
+| Personal data | Yes | No
+| Sensitive personal data | Yes | No
+| Data subject | Yes | No
+| Duplicates | Yes | Yes
+| Classification status | Yes | Status is always "Limited insights"
+| Scan analysis event | Yes | Yes
+| File hash | Yes | Yes
+| Number of users with access | Yes | Yes
+| User/group permissions |Yes | Yes
+| File owner | Yes | Yes
+| Directory type | Yes | Yes
+
+|===
+
+====
+// End snippet
+
+
+== How quickly does Data Classification scan data
+
+The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
+
+* When performing Mapping-only scans, Data Classification can scan between 100 and 150 TiB of data per day. 
+* When performing Map & classify scans, Data Classification can scan between 15 and 40 TiB of data per day. 
+

@@ -1,0 +1,30 @@
+---
+sidebar: sidebar
+permalink: task-custom-classification.html
+keywords: custom classification, customize, regular expression, keyword, regex
+summary: NetApp Data Classification enables you to customize a search for sensitive information, tailoring the service to individual patterns and keywords relevant to your organization.
+---
+= Create a custom classification in NetApp Data Classification
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+With NetApp Data Classification, you can create a custom search for sensitive information. The search can be scoped to a regular expression (regex). 
+
+== Create a custom classification
+
+Custom classification is only available for Map & Classify scans, not mapping-only scans. This feature is currently in preview. 
+
+.Steps
+. Select the **Custom classification** tab. 
+image:screenshot-custom-classification-tab.png[A screenshot of the Custom classification page.]
+. Select the **Add New Classifier** button.
+. Add a Name and Description for the new classifier. 
+. To add the customization as a regular expression, select **Custom regular expression** then **Next**. 
+. Add a pattern to detect the specific information of your data. Select **Validate** to confirm the syntax of your entry. 
+image:screenshot-create-logic-regex.png[A screenshot of the dialog to create a regular expression.]
+. Select **Done** to create the custom classification. 
+
+The new customization is captured in the next scheduled scan. To view results, see xref:task-generating-compliance-reports.html[Generate compliance reports].

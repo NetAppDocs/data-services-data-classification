@@ -1,0 +1,54 @@
+---
+sidebar: sidebar
+permalink: task-add-group-id-as-open.html
+keywords: permissions, open to organization, file access
+summary: When group IDs are attached to files or folders in NFS file shares they define the permissions for the file or folder; such as whether they are "open to the organization". If some group IDs (GIDs) are not initially set up with the "Open to Organization" permission level, you can add that permission to the GID so that any files and folders that have that GID attached will be deemed "open to the organization".
+---
+
+= Define additional group IDs as open to organization in NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When group IDs (GIDs) are attached to files or folders in NFS file shares they define the permissions for the file or folder; such as whether they are "open to the organization". If some GIDs are not initially set up with the "Open to Organization" permission level, you can add that permission to the GID so that any files and folders that have that GID attached will be deemed "open to the organization".
+
+After you make this change and NetApp Data Classification rescans your files and folders, any files and folders that have these group IDs attached will show this permission in the Investigation Details page, and they'll also appear in reports where you are displaying file permissions.
+
+To activate this functionality, you need to log into the Data Classification system so you can edit a configuration file and run a script. See how to link:reference-log-in-to-instance.html[log in to the Data Classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.
+
+== Add the "open to organization" permission to group IDs
+
+You need to have the group ID numbers (GIDs) before starting this task.
+
+.Steps
+
+. On the Data Classification system, go to "/opt/netapp/config/custom_configuration" and open the file `data_provider.yaml`.
+
+. In the line "organization_group_ids: []" add the group IDs. For example:
+
+ organization_group_ids: [1014, 1015, 21, 2021, 1013, 2020, 1018, 1019]
++
+Do not change anything else in this file.
+
+. Save the changes to the file.
+
+. Go to "/opt/netapp/Datasense/tools/customer_configuration/data_providers" and run the following script:
+
+ update_data_providers_from_config_file.sh
++
+This command commits the revised group ID permissions to the classification engine.
+
+.Result
+
+All subsequent scans of your data will identify files or folders that have these group IDs attached as "open to organization."
+
+You can edit the list of group IDs and delete any group IDs you added in the past using these same steps. The revised list of group IDs will be updated after you run the script to commit your changes.
+
+== View the current list of group IDs
+
+It's possible for the contents of the `data_provider.yaml` configuration file to differ from what has actually been committed after running the `update_data_providers_from_config_file.sh` script. To view the current list of group IDs that you've added to Data Classification, run the following command from "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
+
+ get_data_providers_configuration.sh

@@ -1,0 +1,3 @@
+=== Version 1.38
+This BlueXP classification release includes general improvements and bug fixes.
+

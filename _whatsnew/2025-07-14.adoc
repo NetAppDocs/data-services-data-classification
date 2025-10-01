@@ -1,0 +1,15 @@
+=== Version 1.45
+
+This BlueXP classification release includes code changes that optimize resource utilization and:
+
+.Improved workflow to add file shares for scanning
+
+The workflow to add files shares to a file share group has been simplified. The process also now differentiates CIFS protocol support based on authentication type (Kerberos or NTLM). 
+
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-scanning-file-shares.html[Scan file shares].
+
+.Enhanced file owner information
+
+You can now view more information about file owners for files captured in the Investigation tab. When viewing metadata for a file in the Investigation tab, locate the file owner then select **View details** to see the username, email, and SAM account name. You can also view other items owned by this user. This feature is only available for working environments with Active Directory.
+
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html[Investigate the data stored in your organization].

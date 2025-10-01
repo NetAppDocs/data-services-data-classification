@@ -1,0 +1,138 @@
+---
+sidebar: sidebar
+permalink: task-getting-started-compliance.html
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense
+summary: Complete a few steps to start scanning your Cloud Volumes ONTAP and on-premises ONTAP volumes using NetApp Data Classification.
+---
+
+= Scan Cloud Volumes ONTAP and on-premises ONTAP volumes with NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Complete a few steps to start scanning your Cloud Volumes ONTAP and on-premises ONTAP volumes using NetApp Data Classification.
+
+
+== Prerequisites
+
+Before you enable Data Classification, make sure you have a supported configuration.
+
+* If you are scanning Cloud Volumes ONTAP and on-premises ONTAP systems that are accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy Data Classification in the cloud] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access].
+
+* If you are scanning on-premises ONTAP systems that have been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy Data Classification in the same on-premises location that has no internet access]. This requires the Console agent to be deployed in that same on-premises location.
+
+== Enable Data Classification scanning in your systems
+
+You can enable Data Classification scanning on Cloud Volumes ONTAP systems in any supported cloud provider, and on on-premises ONTAP clusters.
+
+.Steps
+
+. From the Data Classification menu, select *Configuration*.
++
+The Configuration page shows multiple systems. 
++
+image:screen-cl-config-cvo.png[A screenshot of the Configuration tab showing a Cloud Volumes ONTAP system.]
+
+. Choose a system then select *Configuration*. 
++
+image:screen-cl-config-cvo-map-options.png[A screenshot of the Configuration tab showing the options for mapping and classifying repositories.]
+
+. If you don't care if the last access time is reset, turn the *Scan when missing "write attributes" permissions* switch ON and all files are scanned regardless of the permissions. 
++
+The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't classify the files because Data Classification can't revert the "last access time" to the original timestamp. link:reference-collected-metadata.html[Learn more^].
+
+
+. Select how you want to scan the volumes in each system. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans[Learn about mapping and classification scans]:
+
+* To map all volumes, select *Map*.
+* To map and classify all volumes, select *Map & Classify*.
+* To customize scanning for each volume, select *Custom*, and then choose the volumes you want to map and/or classify.
+
+
+. In the confirmation dialog box, select *Approve* to have Data Classification start scanning your volumes.
+
+.Result
+
+Data Classification starts scanning the volumes you selected in the system. Results start to appear in the Compliance dashboard as soon as Data Classification starts the scan. The time that it takes to complete depends on the amount of data--it could be a few minutes or hours.  
+
+NOTE: Data Classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume[See more details about this Data Classification limitation^].
+
+
+
+== Verify that Data Classification has access to volumes
+
+Make sure that Data Classification can access volumes by checking your networking, security groups, and export policies. You'll need to provide Data Classification with CIFS credentials so it can access CIFS volumes.
+
+.Checklist
+
+* Make sure that there's a network connection between the Data Classification instance and each network that includes volumes for Cloud Volumes ONTAP or on-prem ONTAP clusters.
+* Ensure that the security group for Cloud Volumes ONTAP allows inbound traffic from the Data Classification instance.
++
+You can either open the security group for traffic from the IP address of the Data Classification instance, or you can open the security group for all traffic from inside the virtual network.
+* Ensure that NFS volume export policies include the IP address of the Data Classification instance so it can access the data on each volume.
+
+.Steps
+. From the Data Classification menu, select *Configuration*.
++
+image:screen-cl-config-cvo-map-options.png[A screenshot of the Configuration tab showing the options for mapping and classifying repositories.]
+.. If you use CIFS, provide Data Classification with Active Directory credentials so it can scan CIFS volumes. For each system, select *Edit CIFS Credentials* and enter the user name and password that Data Classification needs to access CIFS volumes on the system.
++
+The credentials can be read-only, but providing admin credentials ensures that Data Classification can read any data that requires elevated permissions. The credentials are stored on the Data Classification instance.
+include::_include/cifs-permissions.adoc[]
++
+After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.
+
+. On the Configuration page, select *Configuration* to review the status for each CIFS and NFS volume and correct any errors.
+
+
+== Disable compliance scans on volumes
+
+You can start or stop mapping-only scans, or mapping and classification scans, in a system at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa. We recommend that you scan all volumes.
+
+NOTE: New volumes added to the system are automatically scanned only when you have set the *Map* or *Map & Classify* setting in the heading area. When the option is set to *Custom* or *Off* in the heading area, you'll need to activate mapping and/or full scanning on each new volume you add in the system.
+
+.Steps
+. From the Data Classification menu, select *Configuration*.
+. Select the *Configuration* button for the system that you want to change.
++
+image:screen-cl-config-cvo-map-options.png[A screenshot of the Configuration tab showing the options for mapping and classifying repositories.]
+
+. Do one of the following: 
+
+* To disable scanning on a volume, in the volume area, select *Off*. 
+* To disable scanning on all volumes, in the heading area, select *Off*.
+
+
+
+//== Scan data protection volumes
+
+//By default, data protection (DP) volumes are not scanned because they are not exposed externally and Data Classification cannot access them. These are the destination volumes for SnapMirror operations from an on-premises ONTAP system or from a Cloud Volumes ONTAP system.
+
+//Initially, the volume list identifies these volumes as _Type_ *DP* with the _Status_ *Not Scanning* and the _Required Action_ *Enable Access to DP volumes*.
+
+//image:screenshot_cloud_compliance_dp_volumes.png[A screenshot showing the Enable Access to DP Volumes button that you can select to scan data protection volumes.]
+
+//.Steps
+
+//If you want to scan these data protection volumes:
+
+//. From the Data Classification menu, select *Configuration*.
+//. Select *Enable Access to DP volumes* at the top of the page.
+
+//. Review the confirmation message and select *Enable Access to DP volumes* again.
+//- Volumes that were initially created as NFS volumes in the source ONTAP system are enabled.
+//- Volumes that were initially created as CIFS volumes in the source ONTAP system require that you enter CIFS credentials to scan those DP volumes. If you already entered Active Directory credentials so that Data Classification can scan CIFS volumes you can use those credentials, or you can specify a different set of Admin credentials.
+//+
+//image:screenshot_compliance_dp_cifs_volumes.png[A screenshot of the two options for enabling CIFS data protection volumes.]
+
+//. Activate each DP volume that you want to scan.
+
+//.Result
+//Once enabled, Data Classification creates an NFS share from each DP volume that was activated for scanning. The share export policies only allow access from the Data Classification instance.
+
+//If you had no CIFS data protection volumes when you initially enabled access to DP volumes, and later add some, the button *Enable Access to CIFS DP* appears at the top of the Configuration page. Select this button and add CIFS credentials to enable access to these CIFS DP volumes.
+
+//NOTE: Active Directory credentials are registered only in the storage VM of the first CIFS DP volume, so all DP volumes on that SVM will be scanned. Any volumes that reside on other SVMs will not have the Active Directory credentials registered, so those DP volumes won't be scanned.

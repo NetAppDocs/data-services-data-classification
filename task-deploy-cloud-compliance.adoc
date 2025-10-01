@@ -1,0 +1,304 @@
+---
+sidebar: sidebar
+permalink: task-deploy-cloud-compliance.html
+keywords: cloud compliance, data sense, quickstart, outbound internet, endpoints, cloud compliance internet, browser connectivity, cloud compliance access, privacy, compliance, bluexp classification, classification, netapp console,
+summary: Complete a few steps to deploy NetApp Data Classification in the cloud. The NetApp Console deploys the Data Classification instance in the same cloud provider network as the Console agent.
+---
+= Deploy NetApp Data Classification in the cloud using the NetApp Console
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can deploy NetApp Data Classification in the cloud with the NetApp Console. The Console deploys the Data Classification instance in the same cloud provider network as the Console agent.
+
+Note that you can also link:task-deploy-compliance-onprem.html[install Data Classification on a Linux host that has internet access]. This type of installation may be a good option if you prefer to scan on-premises ONTAP systems using a Data Classification instance that's also located on premises -- but this is not a requirement. The software functions exactly the same way regardless of which installation method you choose.
+
+== Quick start
+
+Get started quickly by following these steps, or scroll down to the remaining sections for full details.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Create a Console agent
+
+[role="quick-margin-para"]
+If you don't already have a Console agent, create one. See https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^].
+
+[role="quick-margin-para"]
+You can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Prerequisites
+
+[role="quick-margin-para"]
+Ensure that your environment can meet the prerequisites. This includes outbound internet access for the instance, connectivity between the Console agent and Data Classification over port 443, and more. << Prerequisites,See the complete list>>.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy Data Classification
+
+[role="quick-margin-para"]
+Launch the installation wizard to deploy the Data Classification instance in the cloud.
+
+== Create a Console agent
+
+If you don't already have a Console agent, create a Console agent in your cloud provider. See https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^] or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]. In most cases you will probably have a Console agent set up before you attempt to activate Data Classification because most https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-a-connector-is-required[Console features require a Console agent], but there are cases where you'll you need to set one up now.
+
+There are some scenarios where you have to use a Console agent that's deployed in a specific cloud provider:
+
+//* When scanning data in Cloud Volumes ONTAP in AWS, Amazon FSx for ONTAP, or in Amazon Simple Storage Service (Amazon S3) buckets, you use a Console agent in AWS.
+* When scanning data in Cloud Volumes ONTAP in AWS or Amazon FSx for ONTAP buckets, you use a Console agent in AWS.
+* When scanning data in Cloud Volumes ONTAP in Azure or in Azure NetApp Files, you use a Console agent in Azure.
+** For Azure NetApp Files, it must be deployed in the same region as the volumes you wish to scan.
+* When scanning data in Cloud Volumes ONTAP in GCP, you use a Console agent in GCP.
+
+On-prem ONTAP systems, NetApp file shares, and databases can be scanned when using any of these cloud Console agents.
+//On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts can be scanned when using any of these cloud Console agents.
+
+Note that you can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or in the cloud. Some users planning to install Data Classification on-prem may also choose to install the Console agent on-premises.
+
+As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors[multiple Console agents].
+
+[TIP]
+include::_include/console-agent-limit.adoc[]
+
+=== Government region support
+
+Data Classification is supported when the Console agent is deployed in a Government region (AWS GovCloud, Azure Gov, or Azure DoD). When deployed in this manner, Data Classification has the following restrictions:
+
+//* OneDrive accounts, SharePoint accounts, and Google Drive accounts can't be scanned.
+//* Microsoft Azure Information Protection (AIP) label functionality can't be integrated.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-restricted-mode.html[See more information about deploying the Console agent in a Government region^].
+
+== Prerequisites
+
+Review the following prerequisites to make sure that you have a supported configuration before you deploy Data Classification in the cloud. When you deploy Data Classification in the cloud, it's located in the same subnet as the Console agent.
+
+Enable outbound internet access from Data Classification::
+Data Classification requires outbound internet access. If your virtual or physical network uses a proxy server for internet access, ensure that the Data Classification instance has outbound internet access to contact the following endpoints. The proxy must be non-transparent. Transparent proxies are not currently supported.
++
+Review the appropriate table below depending on whether you are deploying Data Classification in AWS, Azure, or GCP.
++
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Required endpoints for AWS
+--
+[cols="43,57",options="header"]
+|===
+| Endpoints
+| Purpose
+
+| \https://api.bluexp.netapp.com | Communication with the Console service, which includes NetApp accounts.
+
+|
+\https://netapp-cloud-account.auth0.com
+\https://auth0.com
+
+| Communication with the Console website for centralized user authentication.
+
+|
+\https://cloud-compliance-support-netapp.s3.us-west-2.amazonaws.com
+\https://hub.docker.com
+\https://auth.docker.io
+\https://registry-1.docker.io
+\https://index.docker.io/
+\https://dseasb33srnrn.cloudfront.net/
+\https://production.cloudflare.docker.com/
+
+| Provides access to software images, manifests, and templates.
+
+| \https://kinesis.us-east-1.amazonaws.com	| Enables NetApp to stream data from audit records.
+
+|
+\https://cognito-idp.us-east-1.amazonaws.com
+\https://cognito-identity.us-east-1.amazonaws.com
+\https://user-feedback-store-prod.s3.us-west-2.amazonaws.com
+\https://customer-data-production.s3.us-west-2.amazonaws.com
+
+| Enables Data Classification to access and download manifests and templates, and to send logs and metrics.
+|===
+--
+
+.Required endpoints for Azure
+--
+[cols="43,57",options="header"]
+|===
+| Endpoints
+| Purpose
+
+| \https://api.bluexp.netapp.com | Communication with the Console service, which includes NetApp accounts.
+
+|
+\https://netapp-cloud-account.auth0.com
+\https://auth0.com
+
+| Communication with the Console website for centralized user authentication.
+
+|
+\https://support.compliance.api.bluexp.netapp.com/
+\https://hub.docker.com
+\https://auth.docker.io
+\https://registry-1.docker.io
+\https://index.docker.io/
+\https://dseasb33srnrn.cloudfront.net/
+\https://production.cloudflare.docker.com/
+
+| Provides access to software images, manifests, templates, and to send logs and metrics.
+
+| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
+|===
+--
+
+.Required endpoints for GCP
+--
+[cols="43,57",options="header"]
+|===
+| Endpoints
+| Purpose
+
+| \https://api.bluexp.netapp.com | Communication with the Console service, which includes NetApp accounts.
+
+|
+\https://netapp-cloud-account.auth0.com
+\https://auth0.com
+
+| Communication with the Console website for centralized user authentication.
+
+|
+\https://support.compliance.api.bluexp.netapp.com/
+\https://hub.docker.com
+\https://auth.docker.io
+\https://registry-1.docker.io
+\https://index.docker.io/
+\https://dseasb33srnrn.cloudfront.net/
+\https://production.cloudflare.docker.com/
+
+| Provides access to software images, manifests, templates, and to send logs and metrics.
+
+| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
+|===
+--
+
+====
+
+// end tabbed area
+
+Ensure that Data Classification has the required permissions::
+Ensure that Data Classification has permissions to deploy resources and create security groups for the Data Classification instance.
+
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html[Google Cloud permissions^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#classification[AWS permissions^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#classification[Azure permissions^]
+
+Ensure that the Console agent can access Data Classification::
+Ensure connectivity between the Console agent and the Data Classification instance. The security group for the Console agent must allow inbound and outbound traffic over port 443 to and from the Data Classification instance. This connection enables deployment of the Data Classification instance and enables you to view information in the Compliance and Governance tabs. Data Classification is supported in Government regions in AWS and Azure.
++
+Additional inbound and outbound security group rules are required for AWS and AWS GovCloud deployments. See https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html[Rules for the Console agent in AWS^] for details.
++
+Additional inbound and outbound security group rules are required for Azure and Azure Government deployments. See https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html[Rules for the Console agent in Azure^] for details.
+
+Ensure you can keep Data Classification running::
+The Data Classification instance needs to stay on to continuously scan your data.
+
+Ensure web browser connectivity to Data Classification::
+After Data Classification is enabled, ensure that users access the Console interface from a host that has a connection to the Data Classification instance.
++
+The Data Classification instance uses a private IP address to ensure that the indexed data isn't accessible to the internet. As a result, the web browser that you use to access the Console must have a connection to that private IP address. That connection can come from a direct connection to your cloud provider (for example, a VPN), or from a host that's inside the same network as the Data Classification instance.
+
+Check your vCPU limits::
+Ensure that your cloud provider's vCPU limit allows for the deployment of an instance with the necessary number of cores. You'll need to verify the vCPU limit for the relevant instance family in the region where the Console is running. link:concept-classification.html#the-data-classification-instance[See the required instance types].
++
+See the following links for more details on vCPU limits:
++
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html[AWS documentation: Amazon EC2 service quotas^]
+* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas[Azure documentation: Virtual machine vCPU quotas^]
+* https://cloud.google.com/compute/quotas[Google Cloud documentation: Resource quotas^]
+
+
+
+== Deploy Data Classification in the cloud
+
+Follow these steps to deploy an instance of Data Classification in the cloud. The Console agent will deploy the instance in the cloud, and then install Data Classification software on that instance.
+
+In regions where the default instance type isn't available, Data Classification runs on an link:reference-instance-types.html[alternate instance type].
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Deploy in AWS
+--
+.Steps
+
+. From the main page of Data Classification, select *Deploy Classification On-Premises or Cloud*.
++
+image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
+
+. From the _Installation_ page, select *Deploy > Deploy* to use the "Large" instance size and start the cloud deployment wizard. 
+//+
+//Then select *Deploy* to start the cloud deployment wizard.
+//+
+//image:screenshot_cloud_deploy_resource_size.png[A screenshot of the deployment page to pick the size of the instance that Data Classification will be deployed on.]
+
+. The wizard displays progress as it goes through the deployment steps. When inputs are required or if it encounters issues, you are prompted.
++
+image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Classification wizard to deploy a new instance.]
+
+. When the instance is deployed and Data Classification is installed, select *Continue to configuration* to go to the _Configuration_ page.
+--
+
+.Deploy in Azure
+--
+.Steps
+
+. From the main page of Data Classification, select *Deploy Classification On-Premises or Cloud*.
++
+image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
+
+. Select *Deploy* to start the cloud deployment wizard.
++
+image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy Data Classification in the cloud.]
+
+. The wizard displays progress as it goes through the deployment steps. It will stop and prompt for input if it runs into any issues.
++
+image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Classification wizard to deploy a new instance.]
+
+. When the instance is deployed and Data Classification is installed, select *Continue to configuration* to go to the _Configuration_ page.
+--
+
+.Deploy in Google Cloud
+--
+.Steps
+
+. From the main page of Data Classification, select *Governance > Classification*.
+
+. Select *Deploy Classification On-Premises or Cloud*.
++
+image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
+
+. Select *Deploy* to start the cloud deployment wizard.
++
+image:screenshot_cloud_compliance_deploy_cloud.png[A screenshot of selecting the button to deploy Data Classification in the cloud.]
+
+. The wizard displays progress as it goes through the deployment steps. It will stop and prompt for input if it runs into any issues.
++
+image:screenshot_cloud_compliance_wizard_start.png[A screenshot of the Data Classification wizard to deploy a new instance.]
+
+. When the instance is deployed and Data Classification is installed, select *Continue to configuration* to go to the _Configuration_ page.
+--
+
+====
+
+.Result
+
+The Console deploys the Data Classification instance in your cloud provider.
+
+Upgrades to the Console agent and Data Classification software is automated as long as the instances have internet connectivity.
+
+.What's Next
+From the Configuration page you can select the data sources that you want to scan.
+
+

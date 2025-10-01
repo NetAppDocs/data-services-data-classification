@@ -1,0 +1,69 @@
+---
+sidebar: sidebar
+permalink: reference-db-capabilities.html
+keywords: database actions, database filters, supported, unsupported
+summary: There are some features and functionality that are unavailable with NetApp Data Classification when you are scanning database schemas.
+---
+= Supported and unsupported database capabilities in NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are some features and functionality that are unavailable with NetApp Data Classification when you are scanning database schemas. See the list below.
+
+You can add your databases schemas to Data Classification to be scanned link:task-scanning-databases.html[as described here^].
+
+[cols="12,25,9,9,9,9,9,9,9",width=95%,options="header"]
+|===
+| Type
+| Description
+| MongoDB
+| SQL Server
+| MySQL
+| Oracle
+| PostgreSQL
+| SAP HANA
+| Amazon RDS
+
+.9+| Actions 
+| Create saved search | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Tag | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Assign to | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Export data | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Rescan | x | x | x | x | x | x | x
+| Delete | x | x | x | x | x | x | x
+| Move | x | x | x | x | x | x | x
+| Copy | x | x | x | x | x | x | x
+| Label | x | x | x | x | x | x | x
+
+.25+| Filters 
+| Saved searches | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Scan analysis status | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| System type | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| System | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Storage repository | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Sensitivity level | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Sensitive personal data | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Categories | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Personal data | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Data subject | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| File type | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| File size | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Discovered time | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Tags | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Assign to | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Scan analysis event | x | x | x | x | x | x | x
+| File/directory path | x | x | x | x | x | x |  x
+| Permissions filters | x | x | x | x | x | x | x
+| Label | x | x | x | x | x | x | x
+| Number of identifiers | x | x | x | x | x | x | x
+| Directory type | x | x | x | x | x | x | x
+| Created time | x | x | x | x | x | x | x
+| Last modified | x | x | x | x | x | x | x
+| Last accessed | x | x | x | x | x | x | x
+| Duplicates | x | x | x | x | x | x | x
+
+|===

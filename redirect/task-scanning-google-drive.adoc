@@ -1,0 +1,146 @@
+---
+permalink: data-services-data-classification/task-scanning-google-drive.html
+redirect: data-services-data-classification/task-scanning-overview.html
+---
+
+
+// ---
+// sidebar: sidebar
+// permalink: task-scanning-google-drive.html
+// keywords: cloud compliance, enable cloud compliance, privacy, compliance, google drive, data sense
+// summary: Complete a few steps to start scanning user files in your Google Drive accounts with NetApp Data Classification.
+// ---
+
+// = Scan Google Drive accounts with NetApp Data Classification
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
+
+// [.lead]
+// Complete a few steps to start scanning user files in your Google Drive accounts with NetApp Data Classification.
+
+// [NOTE]
+// This information is relevant only for Data Classification legacy versions 1.30 and earlier.
+
+// == Quick start
+
+// Get started quickly by following these steps, or scroll down to the remaining sections for full details.
+
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Review Google Drive prerequisites
+
+// [role="quick-margin-para"]
+// Ensure that you have the Admin credentials to log into the Google Drive account.
+// //, and that you have the URLs for the Google Drive sites that you want to scan.
+
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy Data Classification
+
+// [role="quick-margin-para"]
+// link:task-deploy-cloud-compliance.html[Deploy Data Classification^] if there isn't already an instance deployed.
+
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Log into the Google Drive account
+
+// [role="quick-margin-para"]
+// Using Admin user credentials, log into the Google Drive account that you want to access so that it is added as a new data source.
+
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Select the type of scanning for the user files
+
+// [role="quick-margin-para"]
+// Select the type of scanning you want to perform on the user files; mapping or mapping and classifying.
+// //
+// //.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the Google Drive site URLs to scan
+// //
+// //[role="quick-margin-para"]
+// //Add the list of Google Drive site URLs that you want to scan in the Google Drive account, and select the type of scanning. You can add up to 100 URLs at time.
+
+// == Review Google Drive requirements
+
+// Review the following prerequisites to make sure you are ready to enable Data Classification on a Google Drive account.
+
+// * You must have the Admin login credentials for the Google Drive account that provides read access to the user's files
+// // all Google Drive sites.
+// // * You will need a line-separated list of the Google Drive site URLs for all the data you want to scan.
+
+// === Current restrictions
+
+// The following Data Classification features are not currently supported with Google Drive files:
+
+// * When viewing files in the Data Investigation page, the actions in the button bar aren't active. You can't copy, move, delete, etc. any files.
+// * Permissions can't be identified within files in Google Drive, so no permission information is displayed in the Investigation page.
+
+// == Deploy Data Classification
+
+// Deploy Data Classification if there isn't already an instance deployed.
+
+// Data Classification can be link:task-deploy-cloud-compliance.html[deployed in the cloud^] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^].
+
+// Upgrades to Data Classification software is automated as long as the instance has internet connectivity.
+// //
+// // Data Classification can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local Google Drive files. link:task-deploy-compliance-dark-site.html[See the list of required endpoints here].
+
+// == Add the Google Drive account
+
+// Add the Google Drive account where the user files reside. If you want to scan files from multiple users, you'll need to run through this step for each user.
+
+// .Steps
+
+// . From the Systems Configuration page, select *Add Data Source* > *Add Google Drive Account*.
+// +
+// // image:screenshot_compliance_add_google_drive_button.png[A screenshot of the Scan Configuration page where you can select the Add Google Drive button.]
+
+// . In the Add a Google Drive Account dialog, select *Sign in to Google Drive*.
+
+// . In the Google page that appears, select the Google Drive account and enter the required Admin user and password, then select *Accept* to allow Data Classification to read data from this account.
+
+// The Google Drive account is added to the list of systems.
+
+// == Select the type of scanning for user data
+
+// Select the type of scanning that Data Classification will perform on the user's data.
+
+// .Steps
+
+// . From the _Configuration_ page, select the *Configuration* button for the Google Drive account.
+
+// //
+// //. If this is the first time adding sites for this Google Drive account, select *Add your first Google Drive site*.
+// //+
+// //image:screenshot_compliance_google_drive_add_initial_sites.png[A screenshot showing the Add your first Google Drive sites button to add initial sites to be scanned.]
+// //+
+// //If you are adding additional users from a Google Drive account, select *Add Google Drive Sites*.
+// //+
+// //image:screenshot_compliance_sharepoint_add_more_sites.png[A screenshot showing the Add Google Drive sites button to add more sites to an account.]
+// //. Add the URLs for the sites whose files you want to scan - one URL per line (up to 100 maximum per session) - and select *Add Sites*.
+// //+
+// //image:screenshot_compliance_google_drive_add_site.png[A screenshot of the Add Google Drive Sites page where you can add sites to be scanned.]
+// //+
+// //A confirmation dialog displays the number of sites that were added.
+// //+
+// //If the dialog lists any sites that could not be added, capture this information so that you can resolve the issue. In some cases you can re-add the site with a corrected URL.
+
+// . Enable mapping-only scans, or mapping and classification scans, on the files in the Google Drive account.
+// +
+// // image:screenshot_compliance_google_drive_select_scan.png[A screenshot showing how to select the type of scanning Data Classification will perform on the Google Drive data.]
+// +
+// [cols="45,45",width=90%,options="header"]
+// |===
+// | To:
+// | Do this:
+
+// | Enable mapping-only scans on files | Select *Map*
+// | Enable full scans on files | Select *Map & Classify*
+// | Disable scanning on files | Select *Off*
+
+// |===
+
+// .Result
+
+// Data Classification starts scanning the files in the Google Drive account you added, and the results are displayed in the Dashboard and in other locations.
+
+// == Remove a Google Drive account from compliance scans
+
+// //If you remove a Google Drive site in the future, or decide not to scan files in a Google Drive site, you can remove individual Google Drive sites from having their files scanned at any time. Just select *Remove Google Drive Site* from the Configuration page.
+// //
+// //image:screenshot_compliance_sharepoint_remove_site.png[A screenshot showing how to remove a single Google Drive site from having their files scanned.]
+// Since only a single user's Google Drive files are part of a single Google Drive account, if you want to stop scanning files from a user's Google Drive account, then you should link:task-managing-compliance.html[delete the Google Drive account from Data Classification].
