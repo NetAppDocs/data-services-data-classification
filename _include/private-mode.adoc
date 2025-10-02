@@ -1,4 +1,2 @@
 [IMPORTANT]
-BlueXP private mode (legacy BlueXP interface) is typically used with on-premises environments that have no internet connection and with secure cloud regions, which includes AWS Secret Cloud, AWS Top Secret Cloud, and Azure IL6. NetApp continues to support these environments with the legacy BlueXP interface.
-+
-For private mode documentation in the legacy BlueXP interface, see link:https://docs.netapp.com/us-en/console-setup-admin_console-release/media/BlueXP-Private-Mode-legacy-interface.pdf[PDF documentation for BlueXP private mode^]. 
+BlueXP private mode (legacy BlueXP interface) is typically used with on-premises environments that have no internet connection and with secure cloud regions, which includes AWS Secret Cloud, AWS Top Secret Cloud, and Azure IL6. NetApp continues to support these environments with the legacy BlueXP interface. For private mode documentation in the legacy BlueXP interface, see link:https://docs.netapp.com/us-en/console-setup-admin_console-release/media/BlueXP-Private-Mode-legacy-interface.pdf[PDF documentation for BlueXP private mode^]. 
