@@ -14,7 +14,9 @@ For details on what has changed, see the https://docs.netapp.com/us-en/bluexp-re
 
 .Policies (preview)
 
-Data Classification now supports policies, enabling you to create automated actions based on saved queries. When certain results are discovered by Data Classification
+Saved searches have been renamed saved queries. You can also turn saved queries into actionable policies: delete dat or send email notifications based on saved query results. 
+
+To learn more, see link:task-using-policies.html[Create policies].
 
 .Actions (preview)
 
