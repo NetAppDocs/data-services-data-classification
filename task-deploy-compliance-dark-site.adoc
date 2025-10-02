@@ -15,267 +15,265 @@ summary: Complete a few steps to install NetApp Data Classification on a Linux h
 [.lead]
 Installing NetApp Data Classification on a Linux host in an on-premises site that doesn't have internet access is known as _private mode_. This type of installation, which uses an installation script, has no connectivity to the NetApp Console SaaS layer. 
 
-[IMPORTANT]
+include::_include/private-mode.adoc[]
 
-// the Private Mode experience link to PDF
+// https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn about the different deployment modes for the Console agent and Data Classification^].
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn about the different deployment modes for the Console agent and Data Classification^].
+// You can also link:task-deploy-compliance-onprem.html[deploy Data Classification in an on-premises site that has internet access].
 
-You can also link:task-deploy-compliance-onprem.html[deploy Data Classification in an on-premises site that has internet access].
+// The Data Classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the Data Classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install Data Classification].
 
-The Data Classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the Data Classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install Data Classification].
+// == Supported data sources
 
-== Supported data sources
+// When installed private mode (sometimes called an "offline" or "dark" site), Data Classification can only scan data from data sources that are also local to the on-premises site. At this time, Data Classification can scan the following *local* data sources:
 
-When installed private mode (sometimes called an "offline" or "dark" site), Data Classification can only scan data from data sources that are also local to the on-premises site. At this time, Data Classification can scan the following *local* data sources:
+// * On-premises ONTAP systems
+// * Database schemas
+// //* SharePoint On-Premises accounts (SharePoint Server)
+// //* Non-NetApp NFS or CIFS file shares
+// //* Object Storage that uses the Simple Storage Service (S3) protocol
 
-* On-premises ONTAP systems
-* Database schemas
-//* SharePoint On-Premises accounts (SharePoint Server)
-//* Non-NetApp NFS or CIFS file shares
-//* Object Storage that uses the Simple Storage Service (S3) protocol
+// There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, or FSx for ONTAP accounts when Data Classification is deployed in private mode.
 
-There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, or FSx for ONTAP accounts when Data Classification is deployed in private mode.
+// == Limitations
 
-== Limitations
+// Most Data Classification features work when it is deployed in a site with no internet access. However, certain features that require internet access are not supported, for example:
 
-Most Data Classification features work when it is deployed in a site with no internet access. However, certain features that require internet access are not supported, for example:
+// //* Managing Microsoft Azure Information Protection (AIP) labels
+// * Setting Console roles for different users (for example, Account Admin or Compliance Viewer)
+// * Copying and synchronizing source files using NetApp Copy and Sync
+// //* Receiving user feedback
+// * Automated software upgrades from the Console
+// +
+// Both the Console agent and Data Classification require periodic manual upgrades to enable new features. You can see the Data Classification version at the bottom of the Data Classification UI pages. Check the link:whats-new.html[Data Classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[upgrade the Console agent^] and <<Upgrade Data Classification software,upgrade your Data Classification software>>.
 
-//* Managing Microsoft Azure Information Protection (AIP) labels
-* Setting Console roles for different users (for example, Account Admin or Compliance Viewer)
-* Copying and synchronizing source files using NetApp Copy and Sync
-//* Receiving user feedback
-* Automated software upgrades from the Console
-+
-Both the Console agent and Data Classification require periodic manual upgrades to enable new features. You can see the Data Classification version at the bottom of the Data Classification UI pages. Check the link:whats-new.html[Data Classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[upgrade the Console agent^] and <<Upgrade Data Classification software,upgrade your Data Classification software>>.
+// == Quick start
 
-== Quick start
+// Get started quickly by following these steps, or scroll down to the remaining sections for full details.
 
-Get started quickly by following these steps, or scroll down to the remaining sections for full details.
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the  Console agent
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the  Console agent
+// [role="quick-margin-para"]
+// If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host now.
 
-[role="quick-margin-para"]
-If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host now.
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review Data Classification prerequisites
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review Data Classification prerequisites
+// [role="quick-margin-para"]
+// Ensure that your Linux system meets the <<Prepare the Linux host system,host requirements>>, that it has all required software installed, and that your offline environment meets the required <<Verify Console and Data Classification prerequisites,permissions and connectivity>>.
 
-[role="quick-margin-para"]
-Ensure that your Linux system meets the <<Prepare the Linux host system,host requirements>>, that it has all required software installed, and that your offline environment meets the required <<Verify Console and Data Classification prerequisites,permissions and connectivity>>.
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Download and deploy Data Classification
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Download and deploy Data Classification
+// [role="quick-margin-para"]
+// Download the Data Classification software from the NetApp Support Site and copy the installer file to the Linux host you plan to use. Then launch the installation wizard and follow the prompts to deploy the Data Classification instance.
 
-[role="quick-margin-para"]
-Download the Data Classification software from the NetApp Support Site and copy the installer file to the Linux host you plan to use. Then launch the installation wizard and follow the prompts to deploy the Data Classification instance.
 
+// == Install the  Console agent
 
-== Install the  Console agent
+// If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host in your offline site.
 
-If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host in your offline site.
+// == Prepare the Linux host system
 
-== Prepare the Linux host system
+// Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on.
 
-Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on.
+// include::_include/host-requirements.adoc[]
 
-include::_include/host-requirements.adoc[]
+// * *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Classification. Run the following commands to configure `firewalld` so that it is compatible with Data Classification:
+// +
+//  firewall-cmd --permanent --add-service=http
+//  firewall-cmd --permanent --add-service=https
+//  firewall-cmd --permanent --add-port=80/tcp
+//  firewall-cmd --permanent --add-port=8080/tcp
+//  firewall-cmd --permanent --add-port=443/tcp
+//  firewall-cmd --reload
+// +
+// Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
+// //Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
 
-* *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Classification. Run the following commands to configure `firewalld` so that it is compatible with Data Classification:
-+
- firewall-cmd --permanent --add-service=http
- firewall-cmd --permanent --add-service=https
- firewall-cmd --permanent --add-port=80/tcp
- firewall-cmd --permanent --add-port=8080/tcp
- firewall-cmd --permanent --add-port=443/tcp
- firewall-cmd --reload
-+
-Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
-//Note that you must restart Docker or Podman whenever you enable or update `firewalld` settings.
+// TIP: The IP address of the Data Classification host system can't be changed after installation.
 
-TIP: The IP address of the Data Classification host system can't be changed after installation.
+// == Verify Console and Data Classification prerequisites
 
-== Verify Console and Data Classification prerequisites
+// Review the following prerequisites to make sure that you have a supported configuration before you deploy Data Classification.
 
-Review the following prerequisites to make sure that you have a supported configuration before you deploy Data Classification.
+// * Ensure that the Console agent has permissions to deploy resources and create security groups for the Data Classification instance. You can find the latest Console permissions in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html[the policies provided by NetApp^].
+// * Ensure that you can keep Data Classification running. The Data Classification instance needs to stay on to continuously scan your data.
+// * Ensure web browser connectivity to Data Classification. After Data Classification is enabled, ensure that users access the Console interface from a host that has a connection to the Data Classification instance.
+// +
+// The Data Classification instance uses a private IP address to ensure that the indexed data isn't accessible to others. As a result, the web browser that you use to access the Console must have a connection to that private IP address. That connection can come from a host that's inside the same network as the Data Classification instance.
 
-* Ensure that the Console agent has permissions to deploy resources and create security groups for the Data Classification instance. You can find the latest Console permissions in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html[the policies provided by NetApp^].
-* Ensure that you can keep Data Classification running. The Data Classification instance needs to stay on to continuously scan your data.
-* Ensure web browser connectivity to Data Classification. After Data Classification is enabled, ensure that users access the Console interface from a host that has a connection to the Data Classification instance.
-+
-The Data Classification instance uses a private IP address to ensure that the indexed data isn't accessible to others. As a result, the web browser that you use to access the Console must have a connection to that private IP address. That connection can come from a host that's inside the same network as the Data Classification instance.
+// == Verify that all required ports are enabled
 
-== Verify that all required ports are enabled
+// You must ensure that all required ports are open for communication between the Console agent, Data Classification, Active Directory, and your data sources.
 
-You must ensure that all required ports are open for communication between the Console agent, Data Classification, Active Directory, and your data sources.
+// [cols="25,25,50",options="header"]
+// |===
+// | Connection Type
+// | Ports
+// | Description
 
-[cols="25,25,50",options="header"]
-|===
-| Connection Type
-| Ports
-| Description
+// |Console agent <> Data Classification | 8080 (TCP), 6000 (TCP), 443 (TCP), and 80. 9000 a| The security group for the Console agent must allow inbound and outbound traffic over ports 6000 and 443 to and from the Data Classification instance.
 
-|Console agent <> Data Classification | 8080 (TCP), 6000 (TCP), 443 (TCP), and 80. 9000 a| The security group for the Console agent must allow inbound and outbound traffic over ports 6000 and 443 to and from the Data Classification instance.
+// * Port 6000 is required so that the Data Classification BYOL license works in a dark site.
+// * Port 8080 should be open so you can see the installation progress in the Console.
+// * If a firewall is used on the Linux host, port 9000 is required for internal processes within an Ubuntu server.
 
-* Port 6000 is required so that the Data Classification BYOL license works in a dark site.
-* Port 8080 should be open so you can see the installation progress in the Console.
-* If a firewall is used on the Linux host, port 9000 is required for internal processes within an Ubuntu server.
+// |Console agent <> ONTAP cluster (NAS) | 443 (TCP)  a| The Console discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
 
-|Console agent <> ONTAP cluster (NAS) | 443 (TCP)  a| The Console discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
+// * The Console agent host must allow outbound HTTPS access through port 443. If the Console agent is in the cloud, all outbound communication is allowed by the predefined security group.
+// * The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Console agent host.
+// |Data Classification <> ONTAP cluster  a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
+// * For CIFS - 139 (TCP\UDP) and 445 (TCP\UDP) a| Data Classification needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Security groups for Cloud Volumes ONTAP must allow inbound connections from the Data Classification instance. 
 
-* The Console agent host must allow outbound HTTPS access through port 443. If the Console agent is in the cloud, all outbound communication is allowed by the predefined security group.
-* The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Console agent host.
-|Data Classification <> ONTAP cluster  a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
-* For CIFS - 139 (TCP\UDP) and 445 (TCP\UDP) a| Data Classification needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Security groups for Cloud Volumes ONTAP must allow inbound connections from the Data Classification instance. 
+// Make sure these ports are open to the Data Classification instance:
 
-Make sure these ports are open to the Data Classification instance:
+// * For NFS - 111 and 2049
+// * For CIFS - 139 and 445
 
-* For NFS - 111 and 2049
-* For CIFS - 139 and 445
+// NFS volume export policies must allow access from the Data Classification instance.
+// |Data Classification <> Active Directory | 389 (TCP & UDP), 636 (TCP), 3268 (TCP), and 3269 (TCP) a| You must have an Active Directory already set up for the users in your company. Additionally, Data Classification needs Active Directory credentials to scan CIFS volumes.
 
-NFS volume export policies must allow access from the Data Classification instance.
-|Data Classification <> Active Directory | 389 (TCP & UDP), 636 (TCP), 3268 (TCP), and 3269 (TCP) a| You must have an Active Directory already set up for the users in your company. Additionally, Data Classification needs Active Directory credentials to scan CIFS volumes.
+// You must have the information for the Active Directory:
 
-You must have the information for the Active Directory:
+// * DNS Server IP Address, or multiple IP Addresses
+// * User Name and Password for the server
+// * Domain Name (Active Directory Name)
+// * Whether you are using secure LDAP (LDAPS) or not
+// * LDAP Server Port (typically 389 for LDAP, and 636 for secure LDAP)
+// | If a firewall used on Linux host | 9000 | Needed for internal processes within an Ubuntu server.
 
-* DNS Server IP Address, or multiple IP Addresses
-* User Name and Password for the server
-* Domain Name (Active Directory Name)
-* Whether you are using secure LDAP (LDAPS) or not
-* LDAP Server Port (typically 389 for LDAP, and 636 for secure LDAP)
-| If a firewall used on Linux host | 9000 | Needed for internal processes within an Ubuntu server.
+// |===
 
-|===
+// //If you are using multiple Data Classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-dark-site.html[See the additional port requirements].
 
-//If you are using multiple Data Classification hosts to provide additional processing power to scan your data sources, you'll need to enable additional ports/protocols. link:task-deploy-compliance-dark-site.html[See the additional port requirements].
+// == Install Data Classification on the on-premises Linux host
 
-== Install Data Classification on the on-premises Linux host
+// For typical configurations you'll install the software on a single host system. 
 
-For typical configurations you'll install the software on a single host system. 
+// // image:diagram_deploy_onprem_single_host_no_internet.png[A diagram showing the location of the data sources you can scan when using a single Data Classification instance deployed on-prem without internet access.]
 
-// image:diagram_deploy_onprem_single_host_no_internet.png[A diagram showing the location of the data sources you can scan when using a single Data Classification instance deployed on-prem without internet access.]
+// //For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. 
 
-//For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. 
+// //image:diagram_deploy_onprem_multi_host_no_internet.png[A diagram showing the location of the data sources you can scan when using multiple Data Classification instances deployed on-prem without internet access.]
 
-//image:diagram_deploy_onprem_multi_host_no_internet.png[A diagram showing the location of the data sources you can scan when using multiple Data Classification instances deployed on-prem without internet access.]
+// Follow these steps when installing Data Classification software on a single on-premises host in an offline environment.
 
-Follow these steps when installing Data Classification software on a single on-premises host in an offline environment.
+// Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`.
 
-Note that all installation activities are logged when installing Data Classification. If you run into any issues during installation, you can view the contents of the installation audit log. It is written to `/opt/netapp/install_logs/`.
+// .Before you begin
 
-.Before you begin
+// * Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
+// * Verify that you have installed the two prerequisite software packages (Docker Engine or Podman, and Python 3).
+// * Make sure you have root privileges on the Linux system.
+// * Verify that your offline environment meets the required <<Verify Console and Data Classification prerequisites,permissions and connectivity>>.
+// //add 'or Podman' in 2nd bullet
 
-* Verify that your Linux system meets the <<Prepare the Linux host system,host requirements>>.
-* Verify that you have installed the two prerequisite software packages (Docker Engine or Podman, and Python 3).
-* Make sure you have root privileges on the Linux system.
-* Verify that your offline environment meets the required <<Verify Console and Data Classification prerequisites,permissions and connectivity>>.
-//add 'or Podman' in 2nd bullet
+// .Steps
 
-.Steps
+// . On an internet-configured system, download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *DataSense-offline-bundle-<version>.tar.gz*.
 
-. On an internet-configured system, download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *DataSense-offline-bundle-<version>.tar.gz*.
+// . Copy the installer bundle to the Linux host you plan to use in private mode.
 
-. Copy the installer bundle to the Linux host you plan to use in private mode.
+// . Unzip the installer bundle on the host machine, for example:
+// +
+// [source,cli]
+// tar -xzf DataSense-offline-bundle-v1.25.0.tar.gz
+// +
+// This extracts required software and the actual installation file *cc_onprem_installer.tar.gz*.
 
-. Unzip the installer bundle on the host machine, for example:
-+
-[source,cli]
-tar -xzf DataSense-offline-bundle-v1.25.0.tar.gz
-+
-This extracts required software and the actual installation file *cc_onprem_installer.tar.gz*.
+// . Unzip the installation file on the host machine, for example:
+// +
+// [source,cli]
+// tar -xzf cc_onprem_installer.tar.gz
 
-. Unzip the installation file on the host machine, for example:
-+
-[source,cli]
-tar -xzf cc_onprem_installer.tar.gz
+// . From Data Classification, select *Deploy Classification On-Premises or Cloud*.
+// +
+// image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
 
-. From Data Classification, select *Deploy Classification On-Premises or Cloud*.
-+
-image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
+// . Select *Deploy* to start the on-prem installation.
 
-. Select *Deploy* to start the on-prem installation.
+// . The _Deploy Data Classification On Premises_ dialog is displayed. Copy the provided command (for example: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq --darksite`) and paste it in a text file so you can use it later. Then select *Close* to dismiss the dialog.
 
-. The _Deploy Data Classification On Premises_ dialog is displayed. Copy the provided command (for example: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq --darksite`) and paste it in a text file so you can use it later. Then select *Close* to dismiss the dialog.
+// . On the host machine, enter the command you copied and then follow a series of prompts, or you can provide the full command including all required parameters as command line arguments.
 
-. On the host machine, enter the command you copied and then follow a series of prompts, or you can provide the full command including all required parameters as command line arguments.
+// +
+// Note that the installer performs a pre-check to make sure your system and networking requirements are in place for a successful installation.
 
-+
-Note that the installer performs a pre-check to make sure your system and networking requirements are in place for a successful installation.
+// +
+// [cols="50a,50",options="header"]
+// |===
+// | Enter parameters as prompted:
+// | Enter the full command:
 
-+
-[cols="50a,50",options="header"]
-|===
-| Enter parameters as prompted:
-| Enter the full command:
+// |
+// a. Paste the information you copied from step 8:
+// `sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --darksite`
+// b. Enter the IP address or host name of the Data Classification host machine so it can be accessed by the Console agent system.
+// c. Enter the IP address or host name of the Console agent host machine so it can be accessed by the Data Classification system.
+// | Alternatively, you can create the whole command in advance, providing the necessary host parameters:
+// `sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> --no-proxy --darksite`
+// |===
 
-|
-a. Paste the information you copied from step 8:
-`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --darksite`
-b. Enter the IP address or host name of the Data Classification host machine so it can be accessed by the Console agent system.
-c. Enter the IP address or host name of the Console agent host machine so it can be accessed by the Data Classification system.
-| Alternatively, you can create the whole command in advance, providing the necessary host parameters:
-`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> --no-proxy --darksite`
-|===
+// +
+// Variable values:
 
-+
-Variable values:
+// * _account_id_ = NetApp Account ID
+// * _client_id_ = Console agent Client ID (add the suffix "clients" to the client ID if it not already there)
+// * _user_token_ = JWT user access token
+// * _ds_host_ = IP address or host name of the Data Classification system.
+// * _cm_host_ = IP address or host name of the Console agent system.
 
-* _account_id_ = NetApp Account ID
-* _client_id_ = Console agent Client ID (add the suffix "clients" to the client ID if it not already there)
-* _user_token_ = JWT user access token
-* _ds_host_ = IP address or host name of the Data Classification system.
-* _cm_host_ = IP address or host name of the Console agent system.
+// .Result
 
-.Result
+// The Data Classification installer installs packages, registers the installation, and installs Data Classification. Installation can take 10 to 20 minutes.
 
-The Data Classification installer installs packages, registers the installation, and installs Data Classification. Installation can take 10 to 20 minutes.
+// If there is connectivity over port 8080 between the host machine and the Console agent instance, you'll see the installation progress in the Data Classification tab.
 
-If there is connectivity over port 8080 between the host machine and the Console agent instance, you'll see the installation progress in the Data Classification tab.
+// .What's Next
+// From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and link:task-scanning-databases.html[databases] that you want to scan.
 
-.What's Next
-From the Configuration page you can select the local link:task-getting-started-compliance.html[on-prem ONTAP clusters] and link:task-scanning-databases.html[databases] that you want to scan.
 
 
+// == Upgrade Data Classification software
 
-== Upgrade Data Classification software
+// Since Data Classification software is updated with new features on a regular basis, you should get into a routine to check for new versions periodically to make sure you're using the newest software and features. You'll need to upgrade Data Classification software manually because there's no internet connectivity to perform the upgrade automatically.
 
-Since Data Classification software is updated with new features on a regular basis, you should get into a routine to check for new versions periodically to make sure you're using the newest software and features. You'll need to upgrade Data Classification software manually because there's no internet connectivity to perform the upgrade automatically.
+// .Before you begin
 
-.Before you begin
+// * We recommend that your Console agent software is upgraded to the newest available version. https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[See the Console agent upgrade steps^].
+// * Starting with Data Classification version 1.24 you can perform upgrades to any future version of software.
+// +
+// If your Data Classification software is running a version prior to 1.24, you can upgrade only one major version at a time. For example, if you have version 1.21.x installed, you can upgrade only to 1.22.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
+// //Data Classification software can be upgraded one major version at a time. For example, if you have version 1.20.x installed, you can upgrade only to 1.21.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
 
-* We recommend that your Console agent software is upgraded to the newest available version. https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[See the Console agent upgrade steps^].
-* Starting with Data Classification version 1.24 you can perform upgrades to any future version of software.
-+
-If your Data Classification software is running a version prior to 1.24, you can upgrade only one major version at a time. For example, if you have version 1.21.x installed, you can upgrade only to 1.22.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
-//Data Classification software can be upgraded one major version at a time. For example, if you have version 1.20.x installed, you can upgrade only to 1.21.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.
+// .Steps
 
-.Steps
+// . On an internet-configured system, download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *DataSense-offline-bundle-<version>.tar.gz*.
 
-. On an internet-configured system, download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *DataSense-offline-bundle-<version>.tar.gz*.
+// . Copy the software bundle to the Linux host where Data Classification is installed in the dark site.
 
-. Copy the software bundle to the Linux host where Data Classification is installed in the dark site.
+// . Unzip the software bundle on the host machine, for example:
+// +
+// [source,cli]
+// tar -xvf DataSense-offline-bundle-v1.25.0.tar.gz
+// +
+// This extracts the installation file *cc_onprem_installer.tar.gz*.
 
-. Unzip the software bundle on the host machine, for example:
-+
-[source,cli]
-tar -xvf DataSense-offline-bundle-v1.25.0.tar.gz
-+
-This extracts the installation file *cc_onprem_installer.tar.gz*.
+// . Unzip the installation file on the host machine, for example:
+// +
+// [source,cli]
+// tar -xzf cc_onprem_installer.tar.gz
+// +
+// This extracts the upgrade script *start_darksite_upgrade.sh* and any required third-party software.
 
-. Unzip the installation file on the host machine, for example:
-+
-[source,cli]
-tar -xzf cc_onprem_installer.tar.gz
-+
-This extracts the upgrade script *start_darksite_upgrade.sh* and any required third-party software.
+// . Run the upgrade script on the host machine, for example:
+// +
+// [source,cli]
+// start_darksite_upgrade.sh
 
-. Run the upgrade script on the host machine, for example:
-+
-[source,cli]
-start_darksite_upgrade.sh
+// .Result
 
-.Result
+// The Data Classification software is upgraded on your host. The update can take 5 to 10 minutes.
 
-The Data Classification software is upgraded on your host. The update can take 5 to 10 minutes.
+// //Note that no upgrade is required on scanner nodes if you have deployed Data Classification on multiple hosts systems for scanning very large configurations.
 
-//Note that no upgrade is required on scanner nodes if you have deployed Data Classification on multiple hosts systems for scanning very large configurations.
-
-You can verify that the software has been updated by checking the version at the bottom of the Data Classification UI pages.
+// You can verify that the software has been updated by checking the version at the bottom of the Data Classification UI pages.

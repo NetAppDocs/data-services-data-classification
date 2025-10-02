@@ -144,6 +144,8 @@ Data Classification is supported when the Console agent is deployed in a Governm
 
 === What data sources can I scan if I install Data Classification in a site without internet access?
 
+include::_include/private-mode.adoc[]
+
 Data Classification can only scan data from data sources that are local to the on-premises site. At this time, Data Classification can scan the following local data sources in "Private mode" - also known as a "dark" site:
 
 * On-premises ONTAP systems
@@ -151,8 +153,6 @@ Data Classification can only scan data from data sources that are local to the o
 //* SharePoint On-Premises accounts (SharePoint Server)
 //* Non-NetApp NFS or CIFS file shares
 * Object Storage that uses the Simple Storage Service (S3) protocol
-
-See link:concept-classification.html[Supported systems and data sources].
 
 === Which file types are supported?
 

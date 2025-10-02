@@ -38,14 +38,15 @@ CAUTION: The statistics gathering feature *must be enabled* in the database.
 
 Any database with connectivity to the Data Classification instance can be scanned, regardless of where it is hosted. You just need the following information to connect to the database:
 
-* IP Address or host name
+* IP address or host name
 * Port
 * Service name (only for accessing Oracle databases)
 * Credentials that allow read access to the schemas
 +
 When choosing a user name and password, it's important to choose one that has full read permissions to all the schemas and tables you want to scan. We recommend that you create a dedicated user for the Data Classification system with all the required permissions.
 
-*Note:* For MongoDB, a read-only Admin role is required.
+[NOTE]
+For MongoDB, a read-only admin role is required.
 
 == Deploy the Data Classification instance
 
