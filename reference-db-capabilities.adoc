@@ -34,10 +34,10 @@ You can add your databases schemas to Data Classification to be scanned link:tas
 | Assign to | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Export data | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 | Rescan | x | x | x | x | x | x | x
-| Delete | x | x | x | x | x | x | x
-| Move | x | x | x | x | x | x | x
-| Copy | x | x | x | x | x | x | x
-| Label | x | x | x | x | x | x | x
+| Delete || ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Move | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Copy | ✓ | ✓ | ✓ | ✓ | ✓ |  | 
+| Label| ✓ | ✓ | ✓ | ✓ | ✓ |  | 
 
 .25+| Filters 
 | Saved queries | ✓ | ✓ | ✓ | ✓ | ✓ |  | 

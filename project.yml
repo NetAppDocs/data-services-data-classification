@@ -63,7 +63,7 @@ sidebar:
           url: /task-controlling-private-data.html
         - title: Categories of private data
           url: /reference-private-data-categories.html
-        - title: Create custom scan 
+        - title: Create a custom scan 
           url: /task-custom-classification.html
         - title: Investigate data
           url: /task-investigate-data.html
@@ -82,7 +82,7 @@ sidebar:
         - title: Remove data sources from Data Classification
           url: /task-managing-compliance.html
         - title: Uninstall Data Classification
-          url: /task-uninstall-data-sense.html
+          url: /task-uninstall.html
     - title: Reference
       entries:
         - title: Supported Data Classification instance types

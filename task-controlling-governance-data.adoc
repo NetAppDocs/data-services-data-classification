@@ -48,21 +48,9 @@ The _Saving Opportunities_ component shows data that you can delete or tier to l
 
 NOTE: If any of your data sources implement data tiering, old data that already resides in object storage can be identified in the _Stale Data_ category.
 
-=== Review saved queries with the largest number of results
+== Create the Data discovery assessment report
 
-In the _Saved queries_ tab, the queries with the greatest number of results appear at the top of the list. This data updates every two hours. 
-
-For details about saved queries, see link:task-using-policies.html[Create saved queries].
-
-.Steps 
-. From the Data Classification menu, select *Governance*.
-. In the Governance dashboard, locate the Saved sueries tile. Select the name of a saved query to display the results in the Investigation page. 
-. Select *View All* to view the list of all available saved queries.
-In the _Saved queries_ area, the queries with the greatest number of results appear at the top of the list. 
-
-== Create the Data Discovery Assessment Report
-
-The Data Discovery Assessment Report provides a high-level analysis of the scanned environment to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your dataset:
+The Data discovery assessment report provides a high-level analysis of the scanned environment to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your dataset:
 
 [cols="25,65",width=90%,options="header"]
 |===
@@ -82,17 +70,17 @@ With the report, you can take the following actions:
 .Steps
 
 . From Data Classification, select *Governance*.
-. Select *Data Discovery Assessment Report*.
+. In the reports tile, select *Data Discovery Assessment Report*.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Discovery Assessment Report.]
 
 .Result
 
-Data Classification generates a PDF report that you can review and send to other groups as needed.
+Data Classification generates a PDF report that you can review and share. 
 
-== Create the Data Mapping Overview Report
+== Create the data mapping overview report
 
-The Data Mapping Overview Report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report summarizes all systems and data sources. It also provides an analysis for each system.
+The data mapping overview report provides an overview of the data being stored in your corporate data sources to assist you with decisions of migration, back up, security, and compliance processes. The report summarizes all systems and data sources. It also provides an analysis for each system.
 
 The report includes the following information:
 
@@ -109,12 +97,12 @@ For single systems: Lists the files that are using the most capacity.
 .Steps
 
 . From Data Classification, select *Governance*.
-. Select *Full Data Mapping Overview Report*.
+. In the reports tile, select *Full data mapping overview report*.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
 
 // PM - confirm step with Micky/Shir
-. To customize the company name that appears on the first page of the report, from the top right of the Data Classification page, select image:button-gallery-options.gif[the More button]. Then select *Change company name*. When you generate the next report, the company name change appears. 
+// . To customize the company name that appears on the first page of the report, from the top right of the Data Classification page, select image:button-gallery-options.gif[the More button]. Then select *Change company name*. When you generate the next report, the company name change appears. 
 
 .Result
 
@@ -126,9 +114,9 @@ If the report is larger than 1 MB, the PDF file is retained on the Data Classifi
 
 The _Top Data Repositories by Sensitivity Level_ area of the Data Mapping Overview report lists the top four data repositories (systems and data sources) that contain the most sensitive items. The bar chart for each system is divided into:
 
-* Non-Sensitive data
+* Non-sensitive data
 * Personal data
-* Sensitive Personal data
+* Sensitive personal data
 
 This data refreshes every two hours and can be manually refreshed. 
 
@@ -140,7 +128,7 @@ This data refreshes every two hours and can be manually refreshed.
 
 === Review sensitive data and wide permissions
 
-The _Sensitive Data and Wide Permissions_ area of the Data Mapping Overview report shows the percentage of files that contain sensitive data and have wide permissions. The chart shows the following types of permissions: 
+The _Sensitive Data and Wide Permissions_ area of the Governance dashboard shows the counts for files that contain sensitive data and have wide permissions. The table shows the following types of permissions: 
 
 * From the most restrictive permissions to the most permissive restrictions on the horizontal axis. 
 * From the least sensitive data to the most sensitive data on the vertical axis.
@@ -168,7 +156,7 @@ The _Open Permissions_ area of the Data Mapping Overview report shows the percen
 
 === Review the age and size of data
 
-You might want to investigate the items in the _Age_ and _Size_ graphs of the Data Mapping Overview report to see if there is any data you should delete or tier to less expensive object storage.
+You can investigate the items in the _Age_ and _Size_ graphs of the Data Mapping Overview report to see if there is any data you should delete or tier to less expensive object storage.
 
 .Steps
 
