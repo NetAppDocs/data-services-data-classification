@@ -14,11 +14,11 @@ You can access the NetApp Data Classification through the NetApp Console.
 
 To sign in to the Console, you can use your NetApp Support Site credentials or you can sign up for a NetApp Console login using your email and a password. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html[Learn more about logging in to the Console^].
 
-Specific tasks require specific Console user roles. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[Learn about Console access roles for all services^].
+Specific tasks require specific Console user roles. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html[Learn about Console access roles for all services^].
 
 .Before you begin
 
-* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[You should add a Console agent.^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html[You should add a Console agent.^]
 * link:task-deploy-cloud-compliance.html[Understand which Data Classification deployment style suits your workload.]
 
 .Steps

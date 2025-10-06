@@ -14,10 +14,10 @@ By default, scans are queued based on the order in which they are initiated. Wit
 
 Priority is granted on a one-time basis. Automatic rescans of mapping data occur in the default order. 
 
-Prioritization is limited to link:https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html[mapping-only scans^]; it's not available for map and classify scans. 
-// https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html[What's the difference between Mapping and Classification scans?]
+Prioritization is limited to link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html[mapping-only scans^]; it's not available for map and classify scans. 
+// https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html[What's the difference between Mapping and Classification scans?]
 
-For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans[Prioritize scans^].
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans[Prioritize scans^].
 
 .Retry all scans
 
@@ -35,4 +35,4 @@ To retry all scans:
 
 .Improved categorization model accuracy 
 
-The accuracy of the machine learning model for link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories[predefined categories] has improved by 11%. 
+The accuracy of the machine learning model for link:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories[predefined categories] has improved by 11%. 

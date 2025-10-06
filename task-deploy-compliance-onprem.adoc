@@ -34,10 +34,10 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Create a Console agent 
 
 [role="quick-margin-para"]
-If you don't already have a Console agent , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[deploy the Console agent on-premises^] on a Linux host in your network, or on a Linux host in the cloud.
+If you don't already have a Console agent , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html[deploy the Console agent on-premises^] on a Linux host in your network, or on a Linux host in the cloud.
 
 [role="quick-margin-para"]
-You can also create a Console agent with your cloud provider. See https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^].
+You can also create a Console agent with your cloud provider. See https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review prerequisites
 
@@ -55,9 +55,9 @@ Download the Cloud Data Classification software from the NetApp Support Site and
 
 == Create a Console agent
 
-A Console agent is required before you can install and use Data Classification. In most cases you'll probably have a Console agent set up before you attempt to activate Data Classification because most https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[Console features require a Console agent], but there are cases where you'll you need to set one up now.
+A Console agent is required before you can install and use Data Classification. In most cases you'll probably have a Console agent set up before you attempt to activate Data Classification because most https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html[Console features require a Console agent], but there are cases where you'll you need to set one up now.
  
-To create one in your cloud provider environment, see https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]. 
+To create one in your cloud provider environment, see https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]. 
 
 There are some scenarios where you have to use a Console agent that's deployed in a specific cloud provider:
 
@@ -69,9 +69,9 @@ For Azure NetApp Files, it must be deployed in the same region as the volumes yo
 
 On-prem ONTAP systems, NetApp file shares and database accounts can be scanned using any of these cloud Console agents.
 
-Note that you can also https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[deploy the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install Data Classification on-prem may also choose to install the Console agent on-prem.
+Note that you can also https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html[deploy the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install Data Classification on-prem may also choose to install the Console agent on-prem.
 
-//As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[multiple Console agents].
+//As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html[multiple Console agents].
 
 You'll need the IP address or host name of the Console agent system when installing Data Classification. You'll have this information if you installed the Console agent in your premises. If the Console agent is deployed in the cloud, you can find this information from the Console: select the Help icon then *Support* then **Console agent**.
 
@@ -113,7 +113,7 @@ Data Classification requires outbound internet access. If your virtual or physic
 | Endpoints
 | Purpose
 
-| \https://api.bluexp.netapp.com | Communication with the Console, which includes NetApp accounts.
+| \https://api.console.netapp.com | Communication with the Console, which includes NetApp accounts.
 
 |
 \https://netapp-cloud-account.auth0.com
@@ -122,7 +122,7 @@ Data Classification requires outbound internet access. If your virtual or physic
 | Communication with the Console website for centralized user authentication.
 
 |
-\https://support.compliance.api.bluexp.netapp.com/
+\https://support.compliance.api.console.netapp.com/
 \https://hub.docker.com
 \https://auth.docker.io
 \https://registry-1.docker.io
@@ -132,7 +132,7 @@ Data Classification requires outbound internet access. If your virtual or physic
 
 | Provides access to software images, manifests, templates, and to send logs and metrics.
 
-| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
+| \https://support.compliance.api.console.netapp.com/ | Enables NetApp to stream data from audit records.
 
 |
 \https://github.com/docker
@@ -150,7 +150,7 @@ Data Classification requires outbound internet access. If your virtual or physic
 |===
 
 //Ensure that the Console agent has the required permissions::
-//Ensure that the Console agent has permissions to deploy resources and create security groups for the Data Classification instance. You can find the latest Console permissions in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html[the policies provided by NetApp^].
+//Ensure that the Console agent has permissions to deploy resources and create security groups for the Data Classification instance. You can find the latest Console permissions in https://docs.netapp.com/us-en/console-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 //
 //Ensure web browser connectivity to Data Classification::
 //After Data Classification is enabled, ensure that users access the Console interface from a host that has a connection to the Data Classification instance.
@@ -211,7 +211,7 @@ See <<Prepare the Linux host system,Preparing the Linux host system>> and <<Enab
 
 Upgrades to Data Classification software is automated as long as the instance has internet connectivity.
 
-NOTE: Data Classification is currently unable to scan S3 buckets, Azure NetApp Files, or FSx for ONTAP when the software is installed on premises. In these cases you'll need to deploy a separate Console agent and instance of Data Classification in the cloud and https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[switch between Connectors^] for your different data sources.
+NOTE: Data Classification is currently unable to scan S3 buckets, Azure NetApp Files, or FSx for ONTAP when the software is installed on premises. In these cases you'll need to deploy a separate Console agent and instance of Data Classification in the cloud and https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html[switch between Connectors^] for your different data sources.
 
 === Single-host installation for typical configurations
 

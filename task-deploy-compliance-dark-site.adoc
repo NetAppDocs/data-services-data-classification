@@ -17,7 +17,7 @@ Installing NetApp Data Classification on a Linux host in an on-premises site tha
 
 include::_include/private-mode.adoc[]
 
-// https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn about the different deployment modes for the Console agent and Data Classification^].
+// https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html[Learn about the different deployment modes for the Console agent and Data Classification^].
 
 // You can also link:task-deploy-compliance-onprem.html[deploy Data Classification in an on-premises site that has internet access].
 
@@ -45,7 +45,7 @@ include::_include/private-mode.adoc[]
 // //* Receiving user feedback
 // * Automated software upgrades from the Console
 // +
-// Both the Console agent and Data Classification require periodic manual upgrades to enable new features. You can see the Data Classification version at the bottom of the Data Classification UI pages. Check the link:whats-new.html[Data Classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[upgrade the Console agent^] and <<Upgrade Data Classification software,upgrade your Data Classification software>>.
+// Both the Console agent and Data Classification require periodic manual upgrades to enable new features. You can see the Data Classification version at the bottom of the Data Classification UI pages. Check the link:whats-new.html[Data Classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html[upgrade the Console agent^] and <<Upgrade Data Classification software,upgrade your Data Classification software>>.
 
 // == Quick start
 
@@ -54,7 +54,7 @@ include::_include/private-mode.adoc[]
 // .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the  Console agent
 
 // [role="quick-margin-para"]
-// If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host now.
+// If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host now.
 
 // .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Review Data Classification prerequisites
 
@@ -69,7 +69,7 @@ include::_include/private-mode.adoc[]
 
 // == Install the  Console agent
 
-// If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host in your offline site.
+// If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host in your offline site.
 
 // == Prepare the Linux host system
 
@@ -95,7 +95,7 @@ include::_include/private-mode.adoc[]
 
 // Review the following prerequisites to make sure that you have a supported configuration before you deploy Data Classification.
 
-// * Ensure that the Console agent has permissions to deploy resources and create security groups for the Data Classification instance. You can find the latest Console permissions in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html[the policies provided by NetApp^].
+// * Ensure that the Console agent has permissions to deploy resources and create security groups for the Data Classification instance. You can find the latest Console permissions in https://docs.netapp.com/us-en/console-setup-admin/reference-permissions.html[the policies provided by NetApp^].
 // * Ensure that you can keep Data Classification running. The Data Classification instance needs to stay on to continuously scan your data.
 // * Ensure web browser connectivity to Data Classification. After Data Classification is enabled, ensure that users access the Console interface from a host that has a connection to the Data Classification instance.
 // +
@@ -239,7 +239,7 @@ include::_include/private-mode.adoc[]
 
 // .Before you begin
 
-// * We recommend that your Console agent software is upgraded to the newest available version. https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html[See the Console agent upgrade steps^].
+// * We recommend that your Console agent software is upgraded to the newest available version. https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html[See the Console agent upgrade steps^].
 // * Starting with Data Classification version 1.24 you can perform upgrades to any future version of software.
 // +
 // If your Data Classification software is running a version prior to 1.24, you can upgrade only one major version at a time. For example, if you have version 1.21.x installed, you can upgrade only to 1.22.x. If you are a few major versions behind, you'll need to upgrade the software multiple times.

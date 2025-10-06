@@ -233,7 +233,7 @@ link:https://docs.netapp.com/us-en/data-services-data-classification/reference-p
 
 .BlueXP classification is fully supported in Restricted mode and Private mode
 
-BlueXP classification is now fully supported in sites with no internet access (Private mode) and with limited outbound internet access (Restricted mode). link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[Learn more about BlueXP deployment modes for the Connector^].
+BlueXP classification is now fully supported in sites with no internet access (Private mode) and with limited outbound internet access (Restricted mode). link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html[Learn more about BlueXP deployment modes for the Connector^].
 
 .Ability to skip versions when upgrading a Private mode installation of BlueXP classification
 

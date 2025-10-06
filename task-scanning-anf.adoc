@@ -17,7 +17,7 @@ Complete a few steps to get started with NetApp Data Classification for Azure Ne
 
 == Discover the Azure NetApp Files system that you want to scan
 
-If the Azure NetApp Files system you want to scan is not already in the NetApp Console as system, link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html[add it in the Systems page^]. 
+If the Azure NetApp Files system you want to scan is not already in the NetApp Console as system, link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html[add it in the Systems page^]. 
 
 == Deploy the Data Classification instance
 
