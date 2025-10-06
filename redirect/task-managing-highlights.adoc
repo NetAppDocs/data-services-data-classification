@@ -1,0 +1,260 @@
+---
+permalink: data-services-data-classification/task-managing-highlights.html
+redirect: data-services-data-classification/concept-classification.html
+---
+
+// ---
+// sidebar: sidebar
+// permalink: task-managing-highlights.html
+// keywords: compliance, privacy, filter data, delete files, move files, copy files, clone files, sync files, data sense, migration
+// summary: NetApp Data Classification provides many ways for you to manage your private data. Some functionality makes it easier to prepare for migrating your data, while other functionality allows you to make changes to the data.
+// ---
+
+// = Manage your private data with NetApp Data Classification
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
+
+// [.lead]
+// NetApp Data Classification provides many ways for you to manage your private data. Some functionality makes it easier to prepare for migrating your data, while other functionality allows you to make changes to the data.
+
+// include::_include/legacy-version-130.adoc[]
+
+// * You can copy files to a destination NFS share if you want to make a copy of certain data and move it to a different NFS location.
+// * You can clone an ONTAP volume to a new volume, while including only selected files from the source volume in the new cloned volume. This is useful for situations where you're migrating data and you want to exclude certain files from the original volume.
+// * You can copy and synchronize files from a source repository to a directory in a specific destination location. This is useful for situations where you're migrating data from one source system to another while there is still some final activity on the source files.
+// * You can move source files that Data Classification is scanning to any NFS share.
+// * You can delete files that seem insecure or too risky to leave in your storage system, or that you have identified as duplicate.
+
+// [NOTE]
+// ====
+// * The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
+// * Data from Google Drive accounts can't use any of these capabilities at this time.
+// ====
+
+// == Copy source files
+
+// You can copy any source files that Data Classification is scanning. There are three types of copy operations depending on what you're trying to accomplish:
+
+// * *Copy files* from the same, or different, volumes or data sources to a destination NFS share.
+// +
+// This is useful if you want to make a copy of certain data and move it to a different NFS location.
+// * *Clone an ONTAP volume* to a new volume in the same aggregate, but include only selected files from the source volume in the new cloned volume.
+// +
+// This is useful for situations where you're migrating data and you want to exclude certain files from the original volume. This action uses the https://docs.netapp.com/us-en/ontap/volumes/flexclone-efficient-copies-concept.html[NetApp FlexClone^] functionality to quickly duplicate the volume and then remove the files that you *didn't* select.
+// * *Copy and synchronize files* from a single source repository (ONTAP volume, S3 bucket, NFS share, etc.) to a directory in a specific destination (target) location.
+// +
+// This is useful for situations where you're migrating data from one source system to another. After the initial copy, the service syncs any changed data based on the schedule that you set. This action uses link:https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html[NetApp Copy and Sync^] to copy and sync data from a source to a target.
+
+// === Copy source files to an NFS share
+
+// You can copy source files that Data Classification is scanning to any NFS share. The NFS share doesn't need to be integrated with Data Classification, you just need to know the name of the NFS share where all selected files will be copied in the format `<host_name>:/<share_path>`.
+
+// TIP: You can't copy files that reside in databases.
+
+// .Requirements
+
+// * You must have permissions to copy files. link:concept-classification.html[Learn about user access to compliance information].
+// * Copying files requires that the destination NFS share allows access from the Data Classification instance.
+// * You can copy between 1 and 100,000 files at a time.
+
+// .Steps
+
+// . In the Data Investigation results pane, select the file, or files, that you want to copy, and select *Copy*.
+// +
+// image:screenshot_compliance_copy_multi_files.png["A screenshot showing how to select the files to copy, and the Copy button, from the Data Investigation page."]
+
+// +
+// * To select individual files, check the box for each file (image:button_backup_1_volume.png[""]).
+// * To select all files on the current page, check the box in the title row (image:button_select_all_files.png[""]).
+// * To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[about selecting all files], select *Select all items in list (xxx items)*.
+
+// . In the _Copy Files_ dialog, select the *Regular Copy* tab.
+// // +
+// // image:screenshot_compliance_copy_files_dialog.png[A screenshot showing the Copy Files dialog so you can specify the name of the NFS share where all selected files will be copied.]
+
+// . Enter the name of the NFS share where all selected files will be copied in the format `<host_name>:/<share_path>`, and select *Copy*.
+// +
+// A dialog appears with the status of the copy operation.
+
+// You can view the progress of the copy operation in the link:task-view-compliance-actions.html[Actions Status pane].
+
+// Note that you can also copy an individual file when viewing the metadata details for a file. Just select *Copy File*.
+
+// // image:screenshot_compliance_copy_file.png[A screenshot showing selection of the Copy File button from the metadata details for a file in the Data Investigation page.]
+
+// === Clone volume data to a new volume
+
+// You can clone an existing ONTAP volume that Data Classification is scanning using NetApp _FlexClone_ functionality. This allows you to quickly duplicate the volume while including only those files you selected. This is useful if you're migrating data and you want to exclude certain files from the original volume, or if you want to create a copy of a volume for testing.
+
+// The new volume is created in the same aggregate as the source volume. Ensure that you have enough space for this new volume in the aggregate before you start this task. Contact your storage administrator if necessary.
+
+// *Note:* FlexGroup volumes can't be cloned because they're not supported by FlexClone.
+
+// .Requirements
+
+// * You must have permissions to copy files. link:concept-classification.html[Learn about user access to compliance information].
+// * You must select a minimum of 20 files.
+// * All selected files must be from the same volume, and the volume must be online.
+// * The volume must be from a Cloud Volumes ONTAP or on-premises ONTAP system. No other data sources are currently supported.
+// * The FlexClone license must be installed on the cluster. This license is installed by default on Cloud Volumes ONTAP systems.
+
+// .Steps
+
+// . In the Data Investigation pane, create a filter by selecting a single *System* and a single *Storage Repository* to make sure all the files are from the same ONTAP volume.
+// // +
+// // image:screenshot_compliance_filter_1_repo.png[A screenshot of creating a filter that includes files from a single storage repository in a single system.]
+// +
+// Apply any other filters so that you're seeing only the files that you want to clone to the new volume.
+
+// . In the Investigation results pane, select the files that you want to clone and select *Copy*.
+// // +
+// // image:screenshot_compliance_copy_multi_files.png["A screenshot showing how to select the files to copy, and the Copy button, from the Data Investigation page."]
+// +
+// * To select individual files, check the box for each file (image:button_backup_1_volume.png[""]).
+// * To select all files on the current page, check the box in the title row (image:button_select_all_files.png[""]).
+// * To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[about selecting all files], select *Select all items in list (xxx items)*.
+
+// . In the _Copy Files_ dialog, select the *FlexClone* tab. This page shows the total number of files that will be cloned from the volume (the files you selected), and the number of files that are not included/deleted (the files you didn't select) from the cloned volume.
+// // +
+// // image:screenshot_compliance_clone_files_dialog.png[A screenshot showing the Copy Files dialog so you can specify the name of the new volume that will be cloned from the source volume.]
+
+// . Enter the name of the new volume, and select *FlexClone*.
+// +
+// A dialog appears with the status of the clone operation.
+
+// .Result
+
+// The new, cloned volume is created in the same aggregate as the source volume.
+
+// You can view the progress of the clone operation in the link:task-view-compliance-actions.html[Actions Status pane].
+
+// If you initially selected *Map all volumes* or *Map & Classify all volumes* when you enabled Data Classification for the system where the source volume resides, then Data Classification will scan the new cloned volume automatically. If you didn't use either of these selections initially, then if you want to scan this new volume, you'll need to link:task-getting-started-compliance.html[enable scanning on the volume manually].
+
+// === Copy and synchronize source files to a target system
+
+// You can copy source files that Data Classification is scanning from any supported unstructured data source to a directory in a specific target destination location (link:https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html[target locations that are supported by Copy and Sync^]). After the initial copy, any data changed in the files are synchronized based on the schedule that you configure.
+
+// This is useful for situations where you're migrating data from one source system to another. This action uses link:https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html[Copy and Sync^] to copy and sync data from a source to a target.
+
+// TIP: You can't copy and sync files that reside in databases, OneDrive accounts, or SharePoint accounts.
+
+// .Requirements
+
+// * You must have permissions to copy and sync files. link:concept-classification.html[Learn about user access to compliance information].
+// * You must select a minimum of 20 files.
+// * All selected files must be from the same source repository (ONTAP volume, S3 bucket, NFS or CIFS share, etc.).
+// * You'll need to activate the Copy and Sync service and configure a minimum of one data broker that can be used to transfer files between the source and target systems. Review the Copy and Sync requirements beginning with the https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html[Quick Start description^].
+// +
+// Note that Copy and Sync has separate service charges for your sync relationships, and will incur resource charges if you deploy the data broker in the cloud.
+
+// .Steps
+
+// . In the Data Investigation pane, create a filter by selecting a single *System* and a single *Storage Repository* to make sure all the files are from the same repository.
+// // +
+// // image:screenshot_compliance_filter_1_repo.png[A screenshot of creating a filter that includes files from a single storage repository in a single system.]
+// +
+// Apply any other filters so that you're seeing only the files that you want to copy and sync to the destination system.
+
+// . In the Investigation results pane, select all files on all pages by checking the box in the title row (image:button_select_all_files.png[""]), then in the pop-up message image:screenshot_select_all_items.png[about selecting all files] select *Select all items in list (xxx items)*, and then select *Copy*.
+// // +
+// // image:screenshot_compliance_sync_multi_files.png["A screenshot showing how to select the files to copy, and the Copy button, from the Data Investigation page."]
+
+// . In the _Copy Files_ dialog, select the *Sync* tab.
+// // +
+// // image:screenshot_compliance_sync_files_dialog.png[A screenshot showing the Copy Files dialog so you can select the Sync option.]
+
+// . If you are sure that you want to sync the selected files to a destination location, select *OK*, which opens Copy and Sync in the Console.
+// +
+// You are prompted to define the sync relationship. The Source system is pre-populated based on the repository and files you already selected in Data Classification.
+
+// . You'll need to select the Target system and then select (or create) the Data Broker you plan to use. Review the Copy and Sync requirements beginning with the link:https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html[Quickstart description^].
+
+// .Result
+
+// The files are copied to the target system and they'll be synchronized based on the schedule you define. If you select a one-time sync then the files are copied and synchronized one time only. If you choose a periodic sync, then the files are synchronized based on the schedule. Note that if the source system adds new files that match the query you created using filters, those _new_ files will be copied to the destination and synchronized in the future.
+
+// Note that some of the usual Copy and Sync operations are disabled when it's invoked from Data Classification:
+
+// * You can't use the *Delete Files on Source* or *Delete Files on Target* buttons.
+// * Running a report is disabled.
+
+// == Move source files to an NFS share
+
+// You can move source files that Data Classification is scanning to any NFS share. The NFS share doesn't need to be integrated with Data Classification.
+
+// Optionally, you can leave a breadcrumb file in the location of the moved file. A breadcrumb file helps your users understand why a file was moved from its original location. For each moved file, the system creates a breadcrumb file in the source location named `<filename>-breadcrumb-<date>.txt`. You can add text in the dialog box that will be added to the breadcrumb file to indicate the location where the file was moved and the user who moved the file.
+
+// Note that the subdirectory structure from the source file is recreated on the destination share when the file is moved so it is easier to understand where the file was moved from. If a file with the same name exists in the destination location, the file will not be moved.
+
+// TIP: You can't move files that reside in databases.
+
+// .Requirements
+
+// * You must have permissions to move files. link:concept-classification.html[Learn about user access to compliance information].
+// * The source files can be located in the following data sources: On-premises ONTAP, Cloud Volumes ONTAP, Azure NetApp Files, File Shares, and SharePoint Online.
+// * You can move a maximum of 15 million files at a time.
+// * Only files which are 50 MB or smaller are moved.
+// * The destination NFS share must allow access from the Data Classification instance IP address.
+
+// .Steps
+
+// . In the Data Investigation results pane, select the file, or files, that you want to move.
+// // +
+// // image:screenshot_compliance_move_multi_files.png["A screenshot showing how to select the files to move, and the Move button, from the Data Investigation page."]
+
+// // +
+// // * To select individual files, check the box for each file (image:button_backup_1_volume.png[""]).
+// // * To select all files on the current page, check the box in the title row (image:button_select_all_files.png[""]).
+// // * To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[about selecting all files], select *Select all items in list (xxx items)*.
+
+// . From the button bar, select *Move*.
+// // +
+// // image:screenshot_compliance_move_files_dialog.png[A screenshot showing the Move Files dialog so you can specify the name of the NFS share where all selected files will be moved.]
+
+// . In the _Move Files_ dialog, enter the name of the NFS share where all selected files will be moved in the format `<host_name>:/<share_path>`.
+
+// . If you want to leave a breadcrumb file, check the _Leave breadcrumb_ box. You can enter text in the dialog box to indicate the location where the file was moved and the user who moved the file, and any other information, such as the reason the file was moved.
+
+// . Select *Move Files*.
+
+// Note that you can also move an individual file when viewing the metadata details for a file. Just select *Move File*.
+
+// == Delete source files
+
+// You can permanently remove source files that seem insecure or too risky to leave in your storage system, or that you've identified as a duplicate. This action is permanent and there is no undo or restore.
+
+// TIP: You can't delete files that reside in databases. All other data sources are supported.
+
+// Deleting files requires the following permissions:
+
+// *	For NFS data - the export policy needs to be defined with write permissions.
+// *	For CIFS data - the CIFS credentials need to have write permissions.
+// *	For S3 data - the IAM role must include the following permission: `s3:DeleteObject`.
+
+// === Delete source files manually
+
+// .Requirements
+
+// * You must have permissions to delete files. link:concept-classification.html[Learn about user access to compliance information].
+// * You can delete a maximum of 100,000 files at a time.
+
+// .Steps
+
+// . In the Data Investigation results pane, select the file, or files, that you want to delete.
+// // +
+// // * To select individual files, check the box for each file (image:button_backup_1_volume.png[""]).
+// // * To select all files on the current page, check the box in the title row (image:button_select_all_files.png[""]).
+// // * To select all files on all pages, check the box in the title row (image:button_select_all_files.png[""]), and then in the pop-up message image:screenshot_select_all_items.png[about selecting all files], select *Select all items in list (xxx items)*.
+
+// . From the button bar, select *Delete*.
+
+// . Because the delete operation is permanent, you must type "*permanently delete*" in the subsequent _Delete File_ dialog and select *Delete File*.
+
+// You can view the progress of the delete operation in the link:task-view-compliance-actions.html[Actions Status pane].
+
+// Note that you can also delete an individual file when viewing the metadata details for a file. Just select *Delete file*.
+
+// // image:screenshot_compliance_delete_file.png[A screenshot showing selection of the Delete File button from the metadata details for a file in the Data Investigation page.]

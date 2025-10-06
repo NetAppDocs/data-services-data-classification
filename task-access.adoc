@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: task-access.html
+keywords: log in, sign in
+summary: Get started with NetApp Data Classification by accessing the service in the NetApp Console.
+---
+= Access NetApp Data Classification
+:hardbreaks:
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+You can access the NetApp Data Classification through the NetApp Console. 
+
+To sign in to the Console, you can use your NetApp Support Site credentials or you can sign up for a NetApp Console login using your email and a password. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html[Learn more about logging in to the Console^].
+
+Specific tasks require specific Console user roles. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html[Learn about Console access roles for all services^].
+
+.Before you begin
+
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[You should add a Console agent.^]
+* link:task-deploy-cloud-compliance.html[Understand which Data Classification deployment style suits your workload.]
+
+.Steps
+
+. In a web browser, navigate to the link:https://console.netapp.com/[Console^].
+. Log in to the Console. 
+. From the main page of the NetApp Console, select *Governance* > *Data Classification*. 
++
+. If this is your first time accessing Data Classification, the landing page appears.
++
+Select *Deploy Classification On-Premises or Cloud* to begin deploying your classification instance. For more information, see link:task-deploy-cloud-compliance.html[Which Data Classification deployment should you use?]
++
+image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
++ 
+Otherwise, the Data Classification Dashboard appears. 

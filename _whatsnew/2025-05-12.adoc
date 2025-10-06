@@ -1,0 +1,42 @@
+=== Version 1.43
+
+This Data Classification release includes:
+
+.Prioritize classification scans
+
+Data Classification supports the ability to prioritize Map & Classify scans in addition to Mapping-only scans, enabling you to select which scans are completed first. Prioritization of Map & Classify scans is supported during and before the scans begin. If you choose to prioritize a scan while it's in progress, both the mapping and classification scans are prioritized. 
+
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans[Prioritize scans].
+
+.Support for Canadian personally identifiable information (PII) data categories
+
+Data Classification scans identify Canadian PII data categories. These categories include banking information, passport numbers, social insurance numbers, driver's license numbers and health card numbers for all Canadian provinces and territories.
+
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data[Personal data categories].
+
+.Custom classification (preview)
+
+Data Classification supports custom classifications for Map & Classify scans. With custom classifications, you can tailor Data Classification scans to capture data specific to your organization using regular expressions. This feature is currently in preview. 
+
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-custom-classification.html[Add custom classifications].
+
+.Saved queries tab
+
+The **Policies** tab has been renamed link:https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html[**Saved queries**]. The functionality is unchanged. 
+
+.Send scan events to the Audit page
+
+Data Classification supports sending classification events (when a scan is initiated and when it ends) to the link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline[NetApp Consle Audit page^].
+
+.Security updates 
+
+* The Keras package has been updated, mitigating vulnerabilities (BDSA-2025-0107 and BDSA-2025-1984). 
+* The Docker containers configuration has been updated. The container no longer has access to the host's network interfaces for crafting raw network packets. By reducing unnecessary access, the update mitigates potential security risks.
+
+.Performance enhancements 
+
+Code enhancements have been implemented to reduce RAM usage and improve the overall performance of Data Classification. 
+
+.Bug fixes
+
+Bugs that caused StorageGRID scans to fail, the investigation page filter options to not load, and the Data Discovery Assessment to not download for high volume assessments have been fixed. 

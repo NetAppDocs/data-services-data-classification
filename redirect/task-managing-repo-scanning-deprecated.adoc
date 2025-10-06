@@ -1,0 +1,41 @@
+---
+permalink: data-services-data-classification/task-managing-repo-scanning-deprecated.html
+redirect: data-services-data-classification/task-managing-repo-scanning.html
+---
+
+// ---
+// sidebar: sidebar
+// permalink: task-managing-repo-scanning-deprecated.html
+// keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan
+// summary: You can manage how your data is being scanned in each of your systems and data sources. You can make the changes on a repository basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
+// ---
+
+// = Rescan data for an existing repository with NetApp Data Classification
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
+
+// [.lead]
+// NetApp Data Classification continuously scans your data to detect incremental changes in the repositories that you've added. However, it takes time for the system to scan all the environments, and there is no method to control the order of the repositories that are scanned. If you need to rescan a particular repository immediately so that changes are reflected in the system, you can select the repository and rescan it. This allows you to prioritize scanning of certain data before other data. After the rescan action, the selected repository returns to being scanned under the normal Data Classification schedule.
+
+// include::_include/legacy-version-130.adoc[]
+
+// Data Classification supports scanning directories on all data source types except for Amazon S3 and Databases. Currently we support rescanning a single directory (folder or share) or multiple directories. Future support will include rescanning additional repository types (files, databases, etc.).
+
+// * When rescanning a directory, all the files within the directory are rescanned, but sub-folders within the directory are not rescanned.
+// * When rescanning a share, only the share's metadata is rescanned.
+// * A maximum of 1K items can be rescanned at a time.
+
+// .Steps
+
+// . In the Data Investigation results pane, select the folders or shares that you want to rescan, and select *Rescan*.
+// +
+// // image:screenshot_compliance_rescan_directory.png[A screenshot showing how to select and rescan a directory.]
+
+// . In the _Rescan Directory_ dialog, select *Rescan*.
+
+// Note that you can also rescan an individual directory when viewing the metadata details. Just select *Rescan*. 
+
+// // image:screenshot_compliance_rescan_single_file.png[A screenshot showing how to rescan a single folder or share.]

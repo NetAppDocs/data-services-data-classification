@@ -1,0 +1,98 @@
+---
+permalink: data-services-data-classification/task-investigate-data-deprecated.html
+redirect: data-services-data-classification/task-investigate-data.html
+---
+
+
+
+// ---
+// sidebar: sidebar
+// permalink: task-investigate-data-deprecated.html
+// keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies
+// summary: You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the NetApp Data Classification UI, including the Governance and Compliance dashboards.
+// ---
+
+
+
+// = Investigate the data stored on the NetApp Data Classification Data Investigation page
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
+
+// [.lead]
+// You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the NetApp Data Classification UI, including the Governance and Compliance dashboards.
+
+// NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
+
+
+
+// == Filter data in the Data Investigation page
+
+// You can filter the contents of the investigation page to display only the results you want to see. This is a very powerful feature because after you've refined the data, you can use the button bar at the top of the page to perform a variety of actions, including copying files, moving files, adding a tag or AIP label to the files, and more.
+
+
+// === Filter data by tags, labels, assigned users, and saved searches
+
+// Use the following filters to view data by tags, AIP labels, assigned users, or saved searches.
+
+// ====
+// *NOTE*    The ability to filter by tags, labels, and assigned users is relevant only for Data Classification versions 1.30 and earlier.
+// ====
+
+// [cols=2*,options="header",cols="30,60"]
+// |===
+
+// | Filter
+// | Details
+
+// | Saved searches | Select one or multiple saved search. Go link:task-using-policies.html[here^] to view the list of existing searches or create a new one.
+// | Label | Select link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP labels] that are assigned to your files.
+// | Tags | Select link:task-org-private-data.html#apply-tags-to-manage-your-scanned-files[the tag or tags] that are assigned to your files.
+// | Assigned To | Select the name of the person to which the file is assigned.
+
+// |===
+
+// == Create the Data Investigation Report
+
+// The Data Investigation Report is a download of the filtered contents of the Data Investigation page. 
+
+// The report is available in two different formats:
+
+// * As a .CSV file that you can save to the local machine. 
+// +
+// This report can include a maximum of 10,000 rows of data.
+// * As a .JSON file that you export to an NFS Share. 
+// +
+// If there are more than 250,000 rows of data, additional .JSON files are created. 
+// +
+// When exporting to a file share, make sure Data Classification has the correct permissions for export access.
+// +
+// ====
+// *NOTE*    The ability to generate the report in .JSON format is relevant only for Data Classification versions 1.30 and earlier.
+// ====
+
+// There can be up to three report files downloaded if Data Classification is scanning files (unstructured data), directories (folders and file shares), and databases (structured data).
+
+
+// .Steps
+
+// . From the Data Investigation page, select the image:button_download.png[download button] button on the top, right of the page.
+
+// . Select whether you want to download a .CSV report or .JSON report of the data, and select *Download Report*.
+// +
+// When selecting a .JSON report, enter the name of the NFS share where the report will be downloaded in the format `<host_name>:/<share_path>`.
+// +
+// You can view the progress of JSON report generation in the link:task-view-compliance-actions.html[Actions Status pane].
+
+// +
+// ====
+// *NOTE*    The ability to filter by tags, labels, and assigned users is relevant only for Data Classification versions 1.30 and earlier.
+// ====
+
+
+
+
+
+

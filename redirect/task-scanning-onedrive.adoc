@@ -1,0 +1,133 @@
+---
+permalink: data-services-data-classification/task-scanning-onedrive.html
+redirect: data-services-data-classification/task-scanning-overview.html
+---
+
+// ---
+// sidebar: sidebar
+// permalink: task-scanning-onedrive.html
+// keywords: cloud compliance, enable cloud compliance, privacy, compliance, onedrive, data sense
+// summary: Complete a few steps to start scanning files in your user's OneDrive folders with NetApp Data Classification.
+// ---
+
+// = Scan OneDrive accounts with NetApp Data Classification
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
+
+// [.lead]
+// Complete a few steps to start scanning files in your user's OneDrive folders with NetApp Data Classification.
+
+// ====
+// *NOTE*    This information is relevant only for Data Classification legacy versions 1.30 and earlier.
+// ====
+
+// == Quick start
+
+// Get started quickly by following these steps, or scroll down to the remaining sections for full details.
+
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Review OneDrive prerequisites
+
+// [role="quick-margin-para"]
+// Ensure that you have the Admin credentials to log into the OneDrive account.
+
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy the Data Classification instance
+
+// [role="quick-margin-para"]
+// link:task-deploy-cloud-compliance.html[Deploy Data Classification^] if there isn't already an instance deployed.
+
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add the OneDrive account
+
+// [role="quick-margin-para"]
+// Using Admin user credentials, log into the OneDrive account that you want to access so that it is added as a new system.
+
+// .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add the users and select the type of scanning
+
+// [role="quick-margin-para"]
+// Add the list of users from the OneDrive account that you want to scan and select the type of scanning. You can add up to 100 users at time.
+
+// == Reviewing OneDrive requirements
+
+// Review the following prerequisites to make sure that you have a supported configuration before you enable Data Classification.
+
+// * You must have the Admin login credentials for the OneDrive for Business account that provides read access to the user's files.
+// * You'll need a line-separated list of the email addresses for all the users whose OneDrive folders you want to scan.
+
+// == Deploying the Data Classification instance
+
+// Deploy Data Classification if there isn't already an instance deployed.
+
+// Data Classification can be link:task-deploy-cloud-compliance.html[deployed in the cloud^] or link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^].
+
+// Upgrades to Data Classification software is automated as long as the instance has internet connectivity.
+
+// //Data Classification can also be link:task-deploy-compliance-dark-site.html[deployed in an on-premises location that has no internet access^]. However, you'll need to provide internet access to a few select endpoints to scan your local OneDrive files. 
+
+// == Adding the OneDrive account
+
+// Add the OneDrive account where the user files reside.
+
+// .Steps
+
+// . From the Systems Configuration page, select *Add Data Source* > *Add OneDrive Account*.
+// +
+// // image:screenshot_compliance_add_onedrive_button.png[A screenshot of the Scan Configuration page where you can select the Add OneDrive button.]
+
+// . In the Add a OneDrive account dialog, select *Sign in to OneDrive*.
+
+// . In the Microsoft page that appears, select the OneDrive account and enter the required Admin user and password, then select *Accept* to allow Data Classification to read data from this account.
+
+// The OneDrive account is added to the list of systems.
+
+// == Adding OneDrive users to compliance scans
+
+// You can add individual OneDrive users, or all of your OneDrive users, so that their files will be scanned by Data Classification.
+
+// .Steps
+
+// . From the _Configuration_ page, select the *Configuration* button for the OneDrive account.
+// +
+// image:screenshot_compliance_onedrive_add_users.png[A screenshot of the Scan Configuration page where you can select the Configuration button.]
+
+// . If this is the first time adding users for this OneDrive account, select *Add your first OneDrive users*.
+// +
+// image:screenshot_compliance_onedrive_add_initial_users.png[A screenshot showing the Add your first OneDrive users button to add initial users to an account.]
+// +
+// If you are adding additional users from a OneDrive account, select *Add OneDrive users*.
+// +
+// image:screenshot_compliance_onedrive_add_more_users.png[A screenshot showing the Add OneDrive users button to add more users to an account.]
+
+// . Add the email addresses for the users whose files you want to scan - one email address per line (up to 100 maximum per session) - and select *Add Users*.
+// +
+// image:screenshot_compliance_onedrive_add_email_addresses.png[A screenshot of the Add OneDrive users page where you can add users to be scanned.]
+// +
+// A confirmation dialog displays the number of users who were added.
+// +
+// If the dialog lists any users who could not be added, capture this information so that you can resolve the issue. In some cases you can re-add the user with a corrected email address.
+
+// . Enable mapping-only scans, or mapping and classification scans, on user files.
+// +
+// [cols="45,45",width=90%,options="header"]
+// |===
+// | To:
+// | Do this:
+
+// | Enable mapping-only scans on user files | Select *Map*
+// | Enable full scans on user files | Select *Map & Classify*
+// | Disable scanning on user files | Select *Off*
+
+// |===
+
+// .Result
+
+// Data Classification starts scanning the files for the users you added, and the results are displayed in the Dashboard and in other locations.
+
+// == Removing a OneDrive user from compliance scans
+
+// If users leave the company or if their email address changes, you can remove individual OneDrive users from having their files scanned at any time. Just select *Remove OneDrive User* from the Configuration page.
+
+// image:screenshot_compliance_onedrive_remove_user.png[A screenshot showing how to remove a single user from having their files scanned.]
+
+// //Note that you can delete the entire OneDrive account from Data Classification if you no longer want to scan any user data from the OneDrive account.

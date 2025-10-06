@@ -1,0 +1,226 @@
+---
+sidebar: sidebar
+permalink: task-generating-compliance-reports.html
+keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file, dsar
+summary: NetApp Data Classification provides reports that you can use to better understand the status of your organization's data privacy program.
+---
+= View NetApp Data Classification compliance reports
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+NetApp Data Classification provides reports that you can use to better understand the status of your organization's data privacy program.
+
+By default, the Data Classification dashboards display compliance and governance data for all systems, databases, and data sources. If you want to view reports that contain data for only some of the systems, you can filter to see just them.
+
+[NOTE]
+====
+* Compliance reports are only available if you perform a full classification scan on your data sources. Data sources that have had a mapping-only scan can only generate the Data Mapping Report.
+* NetApp cannot guarantee 100% accuracy of the personal data and sensitive personal data that Data Classification identifies. You should always validate the information by reviewing the data.
+====
+
+The following reports are available for Data Classification:
+
+* *Data Discovery Assessment report*: Provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. 
+
+* *Data Mapping report*: Provides information about the size and number of files in your systems. This includes usage capacity, age of data, size of data, and file types. 
+
+* *Data Subject Access Request report*: Enables you to extract a report of all files that contain information regarding a data subject's specific name or personal identifier. 
+
+* *HIPAA report*: Helps you identify the distribution of health information across your files. 
+
+* *PCI DSS report*: Helps you identify the distribution of credit card information across your files. 
+
+* *Privacy Risk Assessment report*: Provides privacy insights from your data and a privacy risk score. 
+
+* *Reports on a specific information type*: Reports are available that include details about the identified files that contain personal data and sensitive personal data. You can also see files broken down by category and file type. 
+
+== Select the systems for reports
+
+You can filter the contents of the Data Classification Compliance dashboard to see compliance data for all systems and databases, or for just specific systems.
+
+When you filter the dashboard, Data Classification scopes the compliance data and reports to just those systems that you selected.
+
+.Steps
+
+. From the Data Classification menu, select *Compliance*.
+. Select the systems filter drop-down then select the systems.
+. Select **Accept** to confirm your selection. 
++
+image:screenshot-report-filter.png[Screenshow showing the filtering of systems.]
+
+== Data Subject Access Request Report
+
+Privacy regulations such as the European GDPR grant data subjects (such as customers or employees) the right to access their personal data. When a data subject requests this information, this is known as a DSAR (data subject access request). Organizations are required to respond to these requests "without undue delay", and at the latest within one month of receipt.
+
+You can respond to a DSAR by searching for a subject's full name or known identifier (such as an email address) and then downloading a report. The report is designed to aid in your organization's requirement to comply with GDPR or similar data privacy laws.
+
+*How can Data Classification help you respond to a DSAR?*
+
+When you perform a data subject search, Data Classification finds all of the files that have that person's name or identifier in it. Data Classification checks the latest pre-indexed data for the name or identifier. It doesn't initiate a new scan.
+
+After the search is complete, you can then download the list of files for a Data Subject Access Request report. The report aggregates insights from the data and puts it into legal terms that you can send back to the person.
+
+NOTE: Data subject search is not currently supported within databases.
+
+*Search for data subjects and download reports*
+
+Search for the data subject's full name or known identifier and then download a file list report or DSAR report. You can search by link:reference-private-data-categories.html#types-of-personal-data[any personal information type].
+
+NOTE: English, German, Japanese, and Spanish are supported when searching for the names of data subjects. Support for more languages will be added later.
+
+.Steps
+
+
+. From the Data Classification menu, select *Compliance*.
+
+// data subjects doesn't exist anymore -->
+
+. From the Compliance page, select *Data Subjects*.
+
+. Search for the data subject's full name or known identifier.
++
+Here's an example that shows a search for the name _john doe_:
++
+image:screenshot_dsar_search.gif[Screenshot of the data subject search.]
+
+. Choose one of the available options:
+* *Download DSAR Report*: A formal response to the access request that you can send to the data subject. This report contains automatically-generated information based on data that Data Classification found on the data subject and is designed to be used as a template. You should complete the form and review it internally before sending it to the data subject.
+
+* *Investigate Results*: A page that enables you to investigate the data by searching, sorting, expanding details for a specific file, and by downloading the file list.
++
+NOTE: If there are more than 10,000 results, only the top 10,000 appear in the file list.
+
+== Health Insurance Portability and Accountability Act (HIPAA) Report
+
+The Health Insurance Portability and Accountability Act (HIPAA) Report can help you identify files containing health information. It is designed to aid in your organization's requirement to comply with HIPAA data privacy laws. The information Data Classification looks for includes:
+
+* Health reference pattern
+* ICD-10-CM Medical code
+* ICD-9-CM Medical code
+* HR - Health category
+* Health Application Data category
+
+The report includes the following information:
+
+* Overview: How many files contain health information and in which systems.
+
+* Encryption: The percentage of files containing health information that are on encrypted or unencrypted systems. This information is specific to Cloud Volumes ONTAP.
+
+* Ransomware Protection: The percentage of files containing health information that are on systems that do or don't have ransomware protection enabled. This information is specific to Cloud Volumes ONTAP.
+
+* Retention: The timeframe in which the files were last modified. This is helpful because you shouldn't keep health information for longer than you need to process it.
+
+* Distribution of Health Information: The systems where the health information was found and whether encryption and ransomware protection are enabled.
+
+*Generate the HIPAA Report*
+
+Go to the Compliance tab to generate the report.
+
+.Steps
+
+. From the Data Classification menu, select *Compliance*.
+. Locate the **Reports pane**. Select the download icon next to *HIPAA Report*.
++
+image:screenshot-report-options.png[Screenshot of the report options in the Compliance page.]
+
+.Result
+
+Data Classification generates a PDF report that you can review and send to other groups as needed.
+
+
+== Payment Card Industry Data Security Standard (PCI DSS) report
+
+The Payment Card Industry Data Security Standard (PCI DSS) report can help you identify the distribution of credit card information across your files. 
+
+The report includes the following information:
+
+* Overview: How many files contain credit card information and in which systems.
+
+* Encryption: The percentage of files containing credit card information that are on encrypted or unencrypted systems. This information is specific to Cloud Volumes ONTAP.
+
+* Ransomware Protection: The percentage of files containing credit card information that are on systems that do or don't have ransomware protection enabled. This information is specific to Cloud Volumes ONTAP.
+
+* Retention: The timeframe in which the files were last modified. This is helpful because you shouldn't keep credit card information for longer than you need to process it.
+
+* Distribution of Credit Card Information: The systems where the credit card information was found and whether encryption and ransomware protection are enabled.
+
+*Generate the PCI DSS Report*
+
+Go to the Compliance tab to generate the report.
+
+.Steps
+
+. From the Data Classification menu, select *Compliance*.
+. Locate the **Reports pane**. Select the download icon next to *PCI DSS Report*.
++
+image:screenshot-report-options.png[Screenshot of the report options in the Compliance page.]
+
+.Result
+
+Data Classification generates a PDF report that you can review and send to other groups as needed.
+
+
+
+== Privacy Risk Assessment Report
+
+The Privacy Risk Assessment Report provides an overview of your organization's privacy risk status, as required by privacy regulations such as GDPR and CCPA. 
+
+The report includes the following information:
+
+* Compliance status: A severity score and the distribution of data, whether it's non-sensitive, personal, or sensitive personal.
+
+* Assessment overview: A breakdown of the types of personal data found, as well as the categories of data.
+
+* Data subjects in this assessment: The number of people, by location, for which national identifiers were found.
+
+*Generate the Privacy Risk Assessment Report*
+
+Go to the Compliance tab to generate the report.
+
+.Steps
+
+. From the Data Classification menu, select *Compliance*.
+. Locate the **Reports pane**. Select the download icon next to *Privacy Risk Assessment Report*.
++
+image:screenshot-report-options.png[Screenshot of the report options in the Compliance page.]
+
+.Result
+
+Data Classification generates a PDF report that you can review and send to other groups as needed.
+
+*Severity score*
+
+Data Classification calculates the severity score for the Privacy Risk Assessment Report on the basis of three variables:
+
+* The percentage of personal data out of all data.
+* The percentage of sensitive personal data out of all data.
+* The percentage of files that include data subjects, determined by national identifiers such as national IDs, Social Security numbers, and tax ID numbers.
+
+The logic used to determine the score is as follows:
+
+[cols=2*,options="header",cols="27,73"]
+|===
+
+| Severity score
+| Logic
+
+| 0 | All three variables are exactly 0%
+| 1 | One of the variables are larger than 0%
+| 2 | One of the variables are larger than 3%
+| 3 | Two of the variables are larger than 3%
+| 4 | Three of the variables are larger than 3%
+| 5 | One of the variables are larger than 6%
+| 6 | Two of the variables are larger than 6%
+| 7 | Three of the variables are larger than 6%
+| 8 | One of the variables are larger than 15%
+| 9 | Two of the variables are larger than 15%
+| 10 | Three of the variables are larger than 15%
+
+|===
+
+
+

@@ -1,0 +1,13 @@
+=== Version 1.42
+
+This BlueXP classification release includes:
+
+.Bulk scanning for working environments
+
+BlueXP classification supports bulk operations for working environments. You can choose to enable Mapping scans, enable Map & Classify scans, disable scans, or create a custom configuration across volumes in working enviroment. If you make a selection for an individual volume, it overrides the bulk selection. To perform a bulk operation, navigate to the **Configuration** page and make your selection. 
+
+.Download investigation report locally
+
+BlueXP classification supports the ability to download data investigation reports locally to view in the browser. If you choose the local option, the data investigation is only available in the CSV format and only displays the first 10,000 rows of data. 
+
+For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#create-the-data-investigation-report[Investigate the data stored in your organization with BlueXP classification].

@@ -1,0 +1,4 @@
+---
+permalink: data-services-data-classification/task-uninstall-data-sense.html
+redirect: data-services-data-classification/task-uninstall.html
+---

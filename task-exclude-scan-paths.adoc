@@ -1,0 +1,151 @@
+---
+sidebar: sidebar
+permalink: task-exclude-scan-paths.html
+keywords: exclude scans, folders, directories
+summary: If you want NetApp Data Classification to exclude scanning data that resides in certain data source directories, you can add these directory names to a configuration file. After you apply this change, the Data classification engine will exclude scanning data in those directories.
+---
+
+= Exclude specific directories from NetApp Data Classification scans
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+If you want NetApp Data Classification to exclude specific directories from scans, you can add these directory names to a configuration file. After you apply this change, the Data Classification engine excludes those directories from scans.
+
+
+[NOTE]
+By default, Data Classification scans excludes volume snapshot data, which is identical to its source in the volume.
+
+// This functionality is available in beginning with version 1.29 released in March 2024 and greater (starting in March 2024).
+
+== Supported data sources
+
+Excluding specific directories from Data Classification scans is supported for NFS and CIFS shares in the following data sources:
+
+* On-premises ONTAP
+* Cloud Volumes ONTAP
+* Amazon FSx for NetApp ONTAP
+* Azure NetApp Files
+* General file shares
+
+== Define the directories to exclude from scanning
+
+Before you can exclude directories from classification scanning, you need to log into the Data Classification system so you can edit a configuration file and run a script. See how to link:reference-log-in-to-instance.html[log in to the Data Classification system] depending on whether you manually installed the software on a Linux machine or if you deployed the instance in the cloud.
+
+.Considerations
+* You can exclude a maximum of 50 directory paths per Data Classification system.
+* Excluding directory paths can affect scanning times.
+
+.Steps
+
+. On the Data Classification system, go to "/opt/netapp/config/custom_configuration" then open the file `data_provider.yaml`.
+
+. In the "data_providers" section under the line "exclude:", enter the directory paths to exclude. For example:
+
+ exclude:
+ - "folder1"
+ - "folder2"
++
+Do not modify anything else in this file.
+
+. Save the changes to the file.
+
+. Go to "/opt/netapp/Datasense/tools/customer_configuration/data_providers" and run the following script:
+
+`update_data_providers_from_config_file.sh`
++
+This command commits the directories to be excluded from scanning to the classification engine.
+
+.Result
+
+All subsequent scans of your data will exclude scanning of those specified directories.
+
+You can add, edit, or delete items from the exclude list using these same steps. The revised exclude list will be updated after you run the script to commit your changes.
+
+== Examples
+
+.Configuration 1:
+
+Every folder that contains "folder1" anywhere in the name will be excluded from all data sources.
+
+ data_providers:
+    exclude:
+    - "folder1"
+
+.Expected results for paths that will be excluded:
+
+* /CVO1/folder1
+* /CVO1/folder1name
+* /CVO1/folder10
+* /CVO1/*folder1
+* /CVO1/+folder1name
+* /CVO1/notfolder10
+* /CVO22/folder1
+* /CVO22/folder1name
+* /CVO22/folder10
+
+.Examples for paths that will not be excluded:
+
+* /CVO1/*folder
+* /CVO1/foldername
+* /CVO22/*folder20
+
+.Configuration 2:
+
+Every folder that contains "*folder1" only at the start of the name will be excluded.
+
+ data_providers:
+    exclude:
+    - "\\*folder1"
+
+.Expected results for paths that will be excluded:
+
+* /CVO/*folder1
+* /CVO/*folder1name
+* /CVO/*folder10
+
+.Examples for paths that will not be excluded:
+
+* /CVO/folder1
+* /CVO/folder1name
+* /CVO/not*folder10
+
+.Configuration 3:
+
+Every folder in data source "CVO22" that contains "folder1" anywhere in the name will be excluded.
+
+ data_providers:
+    exclude:
+    - "CVO22/folder1"
+
+.Expected results for paths that will be excluded:
+
+* /CVO22/folder1
+* /CVO22/folder1name
+* /CVO22/folder10
+
+.Examples for paths that will not be excluded:
+* /CVO1/folder1
+* /CVO1/folder1name
+* /CVO1/folder10
+
+== Escaping special characters in folder names
+
+If you have a folder name that contains one of the following special characters and you want to exclude data in that folder from being scanned, you'll need to use the escape sequence \\ before the folder name.
+
+ ., +, *, ?, ^, $, (, ), [, ], {, }, |
+
+For example: 
+
+Path in source: `/project/*not_to_scan`
+
+Syntax in exclude file: `"\\*not_to_scan"`
+
+== View the current exclusion list
+
+It's possible for the contents of the `data_provider.yaml` configuration file to be different than what has actually been committed after running the `update_data_providers_from_config_file.sh` script. To view the current list of directories that you've excluded from Data Classification scanning, run the following command from "/opt/netapp/Datasense/tools/customer_configuration/data_providers":
+
+ get_data_providers_configuration.sh

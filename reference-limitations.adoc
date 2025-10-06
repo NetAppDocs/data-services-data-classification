@@ -1,0 +1,63 @@
+---
+sidebar: sidebar
+permalink: reference-limitations.html
+keywords: limitations, data sense, classification, scan shares
+summary: Known limitations identify functions that are not supported by this release of the product or that do not interoperate correctly with it. Review these limitations carefully.
+---
+
+= Known limitations in NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Known limitations identify functions that are not supported or do not interoperate correctly in this release. Review these limitations carefully.
+
+== NetApp Data Classification disabled options
+
+The December 2023 (version 1.26.6) release removed the following options: 
+
+* The option to activate audit log collection has been disabled. 
+* During the Directories investigation, the option to calculate the number of personally identifiable information  (PII) data by Directories is not available. 
+* The option to integrate data using Azure Information Protection (AIP) labels has been disabled. 
+
+== Data Classification scanning
+
+The following limitations occur with Data Classification scans. 
+
+=== Data Classification scans only one share under a volume
+
+If you have multiple file shares under a single volume, Data Classification scans the share with the highest hierarchy. For example, if you have shares like the following:
+
+* /A
+* /A/B
+* /C
+* /D/E
+
+In this configuration, only the data in /A is scanned. The data in /C and /D is not scanned.
+
+.Workaround
+
+There is a workaround to make sure you are scanning data from all the shares in your volume. Follow these steps:
+
+. In the system, add the volume to be scanned.
+. After Data Classification has completed scanning the volume, go to the _Data Investigation_ page and create a filter to see which share is being scanned:
++
+Filter the data by "system Name" and "Directory Type = Share" to see which share is being scanned.
+. Get the complete list of shares that exist in the volume so you can see which shares are not being scanned.
+. link:task-scanning-file-shares.html[Add the remaining shares to a share group].
++
+Add all the shares individually, for example:
++
+ /C
+ /D
+ 
+. Perform these steps for each volume in the system that has multiple shares.
+
+=== Last accessed timestamp  
+
+When Data Classification conducts a scan of a directory, the scan impacts the directory's **Last accessed** field. When you view the **Last accessed** field, that metadata reflects either the date and time of the scan or the last time a user accessed the directory. 
+
+// 2025 june 23, DSENSE-1337

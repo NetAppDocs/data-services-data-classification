@@ -1,0 +1,131 @@
+---
+sidebar: sidebar
+permalink: task-scanning-file-shares.html
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode
+summary: Complete a few steps to start scanning non-NetApp NFS or CIFS file shares directly with Data Classification. These file shares can reside on-premises or in the cloud.
+---
+= Scan file shares with NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+To scan file shares, you must first create a file shares group in NetApp Data Classification. File shares groups are for NFS or CIFS (SMB) shares hosted on-premises or in the cloud. 
+
+//Complete a few steps to start scanning NFS or CIFS file shares from Google Cloud NetApp Volumes and from older NetApp 7-mode systems. These file shares can reside on-premises or in the cloud.
+
+NOTE: Scanning data from non-NetApp file shares is not supported in the Data Classification core version.
+
+== Prerequisites
+
+Review the following prerequisites to make sure that you have a supported configuration before you enable Data Classification.
+
+* The shares can be hosted anywhere, including in the cloud or on-premises. CIFS shares from older NetApp 7-Mode storage systems can be scanned as file shares.
+
+** Data Classification can't extract permissions or the "last access time" from 7-Mode systems.
+** Because of a known issue between some Linux versions and CIFS shares on 7-Mode systems, you must configure the share to use only SMBv1 with NTLM authentication enabled.
+
+* There needs to be network connectivity between the Data Classification instance and the shares.
+
+* You can add a DFS (Distributed File System) share as a regular CIFS share. Because Data Classification is unaware that the share is built upon multiple servers/volumes combined as a single CIFS share, you might receive permission or connectivity errors about the share when the message really only applies to one of the folders/shares that is located on a different server/volume.
+
+* For CIFS (SMB) shares, ensure that you have Active Directory credentials that provide read access to the shares. Admin credentials are preferred in case Data Classification needs to scan any data that requires elevated permissions.
+include::_include/cifs-permissions.adoc[]
+
+* All CIFS file shares in a group must use the same Active Directory credentials. 
+
+* You can mix NFS and CIFS (using either Kerberos or NTLM) shares. You must add the shares to the group separately. That is, you must complete the process twice—once per protocol. 
+** You cannot create a file shares group that mixes CIFS authentication types (Kerberos and NTLM).
+
+* If you're using CIFS with Kerberos authentication, ensure the IP address provided is accessible to the Data Classification. The files shares can't be added if the IP address is unreachable.
+
+
+== Create a file shares group
+
+When you add file shares to the group, you must use the format `<host_name>:/<share_path>`.
+
+You can add file shares individually or you can enter a line-separated list of the file shares you want to scan. You can add up to 100 shares at a time.
+
+.Steps
+
+. From the Data Classification menu, select *Configuration*. 
+
+. From the Configuration page, select *Add System* > *Add File Shares Group*.
+
+. In the Add File Shares Group dialog, enter the name for the group of shares then select *Continue*.
+
+. Select the protocol for the file shares you are adding.
++
+image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, showing options to select protocols and shares]
+
+.. If you're adding CIFS shares with NTLM authentication, enter the Active Directory credentials to access the CIFS volumes. Although read-only credentials are supported, it's recommended you provide full access with administrator credentials. Select **Save**.
+
+. Add the file shares that you want to scan (one file share per line). Then select **Continue**. 
+
+. A confirmation dialog displays the number of shares that were added.
++
+If the dialog lists any shares that could not be added, capture this information so that you can resolve the issue. If the issue pertains to a naming convention, you can re-add the share with a corrected name.
+
+. Configure scanning on the volume: 
++
+* To enable mapping-only scans on file shares, select *Map*.
+* To enable full scans on file shares, select *Map & Classify*.
+* To disable scanning on file shares, select *Off*.
++
+[NOTE]
+The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. +
+If you switch *Scan when missing "write attributes" permissions* to *On*, the scan resets the last accessed time and scans all files regardless of permissions. +
+To learn more about the last accessed time stamp, see link:link:reference-collected-metadata.html#last-access-time-timestamp[Metadata collected from data sources in Data Classification].
+
+.Result
+
+Data Classification starts scanning the files in the file shares you added. You can xref:#track-the-scanning-progress[Track the scanning progress] and view the results of the scan in the **Dashboard**.
+
+[NOTE]
+If the scan doesn't complete successfully for a CIFS configuration with Kerberos authentication, check the **Configuration** tab for errors. 
+
+== Edit a file shares group
+
+After you create a file shares group, you can edit the CIFS protocol or add and remove file shares. 
+
+.Edit the CIFS protocol configuration 
+. From the Data Classification menu, select *Configuration*. 
+. From the Configuration page, select the file shares group you want to modify. 
+. Select **Edit CIFS Credentials**. 
++
+image:screenshot-edit-cifs-credential.png[Screenshot of the Edit CIFS credentials menu.]
+. Choose the authentication method: **NTLM** or **Kerberos**. 
+. Enter the Active Directory **Username** and **Password**. 
+. Select **Save** to complete the process.
+
+.Add file shares to compliance scans
+. From the Data Classification menu, select *Configuration*. 
+. From the Configuration page, select the file shares group you want to modify. 
+. Select **+ Add shares**. 
+. Select the protocol for the file shares you are adding.
++
+image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, showing options to select protocols and shares]
++
+If you're adding file shares to a protocol you've already configured, no changes are required. 
++
+If you're adding file shares with a second protocol, ensure you've properly configured the authentication prperly as detailed in the link:#prerequisites[prerequisites].
+. Add the file shares you want to scan (one file share per line) using the format `<host_name>:/<share_path>`.
+. Select **Continue** to complete adding the file shares. 
+
+.Remove a file share from compliance scans
+. From the Data Classification menu, select *Configuration*.
+. Select the system you want to remove file shares from.
+. Select *Configuration*. 
+. From the Configuration page, select the Actions image:button-actions-horizontal.png[Actions icon] for the file share you want to remove.
+. From the Actions menu, select *Remove Share*.
+
+== Track the scanning progress
+
+You can track the progress of the initial scan.
+
+. Select the **Configuration** menu.
+. Select the **System Configuration**. 
+. For the storage repository, check the Scan progress column to view its status. 
+

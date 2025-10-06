@@ -1,0 +1,46 @@
+---
+permalink: data-services-data-classification/task-controlling-governance-dashboard-deprecated.html
+redirect: data-services-data-classification/task-controlling-governance-data.html
+---
+
+
+
+
+
+
+// = View governance details about your data using NetApp Data Classification
+// :hardbreaks:
+// :nofooter:
+// :icons: font
+// :linkattrs:
+// :imagesdir: ./media/
+
+// [.lead]
+// Gain control of the costs related to the data on your organizations' storage resources. Data Classification identifies the amount of stale data, non-business data, duplicate files, and very large files in your systems so you can decide whether you want to remove or tier some files to less expensive object storage.
+
+// Additionally, if you're planning to migrate data from on-premises locations to the cloud, you can view the size of the data and whether any of the data contains sensitive information before moving it.
+
+// ====
+// *NOTE*    This information is relevant only for Data Classification legacy versions 1.30 and earlier.
+// ====
+
+// == Data listed by sensitivity and wide permissions on the Governance dashboard
+
+// The _Sensitive Data and Wide Permissions_ area on the Governance dashboard provides a heatmap of files that contain sensitive data (including both sensitive and sensitive personal data) and that are overly permissive. This can help you to see where you may have some risks with sensitive data. 
+
+// NOTE: This applies to Data Classification versions 1.30 and earlier. 
+
+// Files are rated based on the number of users with permission to access the files on the X axis (lowest to highest), and the number of sensitive identifiers within the files on the Y axis (lowest to highest). The blocks represent the number of files that match the items from the X and Y axes. The lighter colored block are good; with fewer users able to access the files, and with fewer sensitive identifiers per file. The darker blocks are the items you may want to investigate. For example, the screen below shows the tooltip text for the dark blue block. It shows that you have 1,500 files where 751-100 users have access, and where there are 501-100 sensitive identifiers per file.
+
+// You can select the block you are interested in to view the filtered results of the affected files in the Investigation page so that you can investigate further.
+
+// No data is displayed in this panel if you haven't integrated an identity service with Data Classification. link:task-add-active-directory-datasense.html[See how to integrate your Active Directory service with Data Classification^].
+
+// TIP: This panel supports files in CIFS shares, OneDrive, and SharePoint data sources. There is currently no support for databases, Google Drive, Amazon S3, and generic object storage.
+
+// == Classification area on the dashboard showing AIP labels
+// The _Classification_ area on the dashboard provides a list of the most identified Azure Information Protection (AIP) Labels in your scanned data. 
+
+// If you have subscribed to Azure Information Protection (AIP), you can classify and protect documents and files by applying labels to content. Reviewing the most used AIP labels that are assigned to files enables you to see which labels are most used in your files.
+
+// See link:task-org-private-data.html#categorize-your-data-using-aip-labels[AIP Labels^] for more information.

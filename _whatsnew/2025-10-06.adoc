@@ -1,0 +1,29 @@
+=== Version 1.47
+
+.BlueXP classification is now NetApp Data Classification
+
+BlueXP classification has been renamed NetApp Data Classification. In addition to the rename, the user interface has been enhanced. 
+
+.BlueXP is now NetApp Console
+
+BlueXP has been renamed and redesigned to better reflect its role in managing your data infrastructure.  
+ 
+The NetApp Console provides centralized management of storage and data services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration.
+ 
+For details on what has changed, see the https://docs.netapp.com/us-en/bluexp-relnotes/index.html[NetApp Console release notes].
+
+.Actions (preview)
+
+Data Classification now supports actions in the Investigation page. You can copy, move, and delete files from Data Classification. 
+
+.Support for tagging files (preview)
+
+Data Classification now supports tagging individual files. With file tags, you can create a custom identifier for specific files that can be used to identify and filter data. With the tag, you can identify specific qualities in your data investigation or create saved queries and policies based on the tag results. 
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada[View file metadata].
+
+.Policies for saved queries (preview)
+
+Saved searches have been renamed saved queries. You can also turn saved queries into actionable policies: delete dat or send email notifications based on saved query results. 
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html[Create policies].

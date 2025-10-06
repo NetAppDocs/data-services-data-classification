@@ -1,0 +1,83 @@
+* Data Classification is not supported on a host that is shared with other applications - the host must be a dedicated host.
+//This include is used in 3 Linux deploy topics
+
+* When building the host system in your premises, you can choose among these system sizes depending on the size of the dataset that you plan to have Data Classification scan.
++
+[cols="17,17,27,31",width=95%,options="header"]
+|===
+| System size
+| CPU
+| RAM (swap memory must be disabled)
+| Disk
+| *Extra Large* | 32 CPUs | 128 GB RAM 
+a|* 1 TiB SSD on /, or 100 GiB available on /opt
+* 895 GiB available on /var/lib/docker
+* 5 GiB on /tmp
+* *For Podman, 30 GB on /var/tmp* 
+| *Large* | 16 CPUs | 64 GB RAM 
+a|* 500 GiB SSD on /, or 100 GiB available on /opt
+* 400 GiB available on /var/lib/docker or for Podman /var/lib/containers
+* 5 GiB on /tmp
+* *For Podman, 30 GB on /var/tmp* 
+|===
+
+
+* When deploying a compute instance in the cloud for your Data Classification installation, it's recommended you use a system that meets the "Large" system requirements above:
+
+** *Amazon Elastic Compute Cloud (Amazon EC2) instance type*: "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types[See additional AWS instance types^]. 
+** *Azure VM size*: "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types[See additional Azure instance types^].
+** *GCP machine type*: "n2-standard-16". link:reference-instance-types.html#gcp-instance-types[See additional GCP instance types^].
+
+* *UNIX folder permissions*: The following minimum UNIX permissions are required:
++
+[cols="25,25",width=60%,options="header"]
+|===
+| Folder
+| Minimum Permissions
+
+| /tmp | `rwxrwxrwt`
+
+| /opt | `rwxr-xr-x`
+
+| /var/lib/docker | `rwx------`
+
+| /usr/lib/systemd/system  | `rwxr-xr-x`
+|===
+
+* *Operating system*: 
+
+** The following operating systems require using the Docker container engine:
+
+*** Red Hat Enterprise Linux version 7.8 and 7.9
+//*** CentOS version 7.8 and 7.9
+//*** Rocky Linux 9 (requires Data Classification version 1.24 or greater)
+*** Ubuntu 22.04 (requires Data Classification version 1.23 or greater)
+*** Ubuntu 24.04 (requires Data Classification version 1.23 or greater)
+
+** The following operating systems require using the Podman container engine, and they require Data Classification version 1.30 or greater:
+
+*** Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, and 9.6.
+
+** Advanced Vector Extensions (AVX2) must be enabled on the host system.
+
+* *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
+
+* *Additional software*: You must install the following software on the host before you install Data Classification:
+
+** Depending on the OS you are using, you'll need to install one of the container engines:
++
+*** Docker Engine version 19.3.1 or greater. https://docs.docker.com/engine/install/[View installation instructions^].
+*** Podman version 4 or greater. To install Podman, enter (`sudo yum install podman netavark -y`).
+
+//*** Podman version 4 or greater. To install Podman, update your system packages (`sudo yum update -y`), and then install Podman (`sudo yum install netavark -y`). PRior to 7/25/2024
+
+//https://podman.io/docs/installation#installing-on-linux[View installation instructions^].
+
+//RHEL 8 and 9 can use "sudo yum install netavark -y" instead of "sudo yum install podman -y" 
+
+** Python version 3.6 or greater. https://www.python.org/downloads/[View installation instructions^].
+
+* *NTP considerations*: NetApp recommends configuring the Data Classification system to use a Network Time Protocol (NTP) service. The time must be synchronized between the Data Classification system and the Console agent system.
+
+//2024/02/21, BLUEXPDOC-262 & BLUEXPDOC-264
+// 2025 June 12, CPE-9494

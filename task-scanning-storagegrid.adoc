@@ -1,0 +1,79 @@
+---
+sidebar: sidebar
+permalink: task-scanning-storagegrid.html
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense
+summary: Complete a few steps to start scanning data within StorageGRID directly with NetApp Data Classification.
+---
+
+= Scan StorageGRID data with NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Complete a few steps to start scanning data within StorageGRID directly with NetApp Data Classification. 
+
+
+== Review StorageGRID requirements
+
+Review the following prerequisites to make sure that you have a supported configuration before you enable Data Classification.
+
+* You need to have the endpoint URL to connect with the object storage service.
+
+* You need to have the Access Key and Secret Key from StorageGRID so that Data Classification can access the buckets.
+//
+//* Support for Azure Blob requires that you use the link:https://min.io/[MinIO service^].
+
+== Deploy the Data Classification instance
+
+Deploy Data Classification if there isn't already an instance deployed.
+
+If you are scanning data from StorageGRID that is accessible over the internet, you can link:task-deploy-cloud-compliance.html[deploy Data Classification in the cloud^] or link:task-deploy-compliance-onprem.html[deploy Data Classification in an on-premises location that has internet access^].
+
+If you are scanning data from StorageGRID that has been installed in a dark site that has no internet access, you need to link:task-deploy-compliance-dark-site.html[deploy Data Classification in the same on-premises location that has no internet access^]. This also requires that the Console agent is deployed in that same on-premises location.
+
+
+== Add the StorageGRID service to Data Classification
+
+Add the StorageGRID service.
+
+.Steps
+
+. From the Data Classification menu, select the *Configuration* option. 
+
+. From the Configuration page, select *Add System* > *Add StorageGRID*.
+
+
+. In the Add StorageGRID Service dialog, enter the details for the StorageGRID service and select *Continue*.
+.. Enter the name you want to use for the System. This name should reflect the name of the StorageGRID service to which you are connecting.
+.. Enter the Endpoint URL to access the object storage service.
+.. Enter the Access Key and Secret Key so that Data Classification can access the buckets in StorageGRID.
++
+image:screenshot-scanning-storagegrid-add.png[A screenshot of the dialog where you enter the values to access the StorageGRID service.]
+
+.Result
+
+StorageGRID is added to the list of systems.
+
+== Enable and disable compliance scans on StorageGRID buckets
+
+After you enable Data Classification on StorageGRID, the next step is to configure the buckets that you want to scan. Data Classification discovers those buckets and displays them in the system you created.
+
+.Steps
+
+. In the Configuration page, locate the StorageGRID system. 
+
+. On the StorageGRID system tile, select *Configuration*.
+. Complete one of the following steps to enable or disable scanning:
++
+* To enable mapping-only scans on a bucket, select *Map*. 
+* To enable full scans on a bucket, select *Map & Classify*. 
+* To disable scanning on a bucket, select *Off*.
+
+
+
+.Result
+
+Data Classification starts scanning the buckets that you enabled. You can track the progress of the initial scan by navigating to the **Configuration** menu then selecting the **System configuration**. The progress of each scan is show as a progress bar. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. If there are any errors, they'll appear in the Status column, alongside the required action to fix the error.

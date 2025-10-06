@@ -1,0 +1,75 @@
+---
+sidebar: sidebar
+permalink: task-controlling-private-data.html
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights
+summary: Gain control of your private data by viewing details about the personal data (PII) and sensitive personal data (SPII) in your organization. You can also gain visibility by reviewing the categories and file types that Data Classification found in your data.
+---
+= View compliance details about the private data stored in your organization with NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Gain control of your private data by viewing details about the personal data (PII) and sensitive personal data (SPII) in your organization. You can also gain visibility by reviewing the categories and file types that NetApp Data Classification found in your data.
+
+[NOTE]
+File-level compliance details are only available if you perform a full classificaiton scan. Mapping-only scans don't yield file-level details. 
+
+By default, the Data Classification dashboard displays compliance data for all systems and databases. To see data for only some of the systems, select them.
+
+image:screenshot_compliance_dashboard.png[A screenshot of the Data Classification dashboard]
+
+You can filter the results from the Data Investigation page and download a report of the results as a CSV file. See link:task-investigate-data.html[Filtering data in the Data Investigation page] for details.
+
+== View files that contain personal data
+
+Data Classification automatically identifies specific words, strings, and patterns (Regex) inside the data. link:link:reference-private-data-categories.html[For example, credit card numbers, social security numbers, bank account numbers, passwords, and more.] Data Classification identifies this type of information in individual files, in files within directories (shares and folders), and in database tables.
+
+You can also create custom search terms to identify personal data specific to your organization. For more information, see link:task-custom-classification.html[Create a custom classification].
+
+For some types of personal data, Data Classification uses _proximity validation_ to validate its findings. The validation occurs by looking for one or more predefined keywords in proximity to the personal data that was found. For example, Data Classification identifies a U.S. social security number (SSN) as an SSN if it sees a proximity word next to it--for example, _SSN_ or _social security_. link:reference-private-data-categories.html[The table of personal data] shows when Data Classification uses proximity validation.
+
+.Steps
+
+. From the Data Classification menu, select the *Compliance* tab.
+
+. To investigate the details for all personal data, select the icon next to the personal data percentage.
++
+image:screenshot_compliance_dashboard.png[A screenshot of the Data Classification dashboard]
+
+. To investigate the details for a specific type of personal data, select *View All* and then select the *Investigate Results* arrow icon for a specific type of personal data, for example, email addresses.
++
+image:screenshot_personal_files.png[A screenshot of the personal files dialog box where you can select the Investigate Results icon next to a personal data type.]
+
+. Investigate the data by searching, sorting, expanding details for a specific file, selecting the *Investigate Results* arrow to see masked information, or by downloading the file list.
++
+The following image show personal data found in a directory (shares and folders). In the *Structured* tab, you view personal data found in databases. In the *Unstructured* tab, you can view file-level data. 
++
+image:screenshot_compliance_investigation_page.png[A screenshot of details information found in files after clicking Investigate Results.]
++
+image:screenshot_compliance_investigation_page_directory.png[A screenshot of detailed information found in directories after clicking Investigate Results.]
+
+== View files that contain sensitive personal data
+
+Data Classification automatically identifies special types of sensitive personal information, as defined by privacy regulations such as https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN#d1e2051-1-1[articles 9 and 10 of the GDPR^]. For example, information regarding a person's health, ethnic origin, or sexual orientation. link:reference-private-data-categories.html[See the full list]. Data Classification identifies this type of information in individual files, in files within directories (shares and folders), and in database tables.
+
+Data Classification uses AI, natural language processing (NLP), machine learning (ML), and cognitive computing (CC) to understand the meaning of the content that it scans in order to extract entities and categorize it accordingly.
+
+For example, one sensitive GDPR data category is ethnic origin. Because of its NLP abilities, Data Classification can distinguish the difference between a sentence that reads "George is Mexican" (indicating sensitive data as specified in article 9 of the GDPR), versus "George is eating Mexican food."
+
+NOTE: Only English is supported when scanning for sensitive personal data. Support for more languages will be added later.
+
+.Steps
+
+. From the Data Classification menu, select *Compliance*.
+
+. To investigate the details for all sensitive personal data, locate the **Sensitive personal results** card then select **Show all**.
++
+image:screenshot-sensitive-personal.png[Screenshot of the Sensitive personal results card].
+
+. To investigate the details for a specific type of sensitive personal data, select *View All* then select the *Investigate Results* arrow icon for a specific type of sensitive personal data.
+
+. Investigate the data by searching, sorting, expanding details for a specific file, clicking *Investigate Results* to see masked information, or by downloading the file list.
+

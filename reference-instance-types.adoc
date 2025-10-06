@@ -1,0 +1,67 @@
+---
+sidebar: sidebar
+permalink: reference-instance-types.html
+keywords: BlueXP classification, installation, deployment, instance, virtual machine, cpu, ram, memory, disk, capacity
+summary: Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. When deploying Data Classification in the cloud, it's recommended you use a system with the "large" characteristics for full functionality.
+---
+
+= Supported NetApp Data Classification instance types
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+NetApp Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. When deploying Data Classification in the cloud, we recommend that you use a system with the "large" characteristics for full functionality.
+
+You can deploy Data Classification on a system with fewer CPUs and less RAM, but there are some limitations when using these less powerful systems. link:concept-classification.html[Learn about these limitations^].
+
+In the following tables, if the system marked as "default" is not available in the region where you are installing Data Classification, the next system in the table will be deployed.
+
+== AWS instance types
+
+[cols="20,30,25",width=80%,options="header"]
+|===
+| System size
+| Specs
+| Instance type
+| Extra Large | 32 CPUs, 128 GB RAM, 1 TiB gp3 SSD | https://aws.amazon.com/ec2/instance-types/m6i/[m6i.8xlarge^] (default)
+| Large | 16 CPUs, 64 GB RAM, 500 GiB SSD | https://aws.amazon.com/ec2/instance-types/m6i/[m6i.4xlarge^] (default)
+m6a.4xlarge
+m5a.4xlarge
+m5.4xlarge
+m4.4xlarge
+| Medium | 8 CPUs, 32 GB RAM, 200 GiB SSD | https://aws.amazon.com/ec2/instance-types/m6i/[m6i.2xlarge^] (default)
+m6a.2xlarge
+m5a.2xlarge
+m5.2xlarge
+m4.2xlarge
+| Small | 8 CPUs, 16 GB RAM, 100 GiB SSD | https://aws.amazon.com/ec2/instance-types/c6a/[c6a.2xlarge^] (default)
+c5a.2xlarge
+c5.2xlarge
+c4.2xlarge
+|===
+
+== Azure instance types
+
+[cols="20,30,25",width=80%,options="header"]
+|===
+| System size
+| Specs
+| Instance type
+| Extra Large | 32 CPUs, 128 GB RAM, OS Disk (2,048 GiB, min 250 MB/s throughput), and Data Disk (1 TiB SSD, min 750 MB/s throughput) | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dv3-series[Standard_D32_v3^] (default)
+| Large | 16 CPUs, 64 GB RAM, 500 GiB SSD | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3^] (default)
+|===
+
+== GCP instance types
+
+[cols="20,30,25",width=80%,options="header"]
+|===
+| System size
+| Specs
+| Instance type
+| Large | 16 CPUs, 64 GB RAM, 500 GiB SSD | https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16^] (default)
+n2d-standard-16
+n1-standard-16
+|===
