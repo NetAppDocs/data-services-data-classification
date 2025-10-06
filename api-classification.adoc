@@ -22,7 +22,7 @@ There are four categories defined within Data Classification that correspond to 
 * Governance
 * Configuration
 
-The APIs in the Swagger documentation allow you to search, aggregate data, track your scans, and create actions like copy, move, and more.
+The APIs in the Swagger documentation allow you to search, aggregate data, track your scans, and perform actions like copy, move, and more.
 
 == Overview 
 
@@ -419,7 +419,8 @@ curl -X GET "http://{classification_ip}/api/{classification_version} /search/opt
 
 We will use that response in our request parameters to filter the desired files we want to copy. 
  
-You can apply an action on multiple items. Supported action types include: move, delete, copy, assign to, FlexClone, export data, rescan, and label. 
+You can apply an action on multiple items. Supported action types include: move, delete, and copy.
+//, assign to, FlexClone, export data, rescan, and label. 
  
 We will create the copy action: 
 

@@ -14,7 +14,7 @@ For details on what has changed, see the https://docs.netapp.com/us-en/bluexp-re
 
 .Actions (preview)
 
-Data Classification now supports actions in the __ page. You can copy, move, and delete files from Data Classification.
+Data Classification now supports actions in the Investigation page. You can copy, move, and delete files from Data Classification. 
 
 .Support for tagging files (preview)
 

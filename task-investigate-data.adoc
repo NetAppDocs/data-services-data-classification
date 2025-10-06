@@ -12,7 +12,7 @@ summary: You can investigate the data from your organization by viewing details 
 :imagesdir: ./media/
 
 [.lead]
-The Data Investigation dashboard displays file and directory-level insights into your data, enabling you to sort and filter results. The Data Investigation page presents insights into file and directory metadata and permissions as well as identifying duplicate files. With file-, directory-, and database-level insights, you can take actions to improve the compliance of your organization and save storage space. 
+The Data Investigation dashboard displays file and directory-level insights into your data, enabling you to sort and filter results. The Data Investigation page presents insights into file and directory metadata and permissions as well as identifying duplicate files. With file-, directory-, and database-level insights, you can take actions to improve the compliance of your organization and save storage space. The Data Investigation page also supports moving, copying, and deleting files. 
 
 [NOTE]
 To gain insights from the Investigation page, you must perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
@@ -221,6 +221,7 @@ Data Classification uses hashing technology to determine duplicate files. If any
 . In Filter pane, select "File Size" along with "Duplicates" ("Has duplicates") to see which files of a certain size range are duplicated in your environment.
 
 . Optionally, download the list of duplicate files and send it to your storage administrator so they can decide which files, if any, can be deleted. 
+. Optionally, you can delete, tag, or move the duplicate files. Select the files you want to perform an action on, then select the appropriate action. 
 
 *View if a specific file is duplicated*
 
@@ -236,6 +237,8 @@ If duplicates exist for a file, this information appears next to the _Duplicates
 
 . To view the list of duplicate files and where they are located, select *View Details*. 
 . In the next page select *View Duplicates* to view the files in the Investigation page.
+. Optionally, you can delete, tag, or move the duplicate files. Select the files you want to perform an action on, then select the appropriate action. 
+
 
 [TIP]
 You can use the "file hash" value provided in this page and enter it directly in the Investigation page to search for a specific duplicate file at any time - or you can use it in a saved query.
