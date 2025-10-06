@@ -24,7 +24,7 @@ Update times for individual components of the Governance dashboard have been imp
 |Top Data Repositories by Sensitivity Level |2 hours
 |===
 
-You can view the time of the last update and manually update the Duplicate Files, Non-Business Data, Saved Searches, Stale Data, and Top Data Repositories by Sensitivity Level components. For more information about the Governance dashboard, see link:https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html[View governance details about the data stored in your organization]. 
+You can view the time of the last update and manually update the Duplicate Files, Non-Business Data, Saved Searches, Stale Data, and Top Data Repositories by Sensitivity Level components. For more information about the Governance dashboard, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-governance-data.html[View governance details about the data stored in your organization]. 
 
 .Performance and security improvements 
 

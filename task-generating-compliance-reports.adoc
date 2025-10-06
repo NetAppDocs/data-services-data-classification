@@ -48,10 +48,9 @@ When you filter the dashboard, Data Classification scopes the compliance data an
 
 . From the Data Classification menu, select *Compliance*.
 . Select the systems filter drop-down then select the systems.
-
-. Select *View*.
+. Select **Accept** to confirm your selection. 
 +
-image:screenshot_cloud_compliance_filter.png[A screen shot of selecting the systems for the reports you want to run.]
+image:screenshot-report-filter.png[Screenshow showing the filtering of systems.]
 
 == Data Subject Access Request Report
 
@@ -65,7 +64,7 @@ When you perform a data subject search, Data Classification finds all of the fil
 
 After the search is complete, you can then download the list of files for a Data Subject Access Request report. The report aggregates insights from the data and puts it into legal terms that you can send back to the person.
 
-NOTE: Data subject search is not supported within databases at this time.
+NOTE: Data subject search is not currently supported within databases.
 
 *Search for data subjects and download reports*
 
@@ -80,13 +79,13 @@ NOTE: English, German, Japanese, and Spanish are supported when searching for th
 
 // data subjects doesn't exist anymore -->
 
-. From the Compliance page, scroll down and select *Data Subjects*.
+. From the Compliance page, select *Data Subjects*.
 
 . Search for the data subject's full name or known identifier.
 +
 Here's an example that shows a search for the name _john doe_:
 +
-image:screenshot_dsar_search.gif[A screenshot that shows a search for the name "John Doe" for a DSAR.]
+image:screenshot_dsar_search.gif[Screenshot of the data subject search.]
 
 . Choose one of the available options:
 * *Download DSAR Report*: A formal response to the access request that you can send to the data subject. This report contains automatically-generated information based on data that Data Classification found on the data subject and is designed to be used as a template. You should complete the form and review it internally before sending it to the data subject.
@@ -124,10 +123,9 @@ Go to the Compliance tab to generate the report.
 .Steps
 
 . From the Data Classification menu, select *Compliance*.
-. Scroll down and locate the *Reports* pane. 
-. Select the download icon next to *HIPAA Report*.
+. Locate the **Reports pane**. Select the download icon next to *HIPAA Report*.
 +
-image:screenshot_hipaa.gif[A screen shot of the Compliance tab in the Console that shows the Reports pane where you can select HIPAA.]
+image:screenshot-report-options.png[Screenshot of the report options in the Compliance page.]
 
 .Result
 
@@ -157,10 +155,9 @@ Go to the Compliance tab to generate the report.
 .Steps
 
 . From the Data Classification menu, select *Compliance*.
-. Scroll down and locate the *Reports* pane. 
-. Select the download icon next to *PCI DSS Report*.
+. Locate the **Reports pane**. Select the download icon next to *PCI DSS Report*.
 +
-image:screenshot_pci_dss.gif[A screen shot of the Compliance tab in the Console that shows the Reports pane where you can select Privacy Risk Assessment.]
+image:screenshot-report-options.png[Screenshot of the report options in the Compliance page.]
 
 .Result
 
@@ -187,10 +184,9 @@ Go to the Compliance tab to generate the report.
 .Steps
 
 . From the Data Classification menu, select *Compliance*.
-. Scroll down and locate the *Reports* pane. 
-. Select the download icon next to *Privacy Risk Assessment*.
+. Locate the **Reports pane**. Select the download icon next to *Privacy Risk Assessment Report*.
 +
-image:screenshot_privacy_risk_assessment.gif[A screen shot of the Compliance tab in the Console that shows the Reports pane where you can select Privacy Risk Assessment.]
+image:screenshot-report-options.png[Screenshot of the report options in the Compliance page.]
 
 .Result
 

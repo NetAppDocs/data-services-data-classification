@@ -6,7 +6,7 @@ This Data Classification release includes bug fixes and the following updates:
 
 The Audit page now supports enhanced insights into scan events for BlueXP classification. The Audit page now displays when the scan of a system begins, statuses of systems, and any issues. Statuses for shares and systems are only available for mapping scans. 
 
-For more information about the Audit page, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html[Monitor NetApp Console operations^].
+For more information about the Audit page, see link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html[Monitor NetApp Console operations^].
 
 .Support for RHEL 9.6
 This release adds support for Red Hat Enterprise Linux v9.6 for manual on-premises installation of BlueXP classification, including dark site deployments.

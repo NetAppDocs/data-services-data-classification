@@ -40,7 +40,7 @@ indexpage:
           url: task-investigate-data.html#check-for-duplicate-files-in-your-storage-systems
         - title: Filter your data to view specific files
           url: task-investigate-data.html
-        - title: Create a saved search
+        - title: Create a saved query
           url: task-using-policies.html
         - title: Generate compliance reports
           url: task-generating-compliance-reports.html
@@ -54,9 +54,8 @@ indexpage:
           url: https://www.netapp.com/data-services/
         - title: NetApp Community 
           url: https://community.netapp.com/
-        # check on these 2
         - title: Data Classification use cases
-          url: https://bluexp.netapp.com/netapp-cloud-data-sense
+          url: https://www.netapp.com/data-services/classification/
         - title: Data Classification videos
           url: https://youtube.com/playlist?list=PLdXI3bZJEw7m0dFDhu3w6Yqt71Zqyl2Pw
 # End snippet

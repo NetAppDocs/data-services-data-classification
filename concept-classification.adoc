@@ -26,13 +26,13 @@ The NetApp Console provides centralized management of NetApp storage and data se
  
 You don't need a license or subscription to start using NetApp Console and you only incur charges when you need to deploy Console agents in your cloud to ensure connectivity to your storage systems or NetApp data services. However, some NetApp data services accessible from the Console are licensed or subscription-based.
 
-Learn more about the link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html[NetApp Console^].
+Learn more about the link:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html[NetApp Console^].
 
 == Features
 
 Data Classification uses artificial intelligence (AI), natural language processing (NLP), and machine learning (ML) to understand the content that it scans in order to extract entities and categorize the content accordingly. This allows Data Classification to provide the following areas of functionality.
 
-https://bluexp.netapp.com/netapp-cloud-data-sense[Learn about use cases for Data Classification^].
+link:https://www.netapp.com/data-services/classification/[Learn about use cases for Data Classification^].
 
 
 .Maintain compliance
@@ -58,7 +58,7 @@ Data Classification can identify data that is potentially at risk for being acce
 Data Classification provides tools that can help with your storage total cost of ownership (TCO). You can use Data Classification to:
 
 * Increase storage efficiency by identifying duplicate or non-business-related data.
-* Save storage costs by identifying inactive data that you can tier to less expensive object storage. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html[Learn more about tiering from Cloud Volumes ONTAP systems^]. https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html[Learn more about tiering from on-premises ONTAP systems^].
+* Save storage costs by identifying inactive data that you can tier to less expensive object storage. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html[Learn more about tiering from Cloud Volumes ONTAP systems^]. https://docs.netapp.com/us-en/data-services-tiering/concept-cloud-tiering.html[Learn more about tiering from on-premises ONTAP systems^].
 
 == Supported systems and data sources
 
@@ -71,8 +71,7 @@ Data Classification can scan and analyze structured and unstructured data from t
 * Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP)
 * On-premises ONTAP clusters
 * StorageGRID
-
-//* Google Cloud NetApp Volumes
+* Google Cloud NetApp Volumes
 
 *Data sources*
 
@@ -98,7 +97,7 @@ Data Classification is free to use. No Classification license or paid subscripti
 
 * Installing Data Classification in the cloud requires deploying a cloud instance, which results in charges from the cloud provider where it is deployed. See <<The Data Classification instance,the type of instance that is deployed for each cloud provider>>. There is no cost if you install Data Classification on an on-premises system.
 
-* Data Classification requires that you have deployed a Console agent. In many cases you already have a Console agent because of other storage and services you are using in the Console. The Console agent instance results in charges from the cloud provider where it's deployed. See the https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html[type of instance that is deployed for each cloud provider^]. There is no cost if you install the Console agent on an on-premises system.
+* Data Classification requires that you have deployed a Console agent. In many cases you already have a Console agent because of other storage and services you are using in the Console. The Console agent instance results in charges from the cloud provider where it's deployed. See the https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html[type of instance that is deployed for each cloud provider^]. There is no cost if you install the Console agent on an on-premises system.
 
 === Data transfer costs
 
@@ -110,7 +109,7 @@ Data transfer costs depend on your setup. If the Data Classification instance an
 
 == The Data Classification instance
 
-When you deploy Data Classification in the cloud, the Console deploys the instance in the same subnet as the Console agent. https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[Learn more about the Console agent.^]
+When you deploy Data Classification in the cloud, the Console deploys the instance in the same subnet as the Console agent. https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html[Learn more about the Console agent.^]
 //
 //NOTE: If the Console agent is installed on-prem, it deploys the Data Classification instance in same VPC or VNet as the first Cloud Volumes ONTAP system in the request. You can install Data Classification on-prem as well.
 

@@ -21,9 +21,8 @@ When you deactivate scans, Data Classification no longer scans the data on the s
 
 . From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the system then *Deactivate Data Classification*.
 
-image:screenshot_deactivate_compliance_scan.png[A screenshot of the action icon where you can select Deactivate Data Classification. This option is available after you select a system from the Systems page.]
-
-TIP: You can also disable compliance scans for a system from the Services panel when you select the system.
+[TIP]
+You can also disable compliance scans for a system from the Services panel when you select the system.
 
 == Remove a database from Data Classification
 
@@ -31,7 +30,6 @@ If you no longer want to scan a certain database, you can delete it from the Dat
 
 . From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the database then *Remove DB Server*.
 
-image:screenshot_compliance_remove_db.png[A screenshot of the Remove DB Server button from the Scan Configuration page.]
 
 == Remove a group of file shares from Data Classification
 
@@ -41,6 +39,6 @@ If you no longer want to scan user files from a file shares group, you can delet
 
 . From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the File Shares Group then *Remove File Shares Group*.
 +
-image:screenshot_compliance_remove_fileshare_group.png[A screenshot of the Remove File Share Group button from the Scan Configuration page.]
+image:screenshot_compliance_remove_db.png[A screenshot of the Remove DB Server button from the Scan Configuration page.]
 
 . Select *Delete Group of Shares* from the confirmation dialog.

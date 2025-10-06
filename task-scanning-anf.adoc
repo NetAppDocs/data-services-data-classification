@@ -17,7 +17,7 @@ Complete a few steps to get started with NetApp Data Classification for Azure Ne
 
 == Discover the Azure NetApp Files system that you want to scan
 
-If the Azure NetApp Files system you want to scan is not already in the NetApp Console as system, link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html[add it in the Systems page^]. 
+If the Azure NetApp Files system you want to scan is not already in the NetApp Console as system, link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html[add it in the Systems page^]. 
 
 == Deploy the Data Classification instance
 
@@ -50,10 +50,8 @@ See <<Enable and disable compliance scans on volumes,Enable and disable complian
 Data Classification starts scanning the volumes you selected in the system. Results are available in the Compliance dashboard as soon as Data Classification finishes the initial scans. The time that it takes depends on the amount of data--it could be a few minutes or hours. You can track the progress of the initial scan by navigating to the **Configuration** menu then selecting the **System configuration**. The progress of each scan is show as a progress bar. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. 
 
 [NOTE]
-===
 * By default, if Data Classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system won't scan the files in your volumes because Data Classification can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, select *Or select scanning type for each volume*. The resulting page has a setting you can enable so that Data Classification will scan the volumes regardless of permissions.
 * Data Classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume[Learn about this Data Classification limitation^].
-===
 
 == Verify that Data Classification has access to volumes
 
@@ -71,8 +69,6 @@ NOTE: For Azure NetApp Files, Data Classification can only scan volumes in the s
 
 .Steps 
 . From the Data Classification menu, select *Configuration*.
-+
-image:screenshot_cifs_credentials.gif[A screenshot of the Compliance tab that shows the Scan Status button that's available in the top right of the content pane.]
 .. If you're using CIFS (SMB), ensure the Active Directory credentials are correct. For each system, select *Edit CIFS Credentials* then enter the user name and password that Data Classification needs to access CIFS volumes on the system.
 +
 The credentials can be read-only, but providing admin credentials ensures that Data Classification can read any data that requires elevated permissions. The credentials are stored on the Data Classification instance.

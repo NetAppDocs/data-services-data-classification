@@ -19,9 +19,13 @@ Custom classification is only available for Map & Classify scans, not mapping-on
 
 .Steps
 . Select the **Custom classification** tab. 
-image:screenshot-custom-classification-tab.png[A screenshot of the Custom classification page.]
 . Select the **Add New Classifier** button.
-. Add a Name and Description for the new classifier. 
+. Add a Classificer name and Description for the new classifier. 
+. Choose to add the classifier as a *Personal identifier* or *Category*. 
++
+image:screenshot-custom-classifier-name.png[Screenshot of add classifier]
+. Select *Next*.
+// Select tool?
 . To add the customization as a regular expression, select **Custom regular expression** then **Next**. 
 . Add a pattern to detect the specific information of your data. Select **Validate** to confirm the syntax of your entry. 
 image:screenshot-create-logic-regex.png[A screenshot of the dialog to create a regular expression.]

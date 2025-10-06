@@ -45,13 +45,13 @@ The table below shows some of the differences:
 | Ability to run a link:task-controlling-governance-data.html[Data Mapping Report] | Yes | Yes
 | Data Investigation page to view file details | Yes | No
 | Search for names within files | Yes | No
-| Create link:task-using-policies.html[saved searches] that provide custom search results | Yes | No
+| Create link:task-using-policies.html[saved queries] that provide custom search results | Yes | No
 | Ability to run other reports | Yes | No
 | Ability to see metadata from files** | No | Yes
 |===
 
-{asterisk} Data Classification does not impose a limit on the amount of data it can scan. Each Console agent supports scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation[install another Console agent^] then link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html[deploy another Data Classification instance]. +
-The Console UI displays data from a single connector. For tips on viewing data from multiple Console agents, see link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors[Work with multiple Console agents^].
+{asterisk} Data Classification does not impose a limit on the amount of data it can scan. Each Console agent supports scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation[install another Console agent^] then link:task-deploy-overview.html[deploy another Data Classification instance]. +
+The Console UI displays data from a single connector. For tips on viewing data from multiple Console agents, see link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors[Work with multiple Console agents^].
 // duplicate of content in include file due to formattinginclude::_include/console-agent-limit.adoc[]
 
 {asterisk}{asterisk} The following metadata is extracted from files during mapping scans:  
@@ -85,8 +85,8 @@ The Console UI displays data from a single connector. For tips on viewing data f
 | Stale data | Yes | Yes
 | Non-business data | Yes | Yes
 | Duplicated files | Yes | Yes
-| Predefined saved searches | Yes | No
-| Default saved searches | Yes | Yes
+| Predefined saved queries | Yes | No
+| Default saved queries | Yes | Yes
 | DDA report | Yes | Yes
 | Mapping report| Yes | Yes
 |Sensitivity level detection | Yes | No
@@ -136,7 +136,7 @@ The Console UI displays data from a single connector. For tips on viewing data f
 | Map & Classify
 | Map 
 
-| Saved searches | Yes | Yes
+| Saved queries | Yes | Yes
 | System type | Yes | Yes
 | System | Yes | Yes
 | Storage repository | Yes | Yes

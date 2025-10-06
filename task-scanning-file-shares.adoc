@@ -45,7 +45,7 @@ include::_include/cifs-permissions.adoc[]
 == Create a file shares group
 
 When you add file shares to the group, you must use the format `<host_name>:/<share_path>`.
-+
+
 You can add file shares individually or you can enter a line-separated list of the file shares you want to scan. You can add up to 100 shares at a time.
 
 .Steps
@@ -60,7 +60,7 @@ You can add file shares individually or you can enter a line-separated list of t
 +
 image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, showing options to select protocols and shares]
 
-..If you're adding CIFS shares with NTLM authentication, enter the Active Directory credentials to access the CIFS volumes. Although read-only credentials are supported, it's recommended you provide full access with administrator credentials. Select **Save**.
+.. If you're adding CIFS shares with NTLM authentication, enter the Active Directory credentials to access the CIFS volumes. Although read-only credentials are supported, it's recommended you provide full access with administrator credentials. Select **Save**.
 
 . Add the file shares that you want to scan (one file share per line). Then select **Continue**. 
 
@@ -127,8 +127,5 @@ You can track the progress of the initial scan.
 
 . Select the **Configuration** menu.
 . Select the **System Configuration**. 
-+
-The progress of each scan is shown as a progress bar. 
-
-. Hover over the progress bar to see the number of files scanned relative to the total files in the volume.
+. For the storage repository, check the Scan progress column to view its status. 
 

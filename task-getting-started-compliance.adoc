@@ -60,8 +60,6 @@ Data Classification starts scanning the volumes you selected in the system. Resu
 
 NOTE: Data Classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume[See more details about this Data Classification limitation^].
 
-
-
 == Verify that Data Classification has access to volumes
 
 Make sure that Data Classification can access volumes by checking your networking, security groups, and export policies. You'll need to provide Data Classification with CIFS credentials so it can access CIFS volumes.
