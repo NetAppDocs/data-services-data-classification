@@ -10,20 +10,32 @@ BlueXP has been renamed and redesigned to better reflect its role in managing yo
  
 The NetApp Console provides centralized management of storage and data services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration.
  
-For details on what has changed, see the https://docs.netapp.com/us-en/bluexp-relnotes/index.html[NetApp Console release notes].
+For details on what has changed, see the https://docs.netapp.com/us-en/console-relnotes/index.html[NetApp Console release notes].
 
-.Actions (preview)
 
-Data Classification now supports actions in the Investigation page. You can copy, move, and delete files from Data Classification. 
+.Enhanced Investigation experience
 
-.Support for tagging files (preview)
+Find and understand your data faster with new searchable filters, per-value result counts, real-time insights summarizing key findings, and a refreshed results table with customizable columns and a slide-out details pane.
 
-Data Classification now supports tagging individual files. With file tags, you can create a custom identifier for specific files that can be used to identify and filter data. With the tag, you can identify specific qualities in your data investigation or create saved queries and policies based on the tag results. 
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada[Investigate data].
 
-For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada[View file metadata].
+.New Governance & Compliance dashboards
+
+Gain critical insights faster with intuitive widgets, clearer visuals, and improved loading performance. For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html[Review governance information about your data] and link:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html[View compliance information about your data].
 
 .Policies for saved queries (preview)
 
-Saved searches have been renamed saved queries. You can also turn saved queries into actionable policies: delete dat or send email notifications based on saved query results. 
+Data Classification now enables you to automate governance with conditional actions. You can create retention rules with automatic deletion set up periodic email notifications, all managed from an updated saved queries page.
 
 For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html[Create policies].
+
+.Actions (preview)
+
+Take direct control from the Investigation page - delete, move, copy, or tag files individually or in bulk, for efficient data management and remediation.
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada[Investigate data].
+
+
+.Support for Google Cloud NetApp Volumes 
+
+Data Classification now supports scanning on Google Cloud NetApp Volumes. Easily add Google Cloud NetApp Volumes from the NetApp Console for seamless data scanning and classification.

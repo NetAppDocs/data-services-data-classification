@@ -33,9 +33,9 @@ You'll perform the following tasks.
 
 A Console agent is required before you can install and use Data Classification. You can, however, run the Prerequisites script without a Console agent.
 
-You can https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install Data Classification on-prem may also choose to install the Console agent on-prem.
+You can https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install Data Classification on-prem may also choose to install the Console agent on-prem.
 
-To create a Console agent in your cloud provider environment, see https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]. 
+To create a Console agent in your cloud provider environment, see https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]. 
 
 You'll need the IP address or host name of the Console agent system when running the Prerequisites script. You'll have this information if you installed the Console agent in your premises. If the Console agent is deployed in the cloud, you can find this information from the Console: select the Help icon then *Support* then *Console agent*.
 
@@ -75,7 +75,7 @@ TIP: This section is not required for host systems installed in sites without in
 | Endpoints
 | Purpose
 
-| \https://api.bluexp.netapp.com | Communication with the Console service, which includes NetApp accounts.
+| \https://api.console.netapp.com | Communication with the Console service, which includes NetApp accounts.
 
 |
 \https://netapp-cloud-account.auth0.com
@@ -84,7 +84,7 @@ TIP: This section is not required for host systems installed in sites without in
 | Communication with the Console website for centralized user authentication.
 
 |
-\https://support.compliance.api.bluexp.netapp.com/
+\https://support.compliance.api.console.netapp.com/
 \https://hub.docker.com
 \https://auth.docker.io
 \https://registry-1.docker.io
@@ -94,7 +94,7 @@ TIP: This section is not required for host systems installed in sites without in
 
 | Provides access to software images, manifests, templates, and to send logs and metrics.
 
-| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
+| \https://support.compliance.api.console.netapp.com/ | Enables NetApp to stream data from audit records.
 
 |
 \https://github.com/docker

@@ -176,7 +176,7 @@ After a full scan there are many additional Data Classification features you can
 
 Data Classification captures metadata such as: file name, permissions, creation time, last access, and last modification. This includes all of the metadata that appears in the Data Investigatcdion Details page and in Data Investigation Reports.  
 
-Data Classification can identify many types of private data such as personal information (PII) and sensitive personal information (SPII). For details about private data, refer to https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html[Categories of private data that Data Classification scans].
+Data Classification can identify many types of private data such as personal information (PII) and sensitive personal information (SPII). For details about private data, refer to xref:reference-private-data-categories.html[Categories of private data that Data Classification scans].
 
 === Can I limit Data Classification information to specific users?
 
@@ -230,7 +230,7 @@ When scanning data, the NetApp Console Console agent needs to be installed in th
 
 //* When scanning data in on-premises ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts, you can use a Console agent in any of these cloud locations.
 
-If you have data in these locations, you may need to use https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Console agents^].
+If you have data in these locations, you may need to use https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-to-use-multiple-connectors[multiple Console agents^].
 
 === Does Data Classification require access to credentials? 
 

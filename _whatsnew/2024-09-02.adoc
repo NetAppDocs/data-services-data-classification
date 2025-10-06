@@ -5,6 +5,4 @@
 
 BlueXP classification supports scanning data in StorageGRID.
 
-//For details, refer to https://docs.netapp.com/us-en/bluexp-classification/task-scanning-storagegrid.html[Scan StorageGRID data].
-
 For details, refer to link:task-scanning-storagegrid.html[Scan StorageGRID data].

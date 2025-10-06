@@ -44,7 +44,7 @@ redirect: data-services-data-classification/task-scanning-overview.html
 // * For SharePoint Online, Data Classification can be link:task-deploy-cloud-compliance.html[deployed in the cloud^].
 // * For SharePoint On-Premises, Data Classification can be installed link:task-deploy-compliance-onprem.html[in an on-premises location that has internet access^] or link:task-deploy-compliance-dark-site.html[in an on-premises location that does not have internet access^]. 
 
-// When Data Classification is installed in a site without internet access, the Console agent also must be installed in that same site without internet access. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html[Learn more^].
+// When Data Classification is installed in a site without internet access, the Console agent also must be installed in that same site without internet access. https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html[Learn more^].
 
 // Upgrades to Data Classification software is automated as long as the instance has internet connectivity.
 

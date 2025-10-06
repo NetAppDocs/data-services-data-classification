@@ -22,7 +22,7 @@ There are four categories defined within Data Classification that correspond to 
 * Governance
 * Configuration
 
-The APIs in the Swagger documentation allow you to search, aggregate data, track your scans, and perform actions like copy, move, and more.
+The APIs in the Swagger documentation allow you to search, aggregate data, track your scans, and perform actions including copy, move, and delete.
 
 == Overview 
 

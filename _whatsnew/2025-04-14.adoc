@@ -10,4 +10,4 @@ BlueXP classification supports bulk operations for working environments. You can
 
 BlueXP classification supports the ability to download data investigation reports locally to view in the browser. If you choose the local option, the data investigation is only available in the CSV format and only displays the first 10,000 rows of data. 
 
-For more information, see link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#create-the-data-investigation-report[Investigate the data stored in your organization with BlueXP classification].
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#create-the-data-investigation-report[Investigate the data stored in your organization with BlueXP classification].
