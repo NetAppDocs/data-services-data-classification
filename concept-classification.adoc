@@ -71,8 +71,7 @@ Data Classification can scan and analyze structured and unstructured data from t
 * Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP)
 * On-premises ONTAP clusters
 * StorageGRID
-
-//* Google Cloud NetApp Volumes
+* Google Cloud NetApp Volumes
 
 *Data sources*
 
