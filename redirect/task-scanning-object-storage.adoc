@@ -1,5 +1,5 @@
 ---
-permalink: data-services-data-classification/task-scanning-object-storage.html
+permalink: task-scanning-object-storage.html
 redirect: data-services-data-classification/task-scanning-overview.html
 ---
 

@@ -1,5 +1,5 @@
 ---
-permalink: data-services-data-classification/task-scanning-sharepoint.html
+permalink: task-scanning-sharepoint.html
 redirect: data-services-data-classification/task-scanning-overview.html
 ---
 

@@ -1,4 +1,4 @@
 ---
-permalink: data-services-data-classification/task-add-active-directory-datasense.html
+permalink: task-add-active-directory-datasense.html
 redirect: data-services-data-classification/task-active-directory.html
 ---
