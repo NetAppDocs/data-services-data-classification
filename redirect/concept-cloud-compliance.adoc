@@ -1,4 +1,4 @@
 ---
-permalink: data-services-data-classification/concept-classification.html
+permalink: data-services-data-classification/concept-cloud-compliance.html
 redirect: data-services-data-classification/concept-classification.html
 ---
