@@ -1,5 +1,5 @@
 ---
-permalink: data-services-data-classification/task-controlling-governance-dashboard-deprecated.html
+permalink: task-controlling-governance-dashboard-deprecated.html
 redirect: data-services-data-classification/task-controlling-governance-data.html
 ---
 
