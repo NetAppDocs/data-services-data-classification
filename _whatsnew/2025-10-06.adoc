@@ -38,4 +38,4 @@ For more information, see link:https://docs.netapp.com/us-en/data-services-data-
 
 .Support for Google Cloud NetApp Volumes 
 
-Data Classification now supports scanning on Google Cloud NetApp Volumes. Easily add Google Cloud NetApp Volumes from the NetApp Console for seamless data scanning and classification.
+Data Classification now supports scanning on Google Cloud NetApp Volumes. Easily add Google Cloud NetApp Volumes from the NetApp Console for seamless data scanning and classification. For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-scan-google-cloud.html[Scan Google Cloud NetApp Volumes^].

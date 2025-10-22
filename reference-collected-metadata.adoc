@@ -58,4 +58,4 @@ The filter selections are:
 * "Not classified -- Cannot revert last access time" - This shows the files that were not classified due to missing write permissions.
 * "Classified and updated last access time" - This shows the files that were classified and Data Classification was unable to reset the last access time back to the original date. This filter is relevant only for environments where you turned *Scan when missing "write attributes" permissions* ON. 
 
-If needed, you can export these results to a report so you can see which files are, or aren't, being scanned because of permissions. link:task-investigate-data.html#data-investigation-report[Learn more about the Data Investigation Report^].
+If needed, you can export these results to a report so you can see which files are, or aren't, being scanned because of permissions. link:task-investigate-data.html#download-your-report[Learn more about Data Investigation reports^].

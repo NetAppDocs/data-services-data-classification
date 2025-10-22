@@ -1,5 +1,5 @@
 ---
-permalink: data-services-data-classification/task-scanning-google-drive.html
+permalink: task-scanning-google-drive.html
 redirect: data-services-data-classification/task-scanning-overview.html
 ---
 

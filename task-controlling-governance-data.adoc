@@ -48,9 +48,9 @@ The _Saving Opportunities_ component shows data that you can delete or tier to l
 
 NOTE: If any of your data sources implement data tiering, old data that already resides in object storage can be identified in the _Stale Data_ category.
 
-== Create the Data discovery assessment report
+== Create the data discovery assessment report
 
-The Data discovery assessment report provides a high-level analysis of the scanned environment to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your dataset:
+The data discovery assessment report provides a high-level analysis of the scanned environment to show areas of concern and potential remediation steps. The results are based on both mapping and classifying your data. The goal of this report is to raise awareness of three significant aspects of your dataset:
 
 [cols="25,65",width=90%,options="header"]
 |===

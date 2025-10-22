@@ -24,17 +24,17 @@ By default, the Data Classification dashboards display compliance and governance
 
 The following reports are available for Data Classification:
 
-* *Data Discovery Assessment report*: Provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. 
+* *Data discovery assessment report*: Provides a high-level analysis of the scanned environment to highlight the system's findings and to show areas of concern and potential remediation steps. This report is available in the Governance dashboard.
 
-* *Data Mapping report*: Provides information about the size and number of files in your systems. This includes usage capacity, age of data, size of data, and file types. 
+* *Full data mapping overview report*: Provides information about the size and number of files in your systems. This includes usage capacity, age of data, size of data, and file types. This report is available in the Governance dashboard.
 
-* *Data Subject Access Request report*: Enables you to extract a report of all files that contain information regarding a data subject's specific name or personal identifier. 
+* *Data Subject Access Request report*: Enables you to extract a report of all files that contain information regarding a data subject's specific name or personal identifier. This report is available in the Compliance dashboard.
 
-* *HIPAA report*: Helps you identify the distribution of health information across your files. 
+* *HIPAA report*: Helps you identify the distribution of health information across your files. This report is available in the Compliance dashboard.
 
-* *PCI DSS report*: Helps you identify the distribution of credit card information across your files. 
+* *PCI DSS report*: Helps you identify the distribution of credit card information across your files. This report is available in the Compliance dashboard.
 
-* *Privacy Risk Assessment report*: Provides privacy insights from your data and a privacy risk score. 
+* *Privacy risk assessment report*: Provides privacy insights from your data and a privacy risk score. This report is available in the Compliance dashboard.
 
 * *Reports on a specific information type*: Reports are available that include details about the identified files that contain personal data and sensitive personal data. You can also see files broken down by category and file type. 
 
@@ -76,23 +76,23 @@ NOTE: English, German, Japanese, and Spanish are supported when searching for th
 
 
 . From the Data Classification menu, select *Compliance*.
-
-// data subjects doesn't exist anymore -->
-
-. From the Compliance page, select *Data Subjects*.
-
-. Search for the data subject's full name or known identifier.
+. From the Compliance page, locate the **Data Subjects** tab. 
+. In the *Data Subjects* section, enter a name or known identifier then select **Search**. 
+. When the search completes, select **Download** to access the data subject access request response. Select **Investigate Results** to view more information in the Data Investigation page. 
+image:screenshot-data-subject-john-doe.png[Screenshot of DSAR search]
+. Review the results in Data Classification or download them as a report by selecting the download icon. 
+.. When you select the download icon, configure your download settings:
 +
-Here's an example that shows a search for the name _john doe_:
+* Choose the film format: CSV or JSON
+* Enter a *Report name*
+* Choose the export destination: *System* or your *Local* machine.
 +
-image:screenshot_dsar_search.gif[Screenshot of the data subject search.]
-
-. Choose one of the available options:
-* *Download DSAR Report*: A formal response to the access request that you can send to the data subject. This report contains automatically-generated information based on data that Data Classification found on the data subject and is designed to be used as a template. You should complete the form and review it internally before sending it to the data subject.
-
-* *Investigate Results*: A page that enables you to investigate the data by searching, sorting, expanding details for a specific file, and by downloading the file list.
+If you choose system, all data downloads. You must also select the *System*, *Volume*, and *Destination folder path*. 
 +
-NOTE: If there are more than 10,000 results, only the top 10,000 appear in the file list.
+If you choose *Local*, it limits the report to the first 10,000 rows of unstructured data; 5,000 rows of unstructured data, and 1,000 rows of structured data. 
++
+.. Select **Download Report** to initiate the download. 
+image:screenshot-download-report.png[Screenshot of the download report options]
 
 == Health Insurance Portability and Accountability Act (HIPAA) Report
 
@@ -129,8 +129,7 @@ image:screenshot-report-options.png[Screenshot of the report options in the Comp
 
 .Result
 
-Data Classification generates a PDF report that you can review and send to other groups as needed.
-
+Data Classification generates a PDF report.
 
 == Payment Card Industry Data Security Standard (PCI DSS) report
 
