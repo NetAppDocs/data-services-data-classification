@@ -1,0 +1,84 @@
+---
+sidebar: sidebar
+permalink: task-scan-google-cloud.html
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, google cloud, google cloud netapp volumes
+summary: Scan your Google Cloud NetApp Volumes system to maintain compliance and governance standards. 
+---
+
+= Scan Google Cloud NetApp Volumes with NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+NetApp Data Classification supports Google Cloud NetApp Volumes as a system. Learn how to scan your Google Cloud NetApp Volumes system. 
+
+== Discover the Google Cloud NetApp Volumes system that you want to scan
+
+If the Google Cloud NetApp Volumes system you want to scan is not already in the NetApp Console as a system, link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html[add it to the Systems page^]. 
+
+== Deploy the Data Classification instance
+
+link:task-deploy-cloud-compliance.html[Deploy Data Classification^] if there isn't already an instance deployed.
+
+Data Classification must be deployed in the cloud when scanning Google Cloud NetApp Volumes, and it must be deployed in the same region as the volumes you wish to scan.
+
+*Note:* Deploying Data Classification in an on-premises location is not currently supported when scanning Google Cloud NetApp Volumes.
+
+== Enable Data Classification in your systems
+
+You can enable Data Classification on your Google Cloud NetApp Volumes system.
+
+. From the Data Classification menu, select *Configuration*.
+
+. Select how you want to scan the volumes in each system. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans[Learn about mapping and classification scans]:
+
+* To map all volumes, select *Map all Volumes*.
+* To map and classify all volumes, select *Map & Classify all Volumes*.
+* To customize scanning for each volume, select *Or select scanning type for each volume*, and then choose the volumes you want to map and/or classify.
++
+See <<Enable and disable compliance scans on volumes,Enable and disable compliance scans on volumes>> for details.
+
+. In the confirmation dialog box, select *Approve*.
+
+.Result
+
+Data Classification starts scanning the volumes you selected in the system. Results are available in the Compliance dashboard as soon as Data Classification finishes the initial scans. The time that it takes depends on the amount of data: a few minutes to a few hours. You can track the progress of the initial scan in the **Configuration** menu's **System configuration** section. Data Classification displays a progress bar for each scan. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. 
+
+[NOTE]
+* By default, if Data Classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system won't scan the files in your volumes because Data Classification can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, select *Or select scanning type for each volume*. The resulting page has a setting you can enable so that Data Classification will scan the volumes regardless of permissions.
+* Data Classification scans only one file share under a volume. If you have multiple shares in your volumes, you need to scan those other shares separately as a shares group. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume[Learn about this Data Classification limitation^].
+
+== Verify that Data Classification has access to volumes
+
+Ensure Data Classification can access volumes by checking your networking, security groups, and export policies. For CIFS volumes, you need to provide Data Classification with CIFS credentials.
+
+NOTE: For Google Cloud NetApp Volumes, Data Classification can only scan volumes in the same region as the Console.
+
+.Checklist
+
+* Make sure that there's a network connection between the Data Classification instance and each network that includes volumes for Google Cloud NetApp Volumes.
+* Ensure the following ports are open to the Data Classification instance:
+** For NFS – ports 111 and 2049.
+** For CIFS – ports 139 and 445.
+* Ensure the NFS volume export policies include the IP address of the Data Classification instance so it can access the data on each volume.
+
+.Steps 
+. From the Data Classification menu, select *Configuration*.
+.. If you're using CIFS (SMB), ensure the Active Directory credentials are correct. For each system, select *Edit CIFS Credentials* then enter the user name and password that Data Classification needs to access CIFS volumes on the system.
++
+The credentials can be read-only, but providing admin credentials ensures that Data Classification can read any data that requires elevated permissions. The credentials are stored on the Data Classification instance.
+include::_include/cifs-permissions.adoc[]
++
+After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.
++
+image:screenshot_cifs_status.gif[A screenshot that shows the Configuration page and one Cloud Volumes ONTAP system for which CIFS credentials were successfully provided.]
+
+. On the Configuration page, select *View Details* to review the status for each CIFS and NFS volume and correct any errors.
+
+
+== Enable and disable compliance scans on volumes
+
+include::_include/enable-disable-scans.adoc[]
