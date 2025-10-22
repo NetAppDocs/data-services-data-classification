@@ -41,7 +41,7 @@ image:screenshot_cloud_compliance_anf_scan_config.png[A screenshot of the Config
 * To map and classify all volumes, select *Map & Classify all Volumes*.
 * To customize scanning for each volume, select *Or select scanning type for each volume*, and then choose the volumes you want to map or map and classify.
 +
-See <<Enable and disable compliance scans on volumes,Enable and disable compliance scans on volumes>> for details.
+See <<Enable or disable compliance scans on volumes,Enable or disable compliance scans on volumes>> for details.
 
 . In the confirmation dialog box, select *Approve*.
 
