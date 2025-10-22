@@ -76,9 +76,6 @@ NOTE: English, German, Japanese, and Spanish are supported when searching for th
 
 
 . From the Data Classification menu, select *Compliance*.
-
-// data subjects doesn't exist anymore -->
-
 . From the Compliance page, locate the **Data Subjects** tab. 
 . In the *Data Subjects* section, enter a name or known identifier then select **Search**. 
 . When the search completes, select **Download** to access the data subject access request response. Select **Investigate Results** to view more information in the Data Investigation page. 
