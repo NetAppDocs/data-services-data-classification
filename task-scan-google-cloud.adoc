@@ -17,7 +17,7 @@ NetApp Data Classification supports Google Cloud NetApp Volumes as a system. Lea
 
 == Discover the Google Cloud NetApp Volumes system that you want to scan
 
-If the Google Cloud NetApp Volumes system you want to scan is not already in the NetApp Console as system, link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html[add it in the Systems page^]. 
+If the Google Cloud NetApp Volumes system you want to scan is not already in the NetApp Console as a system, link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html[add it to the Systems page^]. 
 
 == Deploy the Data Classification instance
 
@@ -81,19 +81,4 @@ image:screenshot_cifs_status.gif[A screenshot that shows the Configuration page 
 
 == Enable and disable compliance scans on volumes
 
-You can start or stop scans on any system at any time from the Configuration page. You can also change switch scans from mapping-only scans to mapping and classification scans, and vice-versa. It's recommended that you scan all volumes. 
-
-TIP: New volumes added to the system are automatically scanned only when you have selected the *Map* or *Map & Classify* setting in the heading area. When set to *Custom* or *Off* in the heading area, you'll need to activate mapping and/or full scanning on each new volume you add in the system.
-
-The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, turn the switch ON and all files are scanned regardless of the permissions. link:reference-collected-metadata.html#last-access-time-timestamp[Learn more^].
-
-image:screenshot_volume_compliance_selection.png[A screenshot of the Configuration page where you can enable or disable scanning of individual volumes.]
-
-.Steps 
-
-. From the Data Classification menu, select *Configuration*.
-. Do one of the following: 
-+
-* To enable mapping-only scans on a volume, in the volume area, select *Map*. To enable on all volumes, in the heading area, select *Map*.
-* To enable full scanning on a volume, in the volume area, select *Map & Classify*. To enable on all volumes, in the heading area, select *Map & Classify*.
-* To disable scanning on a volume, in the volume area, select *Off*. To disable scanning on all volumes, in the heading area, select *Off*.
+include::_include/enable-disable-scans.adoc[]

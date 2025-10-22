@@ -109,22 +109,7 @@ After you enter the credentials, you should see a message that all CIFS volumes 
 
 == Enable and disable compliance scans on volumes
 
-You can start or stop mapping-only scans, or mapping and classification scans, in a system at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa. We recommend that you scan all volumes.
-
-The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, that the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. If you don't care if the last access time is reset, turn the switch ON and all files are scanned regardless of the permissions. link:reference-collected-metadata.html#last-access-time-timestamp[Learn more^].
-
-image:screenshot_volume_compliance_selection.png[A screenshot of the Configuration page where you can enable or disable scanning of individual volumes.]
-
-. From the Data Classification menu, select *Configuration*.
-. In the Configuration page, locate the system with the volumes you want to scan.
-. Do one of the following: 
-+
-* To enable mapping-only scans on a volume, in the volume area, select *Map*. Or, to enable on all volumes, in the heading area, select *Map*.
-To enable full scanning on a volume, in the volume area, select *Map & Classify*. Or, to enable on all volumes, in the heading area, select *Map & Classify*.
-* To disable scanning on a volume, in the volume area, select *Off*. To disable scanning on all volumes, in the heading area, select *Off*.
-
-
-NOTE: New volumes added to the system are automatically scanned only when you have set the *Map* or *Map & Classify* setting in the heading area. When set to *Custom* or *Off* in the heading area, you'll need to activate mapping and/or full scanning on each new volume you add in the system.
+include::_include/enable-disable-scans.adoc[]
 
 == Scan data protection volumes
 

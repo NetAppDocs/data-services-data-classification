@@ -72,8 +72,6 @@ After you enable Data Classification on StorageGRID, the next step is to configu
 * To enable full scans on a bucket, select *Map & Classify*. 
 * To disable scanning on a bucket, select *Off*.
 
-
-
 .Result
 
 Data Classification starts scanning the buckets that you enabled. You can track the progress of the initial scan by navigating to the **Configuration** menu then selecting the **System configuration**. The progress of each scan is show as a progress bar. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. If there are any errors, they'll appear in the Status column, alongside the required action to fix the error.
