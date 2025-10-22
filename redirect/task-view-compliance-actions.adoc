@@ -1,5 +1,5 @@
 ---
-permalink: data-services-data-classification/task-view-compliance-actions.html
+permalink: task-view-compliance-actions.html
 redirect: data-services-data-classification/task-managing-repo-scanning.html
 ---
 
