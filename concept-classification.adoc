@@ -192,10 +192,10 @@ Data Classification collects, indexes, and assigns categories to the following d
 
 * *Sensitive personal data*: Special types of sensitive personal information (SPII), such as health data, ethnic origin, or political opinions, as defined by General Data Protection Regulation (GDPR) and other privacy regulations. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data[Learn more about sensitive personal data^].
 
-* *Categories*: Data Classification takes the data that it scanned and divides it into different types of categories. Categories are topics based on AI analysis of the content and metadata of each file. link:task-controlling-private-data.html#view-files-by-categories[Learn more about categories^].
+* *Categories*: Data Classification takes the data that it scanned and divides it into different types of categories. Categories are topics based on AI analysis of the content and metadata of each file. link:task-controlling-governance-data.html[Learn more about categories^].
 // check link
 
-* *Types*: Data Classification takes the data that it scanned and breaks it down by file type. link:task-controlling-private-data.html#view-files-by-file-types[Learn more about types^].
+// * *Types*: Data Classification takes the data that it scanned and breaks it down by file type. link:task-controlling-private-data.html#view-files-by-file-types[Learn more about types^].
 // check link
 
 

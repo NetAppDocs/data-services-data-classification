@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: whats-new.html
 keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, data sense, cloud data sense, bluexp, bluexp classification
-summary: Learn what's new in BlueXP classification.
+summary: Learn what's new in NetApp Data Classification.
 ---
 = What's new in NetApp Data Classification
 :hardbreaks:
