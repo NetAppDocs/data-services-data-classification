@@ -15,7 +15,7 @@ summary: Gain control of your private data by viewing details about the personal
 Gain control of your private data by viewing details about the personal data (PII) and sensitive personal data (SPII) in your organization. You can also gain visibility by reviewing the categories and file types that NetApp Data Classification found in your data.
 
 [NOTE]
-File-level compliance details are only available if you perform a full classificaiton scan. Mapping-only scans don't yield file-level details. 
+File-level compliance details are only available if you perform a full classification scan. Mapping-only scans don't yield file-level details. 
 
 By default, the Data Classification dashboard displays compliance data for all systems and databases. To see data for only some of the systems, select them.
 
@@ -25,7 +25,7 @@ You can filter the results from the Data Investigation page and download a repor
 
 == View files that contain personal data
 
-Data Classification automatically identifies specific words, strings, and patterns (Regex) inside the data. link:link:reference-private-data-categories.html[For example, credit card numbers, social security numbers, bank account numbers, passwords, and more.] Data Classification identifies this type of information in individual files, in files within directories (shares and folders), and in database tables.
+Data Classification automatically identifies specific words, strings, and patterns (Regex) inside the data. link:reference-private-data-categories.html[For example, credit card numbers, social security numbers, bank account numbers, passwords, and more.] Data Classification identifies this type of information in individual files, in files within directories (shares and folders), and in database tables.
 
 You can also create custom search terms to identify personal data specific to your organization. For more information, see link:task-custom-classification.html[Create a custom classification].
 
@@ -45,9 +45,9 @@ image:screenshot_personal_files.png[A screenshot of the personal files dialog bo
 
 . Investigate the data by searching, sorting, expanding details for a specific file, selecting the *Investigate Results* arrow to see masked information, or by downloading the file list.
 +
-The following image show personal data found in a directory (shares and folders). In the *Structured* tab, you view personal data found in databases. In the *Unstructured* tab, you can view file-level data. 
+The following images show personal data found in a directory (shares and folders). In the *Structured* tab, you view personal data found in databases. In the *Unstructured* tab, you can view file-level data. 
 +
-image:screenshot_compliance_investigation_page.png[A screenshot of details information found in files after clicking Investigate Results.]
+image:screenshot_compliance_investigation_page.png[A screenshot of detailed information found in files after clicking Investigate Results.]
 +
 image:screenshot_compliance_investigation_page_directory.png[A screenshot of detailed information found in directories after clicking Investigate Results.]
 

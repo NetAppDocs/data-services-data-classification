@@ -77,7 +77,7 @@ If the dialog lists any shares that could not be added, capture this information
 [NOTE]
 The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. +
 If you switch *Scan when missing "write attributes" permissions* to *On*, the scan resets the last accessed time and scans all files regardless of permissions. +
-To learn more about the last accessed time stamp, see link:link:reference-collected-metadata.html#last-access-time-timestamp[Metadata collected from data sources in Data Classification].
+To learn more about the last accessed time stamp, see link:reference-collected-metadata.html#last-access-time-timestamp[Metadata collected from data sources in Data Classification].
 
 .Result
 
@@ -100,7 +100,7 @@ image:screenshot-edit-cifs-credential.png[Screenshot of the Edit CIFS credential
 . Enter the Active Directory **Username** and **Password**. 
 . Select **Save** to complete the process.
 
-.Add file shares to compliance scans
+.Add file shares to scans
 . From the Data Classification menu, select *Configuration*. 
 . From the Configuration page, select the file shares group you want to modify. 
 . Select **+ Add shares**. 
@@ -110,11 +110,11 @@ image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, s
 +
 If you're adding file shares to a protocol you've already configured, no changes are required. 
 +
-If you're adding file shares with a second protocol, ensure you've properly configured the authentication prperly as detailed in the link:#prerequisites[prerequisites].
+If you're adding file shares with a second protocol, ensure you've properly configured the authentication as detailed in the link:#prerequisites[prerequisites].
 . Add the file shares you want to scan (one file share per line) using the format `<host_name>:/<share_path>`.
 . Select **Continue** to complete adding the file shares. 
 
-.Remove a file share from compliance scans
+.Remove a file share from scans
 . From the Data Classification menu, select *Configuration*.
 . Select the system you want to remove file shares from.
 . Select *Configuration*. 
