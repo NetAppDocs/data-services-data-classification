@@ -79,6 +79,6 @@ image:screenshot_cifs_status.gif[A screenshot that shows the Configuration page 
 . On the Configuration page, select *View Details* to review the status for each CIFS and NFS volume and correct any errors.
 
 
-== Enable and disable compliance scans on volumes
+== Enable and disable scans on volumes
 
 include::_include/enable-disable-scans.adoc[]
