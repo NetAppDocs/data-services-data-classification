@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-managing-compliance.html
 keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, deactivate, deactivating cloud compliance, data sense
-summary: If you need to, you can stop Data Classification from scanning one or more systems, databases, file share groups, OneDrive accounts, Google Drive accounts, or SharePoint accounts.
+summary: If you need to, you can stop Data Classification from scanning systems, databases, or file share groups.
 ---
 = Remove data sources from NetApp Data Classification
 :hardbreaks:
@@ -26,14 +26,14 @@ You can also disable scans for a system from the Services panel when you select 
 
 == Remove a database from Data Classification
 
-If you no longer want to scan a certain database, you can delete it from the Data Classification interface and stop all scans.
+If you no longer need to scan a certain database, you can delete it from the Data Classification interface and stop all scans.
 
 . From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the database then *Remove DB Server*.
 
 
 == Remove a group of file shares from Data Classification
 
-If you no longer want to scan user files from a file shares group, you can delete the File Shares Group from the Data Classification interface and stop all scans.
+If you no longer want to scan user files from a file share group, you can delete the File Shares Group from the Data Classification interface and stop all scans.
 
 .Steps
 

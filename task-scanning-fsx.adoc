@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-scanning-fsx.html
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense
-summary: Complete a few steps to get started scanning Amazon FSx for ONTAP volume with NetApp Data Classification.
+summary: Complete a few steps to get started scanning Amazon FSx for ONTAP volumes with NetApp Data Classification.
 ---
 
 = Scan Amazon FSx for ONTAP volumes with NetApp Data Classification
@@ -13,7 +13,7 @@ summary: Complete a few steps to get started scanning Amazon FSx for ONTAP volum
 :imagesdir: ./media/
 
 [.lead]
-Complete a few steps to get started scanning Amazon FSx for ONTAP volume with NetApp Data Classification.
+Complete a few steps to scan Amazon FSx for ONTAP volumes with NetApp Data Classification.
 
 == Before you begin
 
@@ -62,7 +62,7 @@ image:screenshot_fsx_scanning_activate.png[A screenshot of the Configuration tab
 
 .Result
 
-Data Classification starts scanning the volumes you selected in the system. Results will be available in the Compliance dashboard as soon as Data Classification finishes the initial scans. The time that it takes depends on the amount of data--it could be a few minutes or hours. You can track the progress of the initial scan by navigating to the **Configuration** menu then selecting the **System configuration**. The progress of each scan is show as a progress bar. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. 
+Data Classification starts scanning the volumes you selected in the system. Results will be available in the Compliance dashboard as soon as Data Classification finishes the initial scans. The time that it takes depends on the amount of data--it could be a few minutes or hours. You can track the progress of the initial scan by navigating to the **Configuration** menu then selecting the **System configuration**. Track the progress of each scan in the progress bar; you can hover over the progress bar to see the number of files scanned relative to the total files in the volume. 
 
 [NOTE]
 ====
