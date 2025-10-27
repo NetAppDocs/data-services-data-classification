@@ -107,7 +107,7 @@ include::_include/cifs-permissions.adoc[]
 +
 After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.
 
-== Enable and disable compliance scans on volumes
+== Enable and disable scans on volumes
 
 include::_include/enable-disable-scans.adoc[]
 

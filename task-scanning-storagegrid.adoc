@@ -57,7 +57,7 @@ image:screenshot-scanning-storagegrid-add.png[A screenshot of the dialog where y
 
 StorageGRID is added to the list of systems.
 
-== Enable and disable compliance scans on StorageGRID buckets
+== Enable and disable scans on StorageGRID buckets
 
 After you enable Data Classification on StorageGRID, the next step is to configure the buckets that you want to scan. Data Classification discovers those buckets and displays them in the system you created.
 

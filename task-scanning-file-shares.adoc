@@ -100,7 +100,7 @@ image:screenshot-edit-cifs-credential.png[Screenshot of the Edit CIFS credential
 . Enter the Active Directory **Username** and **Password**. 
 . Select **Save** to complete the process.
 
-.Add file shares to compliance scans
+.Add file shares to scans
 . From the Data Classification menu, select *Configuration*. 
 . From the Configuration page, select the file shares group you want to modify. 
 . Select **+ Add shares**. 
@@ -114,7 +114,7 @@ If you're adding file shares with a second protocol, ensure you've properly conf
 . Add the file shares you want to scan (one file share per line) using the format `<host_name>:/<share_path>`.
 . Select **Continue** to complete adding the file shares. 
 
-.Remove a file share from compliance scans
+.Remove a file share from scans
 . From the Data Classification menu, select *Configuration*.
 . Select the system you want to remove file shares from.
 . Select *Configuration*. 

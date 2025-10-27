@@ -77,7 +77,7 @@ image:screenshot_compliance_add_db_server_dialog.png[A screenshot of the Add DB 
 
 The database is added to the list of systems.
 
-== Enable and disable compliance scans on database schemas
+== Enable and disable scans on database schemas
 
 You can stop or start full scanning of your schemas at any time.
 

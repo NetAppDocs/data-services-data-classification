@@ -15,14 +15,14 @@ summary: If you need to, you can stop Data Classification from scanning one or m
 If you need to, you can stop NetApp Data Classification from scanning one or more systems, databases, or file share groups.
 
 
-== Deactivate compliance scans for a system
+== Deactivate scans for a system
 
-When you deactivate scans, Data Classification no longer scans the data on the system and it removes the indexed compliance insights from the Data Classification instance (the data from the system itself isn't deleted).
+When you deactivate scans, Data Classification no longer scans the data on the system and it removes the indexed insights from the Data Classification instance. The data from the system itself isn't deleted.
 
 . From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the system then *Deactivate Data Classification*.
 
 [TIP]
-You can also disable compliance scans for a system from the Services panel when you select the system.
+You can also disable scans for a system from the Services panel when you select the system.
 
 == Remove a database from Data Classification
 

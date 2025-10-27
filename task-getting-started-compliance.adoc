@@ -49,7 +49,7 @@ If you've entered the credentials correctly, a message confirms all CIFS volumes
 . On the Configuration page, select *Configuration* to review the status for each CIFS and NFS volume and correct any errors.
 
 
-== Enable or disable compliance scans on volumes
+== Enable or disable scans on volumes
 
 include::_include/enable-disable-scans.adoc[]
 

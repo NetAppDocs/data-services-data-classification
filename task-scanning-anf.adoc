@@ -41,7 +41,7 @@ image:screenshot_cloud_compliance_anf_scan_config.png[A screenshot of the Config
 * To map and classify all volumes, select *Map & Classify all Volumes*.
 * To customize scanning for each volume, select *Or select scanning type for each volume*, and then choose the volumes you want to map or map and classify.
 +
-See <<Enable or disable compliance scans on volumes,Enable or disable compliance scans on volumes>> for details.
+See <<Enable or disable scans on volumes,Enable or disable scans on volumes>> for details.
 
 . In the confirmation dialog box, select *Approve*.
 
@@ -80,6 +80,6 @@ image:screenshot_cifs_status.gif[A screenshot that shows the Configuration page 
 
 . On the Configuration page, select *View Details* to review the status for each CIFS and NFS volume. If necessary, correct any errors such as network connectivity issues.
 
-== Enable or disable compliance scans on volumes
+== Enable or disable scans on volumes
 
 include::_include/enable-disable-scans.adoc[]
