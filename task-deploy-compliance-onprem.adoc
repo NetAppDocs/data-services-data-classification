@@ -132,7 +132,7 @@ Data Classification requires outbound internet access. If your virtual or physic
 
 | Provides access to software images, manifests, templates, and to send logs and metrics.
 
-| \https://support.compliance.api.console.netapp.com/ | Enables NetApp to stream data from audit records.
+| \https://support.compliance.api.bluexp.netapp.com/ | Enables NetApp to stream data from audit records.
 
 |
 \https://github.com/docker
