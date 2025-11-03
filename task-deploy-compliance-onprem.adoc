@@ -122,7 +122,7 @@ Data Classification requires outbound internet access. If your virtual or physic
 | Communication with the Console website for centralized user authentication.
 
 |
-\https://support.compliance.api.console.netapp.com/
+\https://support.compliance.api.bluexp.netapp.com/
 \https://hub.docker.com
 \https://auth.docker.io
 \https://registry-1.docker.io
