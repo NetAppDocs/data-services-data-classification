@@ -210,9 +210,12 @@ TIP: You can expand one level of the group to see the users who are part of the 
 
 You can check whether duplicate files are being stored in your storage systems. This is useful if you want to identify areas where you can save storage space. It's also good to ensure certain files that have specific permissions or sensitive information are not unnecessarily duplicated in your storage systems.
 
-All of your files (not including databases) that are 1 MB or larger, or that contain personal or sensitive personal information, are compared to see if there are duplicates. 
+Data Classification compares all files (excluding databases) for duplicates if they are: 
 
-Data Classification uses hashing technology to determine duplicate files. If any file has the same hash code as another file, you can be 100% sure that the files are exact duplicates—even if the file names are different.
+- 1 MB or lager
+- Or contain personal or sensitive personal information 
+
+Data Classification uses hashing technology to determine duplicate files. If any file has the same hash code as another file, the files are exact duplicates even if the file names are different.
 
 .Steps
 
