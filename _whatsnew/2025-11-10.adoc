@@ -1,0 +1,16 @@
+=== Version 1.48
+
+This release of Data Classification includes bug fixes, security improvements, and performance enhancements. 
+
+.Improved filter load times
+
+Data Classification has improved the load time of filters on the link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html[Data Investigation page^].
+
+
+.Improved scanning insights 
+
+Scan configurations now include improved insights into scan completion. Previously, a progress bar only displayed while the scan was in progress. Now, the progress bar remains visible after completion to confirm scans were completed successfully. 
+
+For more information about scan settings, see xref:task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories[Change the NetApp Data Classification scan settings for your repositories^].
+
+// For more information about scan settings, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories[Change the NetApp Data Classification scan settings for your repositories^].

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-managing-repo-scanning.html
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification
-summary: You can manage how your data is being scanned in each of your systems and data sources in NetApp Data Classification. You can make the changes on a "repository" basis; meaning you can make changes for each volume, bucket, share, schema, user, etc. depending on the type of data source you are scanning.
+summary: Learn how to modify the scan settings for a system in NetApp Data Classification.
 ---
 
 = Change the NetApp Data Classification scan settings for your repositories
@@ -23,17 +23,14 @@ You can view the individual repositories that NetApp Data Classification is scan
 
 You can view the scanning status of each work environment on the Configuration page:
 
-* *Initializing* (light blue dot): The map or classify configuration is activated. This appears for few seconds before starting the “pending queue” status.
+* *Initializing* (light blue dot): The map or classify configuration is activated. This appears briefly before transitioning to the "pending queue" status.
 * *Pending queue* (orange dot): The scan task is waiting to be listed in the scanning queue. 
 * *Queued* (orange dot): The task was successfully added to the scanning queue. The system will start mapping or classifying the volume when its turn in the queue arrives.
 * *Running* (green dot): The scan task, which was in the queue, is actively in progress on the selected storage repository.
 * *Finished* (green dot): The scan of the storage repository is complete.
-* *Paused* (gray dot): You selected the “Pause” option to pause scanning. While the changes in the volume are not displayed in the system, the scanned insights are still shown. 
+* *Paused* (gray dot): You paused scanning. Although the changes in the volume are not displayed in the system, the scanned insights remain available. 
 * *Error* (red dot): The scan cannot complete because it has encountered issues. If you need to complete an action, the error appears in the tooltip under the “Required action” column.  Otherwise, the system shows an “error” status and tries to recover. When it finishes, the status changes.
 * *Not scanning*: The volume configuration of "Off" was selected and the system is not scanning the volume. 
-
-
-//After a scan has completed, you can also see the last full cycle date and time.
 
 .Steps
 
@@ -47,7 +44,7 @@ image:screenshot_compliance_config_button.png[A screenshot showing how to select
 +
 image:screenshot_compliance_repo_scan_settings.png["A screenshot showing whether your buckets are being scanned, and the current scan status."]
 
-. Hover your cursor over the chart in the _Mapping Status_ column to see the number of files that remain to be mapped or classified in each repository (bucket in this example).
+. During a scan, hover your cursor over the progress bar in the _Mapping status_ column to view the number of files in the queue to be mapped or classified for that repository.
 
 == Change the type of scanning for a repository
 
@@ -102,9 +99,11 @@ image:screenshot_compliance_repo_scan_settings.png[A screenshot showing how to s
 
 == Pause and resume scanning for a repository
 
-You can "pause" scanning on a repository if you want to temporarily stop scanning certain content. Pausing scanning means that Data Classification won't perform any future scans for changes or additions to the repository, but that all the current results will still be displayed in the system. Pausing scanning does not stop charging for the scanned the data because the data still exists.
+You can "pause" scanning on a repository if you want to temporarily stop scanning certain content. Pausing scanning means that Data Classification won't perform any future scans for changes or additions to the repository. All current scan results remain accessible in Data Classification. 
 
-You can "resume" scanning at any time.
+If you pause scans, it does not eliminate billing charges because the data is still on the system. 
+
+You can resume scanning at any time.
 
 .Steps
 
