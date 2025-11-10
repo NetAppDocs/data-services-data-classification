@@ -2,10 +2,6 @@
 
 This release of Data Classification includes bug fixes, security improvements, and performance enhancements. 
 
-.Improved load times for data filters
-
-Data Classification has improved the load time of filters on the link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html[Data Investigation page^].
-
 .Enhanced scan progress clarity 
 
 Scan configurations now include improved insights into scan completion. Previously, a progress bar only displayed while the scan was in progress. Now, the progress bar remains visible after completion to confirm scans were completed successfully. You're also able to view the number of files mapped and scanned. 
