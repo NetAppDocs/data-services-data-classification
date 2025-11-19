@@ -212,9 +212,9 @@ Ensure that your cloud provider's vCPU limit allows for the deployment of an ins
 +
 See the following links for more details on vCPU limits:
 +
-* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html[AWS documentation: Amazon EC2 service quotas^]
-* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas[Azure documentation: Virtual machine vCPU quotas^]
-* https://cloud.google.com/compute/quotas[Google Cloud documentation: Resource quotas^]
+* link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html[AWS documentation: Amazon EC2 service quotas^]
+* link:https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas[Azure documentation: Virtual machine vCPU quotas^]
+* link:https://docs.cloud.google.com/docs/quotas/view-manage[Google Cloud documentation: Resource quotas^]
 
 
 
