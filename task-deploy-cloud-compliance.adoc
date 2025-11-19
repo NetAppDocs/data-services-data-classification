@@ -23,10 +23,10 @@ Get started quickly by following these steps, or scroll down to the remaining se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Create a Console agent
 
 [role="quick-margin-para"]
-If you don't already have a Console agent, create one. See https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^].
+If you don't already have a Console agent, create one. See link:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html[creating a Console agent in AWS^], link:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html[creating a Console agent in Azure^], or link:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html[creating a Console agent in GCP^].
 
 [role="quick-margin-para"]
-You can also https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud.
+You can also link:https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Prerequisites
 
@@ -40,7 +40,7 @@ Launch the installation wizard to deploy the Data Classification instance in the
 
 == Create a Console agent
 
-If you don't already have a Console agent, create a Console agent in your cloud provider. See https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^] or https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]. In most cases you will probably have a Console agent set up before you attempt to activate Data Classification because most https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required[Console features require a Console agent], but there are cases where you'll you need to set one up now.
+If you don't already have a Console agent, create a Console agent in your cloud provider. See https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html[creating a Console agent in AWS^] or https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html[creating a Console agent in GCP^]. In most cases you will probably have a Console agent set up before you attempt to activate Data Classification because most https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html[Console features require a Console agent], but there are cases where you'll you need to set one up now.
 
 There are some scenarios where you have to use a Console agent that's deployed in a specific cloud provider:
 
@@ -53,9 +53,9 @@ There are some scenarios where you have to use a Console agent that's deployed i
 On-prem ONTAP systems, NetApp file shares, and databases can be scanned when using any of these cloud Console agents.
 //On-prem ONTAP systems, non-NetApp file shares, generic S3 Object storage, databases, OneDrive folders, SharePoint accounts, and Google Drive accounts can be scanned when using any of these cloud Console agents.
 
-Note that you can also https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or in the cloud. Some users planning to install Data Classification on-prem may also choose to install the Console agent on-premises.
+Note that you can also https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or in the cloud. Some users planning to install Data Classification on-prem may also choose to install the Console agent on-premises.
 
-As you can see, there may be some situations where you need to use https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#multiple-connectors[multiple Console agents].
+There might be situations where you need to use https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html#multiple-systems-and-agents[multiple Console agents^].
 
 [TIP]
 include::_include/console-agent-limit.adoc[]
@@ -67,7 +67,7 @@ Data Classification is supported when the Console agent is deployed in a Governm
 //* OneDrive accounts, SharePoint accounts, and Google Drive accounts can't be scanned.
 //* Microsoft Azure Information Protection (AIP) label functionality can't be integrated.
 
-https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html[See more information about deploying the Console agent in a Government region^].
+link:https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html[Learn about deploying the Console agent in a Government region^].
 
 == Prerequisites
 
