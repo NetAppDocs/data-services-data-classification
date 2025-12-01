@@ -1,0 +1,26 @@
+=== Version 1.49
+
+This release of Data Classification includes bug fixes, security improvements, and performance enhancements. 
+
+.New user interface for custom classification
+
+Data Classification supports a new interface for creating custom classifiers, facilitating an easier process to create custom personal identifiers and categories to identify data types specific to your organization and ensure your data is compliant with governance rquirements. 
+
+For more information, see xref:../task-custom-classification.html[Create a custom classification].
+
+//For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html[Create a custom classification].
+
+.Health monitoring
+
+.Improved loading performance  
+
+The load time performance for all pages across Data Classification has been improved to create a more efficient experience. 
+
+.Customize time ranges for stale data
+
+Data Classification now supports the ability to customize the age of data considered deemed stales.
+Previously, 
+
+Custom classification - new UI
+Health monitor screen (a new page that allows users to view the health of our services, and highlights issues)
+Ability to define what is considered "Stale" (set the property and the time period)
