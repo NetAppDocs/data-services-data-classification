@@ -13,7 +13,7 @@ summary: NetApp Data Classification enables you to customize a search for sensit
 [.lead]
 NetApp Data Classification enables you to create custom categories or personal identifiers to identify data specific to your organization's regulatory and compliance requirements.
 
-Data Classification supports two types of custom classifiers: categories and personal identifiers. Custom categories are created based on a set of files that you upload from which Data Classification creates an AI model to identify similar data in your organization (for example, a health research firm might create a clinical analysis category). Custom personal identifers are created with keyword lists or a regular expression (regex) to identify information specific to your organization that can pose a compliance risk. 
+Data Classification supports two types of custom classifiers: categories and personal identifiers. Custom categories are created based on a set of files you upload from which Data Classification creates an AI model to identify similar data in your organization (for example, a health research firm might create a clinical analysis category). Custom personal identifiers are created using keyword lists or a regular expression (regex) to identify information specific to your organization that can pose a compliance risk. 
 
 All custom classifications are available in the Custom classification dashboard. 
 
@@ -33,13 +33,15 @@ If you're creating your personal identifier with a keyword list, the list must m
 .Steps
 . Select the **Custom classification** tab. 
 . Select **+ New Classifier** to create the custom classifier.
-. Select *Personal identifier* then **Next**.
+. Select *Personal identifier*. Optionally, select **Mask results** to mask detected personal data.
+. Select **Next**.
 +
-image:screenshot-custom-classifier-name.png[Screenshot of add classifier]
+image:screenshot-custom-classifier-name.png[Screenshot of choosing classifier type.]
 . To add the classifier with keywords, select **Keywords**. Enter a list of keywords, with each entry on a separate line. Ensure the keywords adhere to the requirements. 
+image:screenshot-keywords.png[Screenshot of creating a custom classifier with keywords.]
 +
 To add the classifier as a regular expression, select **Regular expression** then add a pattern to detect the specific information of your data. Select **Validate** to confirm the syntax of your entry. 
-image:screenshot-create-logic-regex.png[A screenshot of the dialog to create a regular expression.]
+image:screenshot-create-logic-regex.png[Screenshot of the dialog to create a regular expression.]
 .. Optionally, enter a sample string that should match your regex pattern then select **Test** to check it.
 .. Optionally, add proximity words. If you add proximity words, Data Classification only flags the regex pattern if the proximity words are adjacent to the matching string. 
 
@@ -47,12 +49,11 @@ image:screenshot-create-logic-regex.png[A screenshot of the dialog to create a r
 . Enter a **Classifier name** and a **Description** to identify the custom category in your dashboard.
 . Select **Save** to create the custom personal identifier. 
 
-After you create a custom personal identifer, it's results are captured in the next scheduled scan. To capture results sooner, perform an on-demand scan.  To view results, see xref:task-generating-compliance-reports.html[Generate compliance reports].
+After you create a custom personal identifier, its results are captured in the next scheduled scan. To capture results sooner, perform an on-demand scan. To view results, see xref:task-generating-compliance-reports.html[Generate compliance reports].
 
 == Create a custom category 
 
-With custom categories, you can categorize data specific to your organization Custom categories are created based on text files that you upload from which Data Classification creates an AI model to identify similar information in other files. 
-// mask results -- detected personal results will be masked
+With custom categories, you can categorize data specific to your organization. Custom categories are created based on text files that you upload from which Data Classification creates an AI model to identify similar information in other files. 
 
 .Training data requirements
 
@@ -62,13 +63,12 @@ With custom categories, you can categorize data specific to your organization Cu
 * Data Classification training data must be one of the following file types: CSV, DOCX, DOC, GZ, JSON, PDF, PPTX, TXT, RTT, XLS, or XLSX. You can upload a combination of all the supported file types. 
 
 .Steps
-
 . In NetApp Data Classification, select *Custom classification*. 
 . Select *+ New classifier*. 
 . Choose *Custom category* as your classifier type then **Next**. 
-. Define the logic for your custom category by with a collection of text-based files that satifies the requirements. Provide the IP address of the *Working address* then select the *Volume* from the dropdown menu. 
+. Define the logic for your custom category with a collection of text-based files. Provide the IP address of the *Working address* then select the *Volume* from the dropdown menu. 
 +
-Enter the **Directory path** for the directroy that contains the training data. 
+Enter the **Directory path** for the directory that contains the training data. 
 . Select **Load files** for Data Classification to perform a check of the files. You can review the summary of the files, which lists the file name, size, type, and notes if the file was deemed acceptable for training. 
 +
 image:custom-category-file-summary.png[Screenshot showing the summary of files uploaded for training.]
@@ -78,7 +78,7 @@ image:custom-category-file-summary.png[Screenshot showing the summary of files u
 . Select **Save** to create the custom category. 
 
 .Result 
-After you create a custom category, it's results are captured in the next scheduled scan. To capture results sooner, perform an on-demand scan. 
+After you create a custom category, its results are captured in the next scheduled scan. To capture results sooner, perform an on-demand scan. 
 
 == Edit a custom classifier
 
@@ -86,7 +86,7 @@ You can modify the logic of a personal identifier after you create it. You can't
 
 .Steps
 . In NetApp Data Classification, select *Custom classification*. 
-. Identify the classifier you want to delete the select the action menu `...` at the end of it row. 
+. Identify the classifier you want to delete then select the action menu `...` at the end of its row. 
 . Select **Edit logic**. 
 . If you're modifying keywords, add, delete, or edit the appropriate keywords. If you're modifying a regular expression, enter the new regular expression and validate it. Optionally, add proximity keywords. 
 . Select **Save** to apply the changes. 
@@ -94,5 +94,9 @@ You can modify the logic of a personal identifier after you create it. You can't
 == Delete a custom classifier 
 
 . In NetApp Data Classification, select *Custom classification*. 
-. Identify the classifier you want to delete the select the action menu `...` at the end of it row. 
+. Identify the classifier you want to delete the select the action menu `...` at the end of its row. 
 . Select **Delete classifier**. 
+
+## Next steps 
+
+- xref:task-generating-compliance-reports.html[Generate compliance reports]

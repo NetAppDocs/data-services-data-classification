@@ -1,6 +1,6 @@
 === Version 1.49
 
-This release of Data Classification includes bug fixes, security improvements, and performance enhancements. 
+This release of Data Classification includes bug fixes, performance enhancements, and new features:
 
 .New user interface for custom classification
 
@@ -14,13 +14,9 @@ For more information, see xref:../task-custom-classification.html[Create a custo
 
 .Improved loading performance  
 
-The load time performance for all pages across Data Classification has been improved to create a more efficient experience. 
+The load time performance for all pages in Data Classification has been improved to create a more efficient experience. 
 
 .Customize time ranges for stale data
 
 Data Classification now supports the ability to customize the age of data considered deemed stales.
-Previously, 
-
-Custom classification - new UI
-Health monitor screen (a new page that allows users to view the health of our services, and highlights issues)
-Ability to define what is considered "Stale" (set the property and the time period)
+// previous stale limits
