@@ -4,7 +4,6 @@ permalink: task-health-monitor.html
 keywords: health monitor, disk usage, disk utilization, cpu usage, memory usage, metrics
 summary: Data Classification provides insights into usage and utilization to help optimize performance of your storage. 
 ---
-
 = Monitor health of NetApp Data Classification
 :hardbreaks:
 :nofooter
@@ -19,21 +18,19 @@ The NetApp Data Classification Health Monitor dashboard provides real-time monit
 
 The Health Monitor dashboard presents information in four categories. 
 
-* Infrastructure status
-** Version status
-** System stability
-** Deployment type
-** Machine scale
+* **Infrastructure status**
++
+View information including the version status, system stability, deployment type, and machine scale.
 
-* Problematic containers
+* **Problematic containers**
 +
 Review the problematic containers field for insights into containers that are stopped or restarting frequently. Use this information to investigate the specific containers. 
 
-* System information 
+* **System information**
 +
 The system information panel captures critical information about the NetApp Console and Data Classification such as the public and private IP addresses, host name, operating system, Console version, and Console ID. 
 
-* Usage and utilization
+* **Usage and utilization**
 +
 Review the CPU usage, disk utilization, disk usage, and memory usage. These values are displayed in storage units (GB) or percentages of total use. If any fields display warnings, select the warning for more detailed information and remediation recommendations. 
 
