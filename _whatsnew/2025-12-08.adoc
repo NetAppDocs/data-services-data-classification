@@ -1,6 +1,6 @@
 === Version 1.49
 
-This release of Data Classification includes bug fixes, performance enhancements, and:
+This release of Data Classification includes bug fixes and the following updates:
 
 .Monitor metrics and performance in the Health Monitoring dashboard
 
