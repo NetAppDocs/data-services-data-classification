@@ -1,0 +1,13 @@
+=== Version 1.49
+
+This release of Data Classification includes bug fixes, performance enhancements, and:
+
+.Monitor metrics and performance in the Health Monitoring dashboard
+
+Data Classification now provides a health monitoring dashboard, providing real-time monitoring of your resources and insights into memory usage, disk usage and utilization, and more. With insights from the health monitoring dashboard, you can review the infrastructure of your deployment and gain insights to optimize storage and performance. 
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html[Monitor the health of Data Classification].
+
+.Improved loading performance  
+
+The loading performance for all pages in Data Classification has been improved to create a more efficient user experience. 
