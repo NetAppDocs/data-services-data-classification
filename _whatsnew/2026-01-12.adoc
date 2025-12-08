@@ -1,0 +1,11 @@
+=== Version 1.50
+
+This release of Data Classification includes bug fixes and the following updates:
+
+.Improved custom classification interface
+
+Data Classification supports a new interface for creating custom classifiers, facilitating an easier process to create custom personal identifiers and categories to identify data types specific to your organization and ensure your data is compliant with governance requirements. 
+
+For more information, see link:task-custom-classification.html[Create a custom classification].
+
+//For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html[Create a custom classification].

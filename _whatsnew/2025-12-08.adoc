@@ -1,21 +1,12 @@
 === Version 1.49
 
-This release of Data Classification includes bug fixes, performance enhancements, and new features:
-
-.Improved custom classification interface
-
-Data Classification supports a new interface for creating custom classifiers, facilitating an easier process to create custom personal identifiers and categories to identify data types specific to your organization and ensure your data is compliant with governance requirements. 
-
-For more information, see link:task-custom-classification.html[Create a custom classification].
-
-//For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html[Create a custom classification].
+This release of Data Classification includes bug fixes and the following updates:
 
 .Monitor metrics and performance in the Health Monitoring dashboard
 
-Data Classification now provides a health monitoring dashboard, providing real-time monitoring of your resources and insights into memory usage, disk usage and utilization, and more. With insights from the health monitoring dashboard, you can review the infrastructure of your deployment and gain insights to optimize storage and performance. 
+Data Classification now provides a health monitoring dashboard, providing real-time monitoring of your resources and insights into memory usage, disk usage, disk utilization, and more. With insights from the health monitoring dashboard, you can review the infrastructure of your deployment and gain insights to optimize storage and performance. 
 
-For more information, see link:task-health-monitor.html[Monitor the health of Data Classification].
-//For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html[Monitor the health of Data Classification].
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html[Monitor the health of Data Classification].
 
 .Improved loading performance  
 
