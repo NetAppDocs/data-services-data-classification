@@ -15,33 +15,35 @@ summary: Before installing Data Classification manually on a Linux host you can 
 [.lead]
 Before installing NetApp Data Classification manually on a Linux host, optionally run a script on the host to verify that all the prerequisites are in place for installing Data Classification. You can run this script on a Linux host in your network, or on a Linux host in the cloud. The host can be connected to the internet, or the host can reside in a site that doesn't have internet access (a _dark site_).
 
-// no dark sites
-
-There is also a prerequisite test script that is part of the Data Classification installation script. The script described here is specifically designed for users who want to verify the Linux host independently of running the Data Classification installation script.
+The Data Classification installation script encompasses a test script to ensure your environment meets the requirements. You can run this script separately to verify the Linux host's readiness before run the installation script.
 
 == Getting Started
 
 You'll perform the following tasks.
 
-. Optionally, install a Console agent if you don't already have one installed. You can run the test script without having a Console agent installed, but the script checks for connectivity between the Console agent and the Data Classification host machine - so it is recommended that you have a Console agent.
-. Prepare the host machine and verify that it meets all the requirements.
-. Enable outbound internet access from the Data Classification host machine.
-. Verify that all required ports are enabled on all systems.
-. Download and run the Prerequisite test script.
+* Optionally, install a Console agent if you don't already have one installed. You can run the test script without having a Console agent installed, but the script checks for connectivity between the Console agent and the Data Classification host machine - so it is recommended that you have a Console agent.
+* Prepare the host machine and verify that it meets all the requirements.
+* Enable outbound internet access from the Data Classification host machine.
+* Verify that all required ports are enabled on all systems.
+* Download and run the Prerequisite test script.
 
 == Create a Console agent
 
 A Console agent is required before you can install and use Data Classification. You can, however, run the Prerequisites script without a Console agent.
 
-You can https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud. Some users planning to install Data Classification on-prem may also choose to install the Console agent on-prem.
+You can link:https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html[install the Console agent on-premises^] on a Linux host in your network or on a Linux host in the cloud. You can also install Data Classification on-premises if the Console agent is installed on-premises.
 
-To create a Console agent in your cloud provider environment, see https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]. 
+To create a Console agent in your cloud provider environment, see:
 
-You'll need the IP address or host name of the Console agent system when running the Prerequisites script. You'll have this information if you installed the Console agent in your premises. If the Console agent is deployed in the cloud, you can find this information from the Console: select the Help icon then *Support* then *Console agent*.
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]
+
+You need the IP address or host name of the Console agent system when running the Prerequisites script. You have this information if you installed the Console agent in your premises. If the Console agent is deployed in the cloud, you can find this information from the Console: select the Help icon then *Support*; in the Agent and Audit section, select *Go to the agent*.
 
 == Verify host requirements
 
-Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. 
+Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, and software requirements.
 
 include::_include/host-requirements.adoc[]
 

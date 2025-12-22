@@ -1,4 +1,4 @@
-* Data Classification is not supported on a host that is shared with other applications - the host must be a dedicated host.
+* Data Classification must be on a dedicated host. The host can't be shared with other applications or third-party software such as antivirus. 
 //This include is used in 3 Linux deploy topics
 
 * When building the host system in your premises, you can choose among these system sizes depending on the size of the dataset that you plan to have Data Classification scan.
