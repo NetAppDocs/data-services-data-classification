@@ -1,7 +1,6 @@
 * Data Classification must be on a dedicated host. The host can't be shared with other applications or third-party software such as antivirus. 
-//This include is used in 3 Linux deploy topics
 
-* When building the host system in your premises, you can choose among these system sizes depending on the size of the dataset that you plan to have Data Classification scan.
+* Choose the size that aligns with the data set you plan to scan with Data Classification. 
 +
 [cols="17,17,27,31",width=95%,options="header"]
 |===
@@ -33,7 +32,7 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 [cols="25,25",width=60%,options="header"]
 |===
 | Folder
-| Minimum Permissions
+| Minimum permissions
 
 | /tmp | `rwxrwxrwt`
 
@@ -64,7 +63,7 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 
 * *Additional software*: You must install the following software on the host before you install Data Classification:
 
-** Depending on the OS you are using, you'll need to install one of the container engines:
+** Depending on the OS you are using, you need to install one of the container engines:
 +
 *** Docker Engine version 19.3.1 or greater. https://docs.docker.com/engine/install/[View installation instructions^].
 *** Podman version 4 or greater. To install Podman, enter (`sudo yum install podman netavark -y`).
