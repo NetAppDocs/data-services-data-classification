@@ -9,6 +9,7 @@ summary: Customize the definition of stale data in NetApp Data Classification so
 :icons: font
 :imagesdir: ./media/
 
+[.lead]
 NetApp Data Classification identifies stale data to help you identify saving opportunities and governance risks. Because the definition of stale data can vary across different organizational contexts, you can customize how Data Classification defines stale data. 
 
 Stale data can be defined based on when it was _last accessed_ or _last modified_. The time period selections range from 6 months ago to 10 years ago. 

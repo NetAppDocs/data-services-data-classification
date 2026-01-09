@@ -41,10 +41,12 @@ image:screenshot-custom-classifier-name.png[Screenshot of choosing classifier ty
 image:screenshot-keywords.png[Screenshot of creating a custom classifier with keywords.]
 +
 To add the classifier as a regular expression, select **Regular expression** then add a pattern to detect the specific information of your data. Select **Validate** to confirm the syntax of your entry. 
++
 image:screenshot-create-logic-regex.png[Screenshot of the dialog to create a regular expression.]
++
 .. Optionally, enter a sample string that should match your regex pattern then select **Test** to check it.
++
 .. Optionally, add proximity words. If you add proximity words, Data Classification only flags the regex pattern if the proximity words are adjacent to the matching string. 
-
 . Select **Next**. 
 . Enter a **Classifier name** and a **Description** to identify the custom category in your dashboard.
 . Select **Save** to create the custom personal identifier. 
@@ -72,13 +74,14 @@ Enter the **Directory path** for the directory that contains the training data.
 . Select **Load files** for Data Classification to perform a check of the files. You can review the summary of the files, which lists the file name, size, type, and notes if the file was deemed acceptable for training. 
 +
 image:custom-category-file-summary.png[Screenshot showing the summary of files uploaded for training.]
-.. If you need to change the file path or re-upload files, select **Change path** then re-enter the data and load the files again. 
++
+.. To change the file path or re-upload files, select **Change path** then enter the data and load the files again. 
 . When you're satisfied with the files uploaded, select **Next**. 
 . Enter a **Classifier name** and a **Description** to identify the custom category in your dashboard.
 . Select **Save** to create the custom category. 
 
 .Result 
-After you create a custom category, its results are captured in the next scheduled scan. To capture results sooner, perform an on-demand scan. 
+After you create a custom category, its results are captured in the next scheduled scan. To capture results sooner, manually initiate the scan. 
 
 == Edit a custom classifier
 
