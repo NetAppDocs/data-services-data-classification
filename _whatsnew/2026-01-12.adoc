@@ -4,7 +4,7 @@ This release of Data Classification includes bug fixes and the following updates
 
 .Custom classification improvements
 
-Data Classification now supports creating custom categorings for your data. You can upload files to finetune an AI model that Data Classification uses to apply the category marker to data. The interface for all custom classifications has been improved. 
+Data Classification now supports creating custom categories for your data. You can upload files to fine-tune an AI model that Data Classification uses to apply the category marker to data. The interface for all custom classifications has been improved. 
 
 For more information, see link:task-custom-classification.html[Create a custom classification].
 
@@ -12,7 +12,7 @@ For more information, see link:task-custom-classification.html[Create a custom c
 
 .Custom stale data 
 
-Data Classification now allows you to customize the definition of stale data so it suits your organizational needs. Previously Stale data can be determined based on when it was last accessed _or_ last modified. For either category, you can assign a time period of between 6 months and 10 years.
+Data Classification now allows you to customize the definition of stale data so it suits your organizational needs. Previously, stale data was defined as any data that was last modified three years ago. Now, stale data can be determined based on when it was last accessed _or_ last modified; the time period can range from 6 months ago to 10 years ago.
 
 For more information, see link:task-stale-data.html[Customize the stale data definition].
 
@@ -21,8 +21,8 @@ For more information, see link:task-stale-data.html[Customize the stale data def
 
 .Improved performance
 
-Data Classification has shortened the loading time for all pages in Data Classification as well as the data mapping report and filters on the Investigation page. 
+The loading times for all pages in Data Classification, the data mapping report, and filters on the Investigation page have been shortened. 
 
 .Estimated time for investigation reports
 
-When you donwload an investigation report, Data Classification now reports the estimated time for the download to complete.  
+When you download an investigation report, Data Classification now reports the estimated time for the download to complete.  

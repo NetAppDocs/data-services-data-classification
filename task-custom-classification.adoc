@@ -86,7 +86,7 @@ You can modify the logic of a personal identifier after you create it. You can't
 
 .Steps
 . In NetApp Data Classification, select *Custom classification*. 
-. Identify the classifier you want to delete then select the action menu `...` at the end of its row. 
+. Identify the classifier you want to delete, then select the action menu `...` at the end of its row. 
 . Select **Edit logic**. 
 . If you're modifying keywords, add, delete, or edit the appropriate keywords. If you're modifying a regular expression, enter the new regular expression and validate it. Optionally, add proximity keywords. 
 . Select **Save** to apply the changes. 
