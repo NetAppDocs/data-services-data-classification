@@ -1,0 +1,29 @@
+---
+sidebar: sidebar
+permalink: task-stale-data.html
+keywords: support registration, register for support, support, nss account, add nss account,
+summary: Customize the definition of stale data in NetApp Data Classification so that reporting matches your organizational needs. 
+---
+
+= Customize the stale data definition in NetApp Data Classification
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+NetApp Data Classification identifies stale data to help you identify saving opportunities and governance risks. Because the definition of stale data can vary across different organizational contexts, you can customize how Data Classification defines stale data. 
+
+Stale data can be defined based on when it was _last accessed_ or _last modified_. The time period selections range from 6 months ago to 10 years ago. 
+
+By default, data is considered stale if it was last modified three years ago. 
+
+//required role to perform this task? 
+
+.Define stale data
+
+. In Ransomware Resilience, select **Configuration**. 
+. In the Configuration page, scroll to the **Stale data definition** heading. 
+. In the **File properties** dropdown menu, choose if you want to define stale data based on when it was *Last accessed* or *Last modified*. 
+. Choose the time period for the stale data definition. 
++
+image:stale-data.png["Screenshot of the stale data definition options"]
+. Select **Save**. 

@@ -1,0 +1,28 @@
+=== Version 1.50
+
+This release of Data Classification includes bug fixes and the following updates:
+
+.Custom classification improvements
+
+Data Classification now supports creating custom categories for your data. You can upload files to fine-tune an AI model that Data Classification uses to apply the category marker to data. The interface for all custom classifications has been improved. 
+
+For more information, see link:task-custom-classification.html[Create a custom classification].
+
+//For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html[Create a custom classification].
+
+.Custom stale data definition
+
+Data Classification now allows you to customize the definition of stale data so it suits your organizational needs. Previously, stale data was defined as any data that was last modified three years ago. Now, stale data can be identified based on when it was last accessed _or_ last modified; the time period can range from 6 months ago to 10 years ago.
+
+For more information, see link:task-stale-data.html[Customize the stale data definition].
+
+//For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-stale-data.htmlCustomize the stale data definition].
+
+
+.Improved performance
+
+Loading times for all pages in Data Classification, the data mapping report, and filters on the Investigation page have been shortened. 
+
+.Estimated time for investigation reports
+
+When you download an investigation report, Data Classification now displays the estimated time for the download to complete.  

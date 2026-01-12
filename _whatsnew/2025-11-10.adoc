@@ -6,6 +6,4 @@ This release of Data Classification includes bug fixes, security improvements, a
 
 Scan configurations now include improved insights into scan completion. Previously, a progress bar only displayed while the scan was in progress. Now, the progress bar remains visible after completion to confirm scans were completed successfully. You're also able to view the number of files mapped and scanned. 
 
-For more information about scan settings, see link:task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories[Change the NetApp Data Classification scan settings for your repositories^].
-
-// For more information about scan settings, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories[Change the NetApp Data Classification scan settings for your repositories^].
+For more information about scan settings, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories[Change the NetApp Data Classification scan settings for your repositories^].

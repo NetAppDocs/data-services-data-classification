@@ -85,6 +85,8 @@ sidebar:
           url: /task-exclude-scan-paths.html
         - title: Define existing Group IDs as "open to organization"
           url: /task-add-group-id-as-open.html
+        - title: Define stale data 
+          url: /task-stale-data.html
         - title: Remove data sources from Data Classification
           url: /task-managing-compliance.html
         - title: Uninstall Data Classification
