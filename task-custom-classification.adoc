@@ -97,9 +97,9 @@ You can modify the logic of a personal identifier after you create it. You can't
 == Delete a custom classifier 
 
 . In NetApp Data Classification, select *Custom classification*. 
-. Identify the classifier you want to delete the select the action menu `...` at the end of its row. 
+. Identify the classifier you want to delete then select the action menu `...` at the end of its row. 
 . Select **Delete classifier**. 
 
-## Next steps 
+== Next steps 
 
 - xref:task-generating-compliance-reports.html[Generate compliance reports]
