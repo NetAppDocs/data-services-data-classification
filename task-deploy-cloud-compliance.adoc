@@ -31,7 +31,7 @@ You can also link:https://docs.netapp.com/us-en/console-setup-admin/task-install
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Prerequisites
 
 [role="quick-margin-para"]
-Ensure that your environment can meet the prerequisites. This includes outbound internet access for the instance, connectivity between the Console agent and Data Classification over port 443, and more. << Prerequisites,See the complete list>>.
+Ensure that your environment can meet the prerequisites. This includes outbound internet access for the instance, connectivity between the Console agent and Data Classification over port 443, and more. <<Prerequisites,See the complete list>>.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy Data Classification
 
