@@ -2,7 +2,7 @@
 
 ## Repository Overview
 
-**Product:** [Extract from project.yml settings.name]
+**Product:** NetApp Data Classification
 
 **Repository Type:** NetApp documentation site (AsciiDoc-based)
 
@@ -22,48 +22,29 @@ NetApp Data Classificaiton enables you to scan and classify data across your org
 
 [2-5 core concepts unique to this product - analyze concept_ files]
 
-Example format:
-- **Concept name:** One sentence explanation
+- **Data governance through scanning and classification** - Data Classification is a service that scans corporate on-premises and cloud data sources to map and classify data, identify private information, and address three main areas: compliance risk reduction, security strengthening, and storage cost optimization.
+- **Two-level scanning approach** - The product offers two distinct scan types: Mapping-only scans (fast, metadata-based overview) and Map & Classify scans (deep-level scanning that accesses file contents to identify personal and sensitive data). This allows users to balance speed versus depth of analysis.
+- **Continuous, automated scanning architecture** - Deploys a dedicated instance that continuously scans data in round-robin fashion to detect incremental changes, creating an ongoing index of personal information, sensitive personal information, data categories, and file types across hybrid multicloud environments.
 
 ### Common Terminology
 
-[Product-specific terms - extract from file names and content]
-
-Example format:
-- **Term:** Definition or preferred usage
+- **Mapping-only scan**
+- **Map & Classify scan**
+- **Saved searches**
+- **DSAR**
 
 ### Typical User Workflows
 
-[3-5 common task patterns users follow - analyze task groupings in sidebar]
-
-Example format:
 - **Deployment:** Deployment is process by which customers configure a Console agent and launch Data Classification, connecting to data resource and configuring networking. Key workflows are captured in task-deploy-cloud-compliance.adoc, task-deploy-compliance-onprem.adoc,task-deploy-compliance-dark-site.adoc, and task-test-linux-system.adoc.
 - **Configure scanning:** Customers must configure scanning on their connected resources. The scope of scanning tasks is captured in task-scanning-overview.adoc. 
 - **Classify and manage data:** After configuring scannings, data administrators capture information about compliance risks and stale data in Data Classification, prompting deletion and proper management of data. All data tasks capture under the "Use Data Classification" heading in project.yml capture the scope of actions. 
-
 
 ### Target audience
 
 Data Classification is for enterprise IT administrators and data governance professionals who manage corporate data across hybrid cloud and on-premises environments. The product is specifically designed for compliance officers and security teams who need to identify and protect personal and sensitive information to meet regulatory requirements like GDPR, HIPAA, CCPA, and PCI. Additionally, it targets storage administrators and financial decision-makers looking to optimize storage costs and total cost of ownership (TCO) by identifying duplicate, inactive, or non-business-related data.
 
-## Documentation Conventions
-
-[OPTIONAL - Only include if the repository has unique patterns beyond standard NetAppDocs conventions]
-
-Examples of when to include this section:
-- Non-standard file naming patterns (beyond task_/concept_/reference_)
-- Heavy use of `_include/` files with specific reuse patterns
-- Special metadata requirements
-- Unusual sidebar organization patterns
-- Product-specific validation rules
-
-If none apply, remove this section.
-
 ## Common Writer Tasks
 
-- 
 Examples:
-- Update version-specific information
-- Document new features for [component]
-- Create integration guides
-- Update specific file types when product changes
+- Document new features to manage data classification reporting
+- Update release nnotes in whats-new.adoc
