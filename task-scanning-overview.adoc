@@ -168,12 +168,3 @@ The Console UI displays data from a single connector. For tips on viewing data f
 
 ====
 // End snippet
-
-
-== How quickly does Data Classification scan data
-
-The scan speed is affected by network latency, disk latency, network bandwidth, environment size, and file distribution sizes.
-
-* When performing Mapping-only scans, Data Classification can scan between 100 and 150 TiB of data per day. 
-* When performing Map & classify scans, Data Classification can scan between 15 and 40 TiB of data per day. 
-
