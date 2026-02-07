@@ -26,17 +26,24 @@ All .adoc files in the root directory should be prepended with concept-, faq-, r
 
 ### What's New
 
-The whats-new.adoc directory includes release notes for the Data Classification service. 
+The `whats-new.adoc` directory includes release notes for the Data Classification service. 
 
-* All dates should be formated DAY MONTH YEAR. The date must include two digits even if it's a single digit day. 
-  * Correct: 01 February 2026
-  * Incorrect: February 1, 2026
-  * Incorrect: 1 February 2026
-* Individual entries for each date are include files located in the `_whatsnew` directory. 
-  * All files in the whats new directory should be named year-month-day.adoc, for example `2026-02-01.adoc`.
-  * All files in the `whatsnew` directory should be .adoc files. They should all begin with a level three heading (`===`) that indicates the version of Data Classification in the release. 
-  * All subsequent titles should be list headers, (for example, `.New feature title`).
-  * All links in the page should be absolute. 
+* All dates must follow the format: DD MONTH YYYY (with leading zeros).
+  * ✅ Correct: 01 February 2026
+  * ❌ Incorrect: February 1, 2026 or 1 February 2026
+* All substantive content for each dated entry must be housed in an individual includes file located in the `whatsnew` directory. 
+
+#### _whatsnew directory
+
+* All files in the whats new directory should be named year-month-day.adoc, for example `2026-02-01.adoc`.
+* All files in the `whatsnew` directory should be .adoc files. The file must begin with a level three heading (`===`) that indicates the version of Data Classification in the release. 
+* All subsequent titles should be list headers. 
+  * ✅ Correct: `.New feature title`
+  * ❌ Incorrect: `==== New feature`
+* All links in the page should be absolute.
+* Use the `^` symbol after link text to indicate external links (opens in new tab).
+* Feature descriptions should be concise (1-2 sentences) with a link to detailed documentation.
+
   <!-- this will be a problem for staging>
 
 ## Product-Specific Context
