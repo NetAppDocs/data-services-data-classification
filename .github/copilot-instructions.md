@@ -16,6 +16,29 @@ NetApp Data Classificaiton enables you to scan and classify data across your org
 - `project.yml`
 - `_index.yml`
 
+### File naming
+
+All .adoc files in the root directory should be prepended with concept-, faq-, reference-, or task-, denoting the type of information in the file. Three exceptions exist:
+
+1. `api-` - This is information about the API
+2. `legal-notices`: This is required legal information
+3. `whats-new`: This contains release notes. For more information, see [What's new](#whats-new).
+
+### What's New
+
+The whats-new.adoc directory includes release notes for the Data Classification service. 
+
+* All dates should be formated DAY MONTH YEAR. The date must include two digits even if it's a single digit day. 
+  * Correct: 01 February 2026
+  * Incorrect: February 1, 2026
+  * Incorrect: 1 February 2026
+* Individual entries for each date are include files located in the `_whatsnew` directory. 
+  * All files in the whats new directory should be named year-month-day.adoc, for example `2026-02-01.adoc`.
+  * All files in the `whatsnew` directory should be .adoc files. They should all begin with a level three heading (`===`) that indicates the version of Data Classification in the release. 
+  * All subsequent titles should be list headers, (for example, `.New feature title`).
+  * All links in the page should be absolute. 
+  <!-- this will be a problem for staging>
+
 ## Product-Specific Context
 
 ### Key Concepts
