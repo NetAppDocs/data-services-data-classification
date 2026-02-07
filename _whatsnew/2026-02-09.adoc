@@ -1,0 +1,22 @@
+=== Version 1.50
+
+This release of Data Classification includes bug fixes and the following updates:
+
+.Native FSxN support enables activating FSxN systems classification directly from the Console Canvas.
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-fsx.html[Scan Amazon FSxN for ONTAP volumes]
+
+.Increased export limit for investigating directories
+
+When you're exporting an investigation report about directories from the Investigation dashboard, you can now include 5,000 rows. This increase from the previous limit of XYZ supports larger scale investigations of data governance and compliance. 
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html[Investigate data^].
+
+.Estimated completion time for custom classifier training
+When you create a custom classifier, the UI now displays the estimated completion time for training, enabling greater clarity on the model readiness process. 
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification[Create a custom classification^].
+
+.Copy/Move actions now support handling files up to 250 MB
+
+.Data Classification has improved the user experience to improve the display on low-resolution screens. 
