@@ -8,9 +8,15 @@
 
 **Target URL:** https://docs.netapp.com/data-services-data-classification/index.html
 
-NetApp Data Classificaiton enables you to scan and classify data across your organization's hybrid multicloud. Data Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+NetApp Data Classificaiton enables users to scan and classify data across your organization's hybrid multicloud. Data Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+
+**Intent**: This documentation repository provides comprehensive technical guidance for Data Classification, enabling data governance professionals and IT administrators to deploy, configure, and use the service to scan and classify data across hybrid multicloud environments. Documentation should clearly explain AI-driven scanning capabilities, compliance workflows, and data management features using AsciiDoc format while maintaining consistency with NetApp's documentation standards. All content must prioritize clarity for enterprise users addressing compliance requirements, security vulnerabilities, and storage optimization. When reviewing the documentation, there should be a focus on clarity of language and tangible benefit for using a feature. 
 
 ## Repository Structure
+
+* The repository includes a root directory with .adoc files that contain content articles and .yml files that provide sidebar and homepage structure. It also includes necessary files (.gitignore and readme.md).
+* The repository includes sub-directories including media for media files (.png and source files) and an _includes directory, which contains .adoc files with reusable text blocks. Other specific subdirectory information is captured below. 
+
 
 ### Key Configuration Files
 - `project.yml`
@@ -18,7 +24,7 @@ NetApp Data Classificaiton enables you to scan and classify data across your org
 
 ### File naming
 
-All .adoc files in the root directory should be prepended with concept-, faq-, reference-, or task-, denoting the type of information in the file. Three exceptions exist:
+All .adoc files in the root directory should be prepended with concept-, faq-, reference-, or task-. These prefixes denote the type of information in the file. There are three files that are exceptions:
 
 1. `api-` - This is information about the API
 2. `legal-notices`: This is required legal information
@@ -44,13 +50,27 @@ The `whats-new.adoc` directory includes release notes for the Data Classificatio
 * Use the `^` symbol after link text to indicate external links (opens in new tab).
 * Feature descriptions should be concise (1-2 sentences) with a link to detailed documentation.
 
-  <!-- this will be a problem for staging>
+  <!-- this will be a problem for staging -->
+#### Redirect directory
+
+<!-- could this be org level or a separate agent -->
+
+The redirect directory captures decomissioned content pages that redirect HTTP request to a designated page. There should only be two metadata tags on the page:
+1. `permalink:` - the HTML endpoint of the page. This should be match the file name, file type excluded. 
+2. `redirect:` - the page the HTML request should be directed to. This must include the repository name as expressed in the path and a working page in that exists. Redirects most often point to the same repository, though sometimes they point to other docs.netapp.com sites. 
+
+This is a correctly formatting redirect page: 
+
+```
+---
+permalink: concept-cloud-compliance.html
+redirect: data-services-data-classification/concept-classification.html
+---
+```
 
 ## Product-Specific Context
 
 ### Key Concepts
-
-[2-5 core concepts unique to this product - analyze concept_ files]
 
 - **Data governance through scanning and classification** - Data Classification is a service that scans corporate on-premises and cloud data sources to map and classify data, identify private information, and address three main areas: compliance risk reduction, security strengthening, and storage cost optimization.
 - **Two-level scanning approach** - The product offers two distinct scan types: Mapping-only scans (fast, metadata-based overview) and Map & Classify scans (deep-level scanning that accesses file contents to identify personal and sensitive data). This allows users to balance speed versus depth of analysis.
@@ -71,10 +91,4 @@ The `whats-new.adoc` directory includes release notes for the Data Classificatio
 
 ### Target audience
 
-Data Classification is for enterprise IT administrators and data governance professionals who manage corporate data across hybrid cloud and on-premises environments. The product is specifically designed for compliance officers and security teams who need to identify and protect personal and sensitive information to meet regulatory requirements like GDPR, HIPAA, CCPA, and PCI. Additionally, it targets storage administrators and financial decision-makers looking to optimize storage costs and total cost of ownership (TCO) by identifying duplicate, inactive, or non-business-related data.
-
-## Common Writer Tasks
-
-Examples:
-- Document new features to manage data classification reporting
-- Update release nnotes in whats-new.adoc
+Data Classification is for enterprise IT administrators and data governance professionals who manage corporate data across hybrid cloud and on-premises environments. The product is specifically designed for compliance officers and security teams who need to identify and protect personal and sensitive information to meet regulatory requirements like GDPR, HIPAA, CCPA, and PCI. Additionally, it targets storage administrators and financial decision-makers looking to optimize storage costs and total cost of ownership (TCO) by identifying duplicate, inactive, or non-business-related data. When reviewing the documentation, the audience should clearly understand a procedure and the use case--that is, how using this feature provides value to their organization. 
