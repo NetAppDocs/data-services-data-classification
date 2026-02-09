@@ -75,6 +75,7 @@ Enter the **Directory path** for the directory that contains the training data.
 +
 image:custom-category-file-summary.png[Screenshot showing the summary of files uploaded for training.]
 +
+Data Classification displays the estimated completion time for data training.
 .. To change the file path or re-upload files, select **Change path** then enter the data and load the files again. 
 . When you're satisfied with the files uploaded, select **Next**. 
 . Enter a **Classifier name** and a **Description** to identify the custom category in your dashboard.
