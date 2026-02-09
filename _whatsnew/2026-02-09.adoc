@@ -14,15 +14,11 @@ When you're exporting an investigation report about directories from the Investi
 
 For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html[Investigate data^].
 
-.Estimated completion time for custom classifier training
-
-When you create a custom classifier, the UI now displays the estimated completion time for training, enabling greater clarity on the model readiness process. 
-
-For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification[Create a custom classification^].
-
 .Increased limit for copy and move
 
 When copying or moving files, you can now move files up to 250 MB, an increase from the previous limit of 50 MB. 
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html[Investigate data^].
 
 .Improved display for low-resolution screens
 
