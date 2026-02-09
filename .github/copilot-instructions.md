@@ -58,7 +58,7 @@ The `whats-new.adoc` directory includes release notes for the Data Classificatio
 
 The redirect directory captures decomissioned content pages that redirect HTTP request to a designated page. There should only be two metadata tags on the page:
 1. `permalink:` - the HTML endpoint of the page. This should be match the file name, file type excluded. 
-2. `redirect:` - the page the HTML request should be directed to. This must include the repository name as expressed in the path and a working page in that exists. Redirects most often point to the same repository, though sometimes they point to other docs.netapp.com sites. 
+2. `redirect:` - the page the HTML request should be directed to. This must include the repository name as expressed in the path and a working page in that repository. Redirects most often point to the same repository, though sometimes they point to other docs.netapp.com sites. 
 
 This is a correctly formatting redirect page: 
 
