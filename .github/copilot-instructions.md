@@ -46,11 +46,12 @@ The `whats-new.adoc` directory includes release notes for the Data Classificatio
 * All subsequent titles should be list headers. 
   * ✅ Correct: `.New feature title`
   * ❌ Incorrect: `==== New feature`
-* All links in the page should be absolute.
+* When deploying to production (i.e., when pushing to the public remote), all links in the page should be absolute.
+  <!-- phrased this way to mitigate problems when deploying for staging -->
 * Use the `^` symbol after link text to indicate external links (opens in new tab).
-* Feature descriptions should be concise (1-2 sentences) with a link to detailed documentation.
+* Feature descriptions should be concise: 1-3 sentences describing the change and the added value to the user. In most cases, they should include a link that directs users to more information. 
+* The `release_notes_repo: console-relnotes` setting in the project.yml file enables release notes to be automatically collated in a release notes repository for the entire NetApp Console: https://docs.netapp.com/us-en/console-relnotes/. 
 
-  <!-- this will be a problem for staging -->
 #### Redirect directory
 
 <!-- could this be org level or a separate agent -->
