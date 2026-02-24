@@ -21,8 +21,6 @@ Data Classification can be deployed in the following ways:
 * link:task-deploy-compliance-onprem.html[Install on a Linux host with internet access]. Install Data Classification on a Linux host in your network, or on a Linux host in the cloud, that has internet access. This type of installation may be a good option if you prefer to scan on-premises ONTAP systems using a Data Classification instance that's also located on premises, though this isn't a requirement.
 * link:task-deploy-compliance-dark-site.html[Install on a Linux host in an on-premises site without internet access], also known as _private mode._ This type of installation, which uses an installation script, has no connectivity to the Console SaaS layer. 
 
-include::_include/private-mode.adoc[]
-
 Both the installation on a Linux host with internet access and the on-premises installation on a Linux host without internet access use an installation script. The script starts by checking if the system and environment meet the prerequisites. If the prerequisites are met, the installation starts. If you would like to verify the prerequisites independently of running the Data Classification installation, there is a separate software package you can download that only tests for the prerequisites.
 
 Refer to link:task-test-linux-system.html[Check that your Linux host is ready to install Data Classification].
