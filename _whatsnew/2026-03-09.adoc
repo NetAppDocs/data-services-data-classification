@@ -1,0 +1,20 @@
+
+=== Version 1.52
+
+.Health monitoring dashboard enhancements
+
+- Architecture Refactor
+- Validate that a customer has enough resources
+- Show an error when upgrade fails
+
+.Actions
+
+.Permission changes 
+
+Users with the Classification viewer IAM role no longer have the ability to add, remove, or modify an Active Directory (AD) connection. This change tightens the remit of the role to observability. 
+
+For more information about the Classification viewer role, see link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles[Data service roles^].
+
+.Improved cloud installation process
+
+.Store NFS basic permissions
