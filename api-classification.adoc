@@ -46,7 +46,7 @@ The API is secure and it uses the same authentication method as the UI. You can 
 
 == Accessing the Swagger API reference
 
-To get into Swagger you'll need the IP address of the your Data Classification instance. In the case of a cloud deployment you'll use the public IP address. Then you'll need to get into this endpoint: 
+To get into Swagger you'll need the IP address of your Data Classification instance. In the case of a cloud deployment you'll use the public IP address. Then you'll need to get into this endpoint: 
 
 \https://<classification_ip>/documentation
 
