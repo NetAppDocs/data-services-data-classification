@@ -3,7 +3,7 @@
 
 .Resource validation 
 
-The system now validates available memory and disk resources across scanning, report generation, and actions. When memory usage exceeds 95% or disk space falls below 6 GB, Data Classification automatically pauses operations. Operations resume once resources are sufficient.  
+To ensure reliability, Data Classification now validates available memory and disk resources across scanning, report generation, and actions. When memory usage exceeds 95% or disk space falls below 6 GB, Data Classification automatically pauses operations. Operations resume once resources are sufficient.  
  
 To monitor your system resources, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html[Monitor the health of Data Classification^].
 
