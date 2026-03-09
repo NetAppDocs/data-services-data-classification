@@ -146,7 +146,7 @@ You must have the information for the Active Directory:
 
 For typical configurations you'll install the software on a single host system. 
 
-//image:diagram_deploy_onprem_single_host_no_internet.png[A diagram showing the location of the data sources you can scan when using a single Data Classification instance deployed on-prem without internet access.]
+image:diagram_deploy_onprem_single_host_no_internet.png[A diagram showing the location of the data sources you can scan when using a single Data Classification instance deployed on-prem without internet access.]
 
 //For very large configurations where you'll be scanning petabytes of data, you can include multiple hosts to provide additional processing power. 
 
