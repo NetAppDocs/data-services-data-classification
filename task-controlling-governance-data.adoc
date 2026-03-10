@@ -41,7 +41,7 @@ The _Saving Opportunities_ component shows data that you can delete or tier to l
 
 . From the Data Classification menu, select *Governance*.
 
-. Within each Savings Opportunities tile of the Governance dashboard, select *Optimize Storage* to view the filtered results in the Investigation page. To discover any data you should delete or tier to less expensive storage, investigate the the _Saving Opportunities_.
+. Within each Savings Opportunities tile of the Governance dashboard, select *Optimize Storage* to view the filtered results in the Investigation page. To discover any data you should delete or tier to less expensive storage, investigate the _Saving Opportunities_.
 
 * *Stale Data* - By default, data is considered stale if it was last modified over 3 years ago. You can [customize the definition of stale data](task-stale-data.html). 
 * *Duplicate Files* - Files that are duplicated in other locations in the data sources you are scanning. link:task-investigate-data.html[See what types of duplicate files are displayed].

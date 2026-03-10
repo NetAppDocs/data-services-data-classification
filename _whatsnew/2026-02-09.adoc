@@ -1,4 +1,4 @@
-=== Version 1.50
+=== Version 1.51
 
 This release of Data Classification includes bug fixes and the following updates:
 
@@ -14,7 +14,7 @@ When you're exporting an investigation report about directories from the Investi
 
 For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html[Investigate data^].
 
-.Increased limit for copy and move
+.Increased limits for copy and move
 
 When copying or moving files, you can now move files up to 250 MB, an increase from the previous limit of 50 MB. 
 
