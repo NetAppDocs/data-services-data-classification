@@ -1,26 +1,24 @@
-# NetApp Data Classification - Copilot Instructions
+# Copilot Instructions for NetApp Data Classification documentation
 
 ## Repository Overview
 
 **Product:** NetApp Data Classification
 
-**Repository Type:** NetApp documentation site (AsciiDoc-based)
-
-**Target URL:** https://docs.netapp.com/data-services-data-classification/index.html
-
-NetApp Data Classificaiton enables users to scan and classify data across your organization's hybrid multicloud. Data Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
-
-**Intent**: This documentation repository provides comprehensive technical guidance for Data Classification, enabling data governance professionals and IT administrators to deploy, configure, and use the service to scan and classify data across hybrid multicloud environments. Documentation should clearly explain AI-driven scanning capabilities, compliance workflows, and data management features using AsciiDoc format while maintaining consistency with NetApp's documentation standards. All content must prioritize clarity for enterprise users addressing compliance requirements, security vulnerabilities, and storage optimization. When reviewing the documentation, there should be a focus on clarity of language and tangible benefit for using a feature. 
+NetApp Data Classificaiton is a governance service to audit security and compliance of your data. Data Classification utilizes natural language processing for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
 
 ## Repository Structure
 
-* The repository includes a root directory with .adoc files that contain content articles and .yml files that provide sidebar and homepage structure. It also includes necessary files (.gitignore and readme.md).
-* The repository includes sub-directories including media for media files (.png and source files) and an _includes directory, which contains .adoc files with reusable text blocks. Other specific subdirectory information is captured below. 
+* Root directory - .adoc and .yml that contain the documentation, sidebar, and landing page structure of the repository.
+* `_include` - Reusable text blocks referenced in .adoc files in the root. 
+* `media` - Images and diagrams that are elements of articles in the root directory. This includes .png and source files. 
+* `redirect` - .adoc files for retired pages and endpoints that redirect HTTPS requests to the appropriate endpoint. This is a correctly formatted redirect page: 
 
-
-### Key Configuration Files
-- `project.yml`
-- `_index.yml`
+```
+---
+permalink: concept-cloud-compliance.html
+redirect: data-services-data-classification/concept-classification.html
+---
+```
 
 ### File naming
 
@@ -52,26 +50,7 @@ The `whats-new.adoc` directory includes release notes for the Data Classificatio
 * Feature descriptions should be concise: 1-3 sentences describing the change and the added value to the user. In most cases, they should include a link that directs users to more information. 
 * The `release_notes_repo: console-relnotes` setting in the project.yml file enables release notes to be automatically collated in a release notes repository for the entire NetApp Console: https://docs.netapp.com/us-en/console-relnotes/. 
 
-#### Redirect directory
-
-<!-- could this be org level or a separate agent -->
-
-The redirect directory captures decomissioned content pages that redirect HTTP request to a designated page. There should only be two metadata tags on the page:
-1. `permalink:` - the HTML endpoint of the page. This should be match the file name, file type excluded. 
-2. `redirect:` - the page the HTML request should be directed to. This must include the repository name as expressed in the path and a working page in that repository. Redirects most often point to the same repository, though sometimes they point to other docs.netapp.com sites. 
-
-This is a correctly formatting redirect page: 
-
-```
----
-permalink: concept-cloud-compliance.html
-redirect: data-services-data-classification/concept-classification.html
----
-```
-
-## Product-Specific Context
-
-### Key Concepts
+## Product-specific context
 
 - **Data governance through scanning and classification** - Data Classification is a service that scans corporate on-premises and cloud data sources to map and classify data, identify private information, and address three main areas: compliance risk reduction, security strengthening, and storage cost optimization.
 - **Two-level scanning approach** - The product offers two distinct scan types: Mapping-only scans (fast, metadata-based overview) and Map & Classify scans (deep-level scanning that accesses file contents to identify personal and sensitive data). This allows users to balance speed versus depth of analysis.
@@ -79,17 +58,13 @@ redirect: data-services-data-classification/concept-classification.html
 
 ### Common Terminology
 
-- **Mapping-only scan**
-- **Map & Classify scan**
-- **Saved searches**
-- **DSAR**
+- **Mapping-only scan** - Data Classification must scan data to provide insights into it. A mapping-only scan is a high-level overview of data that provides broad insights and reads metadata. It does not read the files. 
+- **Map & Classify scan** - Map & Classify scans provide the same benefits of a mapping-only scan with added insights such as names within file or specific pieces of PII. 
+- **Saved queries** - Custom queries created by the user to identify data or a data pattern specific to their organization. 
+- **DSAR** - A Data Subject Access request. This is a request made by an individual to access their personal data. 
 
-### Typical User Workflows
+## Typical User Workflows
 
 - **Deployment:** Deployment is process by which customers configure a Console agent and launch Data Classification, connecting to data resource and configuring networking. Key workflows are captured in task-deploy-cloud-compliance.adoc, task-deploy-compliance-onprem.adoc,task-deploy-compliance-dark-site.adoc, and task-test-linux-system.adoc.
-- **Configure scanning:** Customers must configure scanning on their connected resources. The scope of scanning tasks is captured in task-scanning-overview.adoc. 
-- **Classify and manage data:** After configuring scannings, data administrators capture information about compliance risks and stale data in Data Classification, prompting deletion and proper management of data. All data tasks capture under the "Use Data Classification" heading in project.yml capture the scope of actions. 
-
-### Target audience
-
-Data Classification is for enterprise IT administrators and data governance professionals who manage corporate data across hybrid cloud and on-premises environments. The product is specifically designed for compliance officers and security teams who need to identify and protect personal and sensitive information to meet regulatory requirements like GDPR, HIPAA, CCPA, and PCI. Additionally, it targets storage administrators and financial decision-makers looking to optimize storage costs and total cost of ownership (TCO) by identifying duplicate, inactive, or non-business-related data. When reviewing the documentation, the audience should clearly understand a procedure and the use case--that is, how using this feature provides value to their organization. 
+- **Scanning configuration:** Customers must configure scanning on their connected resources. Scanning tasks are captured in the `task-scanning-overview.adoc` file. 
+- **Classify and manage data:** After configuring scannings, data administrators capture information about compliance risks and stale data in Data Classification, prompting deletion and proper management of data. All data tasks under the "Use Data Classification" heading in project.yml pertain to these workflows. 
