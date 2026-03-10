@@ -47,7 +47,7 @@ The table below shows some of the differences:
 | Search for names within files | Yes | No
 | Create link:task-using-policies.html[saved queries] that provide custom search results | Yes | No
 | Ability to run other reports | Yes | No
-| Ability to see metadata from files** | No | Yes
+| Ability to see metadata from files** | Yes | Yes
 |===
 
 {asterisk} Data Classification does not impose a limit on the amount of data it can scan. Each Console agent supports scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation[install another Console agent^] then link:task-deploy-overview.html[deploy another Data Classification instance]. +
