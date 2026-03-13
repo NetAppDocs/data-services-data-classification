@@ -21,6 +21,8 @@ Data Classification supports copying files to 1 GB in size. You can copy a total
 .Steps
 . In the Investigation dashboard, select the files you want to copy.
 . Above the list of files, select **Copy**.
++
+image:screenshot-copy-move-delete.png[Screenshot of actions in the Investigation page]
 . Select the protocol of the destination for the copies: **NFS** or **CIFS**.
 . If you selected NFS, enter the destination path using forward slashes, for example `hostname:/path/to/destination`.
 +
@@ -43,7 +45,7 @@ image:screenshot-copy-move-delete.png[Screenshot of actions in the Investigation
 +
 If you selected CIFS, enter the volume destination path using backslashes, for example `\\server\share\path`. Also enter the **Username** and **Password** credentials for the CIFS share. 
 +
-image:screenshot-copy-nfs.png[Screenshot of the copy function for NFS files]
+image:screenshot-move-nfs.png[Screenshot of the copy function for NFS files]
 . Optionally, select **Leave breadcrumb** to leave a breadcrumb file in the source volume that explains where and why the file was moved.
 .. If you selected **Leave breadcrumb**, enter a descriptive text that notes the rationale for moving the file and, if necessary, the new location. 
 +
