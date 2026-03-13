@@ -4,7 +4,6 @@ permalink: reference-instance-types.html
 keywords: BlueXP classification, installation, deployment, instance, virtual machine, cpu, ram, memory, disk, capacity
 summary: Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. When deploying Data Classification in the cloud, it's recommended you use a system with the "large" characteristics for full functionality.
 ---
-
 = Supported NetApp Data Classification instance types
 :hardbreaks:
 :nofooter:

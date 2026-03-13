@@ -4,7 +4,6 @@ permalink: reference-collected-metadata.html
 keywords: compliance, metadata, permissions, time stamps, privacy, last access time
 summary: Data Classification collects certain metadata when performing classification scans on the data from your data sources and systems. Data Classification can access most of the metadata we need to classify your data, but there are some sources where we are unable to access the data we need.
 ---
-
 = Metadata collected from data sources in NetApp Data Classification
 :hardbreaks:
 :nofooter:

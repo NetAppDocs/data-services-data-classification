@@ -11,7 +11,7 @@ To monitor your system resources, see link:https://docs.netapp.com/us-en/data-se
 
 The copy and move functions are now supported for CIFS destinations. The per-file size limit for both actions has increased to 1 GB from the previous limit of 50 MB. The operation limits for both actions have increased to 1 TB or 5 million files. 
 
-For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html[Investigate data^].
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html[Copy, move, and delete data^].
 
 .Active Directory integration configuration permissions
 

@@ -37,7 +37,7 @@ sidebar:
               url: /task-deploy-compliance-onprem.html
             - title: Install on a Linux host on-prem without internet access
               url: /task-deploy-compliance-dark-site.html
-            - title: Check that your Linux host is ready to install Data Classification
+            - title: Check the readiness of your Linux host
               url: /task-test-linux-system.html
         - title: Activate scanning on your data sources
           entries:
@@ -67,18 +67,18 @@ sidebar:
           url: /task-controlling-private-data.html
         - title: Categories of private data
           url: /reference-private-data-categories.html
-        - title: Create a custom scan 
-          url: /task-custom-classification.html
         - title: Investigate data
           url: /task-investigate-data.html
+        - title: Copy, move, and delete data
+          url: /task-copy-move.html
+        - title: Create a custom classification 
+          url: /task-custom-classification.html
         - title: Manage saved queries
           url: /task-using-policies.html
         - title: Modify scan settings
           url: /task-managing-repo-scanning.html
         - title: Generate compliance reports
           url: /task-generating-compliance-reports.html
-        - title: Monitor system health
-          url: /task-health-monitor.html
     - title: Manage Data Classification
       entries:
         - title: Exclude directories from scanning
@@ -87,7 +87,9 @@ sidebar:
           url: /task-add-group-id-as-open.html
         - title: Define stale data 
           url: /task-stale-data.html
-        - title: Remove data sources from Data Classification
+        - title: Monitor system health
+          url: /task-health-monitor.html
+        - title: Remove data sources
           url: /task-managing-compliance.html
         - title: Uninstall Data Classification
           url: /task-uninstall.html
