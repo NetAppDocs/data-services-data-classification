@@ -44,8 +44,6 @@ image:screenshot-copy-move-delete.png[Screenshot of actions in the Investigation
 . If you selected NFS, enter the volume destination path using forward slashes, for example `hostname:/path/to/destination`.
 +
 If you selected CIFS, enter the volume destination path using backslashes, for example `\\server\share\path`. Also enter the **Username** and **Password** credentials for the CIFS share. 
-+
-image:screenshot-move-nfs.png[Screenshot of the copy function for NFS files]
 . Optionally, select **Leave breadcrumb** to leave a breadcrumb file in the source volume that explains where and why the file was moved.
 .. If you selected **Leave breadcrumb**, enter a descriptive text that notes the rationale for moving the file and, if necessary, the new location. 
 +
