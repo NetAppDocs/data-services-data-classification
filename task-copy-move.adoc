@@ -48,7 +48,7 @@ image:screenshot-copy-nfs.png[Screenshot of the copy function for NFS files]
 .. If you selected **Leave breadcrumb**, enter a descriptive text that notes the rationale for moving the file and, if necessary, the new location. 
 +
 image:screenshot-move-nfs.png[Screenshot of the move function for NFS files]
-. Select **Submit**.
+. Select **Move items**.
 
 == Delete files
 
