@@ -4,8 +4,7 @@ sidebar: sidebar
 keywords:
 summary:
 ---
-
-= Legal notices for NetApp Data Classification 
+= Legal notices for NetApp Data Classification
 :icons: font
 :imagesdir: ./media/
 
