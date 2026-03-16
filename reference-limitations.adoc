@@ -4,7 +4,6 @@ permalink: reference-limitations.html
 keywords: limitations, data sense, classification, scan shares
 summary: Known limitations identify functions that are not supported by this release of the product or that do not interoperate correctly with it. Review these limitations carefully.
 ---
-
 = Known limitations in NetApp Data Classification
 :hardbreaks:
 :nofooter:

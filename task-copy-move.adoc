@@ -1,0 +1,62 @@
+---
+sidebar: sidebar
+permalink: task-copy-move.html
+keywords: investigation, filter, delete, copy, move, flexclone, sync
+summary: After filtering data in the investigation dashboard, you can copy, move, and delete unstructured data.
+---
+= Copy, move, and delete files using NetApp Data Classification
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+In addition to providing insights about governance and savings opportunities, NetApp Data Classification also enables you to perform actions on files from its Investigation dashboard. After filtering data in the investigation dashboard, you can copy, move, and delete unstructured data. Performing these actions can improve compliance, for example, moving files to a more secure location, or create savings opportunities by deleting old or duplicate files. 
+
+== Copy files
+
+Data Classification supports copying files that are up to 1 GB in size. You can copy a total of 1 TB of data or 5 million files, whichever limit is reached first. You can copy files to a CIFS or NFS destination. There's no impact on the source file when you copy it. 
+
+.Steps
+. In the Investigation dashboard, select the files you want to copy.
+. Above the list of files, select **Copy**.
++
+image:screenshot-copy-move-delete.png[Screenshot of actions in the Investigation page]
+. Select the protocol of the destination for the copies: **NFS** or **CIFS**.
+. If you selected NFS, enter the destination path using forward slashes, for example `hostname:/path/to/destination`.
++
+If you selected CIFS, enter the destination path using backslashes, for example `\\server\share\path`. Also enter the **Username** and **Password** credentials for the CIFS share. 
++
+image:screenshot-copy-nfs.png[Screenshot of the copy function for NFS files]
+. Select **Submit**.
+
+== Move files
+
+Data Classification supports moving files that are up to 1 GB in size. You can move a total of 1 TB of data or 5 million files, whichever limit is reached first. You can move files to a CIFS or NFS destination. 
+
+.Steps
+. In the Investigation dashboard, select the files you want to move.
++
+image:screenshot-copy-move-delete.png[Screenshot of actions in the Investigation page]
+. Above the list of files, select **Move**.
+. Select the destination's protocol: **NFS** or **CIFS**.
+. If you selected NFS, enter the destination path using forward slashes, for example `hostname:/path/to/destination`.
++
+If you selected CIFS, enter the destination path using backslashes, for example `\\server\share\path`. Also enter the **Username** and **Password** credentials for the CIFS share. 
+. Optionally, select **Leave breadcrumb** to leave a breadcrumb file in the source volume that explains where and why the file was moved.
+.. If you selected **Leave breadcrumb**, enter a descriptive text that notes the rationale for moving the file and, if necessary, the new location. 
++
+image:screenshot-move-nfs.png[Screenshot of the move function for NFS files]
+. Select **Move items**.
+
+== Delete files
+
+When you filter data on the Investigation dashboard to discover space and cost saving opportunities, you can delete those files. Deleting files is only supported for unstructured files. 
+
+.Steps
+. In the Investigation dashboard, select the files you want to delete.
+. In the confirmation dialog, enter "permanently delete".
+. Select **Delete File** to confirm the operation. 
++
+image:screenshot-delete.png[Screenshot of the delete dialog]
