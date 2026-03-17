@@ -55,7 +55,7 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 
 ** The following operating systems require using the Podman container engine, and they require Data Classification version 1.30 or greater:
 
-*** Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, and 9.6.
+*** Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, and 9.7.
 
 ** Advanced Vector Extensions (AVX2) must be enabled on the host system.
 
