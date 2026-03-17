@@ -22,7 +22,7 @@ For more information about the Classification viewer role, see link:https://docs
 .Support for RHEL 9.7
 Data Classification has added Red Hat Enterprise Linux v9.7 for manual on-premises installation, including dark site deployments.
 
-The following operating systems require using the Podman container engine, and they require Data Classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, or 9.7.
+The following operating systems require using the Podman container engine, and they require Data Classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, and 9.7.
 
  
 .Transparent proxy support
