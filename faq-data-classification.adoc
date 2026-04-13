@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: faq-cloud-compliance.html
+permalink: faq-data-classification.html
 keywords: faq, frequently asked questions, questions, cloud compliance, data sense
 summary: This FAQ can help if you're just looking for a quick answer to a question.
 ---
@@ -269,5 +269,3 @@ Yes. You can install Data Classification software on a Linux host that has inter
 === What about secure sites without internet access?
 
 Yes, that's also supported. You can link:task-deploy-compliance-dark-site.html[deploy Data Classification in an on-premises site that doesn't have internet access] for completely secure sites.
-
-

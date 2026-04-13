@@ -14,6 +14,10 @@ summary: Learn what's new in NetApp Data Classification.
 [.lead]
 Learn what's new in NetApp Data Classification.
 
+== 13 April 2026
+
+include::_whatsnew/2026-04-13.adoc[]
+
 
 == 09 March 2026
 
