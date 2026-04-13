@@ -1,0 +1,4 @@
+---
+permalink: faq-cloud-compliance.adoc
+redirect: data-services-data-classification/faq-data-classification.html
+---
