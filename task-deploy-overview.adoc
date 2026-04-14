@@ -5,7 +5,7 @@ keywords: cloud compliance, data sense, get started, deploy cloud data sense, ou
 summary: Plan which deployment of NetApp Data Classification meets your needs.
 ---
 
-= Which NetApp Data Classification deployment should you use?
+= Choose your NetApp Data Classification deployment method
 :hardbreaks:
 :nofooter:
 :icons: font
