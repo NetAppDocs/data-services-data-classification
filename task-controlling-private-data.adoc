@@ -4,7 +4,7 @@ permalink: task-controlling-private-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights
 summary: Gain control of your private data by viewing details about the personal data (PII) and sensitive personal data (SPII) in your organization. You can also gain visibility by reviewing the categories and file types that Data Classification found in your data.
 ---
-= View compliance details about the private data stored in your organization with NetApp Data Classification
+= View compliance details about organizational private data with NetApp Data Classification
 :hardbreaks:
 :nofooter:
 :icons: font
