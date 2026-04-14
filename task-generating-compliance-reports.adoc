@@ -6,7 +6,7 @@ summary: NetApp Data Classification provides reports that you can use to better 
 ---
 = View compliance reports in NetApp Data Classification
 :hardbreaks:
-:nofooter: 
+:nofooter:
 :icons: font
 :linkattrs:
 :imagesdir: ./media/

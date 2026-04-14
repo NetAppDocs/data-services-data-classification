@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-deploy-compliance-onprem.html
 keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, linux, ubuntu, cloud compliance access, privacy, compliance, on-premises
-summary: To deploy NetApp Data Classification on a Linux host in your network or on a Linux host in the cloud that has internet access, you need deploy the Linux host manually in your network or in the cloud.
+summary: To install NetApp Data Classification on a Linux host in your network or on a Linux host in the cloud that has internet access, you need to deploy the Linux host manually in your network or in the cloud.
 ---
 = Install NetApp Data Classification on a host with internet access
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: To deploy NetApp Data Classification on a Linux host in your network or
 :imagesdir: ./media/
 
 [.lead]
-To deploy NetApp Data Classification on a Linux host in your network or on a Linux host in the cloud that has internet access, you need deploy the Linux host manually in your network or in the cloud.
+To deploy NetApp Data Classification on a Linux host in your network or on a Linux host in the cloud that has internet access, you need to deploy the Linux host manually in your network or in the cloud.
 
 The on-premises installation is a good option if you prefer to scan on-premises ONTAP systems using a Data Classification instance that's also located on premises. This is not a requirement. The software functions the same regardless of which installation method you choose.
 
@@ -54,7 +54,7 @@ Download the Cloud Data Classification software from the NetApp Support Site and
 
 == Create a Console agent
 
-A Console agent is required before you can install and use Data Classification. In most cases you'll probably have a Console agent set up before you attempt to activate Data Classification because most https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html[Console features require a Console agent], but there are cases where you'll you need to set one up now.
+A Console agent is required before you can install and use Data Classification. In most cases you'll probably have a Console agent set up before you attempt to activate Data Classification.
  
 To create one in your cloud provider environment, see https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html[creating a Console agent in AWS^], https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html[creating a Console agent in GCP^]. 
 
