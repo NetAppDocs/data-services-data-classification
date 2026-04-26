@@ -31,15 +31,6 @@ m6a.4xlarge
 m5a.4xlarge
 m5.4xlarge
 m4.4xlarge
-| Medium | 8 CPUs, 32 GB RAM, 200 GiB SSD | https://aws.amazon.com/ec2/instance-types/m6i/[m6i.2xlarge^] (default)
-m6a.2xlarge
-m5a.2xlarge
-m5.2xlarge
-m4.2xlarge
-| Small | 8 CPUs, 16 GB RAM, 100 GiB SSD | https://aws.amazon.com/ec2/instance-types/c6a/[c6a.2xlarge^] (default)
-c5a.2xlarge
-c5.2xlarge
-c4.2xlarge
 |===
 
 == Azure instance types
