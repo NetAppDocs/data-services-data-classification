@@ -14,8 +14,6 @@ summary: Data Classification software must run on a host that meets specific ope
 [.lead]
 NetApp Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. When deploying Data Classification in the cloud, we recommend that you use a system with the "large" characteristics for full functionality.
 
-You can deploy Data Classification on a system with fewer CPUs and less RAM, but there are some limitations when using these less powerful systems. link:concept-classification.html[Learn about these limitations^].
-
 In the following tables, if the system marked as "default" is not available in the region where you are installing Data Classification, the next system in the table will be deployed.
 
 == AWS instance types

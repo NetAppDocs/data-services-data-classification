@@ -69,9 +69,9 @@ Data Classification can scan and analyze structured and unstructured data from t
 * Amazon FSx for NetApp ONTAP management
 * Azure NetApp Files
 * Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP)
+* Google Cloud NetApp Volumes
 * On-premises ONTAP clusters
 * StorageGRID
-* Google Cloud NetApp Volumes
 
 *Data sources*
 
@@ -84,10 +84,8 @@ Data Classification can scan and analyze structured and unstructured data from t
 ** PostgreSQL
 ** SAP HANA
 ** SQL Server (MSSQL)
-//* File shares (for example, Dell EMC Isilon, Pure Storage, Nutanix, and so on)
 
 Data Classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
-//Data Classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
 
 == Cost
 
