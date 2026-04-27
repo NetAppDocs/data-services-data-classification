@@ -69,9 +69,9 @@ Data Classification can scan and analyze structured and unstructured data from t
 * Amazon FSx for NetApp ONTAP management
 * Azure NetApp Files
 * Cloud Volumes ONTAP (deployed in AWS, Azure, or GCP)
+* Google Cloud NetApp Volumes
 * On-premises ONTAP clusters
 * StorageGRID
-* Google Cloud NetApp Volumes
 
 *Data sources*
 
@@ -84,10 +84,8 @@ Data Classification can scan and analyze structured and unstructured data from t
 ** PostgreSQL
 ** SAP HANA
 ** SQL Server (MSSQL)
-//* File shares (for example, Dell EMC Isilon, Pure Storage, Nutanix, and so on)
 
 Data Classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
-//Data Classification supports NFS versions 3.x, 4.0, and 4.1, and CIFS versions 1.x, 2.0, 2.1, and 3.0.
 
 == Cost
 
@@ -117,7 +115,7 @@ image:diagram_cloud_compliance_instance.png[A diagram that shows a Console insta
 
 Note the following about the default instance:
 
-* In AWS, Data Classification runs on an https://aws.amazon.com/ec2/instance-types/m6i/[m6i.4xlarge instance^] with a 500 GiB GP2 disk. The operating system image is Amazon Linux 2. When deployed in AWS, you can choose a smaller instance size if you are scanning a small amount of data.
+* In AWS, Data Classification runs on an https://aws.amazon.com/ec2/instance-types/m6i/[m6i.4xlarge instance^] with a 500 GiB GP2 disk. The operating system image is Amazon Linux 2.
 
 * In Azure, Data Classification runs on a link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3 VM^] with a 500 GiB disk. The operating system image is Ubuntu 22.04.
 
@@ -144,11 +142,8 @@ Review the following specifications for instance types:
 | Limitations
 | Extra Large | 32 CPUs, 128 GB RAM, 1 TiB SSD | Can scan up to 500 million files.
 | Large (default) | 16 CPUs, 64 GB RAM, 500 GiB SSD | Can scan up to 250 million files.
-//| Medium | 8 CPUs, 32 GB RAM, 200 GiB SSD | Slower scanning, and can only scan up to 1 million files.
-//| Small | 8 CPUs, 16 GB RAM, 100 GiB SSD | Same limitations as "Medium", plus the ability to identify link:task-generating-compliance-reports.html[data subject names] inside files is disabled.
 |===
 
-When deploying Data Classification in Azure or GCP, email ng-contact-data-sense@netapp.com for assistance if you want to use a smaller instance type. 
 
 == How Data Classification scanning works
 

@@ -64,9 +64,6 @@ Data Classification scans databases only once per day; databases are not continu
 
 Data scans have a negligible impact on your storage systems and on your data. 
 
-//However, if you are concerned with even a very small impact, you can configure Data Classification to perform "slow" scans. link:task-reduce-scan-speed.html[See how to reduce the scan speed].
-
-
 === Does scan performance vary?
 
 Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size characteristics of the host system (either in the cloud or on-premises). See link:concept-classification.html[The Data Classification instance] and link:task-deploy-overview.html[Deploying Data Classification] for more information.
@@ -255,7 +252,7 @@ The NetApp Console allows the user to scan and report on systems virtually anywh
 
 When link:task-deploy-cloud-compliance.html[deployed in the cloud]:
 
-* In AWS, Data Classification runs on an m6i.4xlarge instance with a 500 GiB GP2 disk. You can select a smaller instance type during deployment.
+* In AWS, Data Classification runs on an m6i.4xlarge instance with a 500 GiB GP2 disk. 
 * In Azure, Data Classification runs on a Standard_D16s_v3 VM with a 500 GiB disk.
 * In GCP, Data Classification runs on an n2-standard-16 VM with a 500 GiB Standard persistent disk.
 
