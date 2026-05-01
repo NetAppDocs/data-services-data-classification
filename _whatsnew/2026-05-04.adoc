@@ -1,4 +1,4 @@
-=== Deploy Classification with OVA
+=== Deploy Data Classification with OVA
 
 NetApp Data Classification now supports deployment with VMware Open Virtual Applicance (OVA), offering a simplified deployment strategy for on-premises VMware vSphere environments. 
 

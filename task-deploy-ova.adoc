@@ -43,7 +43,7 @@ Before using the OVA file to install Data Classification, you must have:
 +
 . Enter the vSphere client. Right-click the target cluster or host then select *Deploy OVF Template* > *Create VM from OVA*. 
 . Upload the OVA file you downloaded in step one. 
-. Specify the the *VM name* and the target data center, host or cluster, and datastore. 
+. Specify the *VM name* and the target data center, host or cluster, and datastore. 
 . Accept the NetApp End User License Agreement. 
 . Customize the template. You must provide the following information:
 +
@@ -53,11 +53,11 @@ Before using the OVA file to install Data Classification, you must have:
 * *IPv4 gateway address* - the default gateway
 * *Primary DNS* - the required DNS resolver
 +
-Optionally, add the **Secondary DNS** and, as comma-separate lists, the **Search domains** (for example, `corp.local,lab.local`) and the *NTP servers*. 
+Optionally, add the **Secondary DNS** and, as comma-separated lists, the **Search domains** (for example, `corp.local,lab.local`) and the *NTP servers*. 
 . Set the *Admin password* for the default Linux user.
 +
 [NOTE]
-The password is used for root access. Store it security. It's required for SSH access and system administration.
+The password is used for root access. Store it securely. It's required for SSH access and system administration.
 . Review the summary. Select *Finish* to deploy. 
 . After deployment completes, turn on the VM. 
 
@@ -73,8 +73,8 @@ Select the file named *DATASENSE-INSTALLER-<version>.tar.gz*.
 image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
 . Depending on whether you are installing Data Classification on an instance you prepared in the cloud or on an instance you prepared in your premises, select the appropriate *Deploy* option to start the Data Classification installation.
 . The _Deploy Data Classification On Premises_ dialog is displayed. Copy the provided command (for example: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`) and paste it in a text file so you can use it later. Then select *Close* to dismiss the dialog.
-. Authenticate with SSH into the OVA appliance using the administrator user. 
-. Run the install command you generated to complete installation and register the sytem with your organization. 
+. Connect via SSH to the OVA appliance using the administrator user. 
+. Run the install command you generated to complete installation and register the system with your organization. 
 
 == Next steps 
 
