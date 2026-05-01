@@ -21,6 +21,6 @@ You can deploy NetApp Data Classification in different ways. Review the availabl
 
 == On-premises installation script
 
-Both the installation on a Linux host with internet access and the on-premises installation on a Linux host without internet access use an installation script. The script starts by checking if the system and environment meet the prerequisites. If the prerequisites are met, the installation starts
+Both the installation on a Linux host with internet access and the on-premises installation on a Linux host without internet access use an installation script. The script starts by checking if the system and environment meet the prerequisites. If the prerequisites are met, the installation starts.
 
 A separate software package is available to verify the readiness of your Linux. To run the verification package, see link:task-test-linux-system.html[verify your Linux host is ready to install Data Classification].

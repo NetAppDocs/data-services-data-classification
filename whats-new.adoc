@@ -19,103 +19,104 @@ Learn what's new in NetApp Data Classification.
 include::_whatsnew/2026-05-04.adoc[]
 
 == 13 April 2026
-Version 1.53 
+*Version 1.53*
 
 include::_whatsnew/2026-04-13.adoc[]
 
 == 09 March 2026
-Version 1.52
+*Version 1.52*
 
 include::_whatsnew/2026-03-09.adoc[]
 
 == 09 February 2026
-Version 1.51
+*Version 1.51*
 
 include::_whatsnew/2026-02-09.adoc[]
 
 == 14 January 2026
-Version 1.50 
+*Version 1.50*
 
 include::_whatsnew/2026-01-14.adoc[]
 
 == 08 December 2025
-Version 1.49
+*Version 1.49*
 
 include::_whatsnew/2025-12-08.adoc[]
 
 == 10 November 2025
-Version 1.48
+*Version 1.48*
 
 include::_whatsnew/2025-11-10.adoc[]
 
 == 06 October 2025
-Version 1.47
+*Version 1.47*
 
 include::_whatsnew/2025-10-06.adoc[]
 
 == 11 August 2025 
-Version 1.46
+*Version 1.46*
 
 include::_whatsnew/2025-08-11.adoc[]
 
 == 14 July 2025
-Version 1.45
+*Version 1.45*
 
 include::_whatsnew/2025-07-14.adoc[]
 
 == 10 June 2025
-Version 1.44
+*Version 1.44*
 
 include::_whatsnew/2025-06-09.adoc[]
 
 == 12 May 2025
-Version 1.43
+*Version 1.43*
 
 include::_whatsnew/2025-05-12.adoc[]
 
 == 14 April 2025
-Version 1.42 
+*Version 1.42*
 
 include::_whatsnew/2025-04-14.adoc[]
 
 == 10 March 2025
-Version 1.41
+*Version 1.41*
 
 include::_whatsnew/2025-03-10.adoc[]
 
 == 19 February 2025
-Version 1.40
+*Version 1.40*
 
 include::_whatsnew/2025-02-19.adoc[]
 
 == 22 January 2025
-Version 1.37
+*Version 1.37*
 
-include::_whatsnew/2025-01-13.adoc[]
+include::_whatsnew/2025-01-22.adoc[]
 
 == 16 December 2024
-Version 1.38
+*Version 1.38*
 
 include::_whatsnew/2024-12-16.adoc[]
 
 == 4 November 2024 
-Version 1.37
+*Version 1.37*
 
 include::_whatsnew/2024-11-04.adoc[]
 
 == 10 October 2024 
-Version 1.36
+*Version 1.36*
 
 include::_whatsnew/2024-10-10.adoc[]
 
 
 == 2 September 2024
-Version 1.35
+*Version 1.35*
 
 include::_whatsnew/2024-09-02.adoc[]
 
 == 05 August 2024
-Version 1.34
+*Version 1.34*
+
 This BlueXP classification release includes the following update. 
 
 === Change from CentOS to Ubuntu 
@@ -125,7 +126,7 @@ BlueXP classification has updated its Linux operating system for Microsoft Azure
 For deployment details, refer to https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-onprem.html#prepare-the-linux-host-system[Install on a Linux host with internet access and prepare the Linux host system].
 
 == 01 July 2024
-Version 1.33
+*Version 1.33*
 
 === Ubuntu supported
 This release supports the Ubuntu 24.04 Linux platform. 
@@ -152,7 +153,7 @@ This release updates which data appears in the Governance, Compliance, and Inves
 For details, see link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html[What's the difference between mapping and classification scans].
 
 == 05 June 2024
-Version 1.32
+*Version 1.32*
 
 === New Mapping status column in the Configuration page
 
@@ -161,7 +162,7 @@ This release now shows a new Mapping status column in the Configuration page. Th
 For explanations of the statuses, see https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html[Change scan settings].
 
 == 15 May 2024
-Version 1.31
+*Version 1.31*
 
 === Classification is available as a core service within BlueXP
 
@@ -171,7 +172,7 @@ BlueXP classification is now available as a core capability within BlueXP at no 
 include::_include/console-agent-limit.adoc[]
 
 == 01 April 2024
-Version 1.30
+*Version 1.30*
 
 === Support added for RHEL v8.8 and v9.3 BlueXP classification
 
@@ -198,7 +199,7 @@ If you deployed BlueXP classification on a system with internet access, the syst
 If you deployed BlueXP classification without internet access, you'll need to upgrade manually. For details, refer to https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html[Install BlueXP classification on a Linux host with no internet access].
 
 == 04 March 2024
-Version 1.29
+*Version 1.29*
 
 === Now you can exclude scanning data that resides in certain data source directories
 
@@ -214,7 +215,7 @@ https://docs.netapp.com/us-en/data-services-data-classification/concept-classifi
 
 
 == 10 January 2024
-Version 1.27
+*Version 1.27*
 
 === Investigation page results display the total size in addition to total number of items
 
@@ -225,7 +226,7 @@ The filtered results in the Investigation page display the total size of the ite
 Now you can configure Group IDs in NFS to be considered as "Open to Organization" directly from BlueXP classification if the group had not initially been set with that permission. Any files and folders that have these group IDs attached will show as "Open to Organization" in the Investigation Details page. See how to link:https://docs.netapp.com/us-en/data-services-data-classification/task-add-group-id-as-open.html[add additional Group IDs as "open to organization"].
 
 == 14 December 2023
-Version 1.26.6
+*Version 1.26.6*
 
 This release included minor enhancements.
 
@@ -236,7 +237,7 @@ The release also removed the following options:
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled.
 
 == 06 November 2023
-Version 1.26.3
+*Version 1.26.3*
 
 The following issues have been fixed in this release
 
@@ -244,16 +245,16 @@ The following issues have been fixed in this release
 * Improved the scanning behavior by handling and reporting on files and directories with special characters in the name and metadata.
 
 == 04 October 2023
-Version 1.26
+*Version 1.26*
 
 === Support for on-premises installations of BlueXP classification on RHEL version 9
 
 Red Hat Enterprise Linux versions 8 and 9 do not support the Docker engine, which was previously required for the BlueXP classification installation. BlueXP classification now supports installation on RHEL 9.0, 9.1, and 9.2 using Podman version 4 or greater as the container infrastructure. If your environment requires using the newest versions of RHEL, now you can install BlueXP classification (version 1.26 or greater) when using Podman.
 
-Currently, dark site installations nor distributed scanning environments (using a master and remote scanner nodes) when using RHEL 9.x.
+Currently, Data Classification support neither dark site installations nor distributed scanning environments (using a master and remote scanner nodes) when using RHEL 9.x.
 
 == 05 September 2023
-Version 1.25
+*Version 1.25*
 
 === Small and medium deployments temporarily unavailable
 
@@ -268,7 +269,7 @@ In the past you could only apply tags to a single page at a time in the Investig
 BlueXP classification used to identify duplicated files only when files were 50 MB or larger. Now duplicated files starting with 1 MB can be identified. You can use the Investigation page filters "File Size" along with "Duplicates" to see which files of a certain size are duplicated in your environment.
 
 == 17 July 2023
-Version 1.24
+*Version 1.24*
 
 === Two new types of German personal data are identified by BlueXP classification
 
@@ -294,7 +295,7 @@ The BlueXP classification API enables you to perform actions, create queries, an
 link:https://docs.netapp.com/us-en/data-services-data-classification/api-classification.html[Learn more about the BlueXP classification APIs].
 
 == 06 June 2023
-Version 1.23
+*Version 1.23*
 
 === Japanese is now supported when searching for data subject names
 
@@ -317,7 +318,7 @@ You can enable file access audit logs to be collected on your BlueXP classificat
 Now you can upload your Data Sense BYOL license into the BlueXP digital wallet in a dark site so that you are notified when your license is getting low. 
 
 == 03 April 2023
-Version 1.22
+*Version 1.22*
 
 === New Data Discovery Assessment Report
 
@@ -332,7 +333,7 @@ When deploying BlueXP classification from a BlueXP Connector in an AWS environme
 If you would like to verify that your Linux system meets all prerequisites independently of running the BlueXP classification installation, there is a separate script you can download that only tests for the prerequisites. https://docs.netapp.com/us-en/data-services-data-classification/task-test-linux-system.html[See how to check if your Linux host is ready to install BlueXP classification].
 
 == 07 March 2023
-Version 1.21
+*Version 1.21*
 
 === New functionality to add your own custom categories from the BlueXP classification UI
 
@@ -372,7 +373,7 @@ https://docs.netapp.com/us-en/data-services-data-classification/reference-privat
 * Installation audit log files are saved now; they are written to `/ops/netapp/install_logs`.
 
 == 05 February 2023
-Version 1.20
+*Version 1.20*
 
 === Ability to send Policy-based notification emails to any email address
 
@@ -397,7 +398,7 @@ The "Number of users with access" filter now supports files stored in SharePoint
 The new "Partial Success" status indicates that a BlueXP classification action is finished and some items failed and some items succeeded, for example, when you are moving or deleting 100 files. Additionally, the "Finished" status has been renamed to "Success". In the past, the "Finished" status might list actions that succeeded and that failed. Now the "Success" status means that all actions succeeded on all items. https://docs.netapp.com/us-en/data-services-data-classification/task-view-compliance-actions.html[See how to view the Actions Status panel].
 
 == 09 January 2023
-Version 1.19
+*Version 1.19*
 
 === Ability to view a chart of files that contain sensitive data and that are overly permissive
 

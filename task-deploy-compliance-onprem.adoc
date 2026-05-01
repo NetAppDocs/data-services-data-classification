@@ -18,6 +18,9 @@ The on-premises installation is a good option if you prefer to scan on-premises 
 
 The Data Classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the Data Classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install Data Classification].
 
+[TIP]
+For on-premises VMware vSphere deployments, Data Classification supports a simplified link:task-deploy-ova.html[Deployment with OVA].
+
 The typical installation on a Linux host _in your premises_ has the following components and connections.
 
 image:diagram_deploy_onprem_overview.png[A diagram of the required Console and network components, and the related connections.]
@@ -79,9 +82,6 @@ You'll need the IP address or host name of the Console agent system when install
 Data Classification software must run on a host that meets specific operating system requirements, RAM requirements, software requirements, and so on. The Linux host can be in your network, or in the cloud. 
 
 Ensure that you can keep Data Classification running. The Data Classification machine needs to stay on to continuously scan your data.
-
-[IMPORTANT]
-For OVA installation, you can skip preparing the host system. 
 
 include::_include/host-requirements.adoc[]
 
@@ -238,7 +238,7 @@ Note that all installation activities are logged when installing Data Classifica
 
 .Steps
 
-. Download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. Select the file name *DATASENSE-INSTALLER-<version>.tar.gz*.
+. Download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. Select the file named *DATASENSE-INSTALLER-<version>.tar.gz*.
 
 . Copy the installer file to the Linux host you plan to use (using `scp` or some other method).
 

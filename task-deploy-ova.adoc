@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-deploy-ova.html
-keywords: deploy, install, vmware, ova, open virtual appliance, 
+keywords: deploy, install, vmware, ova, open virtual appliance
 summary: NetApp Data Classification supports deployment for on-premises vSphere environments with Open Virtual Appliance (OVA). The OVA deployment method provides a prevalidated, NetApp managed environment, to simplify deployment. 
 ---
 = Deploy NetApp Data Classification with VMware Open Virtual Appliance
@@ -49,7 +49,7 @@ Before using the OVA file to install Data Classification, you must have:
 +
 * **Hostname** - the name of the appliance
 * **IPv4 address** - the static IPv4 address for the management interface
-* **IPv4 subnet mask** - for example 100.100.100.0
+* **IPv4 subnet mask** - for example 255.255.255.0
 * *IPv4 gateway address* - the default gateway
 * *Primary DNS* - the required DNS resolver
 +
@@ -57,7 +57,8 @@ Optionally, add the **Secondary DNS** and, as comma-separated lists, the **Searc
 . Set the *Admin password* for the default Linux user.
 +
 [NOTE]
-The password is used for root access. Store it securely. It's required for SSH access and system administration.
+The password is used for root access, SSH access, and system administration. Store the password securely.
++
 . Review the summary. Select *Finish* to deploy. 
 . After deployment completes, turn on the VM. 
 

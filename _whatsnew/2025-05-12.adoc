@@ -22,7 +22,7 @@ The **Policies** tab has been renamed link:https://docs.netapp.com/us-en/data-se
 
 === Send scan events to the Audit page
 
-Data Classification supports sending classification events (when a scan is initiated and when it ends) to the link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline[NetApp Consle Audit page^].
+Data Classification supports sending classification events (when a scan is initiated and when it ends) to the link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline[NetApp Console Audit page^].
 
 === Security updates 
 
