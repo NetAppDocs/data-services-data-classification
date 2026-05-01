@@ -274,3 +274,7 @@ The Data Classification software is upgraded on your host. The update can take 5
 //Note that no upgrade is required on scanner nodes if you have deployed Data Classification on multiple hosts systems for scanning very large configurations.
 
 You can verify that the software has been updated by checking the version at the bottom of the Data Classification UI pages.
+
+== Next steps
+
+* link:task-scanning-overview.html[Configure scanning on your data sources]

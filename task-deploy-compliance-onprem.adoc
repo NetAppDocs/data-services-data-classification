@@ -80,6 +80,9 @@ Data Classification software must run on a host that meets specific operating sy
 
 Ensure that you can keep Data Classification running. The Data Classification machine needs to stay on to continuously scan your data.
 
+[IMPORTANT]
+For OVA installation, you can skip preparing the host system. 
+
 include::_include/host-requirements.adoc[]
 
 * *Firewalld considerations*: If you are planning to use `firewalld`, we recommend that you enable it before installing Data Classification. Run the following commands to configure `firewalld` so that it is compatible with Data Classification:
@@ -235,7 +238,7 @@ Note that all installation activities are logged when installing Data Classifica
 
 .Steps
 
-. Download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *DATASENSE-INSTALLER-<version>.tar.gz*.
+. Download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. Select the file name *DATASENSE-INSTALLER-<version>.tar.gz*.
 
 . Copy the installer file to the Linux host you plan to use (using `scp` or some other method).
 
@@ -299,8 +302,7 @@ The Data Classification installer installs packages, registers the installation,
 
 If there is connectivity over port 8080 between the host machine and the Console agent instance, you'll see the installation progress in the Data Classification tab in the Console.
 
-.What's Next
-From the Configuration page you can select the data sources that you want to scan.
+== Next steps 
 
-
+* link:task-scanning-overview.html[Configure scanning on your data sources]
 

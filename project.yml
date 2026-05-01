@@ -35,6 +35,8 @@ sidebar:
               url: /task-deploy-cloud-compliance.html
             - title: Install on a Linux host with internet access
               url: /task-deploy-compliance-onprem.html
+            - title: Install on-premises with OVA
+              url: /task-deploy-ova.html
             - title: Install on a Linux host on-prem without internet access
               url: /task-deploy-compliance-dark-site.html
             - title: Check the readiness of your Linux host
