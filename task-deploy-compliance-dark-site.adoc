@@ -17,7 +17,7 @@ Installing NetApp Data Classification on a Linux host in an on-premises site tha
 
 link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html[Learn about the different deployment modes for the Console agent and Data Classification^].
 
-You can also link:task-deploy-compliance-onprem.html[deploy Data Classification in an on-premises site that has internet access].
+include::_include/ova-deployment.adoc[]
 
 The Data Classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the Data Classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install Data Classification].
 

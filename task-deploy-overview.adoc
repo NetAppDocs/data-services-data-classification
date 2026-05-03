@@ -16,8 +16,9 @@ You can deploy NetApp Data Classification in different ways. Review the availabl
 
 * link:task-deploy-cloud-compliance.html[Deploy in the cloud using the Console]. The Console deploys the Data Classification instance in the same cloud provider network as the Console agent.
 * link:task-deploy-compliance-onprem.html[Install on a Linux host with internet access]. Install Data Classification on a Linux host in your network, or on a Linux host in the cloud, that has internet access. This type of installation may be a good option if you prefer to scan on-premises ONTAP systems using a Data Classification instance that's also located on premises, though this isn't a requirement.
-** link:task-deploy-ova.html[Deploy NetApp Data Classification with VMware Open Virtual Appliance (OVA)]. For on-premises VMware vSphere environments, you can employ a simplified deployment with OVA using a NetApp-managed package.
 * link:task-deploy-compliance-dark-site.html[Install on a Linux host in an on-premises site without internet access], also known as _private mode._ This type of installation, which uses an installation script, has no connectivity to the Console SaaS layer. 
+
+include::_include/ova-deployment.adoc[]
 
 == On-premises installation script
 

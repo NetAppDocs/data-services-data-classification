@@ -1,0 +1,2 @@
+[TIP]
+For on-premises VMware vSphere deployments, Data Classification supports a simplified link:task-deploy-ova.html[Deployment with OVA].
