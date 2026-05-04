@@ -18,6 +18,8 @@ The on-premises installation is a good option if you prefer to scan on-premises 
 
 The Data Classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the Data Classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install Data Classification].
 
+include::_include/ova-deployment.adoc[]
+
 The typical installation on a Linux host _in your premises_ has the following components and connections.
 
 image:diagram_deploy_onprem_overview.png[A diagram of the required Console and network components, and the related connections.]
@@ -235,7 +237,7 @@ Note that all installation activities are logged when installing Data Classifica
 
 .Steps
 
-. Download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. The file you should select is named *DATASENSE-INSTALLER-<version>.tar.gz*.
+. Download the Data Classification software from the https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. Select the file named *DATASENSE-INSTALLER-<version>.tar.gz*.
 
 . Copy the installer file to the Linux host you plan to use (using `scp` or some other method).
 
@@ -299,8 +301,7 @@ The Data Classification installer installs packages, registers the installation,
 
 If there is connectivity over port 8080 between the host machine and the Console agent instance, you'll see the installation progress in the Data Classification tab in the Console.
 
-.What's Next
-From the Configuration page you can select the data sources that you want to scan.
+== Next steps 
 
-
+* link:task-scanning-overview.html[Configure scanning on your data sources]
 

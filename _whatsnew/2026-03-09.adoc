@@ -1,31 +1,29 @@
 
-=== Version 1.52
-
-.Resource validation 
+=== Resource validation 
 
 To ensure reliability, Data Classification now validates available memory and disk resources across scanning, report generation, and actions. When memory usage exceeds 95% or disk space falls below 6 GB, Data Classification automatically pauses operations. Operations resume once resources are sufficient.  
  
 To monitor your system resources, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html[Monitor the health of Data Classification^].
 
-.Increased limit for copy and move
+=== Increased limit for copy and move
 
 The copy and move functions are now supported for CIFS destinations. The per-file size limit for both actions has increased to 1 GB from the previous limit of 50 MB. The operation limits for both actions have increased to 1 TB or 5 million files. 
 
 For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html[Copy, move, and delete data^].
 
-.Active Directory integration configuration permissions
+=== Active Directory integration configuration permissions
 
 Changes to Active Directory (AD) integration settings in Data Classification are now restricted to administrators. Viewers no longer have the ability to modify AD settings. 
 
 For more information about the Classification viewer role, see link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles[Data service roles^].
 
-.Support for RHEL 9.7
+=== Support for RHEL 9.7
+
 Data Classification has added Red Hat Enterprise Linux v9.7 for manual on-premises installation, including dark site deployments.
 
 The following operating systems require using the Podman container engine, and they require Data Classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, and 9.7.
 
- 
-.Transparent proxy support
+=== Transparent proxy support
 
 Data Classification now supports transparent proxy configurations, enabling smoother deployment in proxied or restricted network environments.
 
