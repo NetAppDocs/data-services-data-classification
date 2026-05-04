@@ -20,11 +20,11 @@ This method is recommended for new VMware-based deployments.
 
 Before using the OVA file to install Data Classification, you must have:
 
-* A VMware vSphere environment.
-* A Static IPv4 address allocated to the appliance.
-* DNS servers reachable from the target network.
-* SSH access enabled to the appliance.
-* link:https://mysupport.netapp.com/site/user/registration[NetApp Support Site credentials] to download the installer.
+* A VMware vSphere environment
+* A static IPv4 address allocated to the appliance
+* DNS servers reachable from the target network
+* SSH access enabled to the appliance
+* link:https://mysupport.netapp.com/site/user/registration[NetApp Support Site credentials] to download the installer
 
 // .View the list of pre-installed software.
 //[%collapsible]
@@ -50,10 +50,10 @@ Before using the OVA file to install Data Classification, you must have:
 * **Hostname** - the name of the appliance
 * **IPv4 address** - the static IPv4 address for the management interface
 * **IPv4 subnet mask** - for example 255.255.255.0
-* *IPv4 gateway address* - the default gateway
-* *Primary DNS* - the required DNS resolver
+* **IPv4 gateway address** - the default gateway
+* **Primary DNS** - the required DNS resolver
 +
-Optionally, add the **Secondary DNS** and, as comma-separated lists, the **Search domains** (for example, `corp.local,lab.local`) and the *NTP servers*. 
+Optionally, add the **Secondary DNS** and, as comma-separated lists, the **Search domains** (for example, `corp.local,lab.local`) and the **NTP servers**. 
 . Set the *Admin password* for the default Linux user.
 +
 [NOTE]
