@@ -1,7 +1,5 @@
 
-=== Version 1.35
-
-.Scan StorageGRID data 
+=== Scan StorageGRID data 
 
 BlueXP classification supports scanning data in StorageGRID.
 
