@@ -47,7 +47,7 @@ After you've deployed Data Classification and have activated scanning on your da
 
 The Active Directory credentials can be read-only, but providing admin credentials ensures that Data Classification can read any data that requires elevated permissions. The credentials are stored on the Data Classification instance.
 
-For CIFS volumes/file shares, if you want to make sure your files "last accessed times" are unchanged by Data Classification classification scans, the user should have Write Attributes permission. If possible, we recommend making the Active Directory configured user part of a parent group in the organization which has permissions to all files.
+For CIFS volumes/file shares, if you want to make sure your files "last accessed times" are unchanged by Data Classification scans, the user should have Write Attributes permission. If possible, we recommend making the Active Directory configured user part of a parent group in the organization which has permissions to all files.
 
 .Requirements
 
