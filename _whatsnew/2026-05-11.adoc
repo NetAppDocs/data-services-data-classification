@@ -1,0 +1,15 @@
+=== Improved Configuration page
+
+=== Compliance admin IAM role
+
+Data Classification now supports a Compliance admin role for identity and access management. 
+
+The Compliance admin doesn't have access to resources including Console agents and workspaces. Useres with the Compliance admin role must be associated with at least one other role. 
+
+When installing Data Classification, users should have a Console platform admin role or the Compliance admin role. 
+
+=== Deploy Data Classification with OVA
+
+NetApp Data Classification now supports deployment with VMware Open Virtual Appliance (OVA), offering a simplified deployment strategy for on-premises VMware vSphere environments. 
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-ova.html[Deploy Data Classification with OVA^].
