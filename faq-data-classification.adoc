@@ -215,7 +215,7 @@ The Console agent is software running on a compute instance either within your c
 
 === Where does the Console agent need to be installed?
 
-When scanning data, the NetApp Console Console agent needs to be installed in the following locations: 
+When scanning data, the NetApp Console agent needs to be installed in the following locations: 
 
 * For Cloud Volumes ONTAP in AWS or Amazon FSx for ONTAP: Console agent is in AWS.
 * For Cloud Volumes ONTAP in Azure or in Azure NetApp Files:  Console agent is in Azure.

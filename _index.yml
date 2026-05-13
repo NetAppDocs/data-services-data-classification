@@ -1,8 +1,8 @@
 # Start snippet: landing page
 indexpage:
    title: NetApp Data Classification documentation
-   lead: NetApp Data Classificaiton enables you to scan and classify data across your organization's hybrid multicloud. Data Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
-   summary: NetApp Data Classificaiton enables you to scan and classify data across your organization's hybrid multicloud. Data Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+   lead: NetApp Data Classification enables you to scan and classify data across your organization's hybrid multicloud. Data Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+   summary: NetApp Data Classification enables you to scan and classify data across your organization's hybrid multicloud. Data Classification utilizes AI-driven natural language processing (NLP) for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
    keywords: bluexp, data classification, cloud data sense, data sense, compliance, security, netapp console, bluexp classification 
    tiles:
     # Paste tile definitions from project.yml below this line and correct the indentation as needed
