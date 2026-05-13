@@ -47,7 +47,7 @@ image:screenshot_compliance_repo_scan_settings.png["A screenshot showing whether
 
 == Change the scan type
 
-You can start or stop mapping-only scans, or mapping and classification scans, in a system at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa.
+You can start or stop scans in a system at any time from the Configuration page. You can also change from mapping-only scans to full scans, and vice-versa. 
 
 [NOTE]
 Mapping-only scans aren't available for databases. When you enable database scanning, it must be a full scan. 
@@ -100,5 +100,7 @@ You can resume scanning at any time.
 
 . From the Data Classification menu, select *Configuration*. 
 . Find the system that you want to modify scans for then select *Manage*. 
-. Select the resources you want to prioritize. Select the action menu `...` option then *Pause scan*.
+. Identify the resources you want to pause. For each resource, select the action menu `...` option then *Pause scan*.
++
+If you want to resume scanning, repeat the procedure then select *Resume scan*. 
 

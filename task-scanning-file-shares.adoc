@@ -65,7 +65,7 @@ image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, s
 . Add the file shares that you want to scan (one file share per line). Then select **Continue**. 
 
 . A confirmation dialog displays the number of shares that were added.
-. Decide how you want to scan the volumes. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans[Learn about mapping and classification scans].
+. Decide how you want to scan the volumes. link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].
 . To enable scanning on all volumes in the system, select *Activate scan* then select *Map only all volumes* or *Full scan all volumes*. 
 +
 To manage scanning on only select volumes, select *Activate scan* then *Manage*. In the system overview, identify the resources you want to scan. Select the scan type for each volume then set it to the scanning type you want: full or mapping-only. 
@@ -74,8 +74,8 @@ See <<Enable and disable scans on volumes,Enable and disable scans on volumes>> 
 
 
 [NOTE]
-The system overview pages has a for *Scan without without permissions* option; it's disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. +
-If you check the *Scan without without permissions* option*, the scan resets the last accessed time and scans all files regardless of permissions. +
+The system overview pages has a for *Scan without write permissions* option that is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. +
+If you check the *Scan without write permissions* option*, the scan resets to the last accessed time and scans all files regardless of permissions. +
 To learn more about the last accessed time stamp, see link:reference-collected-metadata.html#last-access-time-timestamp[Metadata collected from data sources in Data Classification].
 
 .Result

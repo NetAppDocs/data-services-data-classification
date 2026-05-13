@@ -23,7 +23,7 @@ You can enable and disable scans at the volume level or at the database schema l
 
 You can conduct two types of scans in Data Classification:
 
-* **Map-only scans** provide only a high-level overview of your data and are performed on selected data sources. Map-only scans take less time than full scans because the do not access files to see the data inside.
+* **Map-only scans** provide only a high-level overview of your data and are performed on selected data sources. Map-only scans take less time than full scans because they don't access files to see the data inside.
 * **Full scans** provide deep-level scanning of your data. A full scan includes a mapping scan and a classification of data inside the files. 
 
 [TIP]

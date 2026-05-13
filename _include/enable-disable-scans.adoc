@@ -10,7 +10,7 @@ image:screenshot_volume_compliance_selection.png[A screenshot of the Configurati
 .Steps 
 
 . From the Data Classification menu, select *Configuration*.
-. Identify the system you want to scan. Select **Activate scan**. In the dropdown, Choose **Full scan**, **Map only**, or **Manage scans** to open the system menu and configure scanning on specific volumes or shares. 
+. Identify the system you want to scan. Select **Activate scan**. In the dropdown, choose **Full scan**, **Map only**, or **Manage scans** to open the system menu and configure scanning on specific volumes or shares. 
 +
 To enable or disable scans for individual volumes, find the volumes or shares in the list then select **Map**, **Full scan**, or **Off** next to the volume name. 
 

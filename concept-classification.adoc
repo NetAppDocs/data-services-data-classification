@@ -168,11 +168,11 @@ You can enable and disable scans at the volume level or the database schema leve
 [NOTE]
 include::_include/console-agent-limit.adoc[]
 
-== What's the difference between Mapping and Classification scans
+== Mapping and full scans
 
 You can conduct two types of scans in Data Classification:
 
-- **Map-only scans** provide only a high-level overview of your data and are performed on selected data sources. Map-only scans take less time than full scans because the do not access files to see the data inside. You might want to do this initially to identify areas of research and then perform a full scan on those areas.
+- **Map-only scans** provide only a high-level overview of your data and are performed on selected data sources. Map-only scans take less time than full scans because they don't access files to see the data inside. You might want to do this initially to identify areas of research and then perform a full scan on those areas.
 - **Full scans** provide deep-level scanning of your data. A full scan includes a mapping scan and a classification of data inside the files. 
 
 For a breakdown of the differences between map-only and full scans, see link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].

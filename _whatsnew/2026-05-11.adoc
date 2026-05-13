@@ -6,7 +6,7 @@ Review a link:https://youtu.be/_8YJ3KyZ7nI[video walkthrough^]. For more informa
 
 === Compliance admin IAM role
 
-Data Classification now supports a Compliance admin role to manage permissions in Data Classification. The Compliance admin roles doesn't have access to resources including Console agents and workspaces. Users with the Compliance admin role must be associated with at least one other role. 
+Data Classification now supports a Compliance admin role to manage permissions in Data Classification. The Compliance admin role doesn't have access to resources including Console agents and workspaces. Users with the Compliance admin role must be associated with at least one other role. 
  
 When installing Data Classification, you should have a Console platform admin role or the Compliance admin role. 
 
