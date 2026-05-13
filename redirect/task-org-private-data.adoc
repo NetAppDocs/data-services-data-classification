@@ -30,7 +30,7 @@ redirect: data-services-data-classification/task-managing-repo-scanning.html
 // * With the saved search functionality, you can create your own custom search queries so that you can easily see the results from selecting one button.
 // * You can send email alerts to Console users, or any other email address, when certain critical Saved searches return results.
 
-// NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
+// NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a map-only scan do not show file-level details.
 
 // == Should I use tags or labels?
 

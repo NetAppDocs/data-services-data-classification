@@ -38,16 +38,14 @@ You can either open the security group for traffic from the IP address of the Da
 
 .Steps
 . From the Data Classification menu, select *Configuration*.
-+
-image:screen-cl-config-cvo-map-options.png[A screenshot of the Configuration tab showing the options for mapping and classifying repositories.]
-. If you use CIFS, provide Data Classification with Active Directory credentials so it can scan CIFS volumes. For each system, select *Edit CIFS Credentials* and enter the user name and password that Data Classification needs to access CIFS volumes on the system.
+. Select the system you want to add or modify the CIFS credentials for. 
+. Select *Edit CIFS Credentials* and enter the user name and password that Data Classification needs to access CIFS volumes on the system.
 +
 The credentials can be read-only, but providing admin credentials ensures that Data Classification can read any data that requires elevated permissions. The credentials are stored on the Data Classification instance.
 include::_include/cifs-permissions.adoc[]
 +
 If you've entered the credentials correctly, a message confirms all CIFS volumes were authenticated successfully.
-. On the Configuration page, select *Configuration* to review the status for each CIFS and NFS volume and correct any errors.
-
+. On the Configuration page, select *Configuration* then choose the system to review the status for each CIFS and NFS volume and correct any errors.
 
 == Enable or disable scans on volumes
 

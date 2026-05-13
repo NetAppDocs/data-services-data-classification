@@ -15,7 +15,7 @@ summary: Gain control of your private data by viewing details about the personal
 Gain control of your private data by viewing details about the personal data (PII) and sensitive personal data (SPII) in your organization. You can also gain visibility by reviewing the categories and file types that NetApp Data Classification found in your data.
 
 [NOTE]
-File-level compliance details are only available if you perform a full classification scan. Mapping-only scans don't yield file-level details. 
+File-level compliance details are only available if you perform a full classification scan. Map-only scans don't yield file-level details. 
 
 By default, the Data Classification dashboard displays compliance data for all systems and databases. To see data for only some of the systems, select them.
 

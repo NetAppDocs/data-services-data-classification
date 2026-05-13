@@ -150,7 +150,7 @@ Review the following specifications for instance types:
 At a high-level, Data Classification scanning works like this:
 
 . You deploy an instance of Data Classification in the Console.
-. You enable high-level mapping (called _Mapping only_ scans) or deep-level scanning (called _Map & Classify_ scans) on one or more data sources.
+. You enable high-level mapping (called _Mapping only_ scans) or deep-level scanning (called _Full_ scans) on one or more data sources.
 . Data Classification scans data using an AI learning process.
 . You use the provided dashboards and reporting tools to help in your compliance and governance efforts.
 
@@ -172,10 +172,10 @@ include::_include/console-agent-limit.adoc[]
 
 You can conduct two types of scans in Data Classification:
 
-- **Mapping-only scans** provide only a high-level overview of your data and are performed on selected data sources. Mapping-only scans take less time than map and classify scans because they do not access files to see the data inside. You might want to do this initially to identify areas of research and then perform a Map & Classify scan on those areas.
-- **Map & Classify scans** provide deep-level scanning of your data. 
+- **Map-only scans** provide only a high-level overview of your data and are performed on selected data sources. Map-only scans take less time than full scans because the do not access files to see the data inside. You might want to do this initially to identify areas of research and then perform a full scan on those areas.
+- **Full scans** provide deep-level scanning of your data. A full scan includes a mapping scan and a classification of data inside the files. 
 
-For details about the differences between Mapping and Classification scans, see link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].
+For a breakdown of the differences between map-only and full scans, see link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].
 
 == Information that Data Classification categorizes
 

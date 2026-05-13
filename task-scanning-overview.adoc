@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-scanning-overview.html
-keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, map-only scans, map and classify, full
 summary: Scan your data sources with NetApp Data Classification.
 ---
 
@@ -23,18 +23,20 @@ You can enable and disable scans at the volume level or at the database schema l
 
 You can conduct two types of scans in Data Classification:
 
-- **Mapping-only scans** provide only a high-level overview of your data and are performed on selected data sources. Mapping-only scans take less time than map and classify scans because the do not access files to see the data inside. You might want to do this initially to identify areas of research and then perform a Map & Classify scan on those areas.
-- **Map & Classify scans** provide deep-level scanning of your data. 
+* **Map-only scans** provide only a high-level overview of your data and are performed on selected data sources. Map-only scans take less time than full scans because the do not access files to see the data inside.
+* **Full scans** provide deep-level scanning of your data. A full scan includes a mapping scan and a classification of data inside the files. 
+
+[TIP]
+Performing a map-only scan can be helpful in gaining an overview of your data and pinpoint specific areas to perform full scans on. 
 
 
-
-The table below shows some of the differences:
+Review the tables to see what information is surfaced in map-only scans and full scans. 
 
 [cols="47,18,18",width=85%,options="header"]
 |===
 | Feature
-| Map & classify scans
-| Mapping-only scans
+| Full scan
+| Map-only scan
 
 | Scan speed | Slow | Fast
 | Pricing | Free | Free
@@ -79,8 +81,8 @@ The Console UI displays data from a single connector. For tips on viewing data f
 [cols="40,25,25",width=85%,options="header"]
 |===
 | Feature
-| Map & Classify
-| Map 
+| Full scan
+| Map-only scan
 
 | Stale data | Yes | Yes
 | Non-business data | Yes | Yes
@@ -111,8 +113,8 @@ The Console UI displays data from a single connector. For tips on viewing data f
 [cols="40,25,25",width=85%,options="header"]
 |===
 | Feature
-| Map & Classify
-| Map 
+| Full scan
+| Map-only scan
 
 | Personal information | Yes | No
 | Sensitive personal information | Yes | No
@@ -133,8 +135,8 @@ The Console UI displays data from a single connector. For tips on viewing data f
 [cols="40,25,25",width=85%,options="header"]
 |===
 | Feature
-| Map & Classify
-| Map 
+| Full scan
+| Map-only scan
 
 | Saved queries | Yes | Yes
 | System type | Yes | Yes

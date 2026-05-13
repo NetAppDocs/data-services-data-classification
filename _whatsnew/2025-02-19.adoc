@@ -4,15 +4,15 @@ This release provides support for Red Hat Enterprise Linux v9.5 in addition to p
 
 The following operating systems require using the Podman container engine, and they require BlueXP classification version 1.30 or greater: Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, and 9.5.
 
-=== Prioritize mapping-only scans 
+=== Prioritize map-only scans 
 
-When conducting Mapping-only scans, you can prioritize the most important scans. This feature helps when you have many working environments and want to ensure high priority scans are completed first. 
+When conducting Map-only scans, you can prioritize the most important scans. This feature helps when you have many working environments and want to ensure high priority scans are completed first. 
 
 By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. 
 
 Priority is granted on a one-time basis. Automatic rescans of mapping data occur in the default order. 
 
-Prioritization is limited to link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html[mapping-only scans^]; it's not available for map and classify scans. 
+Prioritization is limited to link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html[map-only scans^]; it's not available for map and classify scans. 
 
 For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans[Prioritize scans^].
 

@@ -36,7 +36,7 @@ You can view the scanning status of each work environment on the Configuration p
 . From the Data Classification menu, select *Configuration*.
 +
 image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.] 
-. From the Configuration tab, select the *Configuration* button for the system.
+. Identify the system whose scan settings you want to review then select **Manage**.
 
 
 . In the Scan Configuration page, view the scan settings for all repositories.
@@ -45,32 +45,26 @@ image:screenshot_compliance_repo_scan_settings.png["A screenshot showing whether
 
 . During a scan, hover your cursor over the progress bar in the _Mapping status_ column to view the number of files in the queue to be mapped or classified for that repository.
 
-== Change the type of scanning for a repository
+== Change the scan type
 
 You can start or stop mapping-only scans, or mapping and classification scans, in a system at any time from the Configuration page. You can also change from mapping-only scans to mapping and classification scans, and vice-versa.
 
-TIP: Databases can't be set to mapping-only scans. Database scanning can be Off or On; where On is equivalent to Map & Classify.
+[NOTE]
+Mapping-only scans aren't available for databases. When you enable database scanning, it must be a full scan. 
 
 .Steps
 
 . From the Data Classification menu, select *Configuration*. 
-. From the Configuration tab, select the *Configuration* button for the system.
+. To change the scan type for all assets in a system, select the action menu for that system then change to the desired scan type. For example, to change the scans for a file shares group from mapping-only to full, select *Scan all shares: full scan*. 
++
+To change the scan type for individual buckets, shares, or volumes, select the **Manage** button for the system.
 +
 image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.]
-
-. In the Scan Configuration page, change any of the repositories (buckets in this example) to perform *Map* or *Map & Classify* scans.
-+
-image:screenshot_compliance_repo_scan_settings.png[A screenshot showing how to select the type of scanning for a bucket.]
-+
-Certain types of systems enable you to change the type of scanning globally for all repositories using a button bar at the top of the page. This is valid for Cloud Volumes ONTAP, on-premises ONTAP, Azure NetApp Files, and Amazon FSx for ONTAP systems.
-+
-The example below shows this button bar for an Azure NetApp Files system.
-+
-image:screenshot_compliance_repo_scan_all.png[A screenshot showing how to configure the same scan setting for all volumes in a system.]
+.. In the individual system configuration, select the asset you want to modify. Select the *Scan type* then change to the desired scan type. 
 
 == Prioritize scans
 
-You can prioritize the most important mapping-only scans or map & classify scans to ensure high priority scans are completed first. 
+You can prioritize the most important mapping-only scans or full scans to ensure high priority scans are completed first. 
 
 By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. 
 
@@ -78,8 +72,8 @@ Priority is granted on a one-time basis. Automatic rescans of mapping data occur
 
 .Steps
 . From the Data Classification menu, select *Configuration*. 
-. Select the resources you want to prioritize.
-. From the Actions `...` option, select *Prioritize scan*.
+. Find the system that you want to modify scans for then select *Manage*. 
+. Find the resources you want to prioritize. Select the action menu `...` option then *Prioritize scan*.
 
 == Stop scanning for a repository
 
@@ -88,17 +82,15 @@ You can stop scanning a repository (for example, a volume) if you no longer need
 .Steps
 
 . From the Data Classification menu, select *Configuration*. 
-. From the Configuration tab, select the *Configuration* button for the system.
+. Select the *Manage* button for the system.
 +
 image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.]
 
-. In the Scan Configuration page select *Off* to stop scanning for a particular bucket.
-+
-image:screenshot_compliance_repo_scan_settings.png[A screenshot showing how to select the type of scanning for a bucket.]
+. In the system overview, select the scan type column. Set the scan type to *Off*.
 
 == Pause and resume scanning for a repository
 
-You can "pause" scanning on a repository if you want to temporarily stop scanning certain content. Pausing scanning means that Data Classification won't perform any future scans for changes or additions to the repository. All current scan results remain accessible in Data Classification. 
+You can pause scanning so that Data Classification won't perform any future scans for changes or additions to the repository. All current scan results remain accessible in Data Classification. 
 
 If you pause scans, it does not eliminate billing charges because the data is still on the system. 
 
@@ -107,12 +99,6 @@ You can resume scanning at any time.
 .Steps
 
 . From the Data Classification menu, select *Configuration*. 
-. From the Configuration tab, select the *Configuration* button for the system.
-+
-image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.]
-
-. In the Scan Configuration page, select the Actions image:button-actions-horizontal.png[Actions icon] icon. 
-
-. Select *Pause* to pause scanning for a volume, or select *Resume* to resume scanning for a volume that had been previously paused.
-
+. Find the system that you want to modify scans for then select *Manage*. 
+. Select the resources you want to prioritize. Select the action menu `...` option then *Pause scan*.
 

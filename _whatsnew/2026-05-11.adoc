@@ -1,12 +1,16 @@
 === Improved Configuration page
 
+Data Classification has updated and improved the Configuration page, enabling an improved usability experience to manage settings, systems, enable scanning, and monitoring systems health. The new Configuration page provides the existing functionality in an easier to use format in addition to the ability to filter systems by type, error status, and scan status. The new page also provides a summary of connected systems and overviews of active and configured scans. 
+
+Review a link:https://youtu.be/_8YJ3KyZ7nI[video walkthrough^]. For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-overview.html[Scan data sources with Data Classification^].
+
 === Compliance admin IAM role
 
-Data Classification now supports a Compliance admin role for identity and access management. 
+Data Classification now supports a Compliance admin role to manage permissions in Data Classification. The Compliance admin roles doesn't have access to resources including Console agents and workspaces. Users with the Compliance admin role must be associated with at least one other role. 
+ 
+When installing Data Classification, you should have a Console platform admin role or the Compliance admin role. 
 
-The Compliance admin doesn't have access to resources including Console agents and workspaces. Useres with the Compliance admin role must be associated with at least one other role. 
-
-When installing Data Classification, users should have a Console platform admin role or the Compliance admin role. 
+If you're an existing user, access should continue as normal. For example, a platform role that has a folder or project admin role has existing access. 
 
 === Deploy Data Classification with OVA
 

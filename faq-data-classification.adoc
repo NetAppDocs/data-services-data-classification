@@ -68,7 +68,7 @@ Data scans have a negligible impact on your storage systems and on your data.
 
 Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size characteristics of the host system (either in the cloud or on-premises). See link:concept-classification.html[The Data Classification instance] and link:task-deploy-overview.html[Deploying Data Classification] for more information.
 
-When initially adding new data sources, you can also choose to perform only a "mapping" (Mapping only) scan instead of a full "classification" (Map & Classify) scan. Mapping can be done on your data sources very quickly because it does not access files to see the data inside. link:task-scanning-overview.html[See the difference between a mapping and classification scan].
+When initially adding new data sources, you can also choose to perform only a map-only scan or a full scan. Mapping can be done on your data sources very quickly because it does not access files to see the data inside. link:task-scanning-overview.html[Understand the difference between a mapping and classification scan].
 
 === Can I search my data using Data Classification?
 
@@ -111,9 +111,9 @@ No. Data Classification does not scan snapshots because the content is identical
 
 === What happens if data tiering is enabled on your ONTAP volumes?
 
-When Data Classification scans volumes that have cold data tiered to object storage using the Mapping only scans, it scans all of the data--data that's on local disks and cold data tiered to object storage. This is also true for non-NetApp products that implement tiering.
+When Data Classification scans volumes that have cold data tiered to object storage using the map-only scans, it scans all of the data--data that's on local disks and cold data tiered to object storage. This is also true for non-NetApp products that implement tiering.
 
-The Mapping only scan doesn't heat up the cold data--it stays cold and remains in object storage. On the other hand, if you perform the Map & Classify scan, some configurations might heat up the cold data. 
+The map-only scan doesn't heat up the cold data: it stays cold and remains in object storage. On the other hand, if you perform the full scan, some configurations might heat up the cold data. 
 
 
 
@@ -165,7 +165,7 @@ Data Classification enables you to run a general "mapping" scan or a full "class
 +
 After a fast scan, you can generate a Data Mapping Report. This report is an overview of the data stored in your corporate data sources to assist you with decisions about resource utilization, migration, backup, security, and compliance processes.
 
-* *Data classification deep scan (Map & Classify scan)*: Data Classification scans data using standard protocols and read-only permission throughout your environments. Select files are opened and scanned for sensitive business-related data, private information, and issues related to ransomware.
+* *Data classification deep scan (full scan)*: Data Classification scans data using standard protocols and read-only permission throughout your environments. Select files are opened and scanned for sensitive business-related data, private information, and issues related to ransomware.
 +
 After a full scan there are many additional Data Classification features you can apply to your data, such as view and refine data in the Data Investigation page, search for names within files, copy, move, and delete source files, and more.
 

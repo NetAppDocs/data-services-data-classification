@@ -21,7 +21,8 @@ By default, data is considered stale if it was last modified three years ago.
 .Define stale data
 
 . In Ransomware Resilience, select **Configuration**. 
-. In the Configuration page, scroll to the **Stale data definition** heading. 
+. In the Configuration page, select the **Settings** tab.
+. Under the Stale data definition heading, select *Edit*. 
 . In the **File properties** dropdown menu, choose if you want to define stale data based on when it was *Last accessed* or *Last modified*. 
 . Choose the time period for the stale data definition. 
 +
