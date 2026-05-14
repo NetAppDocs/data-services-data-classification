@@ -24,7 +24,7 @@ redirect: data-services-data-classification/task-investigate-data.html
 // [.lead]
 // You can investigate the data from your organization by viewing details in the Data Investigation page. You can navigate to this page from many areas of the NetApp Data Classification UI, including the Governance and Compliance dashboards.
 
-// NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
+// NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a map-only scan do not show file-level details.
 
 
 

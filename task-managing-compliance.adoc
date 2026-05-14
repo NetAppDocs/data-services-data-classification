@@ -38,7 +38,5 @@ If you no longer want to scan user files from a file share group, you can delete
 .Steps
 
 . From the _Configuration_ page, select the image:button-gallery-options.gif[More button] button in the row for the File Shares Group then *Remove File Shares Group*.
-+
-image:screenshot_compliance_remove_db.png[A screenshot of the Remove DB Server button from the Scan Configuration page.]
 
 . Select *Delete Group of Shares* from the confirmation dialog.

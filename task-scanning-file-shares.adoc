@@ -58,25 +58,24 @@ You can add file shares individually or you can enter a line-separated list of t
 
 . Select the protocol for the file shares you are adding.
 +
-image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, showing options to select protocols and shares]
+image:add-shares.png[A screenshot of the modal to Add shares, showing options to select protocols and shares]
 
 .. If you're adding CIFS shares with NTLM authentication, enter the Active Directory credentials to access the CIFS volumes. Although read-only credentials are supported, it's recommended you provide full access with administrator credentials. Select **Save**.
 
 . Add the file shares that you want to scan (one file share per line). Then select **Continue**. 
 
 . A confirmation dialog displays the number of shares that were added.
+. Decide how you want to scan the volumes. link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].
+. To enable scanning on all volumes in the system, select *Activate scan* then select *Map only all volumes* or *Full scan all volumes*. 
 +
-If the dialog lists any shares that could not be added, capture this information so that you can resolve the issue. If the issue pertains to a naming convention, you can re-add the share with a corrected name.
+To manage scanning on only select volumes, select *Activate scan* then *Manage*. In the system overview, identify the resources you want to scan. Select the scan type for each volume then set it to the scanning type you want: full or mapping-only. 
++
+See <<Enable and disable scans on volumes,Enable and disable scans on volumes>> for details.
 
-. Configure scanning on the volume: 
-+
-* To enable mapping-only scans on file shares, select *Map*.
-* To enable full scans on file shares, select *Map & Classify*.
-* To disable scanning on file shares, select *Off*.
-+
+
 [NOTE]
-The switch at the top of the page for *Scan when missing "write attributes" permissions* is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. +
-If you switch *Scan when missing "write attributes" permissions* to *On*, the scan resets the last accessed time and scans all files regardless of permissions. +
+The system overview page has a for *Scan without write permissions* option that is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. +
+If you check the *Scan without write permissions* option, the scan resets the last accessed time and scans all files regardless of permissions. +
 To learn more about the last accessed time stamp, see link:reference-collected-metadata.html#last-access-time-timestamp[Metadata collected from data sources in Data Classification].
 
 .Result
@@ -92,7 +91,7 @@ After you create a file shares group, you can edit the CIFS protocol or add and 
 
 .Edit the CIFS protocol configuration 
 . From the Data Classification menu, select *Configuration*. 
-. From the Configuration page, select the file shares group you want to modify. 
+. From the Configuration page, find the file shares group system you want to modify then select **Manage**. 
 . Select **Edit CIFS Credentials**. 
 +
 image:screenshot-edit-cifs-credential.png[Screenshot of the Edit CIFS credentials menu.]
@@ -102,23 +101,22 @@ image:screenshot-edit-cifs-credential.png[Screenshot of the Edit CIFS credential
 
 .Add file shares to scans
 . From the Data Classification menu, select *Configuration*. 
-. From the Configuration page, select the file shares group you want to modify. 
+. From the Configuration page, find the file shares group you want to modify. Select **Manage**.
 . Select **+ Add shares**. 
 . Select the protocol for the file shares you are adding.
 +
-image:screen-cl-config-shares-add.png[A screenshot of the modal to Add shares, showing options to select protocols and shares]
+image:add-shares.png[A screenshot of the modal to Add shares, showing options to select protocols and shares]
 +
 If you're adding file shares to a protocol you've already configured, no changes are required. 
 +
 If you're adding file shares with a second protocol, ensure you've properly configured the authentication as detailed in the link:#prerequisites[prerequisites].
 . Add the file shares you want to scan (one file share per line) using the format `<host_name>:/<share_path>`.
-. Select **Continue** to complete adding the file shares. 
+. Select **Save** to complete adding the file shares. 
 
 .Remove a file share from scans
 . From the Data Classification menu, select *Configuration*.
-. Select the system you want to remove file shares from.
-. Select *Configuration*. 
-. From the Configuration page, select the Actions image:button-actions-horizontal.png[Actions icon] for the file share you want to remove.
+. Find the system you want to remove file shares from then select **Manage**.
+. From the system overview page, select the Actions image:button-actions-horizontal.png[Actions icon] for the file share you want to remove.
 . From the Actions menu, select *Remove Share*.
 
 == Track the scanning progress
@@ -126,6 +124,9 @@ If you're adding file shares with a second protocol, ensure you've properly conf
 You can track the progress of the initial scan.
 
 . Select the **Configuration** menu.
-. Select the **System Configuration**. 
-. For the storage repository, check the Scan progress column to view its status. 
+. Find the file share group then select **Manage**. 
+. For the storage repository, check the Scan progress column to view its status. There are separate progress bars if you've enabled full scans.  
 
+== Enable and disable scans on volumes
+
+include::_include/enable-disable-scans.adoc[]

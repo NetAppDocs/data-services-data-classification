@@ -63,15 +63,13 @@ After you enable Data Classification on StorageGRID, the next step is to configu
 
 .Steps
 
-. In the Configuration page, locate the StorageGRID system. 
-
-. On the StorageGRID system tile, select *Configuration*.
-. Complete one of the following steps to enable or disable scanning:
+. In Data Classification, select **Configuration**. 
+. In the Configuration page, locate the StorageGRID system you want to enable scanning for.
+. Decide how you want to scan the volumes. link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].
+. To enable scanning on all volumes in the system, select *Activate scan* then select *Map only all volumes* or *Full scan all volumes*. 
 +
-* To enable mapping-only scans on a bucket, select *Map*. 
-* To enable full scans on a bucket, select *Map & Classify*. 
-* To disable scanning on a bucket, select *Off*.
+To manage scanning on only select volumes, select *Activate scan* then *Manage*. In the system overview, identify the resources you want to scan. Select the scan type for each volume then set it to the scanning type you want: full or mapping-only. 
 
 .Result
 
-Data Classification starts scanning the buckets that you enabled. You can track the progress of the initial scan by navigating to the **Configuration** menu then selecting the **System configuration**. The progress of each scan is show as a progress bar. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. If there are any errors, they'll appear in the Status column, alongside the required action to fix the error.
+Data Classification starts scanning the buckets that you enabled. You can track the progress of the initial scan by navigating to the **Configuration** menu. Identify the system then select **Manage**. The progress of each scan is show as a progress bar. You can also hover over the progress bar to see the number of files scanned relative to the total files in the volume. If there are any errors, they'll appear in the Status column, alongside the required action to fix the error.

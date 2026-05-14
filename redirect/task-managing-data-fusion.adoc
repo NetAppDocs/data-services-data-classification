@@ -33,7 +33,7 @@ redirect: data-services-data-classification/task-custom-classification.html
 
 // All of these mechanisms to add custom scanning criteria are supported in all languages.
 
-// NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
+// NOTE: The capabilities described in this section are available only if you have chosen to perform a full classification scan on your data sources. Data sources that have had a map-only scan do not show file-level details.
 
 // == Add custom personal data identifiers from your databases
 

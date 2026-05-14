@@ -18,7 +18,7 @@ By default, the Data Classification dashboards display compliance and governance
 
 [NOTE]
 ====
-* Compliance reports are only available if you perform a full classification scan on your data sources. Data sources that have had a mapping-only scan can only generate the Data Mapping Report.
+* Compliance reports are only available if you perform a full classification scan on your data sources. Data sources that have had a map-only scan can only generate the Data Mapping Report.
 * NetApp cannot guarantee 100% accuracy of the personal data and sensitive personal data that Data Classification identifies. You should always validate the information by reviewing the data.
 ====
 

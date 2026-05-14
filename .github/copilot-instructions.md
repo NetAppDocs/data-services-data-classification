@@ -15,8 +15,8 @@ NetApp Data Classification is a governance service to audit security and complia
 
 ## Product-specific context
 
-- **Mapping-only scan** - Data Classification must scan data to provide insights into it. A mapping-only scan is a high-level overview of data that provides broad insights and reads metadata. It does not read the files. 
-- **Map & Classify scan** - Map & Classify scans provide the same benefits of a mapping-only scan with added insights such as names within file or specific pieces of PII. 
+- **Map-only scan** - Data Classification must scan data to provide insights into it. A map-only scan is a high-level overview of data that provides broad insights and reads metadata. It does not read the files. 
+- **Full scan** - Full scans provide the same benefits of a map-only scan with added insights such as names within file or specific pieces of PII. Full scans read file data, whereas mapping only scans do not. Full scans were previously known as "map & classify" scans. 
 - **Saved queries** - Custom queries created by the user to identify data or a data pattern specific to their organization. 
 - **DSAR** - A Data Subject Access request. This is a request made by an individual to access their personal data. 
 
