@@ -13,12 +13,12 @@ When scanning configuration, you can prioritize the most important scans so that
 
 There are two types of scans: 
 
-* *Mapping-only scans* provide only a high-level overview of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
+* *Map-only scans* provide only a high-level overview of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
 * *Map and classify* scans provide deep-level scanning of your data. 
 
-You might benefit from using Mapping-only scans to quickly scan your data to identify the data sources that require more research and then  later enable Map and classify scans only on those required data sources or volumes.
+You might benefit from using Map-only scans to quickly scan your data to identify the data sources that require more research and then  later enable Map and classify scans only on those required data sources or volumes.
 
-The priority is assigned only to Mapping-only scans, not Map and classify scans. 
+The priority is assigned only to Map-only scans, not Map and classify scans. 
 
 The priority is set to 1 by default, and you can change it to any number between 1 and 10. The lower the number, the higher the priority. If you don't set a priority, the scan is assigned a priority of 5.
 

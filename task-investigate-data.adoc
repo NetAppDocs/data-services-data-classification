@@ -15,7 +15,7 @@ summary: You can investigate the data from your organization by viewing details 
 The Data Investigation dashboard displays file and directory-level insights into your data, enabling you to sort and filter results. The Data Investigation page presents insights into file and directory metadata and permissions as well as identifying duplicate files. With file-, directory-, and database-level insights, you can take actions to improve the compliance of your organization and save storage space. The Data Investigation page also supports link:task-copy-move.html[moving, copying, and deleting files]. 
 
 [NOTE]
-To gain insights from the Investigation page, you must perform a full classification scan on your data sources. Data sources that have had a mapping-only scan do not show file-level details.
+To gain insights from the Investigation page, you must perform a full classification scan on your data sources. Data sources that have had a map-only scan do not show file-level details.
 
 == Data investigation structure
 
