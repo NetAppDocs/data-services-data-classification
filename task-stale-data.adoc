@@ -24,7 +24,5 @@ By default, data is considered stale if it was last modified three years ago.
 . In the Configuration page, select the **Settings** tab.
 . Under the Stale data definition heading, select *Edit*. 
 . In the **File properties** dropdown menu, choose if you want to define stale data based on when it was *Last accessed* or *Last modified*. 
-. Choose the time period for the stale data definition. 
-+
-image:stale-data.png["Screenshot of the stale data definition options"]
+. Choose the time period for the stale data definition.
 . Select **Save**. 

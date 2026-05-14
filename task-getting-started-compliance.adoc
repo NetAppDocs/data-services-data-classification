@@ -38,14 +38,13 @@ You can either open the security group for traffic from the IP address of the Da
 
 .Steps
 . From the Data Classification menu, select *Configuration*.
-. Select the system you want to add or modify the CIFS credentials for. 
+. Find the system you want to add or modify the CIFS credentials for then select **Manage**.
 . Select *Edit CIFS Credentials* and enter the user name and password that Data Classification needs to access CIFS volumes on the system.
 +
 The credentials can be read-only, but providing admin credentials ensures that Data Classification can read any data that requires elevated permissions. The credentials are stored on the Data Classification instance.
 include::_include/cifs-permissions.adoc[]
 +
 If you've entered the credentials correctly, a message confirms all CIFS volumes were authenticated successfully.
-. On the Configuration page, select *Configuration* then choose the system to review the status for each CIFS and NFS volume and correct any errors.
 
 == Enable or disable scans on volumes
 

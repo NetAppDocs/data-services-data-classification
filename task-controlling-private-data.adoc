@@ -47,9 +47,9 @@ image:screenshot_personal_files.png[A screenshot of the personal files dialog bo
 +
 The following images show personal data found in a directory (shares and folders). In the *Structured* tab, you view personal data found in databases. In the *Unstructured* tab, you can view file-level data. 
 +
-image:screenshot_compliance_investigation_page.png[A screenshot of detailed information found in files after clicking Investigate Results.]
+image:screenshot_compliance_investigation_page.png[A screenshot of detailed information found in files after selecting Investigate Results.]
 +
-image:screenshot_compliance_investigation_page_directory.png[A screenshot of detailed information found in directories after clicking Investigate Results.]
+image:screenshot_compliance_investigation_page_directory.png[A screenshot of detailed information found in directories after selecting Investigate Results.]
 
 == View files that contain sensitive personal data
 
@@ -71,5 +71,5 @@ image:screenshot-sensitive-personal.png[Screenshot of the Sensitive personal res
 
 . To investigate the details for a specific type of sensitive personal data, select *View All* then select the *Investigate Results* arrow icon for a specific type of sensitive personal data.
 
-. Investigate the data by searching, sorting, expanding details for a specific file, clicking *Investigate Results* to see masked information, or by downloading the file list.
+. Investigate the data by searching, sorting, expanding details for a specific file, selecting *Investigate Results* to see masked information, or by downloading the file list.
 

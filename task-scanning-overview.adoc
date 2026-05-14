@@ -52,25 +52,24 @@ Review the tables to see what information is surfaced in map-only scans and full
 | Ability to see metadata from files** | Yes | Yes
 |===
 
-{asterisk} Data Classification does not impose a limit on the amount of data it can scan. Each Console agent supports scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation[install another Console agent^] then link:task-deploy-overview.html[deploy another Data Classification instance]. +
+{asterisk} Data Classification does not impose a limit on the amount of data it scan. Each Console agent supports scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation[install another Console agent^] then link:task-deploy-overview.html[deploy another Data Classification instance]. +
 The Console UI displays data from a single connector. For tips on viewing data from multiple Console agents, see link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors[Work with multiple Console agents^].
 // duplicate of content in include file due to formattinginclude::_include/console-agent-limit.adoc[]
 
 {asterisk}{asterisk} The following metadata is extracted from files during mapping scans:  
 
-* System 
-* System type 
-* Storage repository 
+* File discovered time 
+* File last accessed
+* File last modified 
 * File type 
-* Used capacity 
-* Number of files  
 * File size 
 * File creation 
-* File last access  
-* File last modified 
-* File discovered time 
+* Number of files  
 * Permissions extraction 
-
+* Storage repository 
+* System 
+* System type 
+* Used capacity 
 
 // Start snippet: collapsible block (open on page load)
 .Governance dashboard differences:

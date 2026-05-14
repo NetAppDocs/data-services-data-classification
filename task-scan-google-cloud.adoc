@@ -71,8 +71,6 @@ The credentials can be read-only, but providing admin credentials ensures that D
 include::_include/cifs-permissions.adoc[]
 +
 After you enter the credentials, you should see a message that all CIFS volumes were authenticated successfully.
-+
-image:screenshot_cifs_status.gif[A screenshot that shows the Configuration page and one Cloud Volumes ONTAP system for which CIFS credentials were successfully provided.]
 
 . On the Configuration page, select *View Details* to review the status for each CIFS and NFS volume and correct any errors.
 
