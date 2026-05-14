@@ -74,8 +74,8 @@ See <<Enable and disable scans on volumes,Enable and disable scans on volumes>> 
 
 
 [NOTE]
-The system overview pages has a for *Scan without write permissions* option that is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. +
-If you check the *Scan without write permissions* option*, the scan resets to the last accessed time and scans all files regardless of permissions. +
+The system overview page has a for *Scan without write permissions* option that is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. +
+If you check the *Scan without write permissions* option, the scan resets the last accessed time and scans all files regardless of permissions. +
 To learn more about the last accessed time stamp, see link:reference-collected-metadata.html#last-access-time-timestamp[Metadata collected from data sources in Data Classification].
 
 .Result

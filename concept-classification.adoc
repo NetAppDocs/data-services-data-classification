@@ -150,10 +150,9 @@ Review the following specifications for instance types:
 At a high-level, Data Classification scanning works like this:
 
 . You deploy an instance of Data Classification in the Console.
-. You enable high-level mapping (called _Mapping only_ scans) or deep-level scanning (called _Full_ scans) on one or more data sources.
+. You enable scans on one or more data sources.
 . Data Classification scans data using an AI learning process.
 . You use the provided dashboards and reporting tools to help in your compliance and governance efforts.
-
 
 After you enable Data Classification and select the repositories that you want to scan (these are the volumes, database schemas, or other user data), it immediately starts scanning the data to identify personal and sensitive data. You should focus on scanning live production data in most cases instead of backups, mirrors, or DR sites. Then Data Classification maps your organizational data, categorizes each file, and identifies and extracts entities and predefined patterns in the data. The result of the scan is an index of personal information, sensitive personal information, data categories, and file types.
 
@@ -173,7 +172,7 @@ include::_include/console-agent-limit.adoc[]
 You can conduct two types of scans in Data Classification:
 
 - **Map-only scans** provide only a high-level overview of your data and are performed on selected data sources. Map-only scans take less time than full scans because they don't access files to see the data inside. You might want to do this initially to identify areas of research and then perform a full scan on those areas.
-- **Full scans** provide deep-level scanning of your data. A full scan includes a mapping scan and a classification of data inside the files. 
+- **Full scans** provide deep-level scanning of your data. A full scan includes a map-only scan and a classification of data inside the files. 
 
 For a breakdown of the differences between map-only and full scans, see link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].
 

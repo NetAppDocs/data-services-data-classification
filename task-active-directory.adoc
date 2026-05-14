@@ -80,8 +80,6 @@ LDAP Server IP address, or multiple IP addresses
 . In Data Classification, select **Configuration**. 
 . Switch to the **Settings** tab. 
 . In the Active Directory heading, select **Add**. 
-. From the Data Classification Configuration page, select *Add Active Directory*.
-
 . In the Connect to Active Directory dialog, enter the Active Directory details then select *Connect*.
 +
 You can add multiple IP addresses, if required, by selecting *Add IP*.

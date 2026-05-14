@@ -19,7 +19,7 @@ After the initial scan, Data Classification continuously scans your data in a ro
 
 You can enable and disable scans at the volume level or at the database schema level.
 
-== What's the difference between Mapping and Classification scans
+== Understand scan types
 
 You can conduct two types of scans in Data Classification:
 
@@ -52,7 +52,7 @@ Review the tables to see what information is surfaced in map-only scans and full
 | Ability to see metadata from files** | Yes | Yes
 |===
 
-{asterisk} Data Classification does not impose a limit on the amount of data it scan. Each Console agent supports scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation[install another Console agent^] then link:task-deploy-overview.html[deploy another Data Classification instance]. +
+{asterisk} Data Classification does not impose a limit on the amount of data it scans. Each Console agent supports scanning and displaying 500 TiB of data. To scan more than 500 TiB of data, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation[install another Console agent^] then link:task-deploy-overview.html[deploy another Data Classification instance]. +
 The Console UI displays data from a single connector. For tips on viewing data from multiple Console agents, see link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors[Work with multiple Console agents^].
 // duplicate of content in include file due to formattinginclude::_include/console-agent-limit.adoc[]
 

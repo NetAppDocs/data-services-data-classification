@@ -63,9 +63,8 @@ After you enable Data Classification on StorageGRID, the next step is to configu
 
 .Steps
 
-. In Data Classification, select **Configure**. 
-. In the Configuration page, locate the StorageGRID system. 
-. Identify the system you want to enable scanning for. 
+. In Data Classification, select **Configuration**. 
+. In the Configuration page, locate the StorageGRID system you want to enable scanning for.
 . Decide how you want to scan the volumes. link:task-scanning-overview.html[What's the difference between Mapping and Classification scans?].
 . To enable scanning on all volumes in the system, select *Activate scan* then select *Map only all volumes* or *Full scan all volumes*. 
 +

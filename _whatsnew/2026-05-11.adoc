@@ -1,6 +1,6 @@
 === Improved Configuration page
 
-Data Classification has updated and improved the Configuration page, enabling an improved usability experience to manage settings, systems, enable scanning, and monitoring systems health. The new Configuration page provides the existing functionality in an easier to use format in addition to the ability to filter systems by type, error status, and scan status. The new page also provides a summary of connected systems and overviews of active and configured scans. 
+Data Classification has updated and improved the Configuration page, enabling an improved usability experience to manage settings, systems, enable scanning, and monitor system health. The new Configuration page provides the existing functionality in an easier to use format in addition to the ability to filter systems by type, error status, and scan status. The new page also provides a summary of connected systems and overviews of active and configured scans. 
 
 Review a link:https://youtu.be/_8YJ3KyZ7nI[video walkthrough^]. For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-overview.html[Scan data sources with Data Classification^].
 

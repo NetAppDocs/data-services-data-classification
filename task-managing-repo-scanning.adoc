@@ -60,11 +60,12 @@ Mapping-only scans aren't available for databases. When you enable database scan
 To change the scan type for individual buckets, shares, or volumes, select the **Manage** button for the system.
 +
 image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.]
-.. In the individual system configuration, select the asset you want to modify. Select the *Scan type* then change to the desired scan type. 
++
+In the individual system configuration, select the asset you want to modify. Select the *Scan type* then change to the desired scan type. 
 
 == Prioritize scans
 
-You can prioritize the most important mapping-only scans or full scans to ensure high priority scans are completed first. 
+You can prioritize the most important map-only or full scans to ensure high priority scans are completed first. 
 
 By default, scans are queued based on the order in which they are initiated. With the ability to prioritize scans, you can move scans to the front of the queue. Multiple scans can be prioritized. Priority is designated in a first-in, first-out order, meaning the first scan you prioritize moves to the front of the queue; the second scan you prioritize becomes second in the queue, and so forth. 
 
