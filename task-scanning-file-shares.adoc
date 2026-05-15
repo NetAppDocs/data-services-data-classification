@@ -127,3 +127,6 @@ You can track the progress of the initial scan.
 . Find the file share group then select **Manage**. 
 . For the storage repository, check the Scan progress column to view its status. There are separate progress bars if you've enabled full scans.  
 
+== Enable and disable scans on volumes
+
+include::_include/enable-disable-scans.adoc[]
