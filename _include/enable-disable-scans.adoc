@@ -12,7 +12,7 @@ image:screenshot_volume_compliance_selection.png[A screenshot of the Configurati
 . From the Data Classification menu, select *Configuration*.
 . Identify the system you want to scan. Select **Activate scan**. In the dropdown, choose **Scan all volumes: full scan**, **Scan all volumes: mapping only**, or **Manage scans** to open the system menu and configure scanning on specific volumes. 
 +
-To enable or disable scans for individual volumes, find the volumes in the list. In the scan type column, select **Map only** or **Full scan**.  
+To enable or disable scans for individual volumes, find the volumes in the list. In the scan type column, select **Map only** or **Full scan**. 
 
 .Result
 

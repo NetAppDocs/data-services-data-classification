@@ -169,7 +169,7 @@ After a fast scan, you can generate a Data Mapping Report. This report is an ove
 +
 After a full scan there are many additional Data Classification features you can apply to your data, such as view and refine data in the Data Investigation page, search for names within files, copy, move, and delete source files, and more.
 
-Data Classification captures metadata such as: file name, permissions, creation time, last access, and last modification. This includes all of the metadata that appears in the Data Investigatcdion Details page and in Data Investigation Reports.  
+Data Classification captures metadata such as: file name, permissions, creation time, last access, and last modification. This includes all of the metadata that appears in the Data Investigation Details page and in Data Investigation Reports. 
 
 Data Classification can identify many types of private data such as personal information (PII) and sensitive personal information (SPII). For details about private data, refer to xref:reference-private-data-categories.html[Categories of private data that Data Classification scans].
 
