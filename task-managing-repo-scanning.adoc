@@ -28,7 +28,7 @@ You can view the scanning status of each work environment on the Configuration p
 * *Running* (green dot): The scan task, which was in the queue, is actively in progress on the selected storage repository.
 * *Finished* (green dot): The scan of the storage repository is complete.
 * *Paused* (gray dot): You paused scanning. Although the changes in the volume are not displayed in the system, the scanned insights remain available. 
-* *Error* (red dot): The scan cannot complete because it has encountered issues. If you need to complete an action, the error appears in the tooltip under the “Required action” column.  Otherwise, the system shows an “error” status and tries to recover. When it finishes, the status changes.
+* *Error* (red dot): The scan cannot complete because it has encountered issues. If you need to complete an action, the error appears in the tooltip under the “Required action” column. Otherwise, the system shows an “error” status and tries to recover. When it finishes, the status changes.
 * *Not scanning*: The volume configuration of "Off" was selected and the system is not scanning the volume. 
 
 .Steps

@@ -38,7 +38,7 @@ You can enable Data Classification on your Azure NetApp Files volumes.
 +
 To manage scanning on only select volumes, select *Activate scan* then *Manage*. In the system overview, identify the resources you want to scan. Select the scan type for each volume then set it to the scanning type you want: full or mapping-only. 
 +
-See <<Enable and disable scans on volumes,Enable and disable scans on volumes>> for details.
+See <<Enable or disable scans on volumes>> for details.
 
 .Result
 

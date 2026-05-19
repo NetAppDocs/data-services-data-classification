@@ -40,7 +40,7 @@ Launch the installation wizard to deploy the Data Classification instance in the
 
 == Create a Console agent
 
-If you don't already have a Console agent, create a Console agent in your cloud provider. See https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html[creating a Console agent in AWS^] or https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html[creating a Console agent in GCP^]. In most cases you will probably have a Console agent set up before you attempt to activate Data Classification because most https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html[Console features require a Console agent], but there are cases where you'll you need to set one up now.
+If you don't already have a Console agent, create a Console agent in your cloud provider. See https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html[creating a Console agent in AWS^] or https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html[creating a Console agent in Azure^], or https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html[creating a Console agent in GCP^]. In most cases, you probably have a Console agent set up before you attempt to activate Data Classification because most https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html[Console features require a Console agent], but there are cases where you'll need to set one up now.
 
 There are some scenarios where you have to use a Console agent that's deployed in a specific cloud provider:
 

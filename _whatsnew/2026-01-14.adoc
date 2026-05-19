@@ -16,4 +16,4 @@ Loading times for all pages in Data Classification, the data mapping report, and
 
 === Estimated time for investigation reports
 
-When you download an investigation report, Data Classification now displays the estimated time for the download to complete.  
+When you download an investigation report, Data Classification now displays the estimated time for the download to complete. 
