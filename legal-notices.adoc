@@ -50,7 +50,7 @@ include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-
 
 //==== Your Responsibilities for Privacy and Data Protection 
 
-//When NetApp handles your Scanned Personal Information, you will act as a “data controller”, “data processor”, or both, depending on the content you upload to the service.  
+//When NetApp handles your Scanned Personal Information, you will act as a “data controller”, “data processor”, or both, depending on the content you upload to the service. 
 
 //When you upload content, you are representing to NetApp that you have sufficient authority, right, title and interest to provide the content to us for the purpose of providing Data Classification SaaS. 
 

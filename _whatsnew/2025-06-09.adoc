@@ -1,6 +1,6 @@
 === Improved update times for the Governance dashboard 
 
-Update times for individual components of the Governance dashboard have been improved. The following table displays the frequency of updates for each component.   
+Update times for individual components of the Governance dashboard have been improved. The following table displays the frequency of updates for each component.  
 
 [cols="1,1", options="header"]
 |===

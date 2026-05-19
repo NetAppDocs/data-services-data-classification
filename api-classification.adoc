@@ -433,7 +433,7 @@ curl -X POST "http:// {classification_ip}/api//{classification_version}/actions"
 
 .Response
 
-The response will return the action object, so you can use the get and delete APIs to get status about the action, or to cancel it.  
+The response will return the action object, so you can use the get and delete APIs to get status about the action, or to cancel it. 
 
 [source,text]
 { 

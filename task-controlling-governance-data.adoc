@@ -96,12 +96,9 @@ For single systems: Lists the files that are using the most capacity.
 .Steps
 
 . From Data Classification, select *Governance*.
-. In the reports tile, select *Full data mapping overview report*.
+. In the reports tile, select the **Download** button in the Full data mapping overview report heading.
 +
 image:screenshot-compliance-report-buttons.png[A screenshot of the Governance Dashboard that shows how to launch the Data Mapping Report.]
-
-// PM - confirm step with Micky/Shir
-// . To customize the company name that appears on the first page of the report, from the top right of the Data Classification page, select image:button-gallery-options.gif[the More button]. Then select *Change company name*. When you generate the next report, the company name change appears. 
 
 .Result
 

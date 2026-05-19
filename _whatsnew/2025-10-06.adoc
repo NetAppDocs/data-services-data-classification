@@ -4,7 +4,7 @@ BlueXP classification has been renamed NetApp Data Classification. In addition t
 
 === BlueXP is now NetApp Console
 
-BlueXP has been renamed and redesigned to better reflect its role in managing your data infrastructure.  
+BlueXP has been renamed and redesigned to better reflect its role in managing your data infrastructure. 
  
 The NetApp Console provides centralized management of storage and data services across on-premises and cloud environments at enterprise grade—delivering real-time insights, faster workflows, and simplified administration.
  

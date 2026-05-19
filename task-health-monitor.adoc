@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: task-health-monitor.html
 keywords: health monitor, disk usage, disk utilization, cpu usage, memory usage, metrics
-summary: Data Classification provides insights into usage and utilization to help optimize performance and remediate issues.  
+summary: Data Classification provides insights into usage and utilization to help optimize performance and remediate issues. 
 ---
 = Monitor health of NetApp Data Classification
 :hardbreaks:
