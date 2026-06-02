@@ -1,0 +1,3 @@
+=== Configuration enhancements
+
+Data Classification has introduced additional enhancements to the configuration page that optimize the experience of setting up and managing scans. For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-overview.html[Scan data sources with Data Classification^].

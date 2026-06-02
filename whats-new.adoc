@@ -14,6 +14,12 @@ summary: Learn what's new in NetApp Data Classification.
 [.lead]
 Learn what's new in NetApp Data Classification.
 
+== 08 June 2026
+*Version 1.55*
+
+include::_whatsnew/2026-06-08.adoc[]
+
+
 == 11 May 2026
 *Version 1.54*
 
