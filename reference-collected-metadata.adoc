@@ -38,15 +38,17 @@ NetApp Data Classification collects certain metadata when performing classificat
 * Older versions of the Windows OS (for example, Windows 7 and Windows 8) disable the collection of the "last accessed time" attribute by default because it can impact system performance. When this attribute is not collected, Data Classification analytics that are based on "last accessed time" will be impacted. You can enable the collection of the last access time on these older Windows systems if needed.
 ====
 
-== Last access time timestamp
+== Last accessed time timestamp
 
 When Data Classification extracts data from file shares, the operating system considers it as accessing the data and it changes the "last access time" accordingly. After scanning, Data Classification attempts to revert the last access time to the original timestamp. If Data Classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system can't revert the last access time to the original timestamp. ONTAP volumes configured with SnapLock have read-only permissions and also can't revert the last access time to the original timestamp. 
 
-By default, if Data Classification doesn't have these permissions, the system won't scan those files in your volumes because Data Classification can't revert the "last access time" to the original timestamp. However, if you don't care if the last access time is reset to the original time in your files, you can select the *Scan when missing "write attributes" permissions* switch at the bottom of the Configuration page so that Data Classification will scan the volumes regardless of permissions.
+By default, if Data Classification doesn't have these permissions, the system won't scan those files in your volumes because Data Classification can't revert the last access time to the original timestamp. If your data can tolerate the last access time not being reset to the original timestamp, enable the *Scan without write permissions* in the Configuration settings. 
 
 image:screenshot_scan_missing_permissions.png[A screenshot showing the switch you can use to have Data Classification scan your files even if it does not have the correct permissions to revert the last access time to the original timestamp.]
 
 This functionality is applicable to on-premises ONTAP systems, Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for NetApp ONTAP management, and third-party file shares.
+
+=== Scan analysis events
 
 There's a filter in the Investigation page called _Scan Analysis Event_ that enables you to display either the files that were not classified because Data Classification couldn't revert the last accessed time, or the files that were classified even though Data Classification couldn't revert the last access time. 
 
@@ -55,6 +57,6 @@ image:screenshot_scan_analysis_event_filter.png[A screenshot of the filter to se
 The filter selections are:
 
 * "Not classified -- Cannot revert last access time" - This shows the files that were not classified due to missing write permissions.
-* "Classified and updated last access time" - This shows the files that were classified and Data Classification was unable to reset the last access time back to the original date. This filter is relevant only for environments where you turned *Scan when missing "write attributes" permissions* ON. 
+* "Classified and updated last access time" - This shows the files that were classified and Data Classification was unable to reset the last access time back to the original date. This filter is relevant only for environments where *Scan without write permissions* is enabled. 
 
 If needed, you can export these results to a report so you can see which files are, or aren't, being scanned because of permissions. link:task-investigate-data.html#download-your-report[Learn more about Data Investigation reports^].
