@@ -12,7 +12,12 @@ summary: Data Classification collects certain metadata when performing classific
 :imagesdir: ./media/
 
 [.lead]
-NetApp Data Classification collects certain metadata when performing classification scans on the data from your data sources and systems. Data Classification can access most of the metadata we need to classify your data, but there are some sources where we are unable to access the data we need.
+NetApp Data Classification collects metadata while scanning your data sources and systems. Most metadata is available, but some attributes aren't available for all source types.
+
+
+
+
+NetApp Data Classification collects some metadata when performing classification scans on the data from your data sources and systems. Data Classification can access most of the metadata we need to classify your data, but there are some sources where we are unable to access the data we need.
 
 [cols="15,25,25,25",width=90%]
 |===
@@ -21,9 +26,9 @@ NetApp Data Classification collects certain metadata when performing classificat
 .3+| *Time stamps* 
 | _Creation time_ | Available | Not available (Unsupported in Linux)
 
-| _Last access time_ | Available | Available
+| _Last accessed time_ | Available | Available
  
-| _Last modify time_ | Available | Available
+| _Last modified time_ | Available | Available
 
 .2+| *Permissions* 
 | _Open permissions_ | If "EVERYONE" group has access to the file, it is considered "Open to organization" | If "Others" has access to the file, it is considered "Open to organization"
@@ -35,28 +40,31 @@ NetApp Data Classification collects certain metadata when performing classificat
 [NOTE]
 ====
 * Data Classification does not extract the "last accessed time" from the database data sources.
-* Older versions of the Windows OS (for example, Windows 7 and Windows 8) disable the collection of the "last accessed time" attribute by default because it can impact system performance. When this attribute is not collected, Data Classification analytics that are based on "last accessed time" will be impacted. You can enable the collection of the last access time on these older Windows systems if needed.
+* Older versions of the Windows OS (for example, Windows 7 and Windows 8) disable the collection of the "last accessed time" attribute by default because it can impact system performance. When this attribute is not collected, Data Classification analytics that are based on "last accessed time" will be impacted. You can enable the collection of the last accessed time on these older Windows systems if needed.
 ====
 
-== Last accessed time timestamp
+== Last accessed time
 
-When Data Classification extracts data from file shares, the operating system considers it as accessing the data and it changes the "last access time" accordingly. After scanning, Data Classification attempts to revert the last access time to the original timestamp. If Data Classification doesn't have write attributes permissions in CIFS, or write permissions in NFS, the system can't revert the last access time to the original timestamp. ONTAP volumes configured with SnapLock have read-only permissions and also can't revert the last access time to the original timestamp. 
+When Data Classification extracts data from file shares, the operating system deems it an access event updates the "last accessed time" accordingly. After scanning, Data Classification attempts to revert the last accessed time to the original timestamp. If Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system can't revert the last accessed time to the original timestamp. 
 
-By default, if Data Classification doesn't have these permissions, the system won't scan those files in your volumes because Data Classification can't revert the last access time to the original timestamp. If your data can tolerate the last access time not being reset to the original timestamp, enable the *Scan without write permissions* in the Configuration settings. 
+By default, Data Classification doesn't scan files when it doesn't have the write permissions to restore the original timestamp. If your data can tolerate the last accessed time not being reset to the original timestamp, enable the *Scan without write permissions* in the system configuration page. 
 
-image:screenshot_scan_missing_permissions.png[A screenshot showing the switch you can use to have Data Classification scan your files even if it does not have the correct permissions to revert the last access time to the original timestamp.]
+image:screenshot_scan_missing_permissions.png[A screenshot showing the switch you can use to have Data Classification scan your files even if it does not have the correct permissions to revert the last accessed time to the original timestamp.]
 
 This functionality is applicable to on-premises ONTAP systems, Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for NetApp ONTAP management, and third-party file shares.
 
+[NOTE]
+ONTAP volumes configured with SnapLock have read-only permissions and also can't revert the last accessed time to the original timestamp. 
+
 === Scan analysis events
 
-There's a filter in the Investigation page called _Scan Analysis Event_ that enables you to display either the files that were not classified because Data Classification couldn't revert the last accessed time, or the files that were classified even though Data Classification couldn't revert the last access time. 
+There's a filter in the Investigation page called _Scan Analysis Event_ that enables you to display either the files that were not classified because Data Classification couldn't revert the last accessed time, or the files that were classified even though Data Classification couldn't revert the last accessed time. 
 
 image:screenshot_scan_analysis_event_filter.png[A screenshot of the filter to see which files were scanned, and not scanned, based on having, or not having, write permissions.]
 
 The filter selections are:
 
-* "Not classified -- Cannot revert last access time" - This shows the files that were not classified due to missing write permissions.
-* "Classified and updated last access time" - This shows the files that were classified and Data Classification was unable to reset the last access time back to the original date. This filter is relevant only for environments where *Scan without write permissions* is enabled. 
+* "Not classified -- Cannot revert last accessed time" - This shows the files that were not classified due to missing write permissions.
+* "Classified and updated last accessed time" - This shows the files that were classified and Data Classification was unable to reset the last accessed time back to the original date. This filter is relevant only for environments where *Scan without write permissions* is enabled. 
 
-If needed, you can export these results to a report so you can see which files are, or aren't, being scanned because of permissions. link:task-investigate-data.html#download-your-report[Learn more about Data Investigation reports^].
+If needed, you can export these results to a report so you can see which files are being scanned or not due to permissions. link:task-investigate-data.html#download-your-report[Learn more about Data Investigation reports^].
