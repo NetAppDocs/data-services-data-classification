@@ -24,7 +24,7 @@ Review the following prerequisites to make sure that you have a supported config
 
 * The shares can be hosted anywhere, including in the cloud or on-premises. CIFS shares from older NetApp 7-Mode storage systems can be scanned as file shares.
 
-** Data Classification can't extract permissions or the "last access time" from 7-Mode systems.
+** Data Classification can't extract permissions or the "last accessed time" from 7-Mode systems.
 ** Because of a known issue between some Linux versions and CIFS shares on 7-Mode systems, you must configure the share to use only SMBv1 with NTLM authentication enabled.
 
 * There needs to be network connectivity between the Data Classification instance and the shares.
@@ -74,9 +74,8 @@ See <<Enable and disable scans on volumes,Enable and disable scans on volumes>> 
 
 
 [NOTE]
-The system overview page has a for *Scan without write permissions* option that is disabled by default. This means that if Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system won't scan the files because Data Classification can't revert the "last access time" to the original timestamp. +
-If you check the *Scan without write permissions* option, the scan resets the last accessed time and scans all files regardless of permissions. +
-To learn more about the last accessed time stamp, see link:reference-collected-metadata.html#last-access-time-timestamp[Metadata collected from data sources in Data Classification].
+The system overview page has a *Scan without write permissions* option that is disabled by default. If Data Classification doesn't have the appropriate permissions, it won't scan the files because Data Classification can't revert the "last accessed time" to the original timestamp. +
+You can override this setting using the *Scan without write permissions* option. To learn more about this option, see link:reference-collected-metadata.html#last-accessed-time-timestamp[Metadata collected from data sources in Data Classification].
 
 .Result
 

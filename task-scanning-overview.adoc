@@ -146,7 +146,7 @@ The Console UI displays data from a single connector. For tips on viewing data f
 | Created time | Yes | Yes
 | Discovered time | Yes | Yes
 | Last modified | Yes | Yes
-| Last access | Yes | Yes
+| Last accessed | Yes | Yes
 | Open permissions | Yes | Yes
 | File directory path | Yes | Yes
 | Category | Yes | No
