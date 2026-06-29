@@ -12,12 +12,7 @@ summary: Data Classification collects certain metadata when performing classific
 :imagesdir: ./media/
 
 [.lead]
-NetApp Data Classification collects metadata while scanning your data sources and systems. Most metadata is available, but some attributes aren't available for all source types.
-
-
-
-
-NetApp Data Classification collects some metadata when performing classification scans on the data from your data sources and systems. Data Classification can access most of the metadata we need to classify your data, but there are some sources where we are unable to access the data we need.
+NetApp Data Classification collects metadata while scanning your data sources and systems. Most metadata is available, but some attributes aren't available for all protocols.
 
 [cols="15,25,25,25",width=90%]
 |===
