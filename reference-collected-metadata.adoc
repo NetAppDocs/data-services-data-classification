@@ -51,15 +51,15 @@ This functionality is applicable to on-premises ONTAP systems, Cloud Volumes ONT
 [NOTE]
 ONTAP volumes configured with SnapLock have read-only permissions and also can't revert the last accessed time to the original timestamp. 
 
-=== Scan analysis events
+// === Scan analysis events
 
-There's a filter in the Investigation page called _Scan Analysis Event_ that enables you to display either the files that were not classified because Data Classification couldn't revert the last accessed time, or the files that were classified even though Data Classification couldn't revert the last accessed time. 
+// There's a filter in the Investigation page called _Scan Analysis Event_ that enables you to display either the files that were not classified because Data Classification couldn't revert the last accessed time, or the files that were classified even though Data Classification couldn't revert the last accessed time. 
 
-image:screenshot_scan_analysis_event_filter.png[A screenshot of the filter to see which files were scanned, and not scanned, based on having, or not having, write permissions.]
+// image:screenshot_scan_analysis_event_filter.png[A screenshot of the filter to see which files were scanned, and not scanned, based on having, or not having, write permissions.]
 
-The filter selections are:
+// The filter selections are:
 
-* "Not classified -- Cannot revert last accessed time" - This shows the files that were not classified due to missing write permissions.
-* "Classified and updated last accessed time" - This shows the files that were classified and Data Classification was unable to reset the last accessed time back to the original date. This filter is relevant only for environments where *Scan without write permissions* is enabled. 
+// * "Not classified -- Cannot revert last accessed time" - This shows the files that were not classified due to missing write permissions.
+// * "Classified and updated last accessed time" - This shows the files that were classified and Data Classification was unable to reset the last accessed time back to the original date. This filter is relevant only for environments where *Scan without write permissions* is enabled. 
 
-If needed, you can export these results to a report so you can see which files are being scanned or not due to permissions. link:task-investigate-data.html#download-your-report[Learn more about Data Investigation reports^].
+// If needed, you can export these results to a report so you can see which files are being scanned or not due to permissions. link:task-investigate-data.html#download-your-report[Learn more about Data Investigation reports^].
