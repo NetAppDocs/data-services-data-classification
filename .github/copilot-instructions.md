@@ -1,27 +1,41 @@
-# Copilot Instructions for NetApp Data Classification documentation
+## Copilot instructions for NetApp Data Classification documentation
 
-## Repository overview
-
+### Repository overview
 **Product:** NetApp Data Classification
 
-NetApp Data Classification is a governance service to audit security and compliance of your data. Data Classification utilizes natural language processing for contextual data analysis and categorization, giving you actionable insights into your data to address compliance requirements, detect security vulnerabilities, optimize costs, and accelerate migration.
+NetApp Data Classification is a data governance service in the NetApp Console, the centralized management interface for NetApp data services, that scans enterprise data sources to map and classify data.
+It uses AI and NLP-based analysis to identify personal and sensitive data for compliance, security, and data lifecycle decisions.
 
-## Repository structure
+### Repository structure
+- `./` – Primary documentation set; root `.adoc` task/concept/reference pages plus `project.yml` and `_index.yml` define site navigation and landing content.
+- `_include/` – Reusable include snippets for shared prerequisites, limits, and repeated procedural text.
+- `_whatsnew/` – Date-based release-note source files used by `whats-new.adoc`.
+- `media/` – Product diagrams and UI screenshots referenced by documentation pages.
+- `redirect/` – Redirect-only legacy pages that preserve retired URLs and endpoints.
+- `.github/` – Repository-scoped Copilot instructions and automation metadata.
 
-* Root directory - .adoc and .yml that contain the documentation, sidebar, and landing page structure of the repository.
-* `_include` - Reusable text blocks referenced in .adoc files in the root. 
-* `media` - Images and diagrams that are elements of articles in the root directory. This includes .png and source files. 
-* `redirect` - .adoc files for retired pages and endpoints that redirect HTTPS requests to the appropriate endpoint. This is a correctly formatted redirect page: 
+### Product-specific context
+**Architecture and components:**
+- *NetApp Console* is the management interface where users deploy and operate Data Classification.
+- A *Console agent* deploys and manages the *Data Classification instance* in cloud or on-premises environments.
+- The Data Classification instance connects to repositories over standard protocols (such as NFS, CIFS, and database connections), scans content, and indexes findings in an Elasticsearch cluster deployed on the same Data Classification server set.
+- One Data Classification instance is deployed per Console agent, and scanning is continuous after initial indexing.
 
-## Product-specific context
+**Key concepts:**
+- *Repositories* are scan targets—such as volumes, database schemas, and other user data sources—selected for analysis.
+- *Map-only scans* collect high-level metadata and usage insights without reading file contents.
+- *Full scans* include map-level metadata plus in-file classification for personal/sensitive data and entity extraction; in legacy references this appears as *map & classify* scans.
+- Scans are enabled per volume or per database schema and continue in round-robin incremental cycles, repeatedly revisiting sources to detect changes.
 
-- **Map-only scan** - Data Classification must scan data to provide insights into it. A map-only scan is a high-level overview of data that provides broad insights and reads metadata. It does not read the files. 
-- **Full scan** - Full scans provide the same benefits of a map-only scan with added insights such as names within file or specific pieces of PII. Full scans read file data, whereas mapping only scans do not. Full scans were previously known as "map & classify" scans. 
-- **Saved queries** - Custom queries created by the user to identify data or a data pattern specific to their organization. 
-- **DSAR** - A Data Subject Access request. This is a request made by an individual to access their personal data. 
+**Naming conventions and terminology:**
+- *DSAR* means *Data Subject Access Request* and is used for subject-based personal-data retrieval workflows.
+- *Saved queries* are user-defined query filters for recurring investigations and policy-driven detection.
+- *Sensitive personal data* is used for Sensitive Personally Identifiable Information (SPII)-style regulated data categories, distinct from broader *personal data* (PII).
+- The term *private mode* refers to dark-site on-premises deployment without SaaS-layer connectivity.
 
-## Typical user workflows
+### Typical user workflows
+**Cloud deployment:** Create Console agent → validate networking/permissions prerequisites → deploy Data Classification instance from Console → select repositories to scan (see `task-deploy-cloud-compliance.adoc`, `task-deploy-overview.adoc`)
 
-- **Deployment:** Deployment is the process by which customers configure a Console agent and launch Data Classification, connecting to data resource and configuring networking. Key workflows are captured in task-deploy-cloud-compliance.adoc, task-deploy-compliance-onprem.adoc,task-deploy-compliance-dark-site.adoc, and task-test-linux-system.adoc.
-- **Scanning configuration:** Customers must configure scanning on their connected resources. Scanning tasks are captured in the `task-scanning-overview.adoc` file. 
-- **Classify and manage data:** After configuring scans, data administrators capture information about compliance risks and stale data in Data Classification, prompting deletion and proper management of data. All data tasks under the "Use Data Classification" heading in project.yml pertain to these workflows. 
+**On-premises deployment:** Verify Linux host readiness → run installation script (internet-connected or private mode) → complete instance setup → open configuration and choose repositories (see `task-deploy-compliance-onprem.adoc`, `task-deploy-compliance-dark-site.adoc`, `task-test-linux-system.adoc`)
+
+**Data discovery and governance:** Enable map-only or full scans per repository → review governance/compliance dashboards and investigation views → run saved queries and reports (including DSAR-related reporting) → take remediation actions (copy/move/delete or scan-setting changes) (see `task-scanning-overview.adoc` and pages under *Use Data Classification* in `project.yml`)
