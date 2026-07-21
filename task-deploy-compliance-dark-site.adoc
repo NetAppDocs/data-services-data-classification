@@ -88,6 +88,9 @@ Note that you must restart Docker or Podman whenever you enable or update `firew
 
 TIP: The IP address of the Data Classification host system can't be changed after installation.
 
+[NOTE]
+The Data Classification installer reserves UID 4321 and GID 4321. Before you start the installation, ensure that UID 4321 and GID 4321 aren't in use on the host machine. If they are in use, the installation will fail with an "invalid user" error message.
+
 == Verify Console and Data Classification prerequisites
 
 Review the following prerequisites to make sure that you have a supported configuration before you deploy Data Classification.
