@@ -1,4 +1,4 @@
-# Copilot Instructions for NetApp Data Classification documentation
+# Copilot instructions for NetApp Data Classification documentation
 
 ## Repository overview
 
