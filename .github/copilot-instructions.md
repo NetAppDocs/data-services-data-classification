@@ -1,4 +1,4 @@
-# Copilot Instructions for NetApp Data Classification documentation
+# Copilot instructions for NetApp Data Classification documentation
 
 ## Repository overview
 
@@ -8,7 +8,6 @@ NetApp Data Classification is a governance service to audit security and complia
 
 ## Repository structure
 
-* Root directory - .adoc and .yml that contain the documentation, sidebar, and landing page structure of the repository.
 * `_include` - Reusable text blocks referenced in .adoc files in the root. 
 * `media` - Images and diagrams that are elements of articles in the root directory. This includes .png and source files. 
 * `redirect` - .adoc files for retired pages and endpoints that redirect HTTPS requests to the appropriate endpoint. This is a correctly formatted redirect page: 
