@@ -85,7 +85,7 @@ Data Classification also has role-based access control (RBAC) to allow files to 
 
 === If I restart my VM during scans, what is the impact on the scan?
 
-Scans are persistent. If you restart a VM while there are active scans, the scan will continue from the point where it left after the VM reboots successfully. 
+Scans persist. If you restart a VM while scans are running, they resume from where they left off after the VM reboots successfully.
 
 == Data Classification management and privacy
 
