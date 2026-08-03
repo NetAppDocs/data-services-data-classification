@@ -48,7 +48,7 @@ Yes, Data Classification has a REST API for the supported features in the Data C
 
 === Is Data Classification available through the cloud marketplaces?
 
-Data Classification is part of the NetApp Console core features, so you do not need to use the marketplaces for this service . 
+Data Classification is part of the NetApp Console core features. You do not need to deploy Data Classification from a cloud marketplace.
 
 == Data Classification scanning and analytics
 
@@ -83,7 +83,9 @@ Data Classification also has role-based access control (RBAC) to allow files to 
 //Data sources can be represented visually, and relationships defined and depicted graphically. For example, admins can see all stale, duplicate, and non-business-related data across data sources throughout the enterprise. They can then copy, move, delete, and manage data to optimize storage costs and reduce risk. Users can reduce risk by seeing what sensitive data might be exposed, and they can create jobs to manage permissions for strong data protection. Data Classification also classifies all the different types of data, so admins can investigate data by type and see what actions have been taken on the data, and when.
 
 
+=== If I restart my VM during scans, what is the impact on the scan?
 
+Scans persist. If you restart a VM while scans are running, they resume from where they left off after the VM reboots successfully.
 
 == Data Classification management and privacy
 
