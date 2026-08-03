@@ -48,7 +48,7 @@ Yes, Data Classification has a REST API for the supported features in the Data C
 
 === Is Data Classification available through the cloud marketplaces?
 
-Data Classification is part of the NetApp Console core features. You don't need to use the marketplaces to use Data Classification. 
+Data Classification is part of the NetApp Console core features. You do not need to deploy Data Classification from a cloud marketplace.
 
 == Data Classification scanning and analytics
 
