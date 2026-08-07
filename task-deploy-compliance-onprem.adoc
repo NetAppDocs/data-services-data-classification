@@ -204,7 +204,7 @@ You must have the information for the Active Directory:
 
 == Install Data Classification on the Linux host
 
-For typical configurations you'll install the software on a single host system. <<Single-host installation for typical configurations,See those steps here>>.
+In most situations, you install Data Classification on a single-host system. This is not the same VM host as the Console agent. <<Single-host installation for typical configurations,See those steps here>>.
 
 image:diagram_deploy_onprem_single_host_internet.png[A diagram showing the location of the data sources you can scan when using a single Data Classification instance deployed on-prem with internet access.]
 
