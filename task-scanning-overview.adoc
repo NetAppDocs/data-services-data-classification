@@ -167,4 +167,3 @@ The Console UI displays data from a single connector. For tips on viewing data f
 |===
 
 ====
-// End snippet
