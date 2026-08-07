@@ -15,7 +15,7 @@ summary: Scan your data sources with NetApp Data Classification.
 [.lead]
 NetApp Data Classification scans the data in the repositories (the volumes, database schemas, or other user data) that you select to identify personal and sensitive data. Data Classification then maps your organizational data, categorizes each file, and identifies predefined patterns in the data. The result of the scan is an index of personal information, sensitive personal information, data categories, and file types.
 
-After the initial scan, Data Classification continuously scans your data in a round-robin fashion to detect incremental changes. This is why it's important to keep the instance running.
+After the initial scan, Data Classification continuously scans your data in a round-robin fashion to detect incremental changes. Scans are automatically conducted every day. Data Classification conducts scans in batches of six; you can pause scans or link:task-managing-repo-scanning.html#prioritize-scans[manually prioritize them].
 
 You can enable and disable scans at the volume level or at the database schema level.
 
@@ -27,8 +27,7 @@ You can conduct two types of scans in Data Classification:
 * **Full scans** provide deep-level scanning of your data. A full scan includes a mapping scan and a classification of data inside the files. 
 
 [TIP]
-Performing a map-only scan can be helpful in gaining an overview of your data and pinpoint specific areas to perform full scans on. 
-
+Performing a map-only scan can be helpful in gaining an overview of your data. With this high-level overview, you can then decide which data sources you want to conduct full scans on. 
 
 Review the tables to see what information is surfaced in map-only scans and full scans. 
 
@@ -168,4 +167,3 @@ The Console UI displays data from a single connector. For tips on viewing data f
 |===
 
 ====
-// End snippet
