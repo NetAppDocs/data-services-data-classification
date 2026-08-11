@@ -42,7 +42,7 @@ Before using the OVA file to install Data Classification, you must have:
 |===
 +
 . Enter the vSphere client. Right-click the target cluster or host then select *Deploy OVF Template* > *Create VM from OVA*. 
-. Upload the OVA file you downloaded in step one. 
+. Upload the OVA file you downloaded in step one.
 . Specify the *VM name* and the target data center, host or cluster, and datastore. 
 . Accept the NetApp End User License Agreement. 
 . Customize the template. You must provide the following information:
@@ -67,6 +67,8 @@ The password is used for root access, SSH access, and system administration. Sto
 . Download the Data Classification software from the link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. 
 +
 Select the file named *DATASENSE-INSTALLER-<version>.tar.gz*.
+. Copy the installer file to the VM host: `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz`.
+. Unzip the installer file on the host machine.
 . In the Console, select *Governance > Classification*.
 
 . Select *Deploy Classification*.

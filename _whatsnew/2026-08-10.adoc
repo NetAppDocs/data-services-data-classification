@@ -1,0 +1,5 @@
+=== Active scans tab to enhance scan management
+
+Data Classification now provides an *Active scans* tab in the Configuration menu, providing an enhanced experience for managing scans. The Active scans tab provides an overview of all volumes that you've activated for scanning with familiar filters to sort your resources. The tab also provides a central location to prioritize scans, pause scans, and review errors.
+
+For more information, see link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html[Manage scans^].
