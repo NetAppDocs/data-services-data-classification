@@ -55,13 +55,12 @@ Mapping-only scans aren't available for databases. When you enable database scan
 .Steps
 
 . From the Data Classification menu, select *Configuration*. 
-. To change the scan type for all assets in a system, select the action menu for that system then change to the desired scan type. For example, to change the scans for a file shares group from mapping-only to full, select *Scan all shares: full scan*. 
-+
-To change the scan type for individual buckets, shares, or volumes, select the **Active scans** tab. Apply the appropriate filters to identify the resources you want to modify. 
+. To change the scan type for all assets in a system, select the action menu for that system then change to the desired scan type. For example, to change the scans for a file shares group from mapping-only to full, select *Scan all shares: full scan*.
+. To change the scan type for individual buckets, shares, or volumes, select the **Active scans** tab. Apply the appropriate filters to identify the resources you want to modify. 
 +
 image:screenshot_compliance_config_button.png[A screenshot showing how to select the Configuration button for a system.]
 +
-In the Scan type column, select the designated option and change to **Mapping only** or **Full scan**. 
+In the Scan type column, select the designated resource and change it to **Mapping only** or **Full scan**. 
 
 == Prioritize scans
 
