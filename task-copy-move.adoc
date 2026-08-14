@@ -12,7 +12,7 @@ summary: After filtering data in the investigation dashboard, you can copy, move
 :imagesdir: ./media/
 
 [.lead]
-In addition to providing insights about governance and savings opportunities, NetApp Data Classification also enables you to perform actions on files from its Investigation dashboard. After filtering data in the investigation dashboard, you can copy, move, and delete unstructured data. Performing these actions can improve compliance, for example, moving files to a more secure location, or create savings opportunities by deleting old or duplicate files. 
+NetApp Data Classification enables you to perform actions on files discovered in the Investigation dashboard. After filtering data, you can copy, move, and delete unstructured data to improve compliance—for example, by moving sensitive files to a more secure location—or to create savings by deleting old or duplicate files. 
 
 == Copy files
 
@@ -52,7 +52,7 @@ image:screenshot-move-nfs.png[Screenshot of the move function for NFS files]
 
 == Delete files
 
-When you filter data on the Investigation dashboard to discover space and cost saving opportunities, you can delete those files. Deleting files is only supported for unstructured files. 
+When you filter data on the Investigation dashboard to discover space and cost saving opportunities, you can delete those files. You can delete only unstructured files. 
 
 .Steps
 . In the Investigation dashboard, select the files you want to delete.
