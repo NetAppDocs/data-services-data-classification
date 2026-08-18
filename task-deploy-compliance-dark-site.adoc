@@ -5,7 +5,7 @@ keywords: cloud compliance, data sense, get started, web browser connectivity, c
 summary: Complete a few steps to install NetApp Data Classification on a Linux host in an on-premises site that doesn't have internet access - also known as "private mode". This type of installation is perfect for your secure sites.
 ---
 
-= Install NetApp Data Classification on a Linux host with no internet access
+= Install NetApp Data Classification on a Linux host in private mode
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,13 +13,13 @@ summary: Complete a few steps to install NetApp Data Classification on a Linux h
 :imagesdir: ./media/
 
 [.lead]
-Installing NetApp Data Classification on a Linux host in an on-premises site that doesn't have internet access is known as _private mode_. This type of installation, which uses an installation script, has no connectivity to the NetApp Console SaaS layer. 
+Use _private mode_ to install NetApp Data Classification on a Linux host in an on-premises site without internet access. This deployment uses an installation script and keeps the Data Classification instance disconnected from the NetApp Console SaaS layer, allowing you to scan local data sources in an isolated environment.
 
 link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html[Learn about the different deployment modes for the Console agent and Data Classification^].
 
 include::_include/ova-deployment.adoc[]
 
-The Data Classification installation script starts by checking if the system and environment meet the required prerequisites. If the prerequisites are all met, then the installation starts. If you would like to verify the prerequisites independently of running the Data Classification installation, there is a separate software package you can download that only tests for the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install Data Classification].
+The Data Classification installation script checks whether the system and environment meet the required prerequisites. If they do, installation starts. If you would like to verify the prerequisites independently of running the Data Classification installation, you can download a separate software package that tests only the prerequisites. link:task-test-linux-system.html[See how to check if your Linux host is ready to install Data Classification].
 
 == Supported data sources
 
