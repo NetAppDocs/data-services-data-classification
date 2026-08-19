@@ -12,11 +12,11 @@ summary: Saved queries are custom filters that provide search results in the Inv
 :imagesdir: ./media/
 
 [.lead]
-NetaApp Data Classification supports saving your search queries. With a saved query, you can create custom filters to sort through frequent queries of your data Investigation page. Data Classification also includes predefined saved queries based on common requests. 
+NetApp Data Classification lets you save search queries and create custom filters to find data in the Investigation page. You can use predefined queries or create saved queries and policies to act on matching data.
 
 The *Saved queries* tab in the Compliance dashboard lists all the predefined and custom saved queries available on this instance of Data Classification.
 
-Saved queries can also be saved as **policies**. Whereas queries filter data, policies allow you to act on the data. With a policy: you can delete discovered data or send email updates about the discovered data. 
+You can convert saved queries to **policies**. Whereas queries filter data, policies allow you to act on the data. With a policy, you can delete discovered data or send email updates about it. 
 
 Saved queries also appear in the list of filters in the Investigation page.
 
@@ -24,13 +24,13 @@ image:screenshot_compliance_highlights_tab.png[A screenshot of the Saved queries
 
 == View saved queries results in the Investigation page
 
-To display the results for a saved query in the Investigation page, select the image:button-gallery-options.gif[More button] button for a specific search then select *Investigate Results*.
+To display saved query results in the Investigation page, select the image:button-gallery-options.gif[More button] button for a search, then select *Investigate Results*.
 
 image:screenshot_compliance_highlights_investigate.png[A screenshot of selecting Investigate Results for a specific search from the Saved query tab.]
 
 == Create saved queries and policies
 
-You can create your own custom saved queries that provide results for queries specific to your organization. Results are returned for all files and directories (shares and folders) that match the search criteria.
+You can create custom saved queries that return results specific to your organization. Results are returned for all files and directories (shares and folders) that match the search criteria.
 
 include::_include/saved-query.adoc[]
 
@@ -38,7 +38,7 @@ include::_include/saved-query.adoc[]
 
 You can modify the name and description of a saved query. You can also convert a query to a policy and vice versa. 
 
-You cannot modify default saved queries. You cannot modify the filters of a saved query. You can alternately view the investigation results of a saved query, change or modify the filters, then save it as a new query or policy. 
+You cannot modify default saved queries or the filters of an existing saved query. Instead, view the saved query's investigation results, change the filters, and save the result as a new query or policy. 
 
 .Steps
 
@@ -46,10 +46,10 @@ You cannot modify default saved queries. You cannot modify the filters of a save
 +
 image:screenshot-edit-search.png[A screenshot showing Edit saved query.]
 
-. Make the changes to the name and description fields. To only change the name and description fields.
+. Make changes to the name and description fields.
 +
 You can optionally convert the query to a policy or convert the policy to a saved query. Switch the *Run as a policy* toggle as needed. 
-.. If you're converting the query to a policy, choose to *Delete permanently* or *Send email updates*. If you choose email updates, you can email the query results to _all_ Console users at daily, weekly, or monthly. Alternately, you can send the notification to specific email address at the same frequencies. 
+.. If you're converting the query to a policy, choose to *Delete permanently* or *Send email updates*. If you choose email updates, you can email the query results to _all_ Console users daily, weekly, or monthly. Alternatively, you can send the notification to a specific email address at the same frequencies. 
 . Select *Save* to complete the changes. 
 
 == Delete saved queries
@@ -76,7 +76,7 @@ Files with more than 20 personal data identifiers or database columns with more 
 
 * **Private data - Stale over 7 years**
 +
-Files containing personal or sensitive personal information, last modified more than 7 years ago
+Files containing personal or sensitive personal information, last modified more than seven years ago
 
 * **Protect - High** 
 +
@@ -84,11 +84,11 @@ Files or database columns that contain a password, credit card information, IBAN
 
 * **Protect - Low**
 +
-Files that have not been accessed for more than 3 years
+Files that have not been accessed for more than three years
 
 * **Protect - Medium**
 +
-Files that contain files or database columns with personal data identifiers including ID numbers, tax identification numbers, drivers license numbers, medicinal IDs, or passport numbers
+Files or database columns that contain personal data identifiers, including ID numbers, tax identification numbers, driver's license numbers, medical IDs, or passport numbers
 
 * **Sensitive Personal data - High risk**
 +
