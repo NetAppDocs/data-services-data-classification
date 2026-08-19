@@ -75,7 +75,7 @@ Select the file named *DATASENSE-INSTALLER-<version>.tar.gz*.
 +
 image:screenshot-deploy-classification.png[A screenshot of selecting the button to activate Data Classification.]
 . Select the appropriate *Deploy* option for the instance type: cloud or on-premises.
-. The _Deploy Data Classification On Premises_ dialog appears. Copy the provided command, such as `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`, to a text file for later use. Select *Close* to dismiss the dialog.
+. The _Deploy Data Classification On Premises_ dialog appears. Copy the provided command (for example `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq`) to a text file for later use. Select *Close* to dismiss the dialog.
 . Use SSH to connect to the OVA appliance as the administrator user. 
 . Run the install command you generated to complete installation and register the system with your organization. 
 
