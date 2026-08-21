@@ -119,7 +119,7 @@ Note the following about the default instance:
 
 * In Azure, Data Classification runs on a link:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series[Standard_D16s_v3 VM^] with a 500 GiB disk. The operating system image is Ubuntu 22.04.
 
-* In GCP, Data Classification runs on a link:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16 VM^] with a 500 GiB Standard persistent disk. The operating system image is Ubuntu 22.04.
+* In GCP, Data Classification runs on an link:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines[n2-standard-16 VM^] with a 500 GiB Standard persistent disk. The operating system image is Ubuntu 22.04.
 
 * In regions where the default instance isn't available, Data Classification runs on an alternate instance. link:reference-instance-types.html[See the alternate instance types].
 
@@ -200,7 +200,7 @@ Data Classification deploys a single server, or cluster, wherever you choose: in
 
 The Console deploys the Data Classification instance with a security group that enables inbound HTTP connections from the Console agent.
 
-When you use the Console in SaaS mode, the connection to the Console is served over HTTPS, and the private data sent between your browser and the Data Classification instance is secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties cannot read it.
+When you use the Console in SaaS mode, the connection to the Console is served over HTTPS, and the private data sent between your browser and the Data Classification instance are secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties can't read it.
 
 Outbound rules are completely open. Internet access is needed to install and upgrade the Data Classification software and to send usage metrics.
 

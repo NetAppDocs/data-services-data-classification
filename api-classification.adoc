@@ -56,7 +56,7 @@ The following example shows an API call to copy files.
 
 .API Request
 
-First, get the relevant fields and options for a system to view the filters in the Investigation tab.
+You need to get all the relevant fields and options for a system to view all of the filters in the Investigation tab.
 
 [source,http]
 curl -X GET "http://{classification_ip}/api/{classification_version} /search/options?data_mode=ALL_EXTRACTABLE" -H "accept: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR……… " -H "x-agent-id: hOXsZNvnA5LsthwMILtjL9xZFYBQxAwMclients" 
@@ -417,7 +417,7 @@ curl -X GET "http://{classification_ip}/api/{classification_version} /search/opt
   ] 
 } 
 
-Use that response in the request parameters to filter the files that you want to copy. 
+Use the response in the request parameters to filter the files you want to copy. 
  
 You can apply an action on multiple items. Supported action types include: move, delete, and copy.
 //, assign to, FlexClone, export data, rescan, and label. 

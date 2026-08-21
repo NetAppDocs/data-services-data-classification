@@ -65,7 +65,7 @@ Data scans have a negligible impact on your storage systems and on your data.
 
 === Does scan performance vary?
 
-Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size of the host system (either in the cloud or on-premises). See link:concept-classification.html[The Data Classification instance] and link:task-deploy-overview.html[Deploying Data Classification] for more information.
+Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size of the size and location of host system (that is, whether it's in the cloud or on-premises). See link:concept-classification.html[The Data Classification instance] and link:task-deploy-overview.html[Deploying Data Classification] for more information.
 
 When initially adding new data sources, you can also choose to perform only a map-only scan or a full scan. Mapping can be done on your data sources very quickly because it does not access files to see the data inside. link:task-scanning-overview.html[Understand the difference between a mapping and classification scan].
 
@@ -73,7 +73,7 @@ When initially adding new data sources, you can also choose to perform only a ma
 
 Data Classification offers extensive search capabilities that make it easy to search for a specific file or piece of data across all connected sources. Data Classification empowers users to search deeper than just what the metadata reflects. It is a language-agnostic service that can also read the files and analyze a multitude of sensitive data types, such as names and IDs. For example, users can search across both structured and unstructured data stores to find data that may have leaked from databases to user files, in violation of corporate policy. Searches can be saved for later, and policies can be created to search and take action on the results at a set frequency.
 
-Once the files of interest are found, characteristics can be listed, including tags, system account, bucket, file path, category (from classification), file size, last modified, permission status, duplicates, sensitivity level, personal data, sensitive data types within the file, owner, file type, created time, file hash, whether the data was assigned to someone seeking their attention, and more. Filters can be applied to screen out characteristics that are not pertinent. 
+Once the files of interest are found, characteristics can be listed, including tags, system account, bucket, file path, category (from classification), file size, last modified, permission status, duplicates, sensitivity level, personal data, sensitive data types within the file, owner, file type, file size, created time, file hash, whether the data was assigned to someone seeking their attention, and more. Filters can be applied to screen out characteristics that are not pertinent. 
 
 Data Classification also has role-based access control (RBAC) to allow files to be moved or deleted, if the right permissions are present. If the right permissions are not present, the tasks can be assigned to someone in the organization who does have the right permissions.
 
@@ -182,7 +182,7 @@ Additionally, if you want to allow certain users to just view Data Classificatio
 
 === Can anyone access the private data sent between my browser and Data Classification?
 
-No. The private data sent between your browser and the Data Classification instance is secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties cannot read it. Data Classification will not share any data or results with NetApp unless you request and approve access.
+No. The private data sent between your browser and the Data Classification instance is secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties cannot read it. Data Classification does not share any data or results with NetApp unless you request and approve access.
 
 The data that is scanned stays within your environment. 
 
@@ -247,7 +247,7 @@ The following questions relate to the separate Data Classification instance.
 
 === What deployment models does Data Classification support?
 
-NetApp Console lets you scan and report on systems virtually anywhere, including on-premises, cloud, and hybrid environments. Data Classification is normally deployed using a SaaS model, in which the service is enabled via the Console interface and requires no hardware or software installation. Even in this click-and-run deployment mode, data management can be done regardless of whether the data stores are on premises or in the public cloud.
+The NetApp Console lets you scan and report on systems virtually anywhere, including on-premises, cloud, and hybrid environments. Data Classification is normally deployed using a SaaS model, in which the service is enabled via the Console interface and requires no hardware or software installation. Even in this click-and-run deployment mode, data management can be done regardless of whether the data stores are on premises or in the public cloud.
 
 === What type of instance or VM is required for Data Classification?
 
