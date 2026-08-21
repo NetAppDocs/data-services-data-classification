@@ -12,8 +12,7 @@ summary: This FAQ can help if you're just looking for a quick answer to a questi
 :imagesdir: ./media/
 
 [.lead]
-
-This FAQ can help if you're just looking for a quick answer to a question.
+Use this FAQ to find quick answers to common questions about NetApp Data Classification.
 
 == NetApp Data Classification
 
@@ -21,9 +20,9 @@ The following questions provide a general understanding of Data Classification.
 
 === How does Data Classification work?
 
-Data Classification deploys another layer of AI alongside your NetApp Console system and storage systems. It then scans the data on volumes, buckets, databases, and other storage accounts and indexes the data insights that are found. Data Classification leverages both artificial intelligence and natural language processing, as opposed to alternative solutions that are commonly built around regular expressions and pattern matching. 
+Data Classification deploys another layer of AI alongside your NetApp Console system and storage systems. It then scans the data on volumes, buckets, databases, and other storage accounts and indexes the data insights it finds. Data Classification leverages both artificial intelligence and natural language processing, as opposed to alternative solutions that are commonly built around regular expressions and pattern matching. 
 
-Data Classification uses AI to provide contextual understanding of data for accurate detection and classification. It is driven by AI because it is designed for modern data types and scale. It also understands data context in order to provide strong, accurate, discovery and classification.
+Data Classification uses AI to provide contextual understanding of data for accurate detection and classification. It is driven by AI because it is designed for modern data types and scale. It also understands data context in order to provide strong, accurate discovery and classification.
 
 link:concept-classification.html[Learn more about how Data Classification works].
 
@@ -66,7 +65,7 @@ Data scans have a negligible impact on your storage systems and on your data.
 
 === Does scan performance vary?
 
-Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size characteristics of the host system (either in the cloud or on-premises). See link:concept-classification.html[The Data Classification instance] and link:task-deploy-overview.html[Deploying Data Classification] for more information.
+Scan performance can vary based on the network bandwidth and the average file size in your environment. It can also depend on the size of the size and location of host system (that is, whether it's in the cloud or on-premises). See link:concept-classification.html[The Data Classification instance] and link:task-deploy-overview.html[Deploying Data Classification] for more information.
 
 When initially adding new data sources, you can also choose to perform only a map-only scan or a full scan. Mapping can be done on your data sources very quickly because it does not access files to see the data inside. link:task-scanning-overview.html[Understand the difference between a mapping and classification scan].
 
@@ -100,7 +99,7 @@ NOTE: Activating Data Classification on a data source results in an immediate in
 
 You can disable Data Classification from scanning an individual system, database, or file share group from the Data Classification Configuration page. See link:task-managing-compliance.html[Remove data sources from Data Classification].
 
-To completely remove the Data Classification instance,  manually remove the Data Classification instance from your cloud provider's portal or on-prem location.
+To completely remove the Data Classification instance, manually remove the Data Classification instance from your cloud provider's portal or on-prem location.
 
 
 === Can the service exclude scanning data in certain directories?
@@ -115,7 +114,7 @@ No. Data Classification does not scan snapshots because the content is identical
 
 When Data Classification scans volumes that have cold data tiered to object storage using the map-only scans, it scans all of the data--data that's on local disks and cold data tiered to object storage. This is also true for non-NetApp products that implement tiering.
 
-The map-only scan doesn't heat up the cold data: it stays cold and remains in object storage. On the other hand, if you perform the full scan, some configurations might heat up the cold data. 
+The map-only scan doesn't heat up the cold data: it stays cold and remains in object storage. On the other hand, if you perform the full scan, some configurations can heat up the cold data. 
 
 
 
@@ -155,13 +154,13 @@ Data Classification can only scan data from data sources that are local to the o
 
 Data Classification scans all files for category and metadata insights, and displays all file types in the file types section of the dashboard.
 
-When Data Classification detects Personal Identifiable Information (PII), or when it performs a DSAR search, only the following file formats are supported:
+When Data Classification detects personally identifiable information (PII), or when it performs a DSAR search, only the following file formats are supported:
 
 `+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
 
 === What kinds of data and metadata does Data Classification capture?
 
-Data Classification enables you to run a general "mapping" scan or a full "classification" scan on your data sources. Mapping provides only a high-level overview of your data, whereas Classification provides deep-level scanning of your data. Mapping can be done on your data sources very quickly because it does not access files to see the data inside.
+Data Classification enables you to run a map-only scan or a full scan on your data sources. Map-only scans provide only a high-level overview of your data, whereas full scans provide deep-level scanning of your data. Map-only scans can be done on your data sources very quickly because they do not access files to see the data inside.
 
 * *Data mapping scan (Mapping only scan)*: Data Classification scans the metadata only. This is useful for overall data management and governance, quick project scoping, very large estates, and prioritization. Data mapping is based on metadata and is considered a *fast* scan.
 +
@@ -183,7 +182,7 @@ Additionally, if you want to allow certain users to just view Data Classificatio
 
 === Can anyone access the private data sent between my browser and Data Classification?
 
-No. The private data sent between your browser and the Data Classification instance are secured with end-to-end encryption using TLS 1.2, which means NetApp and non-NetApp parties can't read it. Data Classification won't share any data or results with NetApp unless you request and approve access.
+No. The private data sent between your browser and the Data Classification instance is secured with end-to-end encryption using TLS 1.2, which means NetApp and third parties cannot read it. Data Classification does not share any data or results with NetApp unless you request and approve access.
 
 The data that is scanned stays within your environment. 
 
@@ -248,7 +247,7 @@ The following questions relate to the separate Data Classification instance.
 
 === What deployment models does Data Classification support?
 
-The NetApp Console allows the user to scan and report on systems virtually anywhere, including on-premises, cloud, and hybrid environments. Data Classification is normally deployed using a SaaS model, in which the service is enabled via the Console interface and requires no hardware or software installation. Even in this click-and-run deployment mode, data management can be done regardless of whether the data stores are on premises or in the public cloud.
+The NetApp Console lets you scan and report on systems virtually anywhere, including on-premises, cloud, and hybrid environments. Data Classification is normally deployed using a SaaS model, in which the service is enabled via the Console interface and requires no hardware or software installation. Even in this click-and-run deployment mode, data management can be done regardless of whether the data stores are on premises or in the public cloud.
 
 === What type of instance or VM is required for Data Classification?
 

@@ -26,11 +26,11 @@ Before you enable Data Classification, make sure you have a supported configurat
 
 == Verify that Data Classification has access to volumes
 
-Make sure that Data Classification can access volumes by checking your networking, security groups, and export policies. You'll need to provide Data Classification with CIFS credentials so it can access CIFS volumes.
+Make sure that Data Classification can access volumes by checking your networking, security groups, and export policies. You need to provide Data Classification with CIFS credentials so it can access CIFS volumes.
 
 .Checklist
 
-* Make sure that there's a network connection between the Data Classification instance and each network that includes volumes for Cloud Volumes ONTAP or on-prem ONTAP clusters.
+* Make sure that there is a network connection between the Data Classification instance and each network that includes volumes for Cloud Volumes ONTAP or on-premises ONTAP clusters.
 * Ensure that the security group for Cloud Volumes ONTAP allows inbound traffic from the Data Classification instance.
 +
 You can either open the security group for traffic from the IP address of the Data Classification instance, or you can open the security group for all traffic from inside the virtual network.
@@ -50,7 +50,7 @@ If you've entered the credentials correctly, a message confirms all CIFS volumes
 
 include::_include/enable-disable-scans.adoc[]
 
-NOTE: Data Classification scans only one file share under a volume. If you have multiple shares in your volumes, you'll need to scan those other shares separately as a shares group. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume[See more details about this Data Classification limitation^].
+NOTE: Data Classification scans only one file share under a volume. If you have multiple shares in your volumes, you need to scan those other shares separately as a shares group. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume[See more details about this Data Classification limitation^].
 
 
 //== Scan data protection volumes

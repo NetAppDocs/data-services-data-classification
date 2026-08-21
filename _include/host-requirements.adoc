@@ -1,4 +1,4 @@
-* Data Classification must be on a dedicated host. The host can't be shared with other applications or third-party software such as antivirus. 
+* Data Classification must be on a dedicated host. The host cannot be shared with other applications or third-party software such as antivirus. 
 
 * Choose the size that aligns with the data set you plan to scan with Data Classification. 
 +
@@ -59,7 +59,7 @@ a|* 500 GiB SSD on /, or 100 GiB available on /opt
 
 ** Advanced Vector Extensions (AVX2) must be enabled on the host system.
 
-* *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it's not registered, the system can't access repositories to update required 3rd-party software during installation.
+* *Red Hat Subscription Management*: The host must be registered with Red Hat Subscription Management. If it is not registered, the system cannot access repositories to update required third-party software during installation.
 
 * *Additional software*: You must install the following software on the host before you install Data Classification:
 
