@@ -47,7 +47,7 @@ Use the following filters to view how much sensitive information is contained in
 | Sensitivity Level | Select the sensitivity level: Personal, Sensitive personal, or Non sensitive.
 | Number of identifiers | Select the range of detected sensitive identifiers per file. Includes personal data and sensitive personal data. When filtering in Directories, Data Classification totals the matches from all files in each folder (and sub-folders).
 
-NOTE: The December 2023 (version 1.26.6) release removed the option to calculate the number of personal identifiable information (PII) data by Directories. 
+NOTE: The December 2023 (version 1.26.6) release removed the option to calculate the number of personally identifiable information (PII) data by Directories. 
 
 | Personal Data | Select the link:reference-private-data-categories.html[types of personal data].
 | Sensitive Personal Data | Select the link:reference-private-data-categories.html[types of sensitive personal data].

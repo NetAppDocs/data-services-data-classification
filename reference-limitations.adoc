@@ -19,7 +19,7 @@ Known limitations identify functions that are not supported or do not interopera
 The December 2023 (version 1.26.6) release removed the following options: 
 
 * The option to activate audit log collection has been disabled. 
-* During the Directories investigation, the option to calculate the number of personally identifiable information  (PII) data by Directories is not available. 
+* During the Directories investigation, the option to calculate the number of personally identifiable information (PII) data by Directories is not available. 
 * The option to integrate data using Azure Information Protection (AIP) labels has been disabled. 
 
 == Data Classification scanning

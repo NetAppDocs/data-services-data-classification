@@ -12,14 +12,14 @@ summary: Data Classification collects certain metadata when performing classific
 :imagesdir: ./media/
 
 [.lead]
-NetApp Data Classification collects metadata while scanning your data sources and systems. Most metadata is available, but some attributes aren't available for all protocols.
+NetApp Data Classification collects metadata while scanning your data sources and systems. Some metadata attributes are not available for all protocols.
 
 [cols="15,25,25,25",width=90%]
 |===
 |  | *Metadata* | *CIFS* | *NFS*
 
 .3+| *Time stamps* 
-| _Creation time_ | Available | Not available (Unsupported in Linux)
+| _Creation time_ | Available | Not available (unsupported in Linux)
 
 | _Last accessed time_ | Available | Available
  
@@ -40,16 +40,16 @@ NetApp Data Classification collects metadata while scanning your data sources an
 
 == Last accessed time
 
-When Data Classification extracts data from file shares, the operating system deems it an access event updates the "last accessed time" accordingly. After scanning, Data Classification attempts to revert the last accessed time to the original timestamp. If Data Classification doesn't have write attributes permissions in CIFS or write permissions in NFS, the system can't revert the last accessed time to the original timestamp. 
+When Data Classification extracts data from file shares, the operating system treats it as an access event and updates the "last accessed time" accordingly. After scanning, Data Classification attempts to revert the last accessed time to the original timestamp. If Data Classification does not have write-attributes permissions in CIFS or write permissions in NFS, the system cannot revert the last accessed time to the original timestamp. 
 
-By default, Data Classification doesn't scan files when it doesn't have the write permissions to restore the original timestamp. If your data can tolerate the last accessed time not being reset to the original timestamp, enable the *Scan without write permissions* in the system configuration page. 
+By default, Data Classification does not scan files when it does not have the write permissions to restore the original timestamp. If your data can tolerate the last accessed time not being reset to the original timestamp, enable *Scan without write permissions* on the system configuration page. 
 
 image:screenshot_scan_missing_permissions.png[A screenshot showing the switch you can use to have Data Classification scan your files even if it does not have the correct permissions to revert the last accessed time to the original timestamp.]
 
 This functionality is applicable to on-premises ONTAP systems, Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for NetApp ONTAP management, and third-party file shares.
 
 [NOTE]
-ONTAP volumes configured with SnapLock have read-only permissions and also can't revert the last accessed time to the original timestamp. 
+ONTAP volumes configured with SnapLock have read-only permissions and also cannot revert the last accessed time to the original timestamp. 
 
 // === Scan analysis events
 

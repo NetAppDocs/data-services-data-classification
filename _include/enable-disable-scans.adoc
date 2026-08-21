@@ -1,9 +1,9 @@
-You can start or stop scans on any system at any time from the Configuration page. You can also switch scans from map-only scans to mapping and classification scans, and vice-versa. It's recommended that you scan all volumes in a system. 
+You can start or stop scans on any system at any time from the Configuration menu. You can also switch scans from map-only scans to full scans, and vice-versa. 
 
-The option to *Scan without write permissions* is disabled by default. This means that if Data Classification doesn't have appropriate write permissions, the system won't scan the files because Data Classification can't revert the "last accessed time" to the original timestamp. If your system can tolerate the last accessed time being modified, select this option. link:reference-collected-metadata.html#last-accessed-time-timestamp[Learn more^].
+The option to *Scan without write permissions* is disabled by default. This means that if Data Classification does not have appropriate write permissions, the system will not scan the files because Data Classification cannot revert the "last accessed time" to the original timestamp. If your system can tolerate the last accessed time being modified, select this option. link:reference-collected-metadata.html#last-accessed-time-timestamp[Learn more^].
 
 [NOTE]
-New volumes added to the system are automatically scanned only when you have enabled scanning for all volumes. If you've only enabled scanning on certain volumes, you must manually enable scanning on the newly added volume. 
+New volumes added to the system are automatically scanned only when you have enabled scanning for all volumes. If you have only enabled scanning on certain volumes, you must manually enable scanning on the newly added volume. 
 
 image:screenshot_volume_compliance_selection.png[A screenshot of the Configuration page where you can enable or disable scanning of individual volumes.]
 
