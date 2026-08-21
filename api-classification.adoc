@@ -13,7 +13,7 @@ summary: The NetApp Data Classification capabilities available through the web U
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Data Classification capabilities available through the web UI are also available through the REST API.
+Use the NetApp Data Classification REST API to access the same capabilities that are available in the web UI.
 
 There are four categories defined within Data Classification that correspond to the tabs in the UI:
 
@@ -30,11 +30,11 @@ The API enables you to perform the following functions:
 
 * Export information
 ** Everything that is available in the UI can be exported via the API (with the exception of reports)
-** Data is exported in a JSON format (easy to parse and push to 3rd party applications, like Splunk)
+** Data is exported in JSON format (easy to parse and push to third-party applications, such as Splunk)
 
 * Create queries using "AND" and "OR" statements, include and exclude information, and more.
 +
-For example, you can locate files _without_ specific Personal Identifiable Information (PII) (functionality not available in the UI). You can also exclude specific fields for the export operation.
+For example, you can locate files _without_ specific personally identifiable information (PII) (functionality not available in the UI). You can also exclude specific fields for the export operation.
 
 * Perform actions
 ** Update CIFS credentials 
@@ -46,7 +46,7 @@ The API is secure and it uses the same authentication method as the UI. You can 
 
 == Accessing the Swagger API reference
 
-To get into Swagger you'll need the IP address of your Data Classification instance. In the case of a cloud deployment you'll use the public IP address. Then you'll need to get into this endpoint: 
+To access Swagger, you need the IP address of your Data Classification instance. For a cloud deployment, use the public IP address. Then you need to access this endpoint: 
 
 \https://<classification_ip>/documentation
 
@@ -56,7 +56,7 @@ The following example shows an API call to copy files.
 
 .API Request
 
-You'll initially need to get all the relevant fields and options for a system to view all of the filters in the investigation tab.
+First, get the relevant fields and options for a system to view the filters in the Investigation tab.
 
 [source,http]
 curl -X GET "http://{classification_ip}/api/{classification_version} /search/options?data_mode=ALL_EXTRACTABLE" -H "accept: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR……… " -H "x-agent-id: hOXsZNvnA5LsthwMILtjL9xZFYBQxAwMclients" 
@@ -417,16 +417,16 @@ curl -X GET "http://{classification_ip}/api/{classification_version} /search/opt
   ] 
 } 
 
-We will use that response in our request parameters to filter the desired files we want to copy. 
+Use that response in the request parameters to filter the files that you want to copy. 
  
 You can apply an action on multiple items. Supported action types include: move, delete, and copy.
 //, assign to, FlexClone, export data, rescan, and label. 
  
-We will create the copy action: 
+Create the copy action: 
 
 .API Request
 
-This next API is that action API and it allows you to create multiple actions.
+This API lets you create multiple actions.
 
 [source,http]
 curl -X POST "http:// {classification_ip}/api//{classification_version}/actions" -H "accept: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR……… " -H "x-agent-id: hOXsZNvnA5LsthwMILtjL9xZFYBQxAwMclients " -H "Content-Type: application/json" -d "{ \"action_type\": \"COPY\", \"data_mode\": \"FILES\", \"policy_id\": 0, \"request_params\": { destination_nfs_path: "{ontap_ip}:/{share_name} " }, \"requested_query\":{"condition":"AND","rules":[{"field":"ENVIRONMENT_TYPE","operator":"IN","value":["ONPREM"]},{"field":"CATEGORY","operator":"IN","value":["21"]}]}}" 
