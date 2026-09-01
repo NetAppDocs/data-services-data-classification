@@ -120,7 +120,7 @@ The map-only scan doesn't heat up the cold data: it stays cold and remains in ob
 
 //=== Can Data Classification send notifications to my organization?
 
-//Yes. In conjunction with the Policies feature, you can send email alerts to NetApp Console users (daily, weekly, or monthly), or any other email address,  when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-using-policies.html[Policies^].
+//Yes. In conjunction with the Policies feature, you can send email alerts to NetApp Console users (daily, weekly, or monthly), or any other email address, when a Policy returns results so you can get notifications to protect your data. Learn more about link:task-using-policies.html[Policies^].
 
 //You can also download status reports from the Governance page and Investigation page that you can share internally in your organization.
 
@@ -219,7 +219,7 @@ The Console agent is software running on a compute instance either within your c
 When scanning data, the NetApp Console agent needs to be installed in the following locations: 
 
 * For Cloud Volumes ONTAP in AWS or Amazon FSx for ONTAP: Console agent is in AWS.
-* For Cloud Volumes ONTAP in Azure or in Azure NetApp Files:  Console agent is in Azure.
+* For Cloud Volumes ONTAP in Azure or in Azure NetApp Files: Console agent is in Azure.
 * For Cloud Volumes ONTAP in GCP: Console agent is in GCP.
 * For on-premises ONTAP systems: Console agent is on-premises.
 

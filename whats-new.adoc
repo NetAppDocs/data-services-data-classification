@@ -144,17 +144,17 @@ For deployment details, refer to https://docs.netapp.com/us-en/data-services-dat
 This release supports the Ubuntu 24.04 Linux platform. 
 
 === Mapping scans gather metadata 
-The following metadata is extracted from files during mapping scans and is displayed on the Governance, Compliance, and Investigation dashboards:  
+The following metadata is extracted from files during mapping scans and is displayed on the Governance, Compliance, and Investigation dashboards:
 
 * Working environment 
 * Working environment type 
 * Storage repository 
 * File type 
 * Used capacity 
-* Number of files  
+* Number of files
 * File size 
 * File creation 
-* File last access  
+* File last access
 * File last modified 
 * File discovered time 
 * Permissions extraction
