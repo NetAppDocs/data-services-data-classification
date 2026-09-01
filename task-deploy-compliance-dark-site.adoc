@@ -4,7 +4,6 @@ permalink: task-deploy-compliance-dark-site.html
 keywords: cloud compliance, data sense, get started, web browser connectivity, cloud compliance access, privacy, linux, ubuntu, compliance, on-premises, dark site, upgrade, private mode, docker, podman, rhel, bluexp classification, classification, install, cloud data sense, linux host
 summary: Complete a few steps to install NetApp Data Classification on a Linux host in an on-premises site that doesn't have internet access - also known as "private mode". This type of installation is perfect for your secure sites.
 ---
-
 = Install NetApp Data Classification on a Linux host in private mode
 :hardbreaks:
 :nofooter:
@@ -13,7 +12,7 @@ summary: Complete a few steps to install NetApp Data Classification on a Linux h
 :imagesdir: ./media/
 
 [.lead]
-Use _private mode_ to install NetApp Data Classification on a Linux host in an on-premises site without internet access. This deployment uses an installation script and keeps the Data Classification instance disconnected from the NetApp Console SaaS layer, allowing you to scan local data sources in an isolated environment.
+Use _private mode_ to install NetApp Data Classification on a Linux host in an on-premises site without internet access (also known as an offline installation or a dark site). This deployment uses an installation script and keeps the Data Classification instance disconnected from the NetApp Console SaaS layer, allowing you to scan local data sources in an isolated environment.
 
 link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html[Learn about the different deployment modes for the Console agent and Data Classification^].
 
@@ -23,24 +22,21 @@ The Data Classification installation script checks whether the system and enviro
 
 == Supported data sources
 
-When installed private mode (sometimes called an "offline" or "dark" site), Data Classification can only scan data from data sources that are also local to the on-premises site. At this time, Data Classification can scan the following *local* data sources:
+When installed in private mode, Data Classification can only scan data from data sources that are also local to the on-premises site. At this time, Data Classification can scan the following *local* data sources:
 
 * On-premises ONTAP systems
 * Database schemas
-//* SharePoint On-Premises accounts (SharePoint Server)
-//* Non-NetApp NFS or CIFS file shares
-//* Object Storage that uses the Simple Storage Service (S3) protocol
 
 There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Files, or FSx for ONTAP accounts when Data Classification is deployed in private mode.
 
 == Limitations
 
+Migrating the Console agent to a different host isn't supported when Data Classification is deployed on a Console agent. If you need Classification on a different Console agent in a dark site, deploy a new Console agent and Data Classification instance on the new host. 
+
 Most Data Classification features work when it is deployed in a site with no internet access. However, certain features that require internet access are not supported, for example:
 
-//* Managing Microsoft Azure Information Protection (AIP) labels
 * Setting Console roles for different users (for example, Account Admin or Compliance Viewer)
 * Copying and synchronizing source files using NetApp Copy and Sync
-//* Receiving user feedback
 * Automated software upgrades from the Console
 +
 Both the Console agent and Data Classification require periodic manual upgrades to enable new features. You can see the Data Classification version at the bottom of the Data Classification UI pages. Check the link:whats-new.html[Data Classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html[upgrade the Console agent^] and <<Upgrade Data Classification software,upgrade your Data Classification software>>.
@@ -49,7 +45,7 @@ Both the Console agent and Data Classification require periodic manual upgrades 
 
 Get started quickly by following these steps, or scroll down to the remaining sections for full details.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the  Console agent
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install the Console agent
 
 [role="quick-margin-para"]
 If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host now.
@@ -65,7 +61,7 @@ Ensure that your Linux system meets the <<Prepare the Linux host system,host req
 Download the Data Classification software from the NetApp Support Site and copy the installer file to the Linux host you plan to use. Then launch the installation wizard and follow the prompts to deploy the Data Classification instance.
 
 
-== Install the  Console agent
+== Install the Console agent
 
 If you don't already have a Console agent installed in private mode, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html[deploy the Console agent^] on a Linux host in your offline site.
 
@@ -117,11 +113,11 @@ You must ensure that all required ports are open for communication between the C
 * Port 8080 should be open so you can see the installation progress in the Console.
 * If a firewall is used on the Linux host, port 9000 is required for internal processes within an Ubuntu server.
 
-|Console agent <> ONTAP cluster (NAS) | 443 (TCP)  a| The Console discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
+|Console agent <> ONTAP cluster (NAS) | 443 (TCP) a| The Console discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
 
 * The Console agent host must allow outbound HTTPS access through port 443. If the Console agent is in the cloud, all outbound communication is allowed by the predefined security group.
 * The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Console agent host.
-|Data Classification <> ONTAP cluster  a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
+|Data Classification <> ONTAP cluster a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
 * For CIFS - 139 (TCP\UDP) and 445 (TCP\UDP) a| Data Classification needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Security groups for Cloud Volumes ONTAP must allow inbound connections from the Data Classification instance. 
 
 Make sure these ports are open to the Data Classification instance:

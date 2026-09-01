@@ -174,11 +174,11 @@ Make sure port 8080 is open so you can see the installation progress in the Cons
 
 If a firewall is used on the Linux host, port 9000 is required for internal processes within an Ubuntu server.
 
-|Console agent <> ONTAP cluster (NAS) | 443 (TCP)  a| The Console discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
+|Console agent <> ONTAP cluster (NAS) | 443 (TCP) a| The Console discovers ONTAP clusters using HTTPS. If you use custom firewall policies, they must meet the following requirements:
 
 * The Console agent host must allow outbound HTTPS access through port 443. If the Console agent is in the cloud, all outbound communication is allowed by the predefined firewall or routing rules.
 * The ONTAP cluster must allow inbound HTTPS access through port 443. The default "mgmt" firewall policy allows inbound HTTPS access from all IP addresses. If you modified this default policy, or if you created your own firewall policy, you must associate the HTTPS protocol with that policy and enable access from the Console agent host.
-|Data Classification <> ONTAP cluster  a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
+|Data Classification <> ONTAP cluster a| * For NFS - 111 (TCP\UDP) and 2049 (TCP\UDP)
 * For CIFS - 139 (TCP\UDP) and 445 (TCP\UDP) a| Data Classification needs a network connection to each Cloud Volumes ONTAP subnet or on-prem ONTAP system. Firewalls or routing rules for Cloud Volumes ONTAP must allow inbound connections from the Data Classification instance. 
 
 Make sure these ports are open to the Data Classification instance:

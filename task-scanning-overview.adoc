@@ -55,7 +55,7 @@ Review the tables to see what information is surfaced in map-only scans and full
 The Console UI displays data from a single connector. For tips on viewing data from multiple Console agents, see link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors[Work with multiple Console agents^].
 // duplicate of content in include file due to formattinginclude::_include/console-agent-limit.adoc[]
 
-{asterisk}{asterisk} The following metadata is extracted from files during mapping scans:  
+{asterisk}{asterisk} The following metadata is extracted from files during mapping scans:
 
 * File discovered time 
 * File last accessed
@@ -63,7 +63,7 @@ The Console UI displays data from a single connector. For tips on viewing data f
 * File type 
 * File size 
 * File creation 
-* Number of files  
+* Number of files
 * Permissions extraction 
 * Storage repository 
 * System 

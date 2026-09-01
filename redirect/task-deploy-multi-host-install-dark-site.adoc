@@ -27,7 +27,7 @@ redirect: data-services-data-classification/task-deploy-compliance-dark-site.htm
 // Follow these steps when installing Data Classification on multiple on-premises hosts in an offline environment.
 
 // [NOTE]
-// The following information is relevant only for Data  Classification legacy versions 1.30 and earlier.
+// The following information is relevant only for Data Classification legacy versions 1.30 and earlier.
 
 // .Before you begin
 
