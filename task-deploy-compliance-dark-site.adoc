@@ -31,6 +31,8 @@ There is no support currently for scanning Cloud Volumes ONTAP, Azure NetApp Fil
 
 == Limitations
 
+Migrating the Console agent to a different host isn't supported when Data Classification is deployed on a Console agent. If you need Classification on a different Console agent in a dark site, deploy a new Console agent and Data Classification instance on the new host. 
+
 Most Data Classification features work when it is deployed in a site with no internet access. However, certain features that require internet access are not supported, for example:
 
 * Setting Console roles for different users (for example, Account Admin or Compliance Viewer)
@@ -38,7 +40,6 @@ Most Data Classification features work when it is deployed in a site with no int
 * Automated software upgrades from the Console
 +
 Both the Console agent and Data Classification require periodic manual upgrades to enable new features. You can see the Data Classification version at the bottom of the Data Classification UI pages. Check the link:whats-new.html[Data Classification Release Notes] to see the new features in each release and whether you want those features. Then you can follow the steps to https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-connector.html[upgrade the Console agent^] and <<Upgrade Data Classification software,upgrade your Data Classification software>>.
-* Migrating the Console agent to a different host isn't supported when Data Classification is deployed on a Console agent. If you need Classification on a different Console agent in a dark site, deploy a new Console agent and Data Classification instance on the new host. 
 
 == Quick start
 
