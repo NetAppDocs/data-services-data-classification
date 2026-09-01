@@ -154,7 +154,7 @@ The following metadata is extracted from files during mapping scans and is displ
 * Number of files
 * File size 
 * File creation 
-* File last access
+* File last accessed
 * File last modified 
 * File discovered time 
 * Permissions extraction
