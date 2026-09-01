@@ -10,7 +10,7 @@ The supported working environments include:
 * Cloud Volumes ONTAP 
 * FSx for ONTAP
 * ONTAP
-* Share group   
+* Share group
 
 Exporting data from the Data Investigation report has the following limitations: 
 
