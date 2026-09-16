@@ -75,11 +75,11 @@ See <<Enable and disable scans on volumes,Enable and disable scans on volumes>> 
 
 [NOTE]
 The system overview page has a *Scan without write permissions* option that is disabled by default. If Data Classification doesn't have the appropriate permissions, it won't scan the files because Data Classification can't revert the "last accessed time" to the original timestamp. +
-You can override this setting using the *Scan without write permissions* option. To learn more about this option, see link:reference-collected-metadata.html#last-accessed-time-timestamp[Metadata collected from data sources in Data Classification].
+You can override this setting using the *Scan without write permissions* option. To learn more about this option, see link:reference-collected-metadata.html#last-accessed-time[Metadata collected from data sources in Data Classification].
 
 .Result
 
-Data Classification starts scanning the files in the file shares you added. You can xref:#track-the-scanning-progress[Track the scanning progress] and view the results of the scan in the **Dashboard**.
+Data Classification starts scanning the files in the file shares you added. You can <<Track the scanning progress>> and view the results of the scan in the **Dashboard**.
 
 [NOTE]
 If the scan doesn't complete successfully for a CIFS configuration with Kerberos authentication, check the **Configuration** tab for errors. 
