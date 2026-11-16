@@ -26,10 +26,6 @@ Before using the OVA file to install Data Classification, you must have:
 * SSH access enabled to the appliance
 * link:https://mysupport.netapp.com/site/user/registration[NetApp Support Site credentials] to download the installer
 
-// .View the list of pre-installed software.
-//[%collapsible]
-// add if not included in link
-
 == Deploy the OVA in VMware vSphere 
 
 . Download the OVA file from link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. Choose the OVA appliance that is appropriate for your environment:
@@ -41,6 +37,8 @@ Before using the OVA file to install Data Classification, you must have:
 | `DataClassification-<version>-XL.ova` | Large production workload: 32 CPUs, 128 GB RAM, 1 TB disk | 500 million files
 |===
 +
+[NOTE]
+The OVA file is a base image and is not tied to a specific Data Classification version. Multiple OVA versions are available on the NetApp Support Site, and any of them can be used to deploy the appliance. Install the Data Classification version you want on top of the OVA in the <<Install Data Classification,next section>>. You don't need an OVA version that matches your Data Classification release.
 . Open the vSphere client. Right-click the target cluster or host, and select *Deploy OVF Template* > *Create VM from OVA*. 
 . Upload the OVA file you downloaded in step one.
 . Specify the *VM name* and the target data center, host or cluster, and datastore. 
@@ -64,11 +62,13 @@ The password is used for root access, SSH access, and system administration. Sto
 
 == Install Data Classification
 
+[NOTE]
+The installer version you download determines the Data Classification version that runs on the appliance. Unlike the OVA, the installer version matters. Download the installer for the Data Classification version you want to use.
+
 . Download the Data Classification software from the link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/[NetApp Support Site^]. 
 +
-Select the file named *DATASENSE-INSTALLER-<version>.tar.gz*.
-. Extract the installer archive on the VM host by running `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz`.
-. Extract the installer archive on the host machine.
+Select the file named *DATASENSE-INSTALLER-<version>.tar.gz*, confirming you've selected the appropriate version. Check the most recent version in link:whats-new.html[the release notes].
+. Extract the installer archive on the host machine: `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz`.
 . In the Console, select *Governance > Classification*.
 
 . Select *Deploy Classification*.
