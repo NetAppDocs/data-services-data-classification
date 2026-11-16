@@ -1,3 +1,0 @@
-=== General improvements
-
-This release of Data Classification includes security improvements and performance enhancements. 
